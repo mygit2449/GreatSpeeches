@@ -1,7 +1,6 @@
 package com.greatspeeches;
 
 import java.io.InputStream;
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 import org.xmlpull.v1.XmlPullParser;
