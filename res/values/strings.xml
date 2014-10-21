@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Great \n Speeches</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_persons_description_view">PersonsDescriptionView</string>
+    <string name="title_activity_persons_data_view">PersonsDataView</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+    <string name="action_finish">Finish</string>
+    <string name="app_id">1451809198381336</string>
+    <string name="photo_post">Photo Post</string>
+    <string name="success">Success</string>
+    <string name="successfully_posted_post">Successfully posted \'%1$s\'.\nPost ID: %2$s</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+	
+</resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+
+<!--  
+	<item>
+		<id>1</id>
+		<name>Abraham Lincoln</name>
+		<img>abraham_lincoln</img>
+		<quote>I'm a slow walker but I never walk back</quote>
+		<audio>regan.mp3</audio>
+		<info>Abraham Lincoln, a self-taught Illinois lawyer and legislator with a reputation as an eloquent opponent of slaveryn shocked many when he overcame several more prominent contenders to win the Republican Party's nomination for president in 1860. His election that November pushed several Southern states to secede by the time of his inauguration in March 1861, and the Civil War began barely a month later. Contrary to expectations, Lincoln proved to be a shrewd military strategist and a savvy leader during what became the costliest conflict ever fought on American soil. His Emancipation Proclamation, issued in 1863, freed all slaves in the rebellious states and paved the way for slavery's eventual abolition, while his Gettysburg Address later that year stands as one of the most famous and influential pieces of oratory in American history. In April 1865, with the Union on the brink of victory, Abraham Lincoln was shot and killed by the Confederate sympathizer John Wilkes Booth; his untimely death made him a martyr to the cause of liberty and Union. Over the years Lincoln's mythic stature has only grown, and he is widely regarded as one of the greatest presidents in the nation's history.</info>
+	</item>
+
+-->
+	<item>
+		<id>2</id>
+		<name>John F. Kennedy</name>
+		<img>john_kennedy</img>
+		<audio>kenedy.mp3</audio>
+		<quote>Forgive your enemies, but never forget their names</quote>
+		<!--  <video>http://www.youtube.com/watch?v=6DbhTwahqPg</video> -->
+		<video>jfk</video>
+		<info>On November 22, 1963, when he was hardly past his first thousand days in office, John Fitzgerald Kennedy was killed by an assassin's bullets as his motorcade wound through Dallas, Texas. Kennedy was the youngest man elected President; he was the youngest to die. Of Irish descent, he was born in Brookline, Massachusetts, on May 29, 1917. Graduating from Harvard in 1940, he entered the Navy. In 1943, when his PT boat was rammed and sunk by a Japanese destroyer, Kennedy, despite grave injuries, led the survivors through perilous waters to safety. Back from the war, he became a Democratic Congressman from the Boston area, advancing in 1953 to the Senate. He married Jacqueline Bouvier on September 12, 1953. In 1955, while recuperating from a back operation, he wrote Profiles in Courage, which won the Pulitzer Prize in history. In 1956 Kennedy almost gained the Democratic nomination for Vice President, and four years later was a first-ballot nominee for President. Millions watched his television debates with the Republican candidate, Richard M. Nixon. Winning by a narrow margin in the popular vote, Kennedy became the first Roman Catholic President.</info>
+	</item>
+	
+	<item>
+		<id>3</id>
+		<name>Gandhi</name>
+		<img>gandhi</img>
+		<audio>gandhi.mp3</audio>
+		<!-- <video>http://www.youtube.com/watch?v=Dcn6OmGF5Rk</video> -->
+		<video>gandhi</video>
+		<quote>Where there is love there is life</quote>
+		<info>Mohandas Gandhi is considered the father of the Indian independence movement. Gandhi spent 20 years in South Africa working to fight discrimination. It was there that he created his concept of satyagraha, a non-violent way of protesting against injustices. While in India, Gandhi's obvious virtue, simplistic lifestyle, and minimal dress endeared him to the people. He spent his remaining years working diligently to both remove British rule from India as well as to better the lives of India's poorest classes. Many civil rights leaders, including Martin Luther King Jr., used Gandhi's concept of non-violent protest as a model for their own struggles.Even after his death, Gandhi's commitment to non-violence and his belief in simple living—making his own clothes, eating a vegetarian diet and using fasts for self-purification as well as a means of protest—have been a beacon of hope for oppressed and marginalized people throughout the world.</info>
+	</item>
+	<!--  
+	<item>
+		<id>4</id>
+		<name>Socrates</name>
+		<img>socrates_louvre</img>
+		<quote>The only true wisdom is in knowing you know nothing</quote>
+		<audio>regan.mp3</audio>
+		<info>Viewed by many as the founding figure of Western philosophy, Socrates (469-399 B.C.) is at once the most exemplary and the strangest of the Greek philosophers. He grew up during the golden age of Pericles' Athens, served with distinction as a soldier, but became best known as a questioner of everything and everyone. His style of teaching—immortalized as the Socratic Method—involved not conveying knowledge but rather asking question after clarifying question until his students arrived at their own understanding. He wrote nothing himself, so all that is known about him is filtered through the writings of a few contemporaries and followers, most of all, his student Plato. He was accused of corrupting the youth of Athens and sentenced to death. Choosing not to flee, he spent his final days in the company of his friends before drinking the executioner’s cup of poisonous hemlock.</info>
+	</item>
+	-->
+	<item>
+		<id>5</id>
+		<name>Patrick Henry</name>
+		<img>patrick_henry</img>
+		<audio>henry.mp3</audio>
+		<!-- <video>http://www.youtube.com/watch?v=iEOets_L7vg</video> -->
+		<video>phenry</video>
+		<quote>The great object is that every man be armed</quote>
+		<info>"Radical," is a title that few men can wear with ease. The name Patrick Henry, during the revolution and for some time after, was synonymous with that word in the minds of colonists and Empire alike. Henry's reputation as a passionate and fiery orator exceeded even that of Samuel Adams. His Stamp Act Resolutions were, arguably, the first shot fired in the Revolutionary War. Patrick Henry's personality was a curious antidote to the stern honor of Washington, the refined logic of Jefferson, and the well-tempered industry of Franklin. Young Henry was an idler and by many accounts a derelict; though everyone knew he was bright, he simply would not lift a finger except to his own pleasure. By the age of 10, his family knew that he would not be a farmer, and tried instead to train him toward academe. He would not apply himself to studies either. At age 21 his father set him up in a business that he bankrupted shortly thereafter. Finally the general public disgust in Hanover and pressure from his young family (he had married at the age of eighteen) caused him to study for six weeks and take the bar exam, which he passed, and begin work as a lawyer.</info>
+	</item>
+	<!--  
+	<item>
+		<id>6</id>
+		<name>Frederick Douglass</name>
+		<img>frederick_douglass</img>
+		<audio>regan.mp3</audio>
+		<quote>It is easier to build strong children than to repair broken men</quote>
+		<info>Frederick Douglass (1818-95) was a prominent American abolitionist, author and orator. Born a slave, Douglass escaped at age 20 and went on to become a world-renowned anti-slavery activist. His three autobiographies are considered important works of the slave narrative tradition as well as classics of American autobiography. Douglass' work as a reformer ranged from his abolitionist activities in the early 1840s to his attacks on Jim Crow and lynching in the 1890s. For 16 years he edited an influential black newspaper and achieved international fame as an inspiring and persuasive speaker and writer. In thousands of speeches and editorials, he levied a powerful indictment against slavery and racism, provided an indomitable voice of hope for his people, embraced antislavery politics and preached his own brand of American ideals.</info>
+	</item>
+	
+	<item>
+		<id>7</id>
+		<name>Susan B. Anthony</name>
+		<img>susan_anthony</img>
+		<audio>regan.mp3</audio>
+		<quote>Organize, agitate, educate, must be our war cry</quote>
+		<info>Susan B. Anthony was born February 15, 1820 in Adams, Massachusetts. She was brought up in a Quaker family with long activist traditions. Early in her life she developed a sense of justice and moral zeal. After teaching for fifteen years, she became active in temperance. Because she was a woman, she was not allowed to speak at temperance rallies. This experience, and her acquaintance with Elizabeth Cady Stanton, led her to join the women's rights movement in 1852. Soon after, she dedicated her life to woman suffrage. Ignoring opposition and abuse, Anthony traveled, lectured, and canvassed across the nation for the vote. She also campaigned for the abolition of slavery, the right for women to own their own property and retain their earnings, and she advocated for women's labor organizations. In 1900, Anthony persuaded the University of Rochester to admit women. Anthony, who never married, was aggressive and compassionate by nature. She had a keen mind and a great ability to inspire. She remained active until her death on March 13, 1906.</info>
+	</item>
+	-->
+	<item>
+		<id>8</id>
+		<name>Winston Churchill</name>
+		<img>churchill</img>
+		<audio>churchil.mp3</audio>
+		<!-- <video>http://www.youtube.com/watch?v=pgfdy5WJ6s4</video> -->
+		<video>wcc</video>
+		<quote>The empires of the future are the empires of the mind</quote>
+		<info>Winston Churchill was an inspirational statesman, writer, orator and leader who led Britain to victory in the Second World War. He served as Conservative Prime Minister twice - from 1940 to 1945 (before being defeated in the 1945 general election by the Labour leader Clement Attlee) and from 1951 to 1955. Winston Churchill was born on 30 November 1874, in Blenheim Palace, Oxfordshire and was of rich, aristocratic ancestry. Although achieving poor grades at school, his early fascination with militarism saw him join the Royal Cavalry in 1895. As a soldier and part-time journalist, Churchill travelled widely, including trips to Cuba, Afghanistan, Egypt and South Africa. Churchill was elected as Conservative MP for Oldham in 1900, before defecting to the Liberal Party in 1904 and spending the next decade climbing the ranks of the Liberal government. He was First Lord of the Admiralty (the civil/political head of the Royal Navy) by the time of the disastrous Gallipoli campaign, which he created. Heavily criticised for this error, he resigned from this position and travelled to the Western Front to fight himself.</info>
+	</item>
+	<item>
+		<id>9</id>
+		<name>Martin Luther King</name>
+		<img>martin_luther_king</img>
+		<audio>ll_king.mp3</audio>
+		<!-- <video>http://www.youtube.com/watch?v=Tb9m81OwYH0</video> -->
+		<video>mlk</video>
+		<quote>A man who won't die for something is not fit to live</quote>
+		<info>Martin Luther King is probably the most famous person associated with the civil rights movement. King was active from the start of the Montgomery Bus Boycott of 1955 to 1956 until his murder in April 1968. To many Martin Luther King epitomised what the civil rights campaign was all about and he brought massive international cover to the movement.Martin Luther King was born in Atlanta, Georgia on January 15th, 1929. The church was very much a part of his life as both his father and grandfather had been Baptist preachers. They themselves were involved in the civil rights movement. By the standards of the time, King came from a reasonably comfortable background and after graduating from college in 1948 he was not sure about which profession to join. He considered a career in medicine and law but rejected both and joined the Baptist Church. He studied at the Crozer Theological Seminary in Pennsylvania. It was while studying here, that King learned about the non-violent methods used by Mahatma Gandhi against the British in India. King became convinced that such methods would be of great value to the civil rights movement.</info>
+	</item>
+	<item>
+		<id>10</id>
+		<name>Lyndon B. Johnson</name>
+		<img>lyndon_johnson</img>
+		<audio>lyndon_johnson.mp3</audio>
+		<!-- <video>http://www.youtube.com/watch?v=Lq_6NroQTWE</video> -->
+		<video>johson</video>
+		<quote>Doing what's right isn't the problem. It is knowing what's right</quote>
+		<info>"A Great Society" for the American people and their fellow men elsewhere was the vision of Lyndon B. Johnson. In his first years of office he obtained passage of one of the most extensive legislative programs in the Nation's history. Maintaining collective security, he carried on the rapidly growing struggle to restrain Communist encroachment in Viet Nam. Johnson was born on August 27, 1908, in central Texas, not far from Johnson City, which his family had helped settle. He felt the pinch of rural poverty as he grew up, working his way through Southwest Texas State Teachers College (now known as Texas State University-San Marcos); he learned compassion for the poverty of others when he taught students of Mexican descent.During World War II he served briefly in the Navy as a lieutenant commander, winning a Silver Star in the South Pacific. After six terms in the House, Johnson was elected to the Senate in 1948. In 1953, he became the youngest Minority Leader in Senate history, and the following year, when the Democrats won control, Majority Leader. With rare skill he obtained passage of a number of key Eisenhower measures.</info>
+	</item>
+	<item>
+		<id>11</id>
+		<name>Ronald Reagan</name>
+		<img>reagan</img>
+		<audio>regan.mp3</audio>
+		<!-- <video>http://www.youtube.com/watch?v=Wt8y18YFH70</video> -->
+		<video>regan</video>
+		<quote>We can't help everyone, but everyone can help someone</quote>
+		<info>At the end of his two terms in office, Ronald Reagan viewed with satisfaction the achievements of his innovative program known as the Reagan Revolution, which aimed to reinvigorate the American people and reduce their reliance upon Government. He felt he had fulfilled his campaign pledge of 1980 to restore "the great, confident roar of American progress and growth and optimism." On February 6, 1911, Ronald Wilson Reagan was born to Nelle and John Reagan in Tampico, Illinois. He attended high school in nearby Dixon and then worked his way through Eureka College. There, he studied economics and sociology, played on the football team, and acted in school plays. Upon graduation, he became a radio sports announcer. A screen test in 1937 won him a contract in Hollywood. During the next two decades he appeared in 53 films.As president of the Screen Actors Guild, Reagan became embroiled in disputes over the issue of Communism in the film industry; his political views shifted from liberal to conservative. He toured the country as a television host, becoming a spokesman for conservatism. In 1966 he was elected Governor of California by a margin of a million votes; he was re-elected in 1970.</info>
+	</item>
+
+	<item>
+		<id>12</id>
+		<name>Swami Vivekananda</name>
+		<img>vivekananda</img>
+		<audio>vivekananda.mp3</audio>
+		<!-- <video>http://www.youtube.com/watch?v=Yt9hN114mjE</video> -->
+		<video>sv</video>
+		<quote>You cannot believe in God until you believe in yourself</quote>
+		<info>A spiritual genius of commanding intellect and power, Vivekananda crammed immense labor and achievement into his short life, 1863-1902. Born in the Datta family of Calcutta, the youthful Vivekananda embraced the agnostic philosophies of the Western mind along with the worship of science. At the same time, vehement in his desire to know the truth about God, he questioned people of holy reputation, asking them if they had seen God. He found such a person in Sri Ramakrishna, who became his master, allayed his doubts, gave him God vision, and transformed him into sage and prophet with authority to teach. After Sri Ramakrishna's death, Vivekananda renounced the world and criss-crossed India as a wandering monk. His mounting compassion for India's people drove him to seek their material help from the West. Accepting an opportunity to represent Hinduism at Chicago's Parliament of Religions in 1893, Vivekananda won instant celebrity in America and a ready forum for his spiritual teaching. For three years he spread the Vedanta philosophy and religion in America and England and then returned to India to found the Ramakrishna Math and Mission. Exhorting his nation to spiritual greatness, he wakened India to a new national consciousness. He died July 4, 1902, after a second, much shorter sojourn in the West. His lectures and writings have been gathered into nine volumes.</info>
+	</item>
+
+</menu>
+
+

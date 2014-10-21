@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".HomeScreen" 
+    android:background="@drawable/ab_stacked_solid_dark_holo">
+
+    <RelativeLayout
+        android:id="@+id/top_rel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp" >
+
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="fill_parent"
+            android:layout_height="225dp"
+            android:layout_centerHorizontal="true"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/slide_in_right_animation"
+            android:outAnimation="@anim/slide_out" >
+        </ViewFlipper>
+    </RelativeLayout>
+
+    <com.greatspeeches.helper.SegmentedRadioGroup
+        android:id="@+id/segment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_rel"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dip"
+        android:checkedButton="@+id/test_btn"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/first_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:minHeight="40dip"
+            android:minWidth="120dip"
+            android:text="Popular"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/radio_colors" />
+
+        <RadioButton
+            android:id="@+id/second_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:minHeight="40dip"
+            android:minWidth="120dip"
+            android:text="Categories"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/radio_colors" />
+    </com.greatspeeches.helper.SegmentedRadioGroup>
+
+    <ListView
+        android:id="@+id/home_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/segment_text"
+        android:scrollingCache="false" 
+        android:divider="@android:color/white"
+        android:dividerHeight="1dp"
+        android:scrollbarThumbVertical="@drawable/tw_scrollbar_holo_dark">
+    </ListView>
+
+</RelativeLayout>
