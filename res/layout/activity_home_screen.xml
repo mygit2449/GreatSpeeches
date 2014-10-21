@@ -62,7 +62,7 @@
         android:scrollingCache="false" 
         android:divider="@android:color/white"
         android:dividerHeight="1dp"
-        android:scrollbarThumbVertical="@drawable/tw_scrollbar_holo_dark">
+        android:scrollbarStyle="outsideOverlay">
     </ListView>
 
 </RelativeLayout>
