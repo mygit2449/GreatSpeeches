@@ -2,8 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".HomeScreen" 
-    android:background="@drawable/ab_stacked_solid_dark_holo">
+    android:background="@drawable/ab_stacked_solid_dark_holo"
+    tools:context=".HomeScreen" >
+
+    <!--
+    android:background="@drawable/ab_stacked_solid_dark_holo"
+    android:background="#0099cc"
+    -->
 
     <RelativeLayout
         android:id="@+id/top_rel"
@@ -59,10 +64,10 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/segment_text"
-        android:scrollingCache="false" 
         android:divider="@android:color/white"
         android:dividerHeight="1dp"
-        android:scrollbarStyle="outsideOverlay">
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false" >
     </ListView>
 
 </RelativeLayout>

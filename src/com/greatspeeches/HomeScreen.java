@@ -2,6 +2,8 @@ package com.greatspeeches;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.xmlpull.v1.XmlPullParser;
 
@@ -13,7 +15,6 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.util.Xml;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +29,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
+import com.greatspeeches.categories.CategoriesListScreen;
 import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.slides.PersonsDescriptionView;
@@ -39,14 +41,13 @@ public class HomeScreen extends Activity implements OnClickListener{
 			R.drawable.reagan,R.drawable.socrates_louvre,R.drawable.susan_anthony};
 	
 	private ViewFlipper _slideViewFlipper;
-	private int iCtr = 0;
     private Handler handler;
     private Runnable runnable; 
     public static ArrayList<HomeDataModel> homeDataarr = null;
     private ListView popularList;
     public static Typeface arimoype,alextype;
     private RadioButton popular, categories;
-    private ArrayList<String> categoriesList = null;
+    private List<String> categoriesList = null;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +61,6 @@ public class HomeScreen extends Activity implements OnClickListener{
 	
 		popular = (RadioButton)findViewById(R.id.first_radio);
 		categories = (RadioButton)findViewById(R.id.second_radio);
-		popular.setChecked(true);
 		popular.setOnClickListener(this);
 		categories.setOnClickListener(this);
 		
@@ -68,7 +68,16 @@ public class HomeScreen extends Activity implements OnClickListener{
 		
 		popularList = (ListView)findViewById(R.id.home_list);
 		
-		popularList.setAdapter(new PopularListAdapter(HomeScreen.this, 0));
+		if(null != getIntent().getAction() && getIntent().getAction().equalsIgnoreCase("fromCat")){
+			categoriesList = Arrays.asList(getResources().getStringArray(R.array.categories));
+			popularList.setAdapter(new PopularListAdapter(HomeScreen.this, 1));
+			categories.setChecked(true);
+			popular.setChecked(false);
+		}else{
+			popularList.setAdapter(new PopularListAdapter(HomeScreen.this, 0));
+			popular.setChecked(true);
+			categories.setChecked(false);
+		}
 		
 		popularList.setOnItemClickListener(new OnItemClickListener() {
 
@@ -78,6 +87,8 @@ public class HomeScreen extends Activity implements OnClickListener{
 				// TODO Auto-generated method stub
 				if (popular.isChecked()) {
 					startActivity(new Intent(HomeScreen.this, PersonsDescriptionView.class).putExtra("position", arg2));
+				}else {
+					startActivity(new Intent(HomeScreen.this, CategoriesListScreen.class).putExtra("categoryType", categoriesList.get(arg2)));
 				}
 			}
 		});
@@ -101,26 +112,6 @@ public class HomeScreen extends Activity implements OnClickListener{
 			handler.postDelayed(runnable, 3000);
 	}
 
-	 RefreshHandler refreshHandler=new RefreshHandler();
-	    class RefreshHandler extends Handler{
-	        @Override
-	        public void handleMessage(Message msg) {
-	            // TODO Auto-generated method stub
-	            updateUI();
-	        }
-	        public void sleep(long delayMillis){
-	            this.removeMessages(0);
-	            sendMessageDelayed(obtainMessage(0), delayMillis);
-	        }
-	    };
-	    
-	    public void updateUI(){
-	            refreshHandler.sleep(10000);
-	            if(iCtr<_imageaCount.length){
-	                iCtr++;
-	        }
-	    }
-	    
 	    public ArrayList<HomeDataModel> parser() {
 			// TODO Auto-generated method stub
 			XmlPullParser parser = Xml.newPullParser();
@@ -271,12 +262,7 @@ public class HomeScreen extends Activity implements OnClickListener{
 				break;
 			case R.id.second_radio:
 				
-				categoriesList = new ArrayList<String>();  
-				categoriesList.add("Science & Technology");
-				categoriesList.add("Sports");
-				categoriesList.add("Entertainment");
-				categoriesList.add("Politics");
-				categoriesList.add("Women's History");
+				categoriesList = Arrays.asList(getResources().getStringArray(R.array.categories));
 				popularList.setAdapter(new PopularListAdapter(HomeScreen.this, 1));
 				
 				break;

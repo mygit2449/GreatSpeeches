@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.greatspeeches.SplashScreen"
+            android:name=".SplashScreen"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -27,18 +27,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.greatspeeches.HomeScreen"
+            android:name=".HomeScreen"
             android:label="@string/title_activity_home_screen"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:name="com.greatspeeches.slides.PersonsDescriptionView"
+            android:name=".slides.PersonsDescriptionView"
             android:label="@string/title_activity_persons_description_view"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.greatspeeches.socialhub.TwitActivity"
+            android:name=".socialhub.TwitActivity"
             android:launchMode="singleInstance" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -64,6 +64,10 @@
             android:name=".video.VideoPlayer"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.greatspeeches.categories.CategoriesListScreen"
+            android:label="@string/title_activity_categories_list_screen">
         </activity>
     </application>
 

@@ -2,7 +2,38 @@
 <resources>
 
     <string-array name="categories">
-        
+        <item>@string/category1</item>
+        <item>@string/category2</item>
+        <item>@string/category3</item>
+        <item>@string/category4</item>
+        <item>@string/category5</item>
     </string-array>
+
+    <array name="science">
+        <item>@drawable/abdulkalam</item>
+        <item>@drawable/alberteinstein</item>
+        <item>@drawable/alfrednobel</item>
+        <item>@drawable/cvraman</item>
+        <item>@drawable/srinivasaramanujan</item>
+        <item>@drawable/thomasedison</item>
+        <item>@drawable/subbarao</item>
+    </array>
+    <array name="sports">
+        <item>@drawable/dhyanchand</item>
+        <item>@drawable/pele</item>
+        <item>@drawable/carllewis</item>
+        <item>@drawable/jackie</item>
+        <item>@drawable/ayrton</item>
+        <item>@drawable/milkhasingh</item>
+        <item>@drawable/vishyanand</item>
+        <item>@drawable/sushilkumar</item>
+        <item>@drawable/kapil</item>
+    </array>
+    <array name="womens">
+        <item>@drawable/teresa</item>
+        <item>@drawable/florencenightingale</item>
+        <item>@drawable/ranijhansi</item>
+        <item>@drawable/sarojininaidu</item>
+    </array>
 
 </resources>

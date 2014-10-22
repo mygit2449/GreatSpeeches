@@ -11,7 +11,21 @@ public class HomeDataModel implements Serializable{
 	public String info = "";
 	public String audio = "";
 	public String videourl = "";
+	public String bDate = "";
+	public String dDate = "";
 
+	public String getbDate() {
+		return bDate;
+	}
+	public void setbDate(String bDate) {
+		this.bDate = bDate;
+	}
+	public String getdDate() {
+		return dDate;
+	}
+	public void setdDate(String dDate) {
+		this.dDate = dDate;
+	}
 	public String getVideourl() {
 		return videourl;
 	}

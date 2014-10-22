@@ -113,6 +113,8 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		_customPlayer = new AudioPlayer();
 		_customPlayer.setOnCompletionListener(this);
 		
+		 getActionBar().setDisplayHomeAsUpEnabled(true);
+		
 //		 try {
 //		        PackageInfo info = getPackageManager().getPackageInfo(
 //		                "com.greatspeeches", 
