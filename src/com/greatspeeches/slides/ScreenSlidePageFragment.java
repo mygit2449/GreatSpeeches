@@ -59,7 +59,7 @@ public class ScreenSlidePageFragment extends Fragment {
     public static ScreenSlidePageFragment create(HomeDataModel dataObj) {
         ScreenSlidePageFragment fragment = new ScreenSlidePageFragment();
         Bundle args = new Bundle();
-        args.putSerializable("data_obj", dataObj);
+        args.putParcelable("data_obj", dataObj);
         fragment.setArguments(args);
         return fragment;
     }
@@ -107,7 +107,7 @@ public class ScreenSlidePageFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPersonObj = (HomeDataModel) getArguments().getSerializable("data_obj");
+        mPersonObj = (HomeDataModel) getArguments().getParcelable("data_obj");
     }
 
     @Override

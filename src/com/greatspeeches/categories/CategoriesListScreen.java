@@ -14,16 +14,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
+import android.widget.AdapterView.OnItemClickListener;
 
 import com.greatspeeches.HomeScreen;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.models.HomeDataModel;
+import com.greatspeeches.slides.PersonsDescriptionView;
 import com.greatspeeches.util.DataParser;
 
 public class CategoriesListScreen extends FragmentActivity {
@@ -34,7 +37,7 @@ public class CategoriesListScreen extends FragmentActivity {
     private ViewFlipper slideViewFlipper;
     private Handler handler;
     private Runnable runnable; 
-    public static ArrayList<HomeDataModel> homeDataarr = null;
+    public  ArrayList<HomeDataModel> catDatarr = null;
     private ListView popularList;
     public static Typeface arimoype,alextype;
 
@@ -49,17 +52,17 @@ public class CategoriesListScreen extends FragmentActivity {
 		getActionBar().setTitle(typeStr);
 		
 		if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category1))){
-			homeDataarr = new DataParser(CategoriesListScreen.this).parser("science.xml");
+			catDatarr = new DataParser(CategoriesListScreen.this).parser("science.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.science);
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category2))){
-			homeDataarr = new DataParser(CategoriesListScreen.this).parser("sports.xml");
+			catDatarr = new DataParser(CategoriesListScreen.this).parser("sports.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.sports);
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category3))){
-			homeDataarr = new DataParser(CategoriesListScreen.this).parser("science.xml");
+			catDatarr = new DataParser(CategoriesListScreen.this).parser("science.xml");
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category4))){
 			
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category5))){
-			homeDataarr = new DataParser(CategoriesListScreen.this).parser("womens.xml");
+			catDatarr = new DataParser(CategoriesListScreen.this).parser("womens.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.womens);
 		}
 		
@@ -90,7 +93,16 @@ public class CategoriesListScreen extends FragmentActivity {
 			popularList = (ListView)findViewById(R.id.home_list);
 
 			popularList.setAdapter(new PopularListAdapter(CategoriesListScreen.this));
+			
+			popularList.setOnItemClickListener(new OnItemClickListener() {
 
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+						long arg3) {
+					// TODO Auto-generated method stub
+					startActivity(new Intent(CategoriesListScreen.this, PersonsDescriptionView.class).putExtra("position", arg2).putParcelableArrayListExtra("popularItems", catDatarr));
+				}
+			});
 	}
 	
 	
@@ -112,11 +124,11 @@ public class CategoriesListScreen extends FragmentActivity {
 					TextView personName = (TextView)convertView.findViewById(R.id.person_name);
 					ImageView personImage = (ImageView)convertView.findViewById(R.id.popular_img);
 					TextView personQuote = (TextView)convertView.findViewById(R.id.person_quote);
-					personName.setText(""+homeDataarr.get(position).getName());
+					personName.setText(""+catDatarr.get(position).getName());
 					personName.setTypeface(alextype);
 					personQuote.setTypeface(arimoype);
-					personQuote.setText(""+homeDataarr.get(position).getQuote());
-					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(homeDataarr.get(position).getImageId(), R.drawable.class));
+					personQuote.setText(""+catDatarr.get(position).getQuote());
+					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(catDatarr.get(position).getImageId(), R.drawable.class));
 				} catch (Exception e) {
 					// TODO: handle exception
 					e.printStackTrace();
@@ -128,7 +140,7 @@ public class CategoriesListScreen extends FragmentActivity {
 		@Override
 		public int getCount() {
 			// TODO Auto-generated method stub
-			return homeDataarr.size();
+			return catDatarr.size();
 		}
 
 
@@ -141,7 +153,7 @@ public class CategoriesListScreen extends FragmentActivity {
 		@Override
 		public Object getItem(int position) {
 			// TODO Auto-generated method stub
-			return homeDataarr.get(position);
+			return catDatarr.get(position);
 		}
 		
 	}

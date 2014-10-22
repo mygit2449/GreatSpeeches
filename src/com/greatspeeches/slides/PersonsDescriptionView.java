@@ -2,6 +2,7 @@ package com.greatspeeches.slides;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
@@ -46,6 +47,7 @@ import com.greatspeeches.R;
 import com.greatspeeches.helper.ArcMenu;
 import com.greatspeeches.helper.AudioPlayer;
 import com.greatspeeches.helper.GreateSpeechesUtil;
+import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.socialhub.TwitActivity;
 import com.greatspeeches.util.ConnectionDetector;
 
@@ -78,7 +80,8 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
     private static final String PERMISSION = "publish_actions";
     private Session session = null;
     private ConnectionDetector network = null;
-    
+    public  ArrayList<HomeDataModel> dataList = null;
+
     private Session.StatusCallback statusCallback = new Session.StatusCallback() {
         @Override
         public void call(Session session, SessionState state, Exception exception) {
@@ -106,45 +109,33 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_persons_description_view); 
-		initializeUI();
 		
 		network = new ConnectionDetector(PersonsDescriptionView.this);
+		
+		dataList = getIntent().getParcelableArrayListExtra("popularItems");
+		
+		initializeUI();
 		
 		_customPlayer = new AudioPlayer();
 		_customPlayer.setOnCompletionListener(this);
 		
 		 getActionBar().setDisplayHomeAsUpEnabled(true);
 		
-//		 try {
-//		        PackageInfo info = getPackageManager().getPackageInfo(
-//		                "com.greatspeeches", 
-//		                PackageManager.GET_SIGNATURES);
-//		        for (Signature signature : info.signatures) {
-//		            MessageDigest md = MessageDigest.getInstance("SHA");
-//		            md.update(signature.toByteArray());
-//		            Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
-//		            }
-//		    } catch (NameNotFoundException e) {
-//
-//		    } catch (NoSuchAlgorithmException e) {
-//
-//		    }
-//			
-			 Settings.addLoggingBehavior(LoggingBehavior.INCLUDE_ACCESS_TOKENS);
+		 Settings.addLoggingBehavior(LoggingBehavior.INCLUDE_ACCESS_TOKENS);
 
-		        Session session = Session.getActiveSession();
-		        if (session == null) {
-		            if (savedInstanceState != null) {
-		                session = Session.restoreSession(this, null, statusCallback, savedInstanceState);
-		            }
-		            if (session == null) {
-		                session = new Session(this);
-		            }
-		            Session.setActiveSession(session);
-		            if (session.getState().equals(SessionState.CREATED_TOKEN_LOADED)) {
-		                session.openForRead(new Session.OpenRequest(this).setCallback(statusCallback));
-		            }
-		        }
+	        Session session = Session.getActiveSession();
+	        if (session == null) {
+	            if (savedInstanceState != null) {
+	                session = Session.restoreSession(this, null, statusCallback, savedInstanceState);
+	            }
+	            if (session == null) {
+	                session = new Session(this);
+	            }
+	            Session.setActiveSession(session);
+	            if (session.getState().equals(SessionState.CREATED_TOKEN_LOADED)) {
+	                session.openForRead(new Session.OpenRequest(this).setCallback(statusCallback));
+	            }
+	        }
 		
 	}
 
@@ -172,8 +163,8 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		mPager.setAdapter(mPagerAdapter);
 		mPager.setCurrentItem(selectPos);
 		getActionBar().setHomeButtonEnabled(true);
-		getActionBar().setTitle(""+HomeScreen.homeDataarr.get(selectPos).name);
-		_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(HomeScreen.homeDataarr.get(selectPos).getImageId(), R.drawable.class));
+		getActionBar().setTitle(""+dataList.get(selectPos).getName());
+		_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(selectPos).getImageId(), R.drawable.class));
 		mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
 			@Override
 			public void onPageSelected(int position) {
@@ -182,8 +173,8 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				// on which page is currently active. An alternative approach is to have each
 				// fragment expose actions itself (rather than the activity exposing actions),
 				// but for simplicity, the activity provides the actions in this sample.
-				getActionBar().setTitle(""+HomeScreen.homeDataarr.get(position).name);
-				_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(HomeScreen.homeDataarr.get(position).getImageId(), R.drawable.class));
+				getActionBar().setTitle(""+dataList.get(position).getName());
+				_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(position).getImageId(), R.drawable.class));
 				invalidateOptionsMenu();
 				mPagerAdapter.getFragment(position).closeVplayer();
 				if (_customPlayer.isPlaying()) {
@@ -222,7 +213,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		play(HomeScreen.homeDataarr.get(selectPos).getAudio());
+		play(dataList.get(selectPos).getAudio());
 	}
    };
 	
@@ -318,12 +309,12 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 
         @Override
         public int getCount() {
-            return HomeScreen.homeDataarr.size();
+            return dataList.size();
         }
         
         public Object instantiateItem(ViewGroup container, int position) {
 
-        	ScreenSlidePageFragment screenFragment = ScreenSlidePageFragment.create(HomeScreen.homeDataarr.get(position));
+        	ScreenSlidePageFragment screenFragment = ScreenSlidePageFragment.create(dataList.get(position));
 			mPageReferenceMap.put(Integer.valueOf(position), new WeakReference<ScreenSlidePageFragment>(screenFragment));
 
 			return super.instantiateItem(container, position);
@@ -396,13 +387,13 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 								public void onAnimationEnd(Animation animation) {
 									// TODO Auto-generated method stub
 									_playerLayout.setVisibility(View.VISIBLE);
-									play(HomeScreen.homeDataarr.get(selectPos).audio);
+									play(dataList.get(selectPos).audio);
 								}
 							});
 	                		
 	                	}else if(ITEM_DRAWABLES[position] == R.drawable.twitter){
 	                		if(network.isConnectingToInternet()){
-	                			startActivity(new Intent(PersonsDescriptionView.this, TwitActivity.class).putExtra("img_name", HomeScreen.homeDataarr.get(selectPos).getImageId()).putExtra("quote", HomeScreen.homeDataarr.get(selectPos).getQuote()));
+	                			startActivity(new Intent(PersonsDescriptionView.this, TwitActivity.class).putExtra("img_name", dataList.get(selectPos).getImageId()).putExtra("quote", dataList.get(selectPos).getQuote()));
 	                		}else{
 	                			Toast.makeText(PersonsDescriptionView.this, "oops!,Please check Internet connection and try again!", Toast.LENGTH_SHORT).show();
 	                		}
@@ -422,7 +413,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	 
 		switch (v.getId()) {
 		case R.id.play_pause_btn:
-			play(HomeScreen.homeDataarr.get(selectPos).audio);
+			play(dataList.get(selectPos).audio);
 			break;
 		case R.id.next_btn:
 			mPager.setCurrentItem(selectPos+1);
@@ -567,7 +558,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	 
 	 private void postPhoto() {
 	        if (hasPublishPermission()) {
-	            Bitmap image = BitmapFactory.decodeResource(this.getResources(), GreateSpeechesUtil.getResId(HomeScreen.homeDataarr.get(selectPos).getImageId(), R.drawable.class));
+	            Bitmap image = BitmapFactory.decodeResource(this.getResources(), GreateSpeechesUtil.getResId(dataList.get(selectPos).getImageId(), R.drawable.class));
 	            Request request = Request.newUploadPhotoRequest(Session.getActiveSession(), image, new Request.Callback() {
 	                @Override
 	                public void onCompleted(Response response) {

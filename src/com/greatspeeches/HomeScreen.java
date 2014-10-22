@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.greatspeeches.categories.CategoriesListScreen;
@@ -43,7 +44,7 @@ public class HomeScreen extends Activity implements OnClickListener{
 	private ViewFlipper _slideViewFlipper;
     private Handler handler;
     private Runnable runnable; 
-    public static ArrayList<HomeDataModel> homeDataarr = null;
+    public  ArrayList<HomeDataModel> homeDataarr = null;
     private ListView popularList;
     public static Typeface arimoype,alextype;
     private RadioButton popular, categories;
@@ -86,7 +87,7 @@ public class HomeScreen extends Activity implements OnClickListener{
 					long arg3) {
 				// TODO Auto-generated method stub
 				if (popular.isChecked()) {
-					startActivity(new Intent(HomeScreen.this, PersonsDescriptionView.class).putExtra("position", arg2));
+					startActivity(new Intent(HomeScreen.this, PersonsDescriptionView.class).putExtra("position", arg2).putParcelableArrayListExtra("popularItems", homeDataarr));
 				}else {
 					startActivity(new Intent(HomeScreen.this, CategoriesListScreen.class).putExtra("categoryType", categoriesList.get(arg2)));
 				}

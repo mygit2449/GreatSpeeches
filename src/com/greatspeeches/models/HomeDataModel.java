@@ -1,8 +1,9 @@
 package com.greatspeeches.models;
 
-import java.io.Serializable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class HomeDataModel implements Serializable{
+public class HomeDataModel implements Parcelable{
 
 	public String name = "";
 	public String quote = "";
@@ -13,6 +14,46 @@ public class HomeDataModel implements Serializable{
 	public String videourl = "";
 	public String bDate = "";
 	public String dDate = "";
+	
+//	public HomeDataModel(String name,String quote,String id,String imageId,String info,String audio,String videourl,String bDate,String dDate){
+//		this.name=name;
+//		this.quote=quote;
+//		this.id=id;
+//		this.imageId=imageId;
+//		this.info=info;
+//		this.audio=audio;
+//		this.videourl=videourl;
+//		this.bDate=bDate;
+//		this.dDate=dDate;
+//	}
+	
+	public HomeDataModel(){
+		
+	}
+	
+	public HomeDataModel(Parcel  in){
+		name=in.readString();
+		quote=in.readString();
+		id=in.readString();
+		imageId=in.readString();
+		info=in.readString();
+		audio=in.readString();
+		videourl=in.readString();
+		bDate=in.readString();
+		dDate=in.readString();
+	}
+	
+	
+	/** * * This field is needed for Android to be able to * create new objects, individually or as arrays. * * 
+	 * This also means that you can use use the default * constructor to create the object and use another * method to hyrdate it as necessary.
+	 *  * * I just find it easier to use the constructor. * It makes sense for the way my brain thinks ;-) 
+	 *  * */ 
+	public static final Parcelable.Creator CREATOR = new Parcelable.Creator() { 
+		public HomeDataModel createFromParcel(Parcel in) { return new HomeDataModel(in); 
+		}  
+		public HomeDataModel[] newArray(int size) { 
+			return new HomeDataModel[size]; 
+		} };
 
 	public String getbDate() {
 		return bDate;
@@ -67,6 +108,28 @@ public class HomeDataModel implements Serializable{
 	}
 	public void setImageId(String imageId) {
 		this.imageId = imageId;
+	}
+
+	@Override
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		// TODO Auto-generated method stub
+		dest.writeString(name);
+		dest.writeString(quote);
+		dest.writeString(id);
+		dest.writeString(imageId);
+		dest.writeString(info);
+		dest.writeString(audio);
+		dest.writeString(videourl);
+		dest.writeString(bDate);
+		dest.writeString(dDate);
+
 	}
 
 	
