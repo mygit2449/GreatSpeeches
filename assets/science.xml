@@ -32,7 +32,7 @@
   <type>ST</type>
   <name>Alfred Nobel</name>
   <img>alfrednobel</img>
-  <audio>       </audio>
+  <audio></audio>
   <bdate>October 21, 1833</bdate>
   <ddate>December 10, 1896</ddate>
   <discoveries>Dynamite</discoveries>
@@ -48,7 +48,7 @@
   <type>ST</type>
   <name>C. V. Raman</name>
   <img>cvraman</img>
-  <audio>       </audio>
+  <audio></audio>
   <bdate>November 7th, 1888</bdate>
   <ddate>November 21, 1970</ddate>
   <discoveries>He was the first Indian scholar who studied wholly in India received the Nobel Prize.Raman effect</discoveries>
@@ -77,7 +77,7 @@
   <type>ST</type>
   <name>Srinivasa Ramanujan</name>
   <img>srinivasaramanujan</img>
-  <audio>       </audio>
+  <audio></audio>
   <bdate>December 22, 1887</bdate>
   <ddate>April 26, 1920</ddate>
   <discoveries>Mathematics</discoveries>

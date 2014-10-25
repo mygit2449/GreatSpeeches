@@ -35,5 +35,30 @@
         <item>@drawable/ranijhansi</item>
         <item>@drawable/sarojininaidu</item>
     </array>
+    <array name="cultural">
+        <item>@drawable/ravishankar</item>
+        <item>@drawable/shakespeare</item>
+        <item>@drawable/aliakbarkhan</item>
+        <item>@drawable/mssubbulakshmi</item>
+        <item>@drawable/panditbhimsenjoshi</item>
+        <item>@drawable/latamangeshkar</item>
+        <item>@drawable/williamhung</item>
+        <item>@drawable/zakirhussain</item>
+        <item>@drawable/michaeljackson</item>
+        <item>@drawable/rahman</item>
+        <item>@drawable/beethoven</item>
+    </array>
 
+    <array name="politicians">
+        <item>@drawable/chandrashekhar</item>
+        <item>@drawable/baltilak</item>
+        <item>@drawable/eban</item>
+        <item>@drawable/bhagatsingh</item>
+        <item>@drawable/sardarpatel</item>
+        <item>@drawable/abraham_lincoln</item>
+        <item>@drawable/rajendra</item>
+        <item>@drawable/gokhale</item>
+        <item>@drawable/ambedkar</item>
+        <item>@drawable/jintao</item>
+    </array>
 </resources>

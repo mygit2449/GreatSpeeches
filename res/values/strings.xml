@@ -18,11 +18,12 @@
     <string name="ok">OK</string>
     <string name="category1">Science &amp; Technology</string>
     <string name="category2">Sports</string>
-    <string name="category3">Entertainment</string>
+    <string name="category3">Cultural</string>
     <string name="category4">Politics</string>
     <string name="category5">Women\'s History</string>
     <string name="title_activity_categories_list_screen">CategoriesListScreen</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
 
 </resources>

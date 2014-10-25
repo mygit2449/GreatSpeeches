@@ -60,6 +60,8 @@ public class DataParser {
 						mHomeDataModelObj.setbDate(parser.nextText());
 					}else if (name.equalsIgnoreCase("ddate")) {
 						mHomeDataModelObj.setdDate(parser.nextText());
+					}else if (name.equalsIgnoreCase("type")) {
+						mHomeDataModelObj.setType(parser.nextText());
 					}
 					break;
 				case XmlPullParser.END_TAG:

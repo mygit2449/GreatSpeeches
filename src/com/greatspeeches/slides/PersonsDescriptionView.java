@@ -17,7 +17,6 @@ import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,7 +41,6 @@ import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.Settings;
 import com.facebook.model.GraphObject;
-import com.greatspeeches.HomeScreen;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.ArcMenu;
 import com.greatspeeches.helper.AudioPlayer;
@@ -63,9 +61,6 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
     private ScreenSlidePagerAdapter mPagerAdapter;
     private Intent receiverIntent = null;
     private int selectPos = 0;
-
-	private static final String twitter_consumer_key = "OvTiZpfMEI442aY1tPHrwQ";
-	private static final String twitter_secret_key = "LKSg5iyz3VtxSnvYZa7cBJ1XTK1GOCeSxBp2kURSqYI";
 	private static final int[] ITEM_DRAWABLES = { R.drawable.facebook, R.drawable.headphone,R.drawable.video_icon,R.drawable.twitter};
 
 	private Button _playBtn, _prevBtn, _nextBtn;
@@ -162,6 +157,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
 		mPager.setAdapter(mPagerAdapter);
 		mPager.setCurrentItem(selectPos);
+		mPager.setOffscreenPageLimit(1);
 		getActionBar().setHomeButtonEnabled(true);
 		getActionBar().setTitle(""+dataList.get(selectPos).getName());
 		_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(selectPos).getImageId(), R.drawable.class));
@@ -176,7 +172,9 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				getActionBar().setTitle(""+dataList.get(position).getName());
 				_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(position).getImageId(), R.drawable.class));
 				invalidateOptionsMenu();
-				mPagerAdapter.getFragment(position).closeVplayer();
+//				mPagerAdapter.getFragment(position).closeVplayer();
+//				mPagerAdapter.getFragment(position).closeYVplayer();
+
 				if (_customPlayer.isPlaying()) {
 					_playBtn.setBackgroundResource(R.drawable.play_button_status);
 					resetAudioPlayer();
@@ -186,6 +184,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 					_playerLayout.setVisibility(View.GONE);
 					resetAudioPlayer();
 				}
+				mPagerAdapter.notifyDataSetChanged();
 			}
 		});
 		
@@ -268,7 +267,8 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	            case android.R.id.home:
 	                // Navigate "up" the demo structure to the launchpad activity.
 	                // See http://developer.android.com/design/patterns/navigation.html for more.
-	                startActivity(new Intent(PersonsDescriptionView.this, HomeScreen.class));
+//	            	getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+//	                startActivity(new Intent(PersonsDescriptionView.this, HomeScreen.class).setAction(getIntent().getAction()));
 	                finish();
 	                return true;
 
@@ -307,6 +307,10 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 //            return ScreenSlidePageFragment.create(HomeScreen.homeDataarr.get(position));
 //        }
 
+        @Override
+        public int getItemPosition(Object object){
+            return ScreenSlidePagerAdapter.POSITION_NONE;
+        }
         @Override
         public int getCount() {
             return dataList.size();
@@ -349,61 +353,68 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	 private void initArcMenu(ArcMenu menu, int[] itemDrawables) {
 	        final int itemCount = itemDrawables.length;
 	        for (int i = 0; i < itemCount; i++) {
-	            ImageView item = new ImageView(this);
-	            item.setImageResource(itemDrawables[i]);
+	        	
+	        	
+	        	
+	        	if(itemDrawables[i] == R.drawable.headphone && (null == dataList.get(selectPos).audio || dataList.get(selectPos).audio.length() == 0)){
+	        		continue ;
+	        	}
+	        	
+	        		ImageView item = new ImageView(this);
+	        		item.setImageResource(itemDrawables[i]);
+	        		
+	        		final int position = i;
+		            menu.addItem(item, new OnClickListener() {
 
-	            final int position = i;
-	            menu.addItem(item, new OnClickListener() {
-
-	                @Override
-	                public void onClick(View v) {
-	                	if(ITEM_DRAWABLES[position] == R.drawable.facebook){
-	                		
-	                		 session = Session.getActiveSession();
-	                			if (!session.isOpened() && !session.isClosed()) { 
-	                				session.openForRead(new Session.OpenRequest(PersonsDescriptionView.this).setCallback(statusCallback));
-	                			} else {
-	                				Session.openActiveSession(PersonsDescriptionView.this, true, statusCallback);
-	                			}
-	                			
-	                	}else if(ITEM_DRAWABLES[position] == R.drawable.headphone){
-	                		
-	                		_playerLayout.startAnimation(bottomToTopAnim);
-	                		bottomToTopAnim.setAnimationListener(new AnimationListener() {
-								
-								@Override
-								public void onAnimationStart(Animation animation) {
-									// TODO Auto-generated method stub
+		                @Override
+		                public void onClick(View v) {
+		                	if(ITEM_DRAWABLES[position] == R.drawable.facebook){
+		                		
+		                		 session = Session.getActiveSession();
+		                			if (!session.isOpened() && !session.isClosed()) { 
+		                				session.openForRead(new Session.OpenRequest(PersonsDescriptionView.this).setCallback(statusCallback));
+		                			} else {
+		                				Session.openActiveSession(PersonsDescriptionView.this, true, statusCallback);
+		                			}
+		                			
+		                	}else if(ITEM_DRAWABLES[position] == R.drawable.headphone){
+		                		
+		                		_playerLayout.startAnimation(bottomToTopAnim);
+		                		bottomToTopAnim.setAnimationListener(new AnimationListener() {
 									
-								}
-								
-								@Override
-								public void onAnimationRepeat(Animation animation) {
-									// TODO Auto-generated method stub
+									@Override
+									public void onAnimationStart(Animation animation) {
+										// TODO Auto-generated method stub
+										
+									}
 									
-								}
-								
-								@Override
-								public void onAnimationEnd(Animation animation) {
-									// TODO Auto-generated method stub
-									_playerLayout.setVisibility(View.VISIBLE);
-									play(dataList.get(selectPos).audio);
-								}
-							});
-	                		
-	                	}else if(ITEM_DRAWABLES[position] == R.drawable.twitter){
-	                		if(network.isConnectingToInternet()){
-	                			startActivity(new Intent(PersonsDescriptionView.this, TwitActivity.class).putExtra("img_name", dataList.get(selectPos).getImageId()).putExtra("quote", dataList.get(selectPos).getQuote()));
-	                		}else{
-	                			Toast.makeText(PersonsDescriptionView.this, "oops!,Please check Internet connection and try again!", Toast.LENGTH_SHORT).show();
-	                		}
-	                	}else if(ITEM_DRAWABLES[position] == R.drawable.video_icon){
-	                		ScreenSlidePageFragment sFragment = mPagerAdapter.getFragment(selectPos);
-	        				sFragment.update();
-	                	}
-				    }
-	            });
-	        }
+									@Override
+									public void onAnimationRepeat(Animation animation) {
+										// TODO Auto-generated method stub
+										
+									}
+									
+									@Override
+									public void onAnimationEnd(Animation animation) {
+										// TODO Auto-generated method stub
+										_playerLayout.setVisibility(View.VISIBLE);
+										play(dataList.get(selectPos).audio);
+									}
+								});
+		                		
+		                	}else if(ITEM_DRAWABLES[position] == R.drawable.twitter){
+		                		if(network.isConnectingToInternet()){
+		                			startActivity(new Intent(PersonsDescriptionView.this, TwitActivity.class).putExtra("img_name", dataList.get(selectPos).getImageId()).putExtra("quote", dataList.get(selectPos).getQuote()));
+		                		}else{
+		                			Toast.makeText(PersonsDescriptionView.this, "oops!,Please check Internet connection and try again!", Toast.LENGTH_SHORT).show();
+		                		}
+		                	}else if(ITEM_DRAWABLES[position] == R.drawable.video_icon){
+		                		ScreenSlidePageFragment sFragment = mPagerAdapter.getFragment(selectPos);
+		        				sFragment.update();
+		                	}
+					    }
+		            });
+	        	}
 	    }
 
 	
@@ -515,8 +526,6 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	 private void performPublish(PendingAction action, boolean allowNoSession) {
 	        if (session != null) {
 	            pendingAction = action;
-	      		 Log.v(getClass().getName(), "Check.."+session.isOpened()+"..."+hasPublishPermission());
-
 	            if (hasPublishPermission()) {
 	                // We can do the action right away.
 	                handlePendingAction();
@@ -595,4 +604,6 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 			}
 	        
 	    }
+	 
+	 
 }

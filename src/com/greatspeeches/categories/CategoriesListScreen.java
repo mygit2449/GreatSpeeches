@@ -58,9 +58,12 @@ public class CategoriesListScreen extends FragmentActivity {
 			catDatarr = new DataParser(CategoriesListScreen.this).parser("sports.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.sports);
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category3))){
-			catDatarr = new DataParser(CategoriesListScreen.this).parser("science.xml");
+			catDatarr = new DataParser(CategoriesListScreen.this).parser("cultural.xml");
+			imagesHere = getResources().obtainTypedArray(R.array.cultural);
+
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category4))){
-			
+			catDatarr = new DataParser(CategoriesListScreen.this).parser("politicians.xml");
+			imagesHere = getResources().obtainTypedArray(R.array.politicians);
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category5))){
 			catDatarr = new DataParser(CategoriesListScreen.this).parser("womens.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.womens);

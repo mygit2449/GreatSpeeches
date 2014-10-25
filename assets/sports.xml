@@ -5,7 +5,7 @@
   <type>Sports</type>
   <name>Dhyan Chand</name>
   <img>dhyanchand</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=Kp5BIHbZJwU</video>
   <bdate>August 29, 1905</bdate> 
   <ddate>December 3, 1979</ddate>  
@@ -40,7 +40,7 @@
   <type>Sports</type>
   <name>Sachin Tendulkar</name>
   <img>sachin</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=83oNPFZSJik</video>
   <bdate>April 24, 1973</bdate> 
   <quote>Every individual has his own style, his own way of presenting himself on and off the field.</quote>
@@ -57,7 +57,7 @@
   <type>Sports</type>
   <name>Pele</name>
   <img>pele</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=T7HFq1gKeUU</video>
   <bdate>October 23, 1940</bdate>
   <quote>Enthusiasm is everything. It must be taut and vibrating like a guitar string.</quote>
@@ -78,7 +78,7 @@
   <type>Sports</type>
   <name>Muhammad Ali</name>
   <img>muhammad_ali</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=ANciqN3lydI</video>
   <bdate>January 17, 1942</bdate>
   <quote>He who is not courageous enough to take risks will accomplish nothing in life.</quote>
@@ -95,7 +95,7 @@
   <type>Sports</type>
   <name>Carl Lewis</name>
   <img>carllewis</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=OhKI7sH0O20</video>
   <bdate>July 1, 1961</bdate>
   <quote>The trials on the road to world harmony are no greater than the courage of those who accept the challenge.</quote>
@@ -112,7 +112,7 @@
   <type>Sports</type>
   <name>Jackie Joyner-Kersee</name>
   <img>jackie</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=_Z-QfDiV2XA</video>
   <bdate>March 3, 1962</bdate>
   <quote>It's better to look ahead and prepare, than to look back and regret.</quote>
@@ -127,7 +127,7 @@
   <type>Sports</type>
   <name>Ayrton Senna</name>
   <img>ayrton</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=6nS8W3b3wvY</video>
   <bdate>March 21, 1960</bdate>
   <ddate>May 1, 1994</ddate>  
@@ -143,10 +143,10 @@
   <type>Sports</type>
   <name>Milkha Singh</name>
   <img>milkhasingh</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=DYXH8SzWKck</video>
   <bdate>November 20, 1935</bdate> 
-  <quote></quote>
+  <quote>There is no joy in competition if it is to be unfair.</quote>
   <info>Milkha Singh has been an Indian Athlete, and considered to be one of the greatest Athletes the nation has ever produced. Also, nicknamed as the Flying Sikh, Milkha has been the only Indian Athlete till date to have broken an Olympic Record, still he lost the Bronze Medal in the 400m event at Rome Olympic Games 1960 by just 0.1 seconds.
 		
 		Probably the best period during Milkha’s career as an Athlete arrived between the year 1958 and 1960. He won Gold Medals in both 200m and 400m events at the Tokyo Asian Games 1958, clocking 21.6 seconds and 47 seconds respectively. At the Cardiff Commonwealth Games held the same year, he improved his 400m timing to 46.16 seconds, and grabbed a Gold Medal again. 
@@ -160,7 +160,7 @@
   <type>Sports</type>
   <name>Viswanathan Anand</name>
   <img>vishyanand</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=ny9LL4YAJc0</video>
   <bdate>December 11, 1969</bdate> 
   <quote>There is always the risk of being over-confident when you are preparing to face a weaker player.</quote>
@@ -177,7 +177,7 @@
   <type>Sports</type>
   <name>Sushil Kumar</name>
   <img>sushilkumar</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=DBI24NT1tIQ</video>
   <bdate>May 26, 1983</bdate> 
   <quote></quote>
@@ -194,7 +194,7 @@
   <type>Sports</type>
   <name>Kapil Dev</name>
   <img>kapil</img>
-  <audio>Not found</audio>
+  <audio></audio>
   <video>http://www.youtube.com/watch?v=78sh10Bz_YY</video>
   <bdate>January 6, 1959</bdate> 
   <quote>When you have to work, work with a smile.</quote>

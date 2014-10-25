@@ -4,6 +4,8 @@ import java.lang.reflect.Field;
 
 public class GreateSpeechesUtil {
 
+	  public static final String 	yOUTUBEdEVELOPERkEY = "AIzaSyBXQz3Hm2vdDThGelmJc6731S9etuzb1Nc";
+
 	 public static int getResId(String variableName, Class<?> c) {
 	    	
 	        try {

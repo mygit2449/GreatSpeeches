@@ -14,6 +14,7 @@ public class HomeDataModel implements Parcelable{
 	public String videourl = "";
 	public String bDate = "";
 	public String dDate = "";
+	public String type = "";
 	
 //	public HomeDataModel(String name,String quote,String id,String imageId,String info,String audio,String videourl,String bDate,String dDate){
 //		this.name=name;
@@ -27,6 +28,14 @@ public class HomeDataModel implements Parcelable{
 //		this.dDate=dDate;
 //	}
 	
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	public HomeDataModel(){
 		
 	}
@@ -41,6 +50,7 @@ public class HomeDataModel implements Parcelable{
 		videourl=in.readString();
 		bDate=in.readString();
 		dDate=in.readString();
+		type=in.readString();
 	}
 	
 	
@@ -129,7 +139,7 @@ public class HomeDataModel implements Parcelable{
 		dest.writeString(videourl);
 		dest.writeString(bDate);
 		dest.writeString(dDate);
-
+		dest.writeString(type);
 	}
 
 	

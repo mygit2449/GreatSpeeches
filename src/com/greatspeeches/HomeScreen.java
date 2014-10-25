@@ -49,6 +49,7 @@ public class HomeScreen extends Activity implements OnClickListener{
     public static Typeface arimoype,alextype;
     private RadioButton popular, categories;
     private List<String> categoriesList = null;
+    private boolean doubleback = false;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -87,9 +88,10 @@ public class HomeScreen extends Activity implements OnClickListener{
 					long arg3) {
 				// TODO Auto-generated method stub
 				if (popular.isChecked()) {
-					startActivity(new Intent(HomeScreen.this, PersonsDescriptionView.class).putExtra("position", arg2).putParcelableArrayListExtra("popularItems", homeDataarr));
+					startActivity(new Intent(HomeScreen.this, PersonsDescriptionView.class).putExtra("position", arg2).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
 				}else {
-					startActivity(new Intent(HomeScreen.this, CategoriesListScreen.class).putExtra("categoryType", categoriesList.get(arg2)));
+					startActivity(new Intent(HomeScreen.this, CategoriesListScreen.class).putExtra("categoryType", categoriesList.get(arg2)).setAction("fromCat"));
+					finish();
 				}
 			}
 		});
@@ -150,6 +152,8 @@ public class HomeScreen extends Activity implements OnClickListener{
 							mHomeDataModelObj.setAudio(parser.nextText());
 						}else if (name.equalsIgnoreCase("video")) {
 							mHomeDataModelObj.setVideourl(parser.nextText());
+						}else if (name.equalsIgnoreCase("type")) {
+							mHomeDataModelObj.setType(parser.nextText());
 						}
 						break;
 					case XmlPullParser.END_TAG:
@@ -271,4 +275,26 @@ public class HomeScreen extends Activity implements OnClickListener{
 				break;
 			}
 		}
+	 	
+	 	
+ 	@Override
+ 	public void onBackPressed() {
+ 		if (doubleback) {
+ 			android.app.FragmentManager fm = getFragmentManager();
+ 			for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {    
+ 			    fm.popBackStack();
+ 			}
+            finish();
+        } else {
+        	doubleback = true;
+            Toast.makeText(HomeScreen.this, "Press the back key again to close the app.", Toast.LENGTH_SHORT).show();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                	doubleback = false;
+                }
+            }, 2000);
+        }
+ 	}
+	 	
 }
