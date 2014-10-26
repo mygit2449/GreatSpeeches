@@ -154,6 +154,10 @@ public class HomeScreen extends Activity implements OnClickListener{
 							mHomeDataModelObj.setVideourl(parser.nextText());
 						}else if (name.equalsIgnoreCase("type")) {
 							mHomeDataModelObj.setType(parser.nextText());
+						}else if (name.equalsIgnoreCase("bdate")) {
+							mHomeDataModelObj.setbDate(parser.nextText());
+						}else if (name.equalsIgnoreCase("ddate")) {
+							mHomeDataModelObj.setdDate(parser.nextText());
 						}
 						break;
 					case XmlPullParser.END_TAG:

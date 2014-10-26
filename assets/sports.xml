@@ -7,8 +7,8 @@
   <img>dhyanchand</img>
   <audio></audio>
   <video>http://www.youtube.com/watch?v=Kp5BIHbZJwU</video>
-  <bdate>August 29, 1905</bdate> 
-  <ddate>December 3, 1979</ddate>  
+  <bdate>August 29, 1905, Allahabad, India</bdate> 
+  <ddate> December 3, 1979, Delhi, India</ddate>  
   <quote>This is not a game of hockey, but magic. Dhyan Chand is in fact the magician of hockey.</quote>
   <info>Major Dhyan ‘Chand’ Singh
 		August 29, 1905 – December 3, 1979
@@ -42,7 +42,7 @@
   <img>sachin</img>
   <audio></audio>
   <video>http://www.youtube.com/watch?v=83oNPFZSJik</video>
-  <bdate>April 24, 1973</bdate> 
+  <bdate> April 24, 1973, Mumbai, India</bdate> 
   <quote>Every individual has his own style, his own way of presenting himself on and off the field.</quote>
   <info>Sachin Tendulkar was born April 24, 1973, in Bombay, India. Given his first cricket bat at the age 11, Tendulkar was just 16 when he became India's youngest Test cricketer. In 2005 he became the first cricketer to score 35 centuries (100 runs in a single inning) in Test play. In 2007 Tendulkar reached another major milestone, becoming the first player to record 15,000 runs in one-day international play. Considered by many to be the greatest cricket player of all time, Sendulkar took home the World Cup with his team in 2011 and retired from the sport two years later.
   
@@ -59,7 +59,7 @@
   <img>pele</img>
   <audio></audio>
   <video>http://www.youtube.com/watch?v=T7HFq1gKeUU</video>
-  <bdate>October 23, 1940</bdate>
+  <bdate>October 23, 1940, Três Corações, Minas Gerais, Brazil</bdate>
   <quote>Enthusiasm is everything. It must be taut and vibrating like a guitar string.</quote>
   <info>Pele is the most iconic footballer of the twentieth Century. He epitomised the flair, joy and passion the Brazilians bought to the game.
 
@@ -97,7 +97,7 @@
   <img>carllewis</img>
   <audio></audio>
   <video>http://www.youtube.com/watch?v=OhKI7sH0O20</video>
-  <bdate>July 1, 1961</bdate>
+  <bdate>July 1, 1961, Birmingham, Alabama, United States</bdate>
   <quote>The trials on the road to world harmony are no greater than the courage of those who accept the challenge.</quote>
   <info>Carl Lewis was born in Birmingham, Alabama, US on 1st July 1961. He become one of the greatest track and field stars of al time. His career spanned from 1979 to 1996 and included nine Olympic gold medals.
 
@@ -114,7 +114,7 @@
   <img>jackie</img>
   <audio></audio>
   <video>http://www.youtube.com/watch?v=_Z-QfDiV2XA</video>
-  <bdate>March 3, 1962</bdate>
+  <bdate>March 3, 1962, East St. Louis, Illinois, United States</bdate>
   <quote>It's better to look ahead and prepare, than to look back and regret.</quote>
   <info>Joyner showed great enthusiasm for athletics early on, and as a teenager she won the first of four consecutive National Junior Pentathlon championships. In high school she was a determined student and athlete, graduating near the top of her class and competing on the school’s volleyball, basketball, and track teams. As a junior, she set the Illinois high-school girls’ long jump record at 6.68 metres (20 feet 7.5 inches). Her high-school success led to a scholarship to the University of California, Los Angeles, where she initially focused on basketball and the long jump.
   
@@ -129,8 +129,8 @@
   <img>ayrton</img>
   <audio></audio>
   <video>http://www.youtube.com/watch?v=6nS8W3b3wvY</video>
-  <bdate>March 21, 1960</bdate>
-  <ddate>May 1, 1994</ddate>  
+  <bdate>March 21, 1960, São Paulo, São Paulo, Brazil</bdate>
+  <ddate>May 1, 1994, Imola, Italy</ddate>  
   <quote>On a given day, a given circumstance, you think you have a limit.</quote>
   <info>Ayrton Senna da Silva (March 21, 1960 – May 1, 1994), better known as Ayrton Senna, was a Brazilian Formula One driver who won the world championship three times, in 1988, 1990 and in 1991. He is widely regarded as one of the greatest and most skilful drivers of all time.
 
@@ -145,7 +145,7 @@
   <img>milkhasingh</img>
   <audio></audio>
   <video>http://www.youtube.com/watch?v=DYXH8SzWKck</video>
-  <bdate>November 20, 1935</bdate> 
+  <bdate>November 20, 1935, Govindpura, Pakistan</bdate> 
   <quote>There is no joy in competition if it is to be unfair.</quote>
   <info>Milkha Singh has been an Indian Athlete, and considered to be one of the greatest Athletes the nation has ever produced. Also, nicknamed as the Flying Sikh, Milkha has been the only Indian Athlete till date to have broken an Olympic Record, still he lost the Bronze Medal in the 400m event at Rome Olympic Games 1960 by just 0.1 seconds.
 		
@@ -162,7 +162,7 @@
   <img>vishyanand</img>
   <audio></audio>
   <video>http://www.youtube.com/watch?v=ny9LL4YAJc0</video>
-  <bdate>December 11, 1969</bdate> 
+  <bdate> December 11, 1969, Mayiladuthurai, India</bdate> 
   <quote>There is always the risk of being over-confident when you are preparing to face a weaker player.</quote>
   <info>Vishwanathan Anand a young Indian boy used to religiously solve almost all the chess puzzles and theories aired by local Philippines T V stations in the late 70s. This boy used to win almost every time. His winning streak led to the studios calling him up and asking him not to participate so that others also got a chance. This boy was none other than the Indian Chess Wizard, Vishwanathan Anand.
   
@@ -172,6 +172,7 @@
   </info>
 </item>
 
+<!--  
 <item>
   <id>10</id>
   <type>Sports</type>
@@ -188,7 +189,7 @@
 		This was the second medal for India at the Beijing Olympics after shooter Abhinav Bindra claimed the first ever individual Olympic gold medal for the country in the 10 m Air Rifle event. This was also the second medal for India in wrestling, and the first since K D Jadhav's bronze medal at the 1952 Helsinki Olympic Games.
   </info>
 </item>
- 
+ -->
  <item>
   <id>11</id>
   <type>Sports</type>
@@ -196,7 +197,7 @@
   <img>kapil</img>
   <audio></audio>
   <video>http://www.youtube.com/watch?v=78sh10Bz_YY</video>
-  <bdate>January 6, 1959</bdate> 
+  <bdate>January 6, 1959, Chandigarh, India</bdate> 
   <quote>When you have to work, work with a smile.</quote>
   <info>Considered to be one of the greatest cricketing all-rounders of all time, Kapil Dev is a former Indian cricketer best known for leading his team to a World Cup victory in 1983. Confident, charismatic and highly skilled, he was the Indian team's main strike bowler for the major part of his career. During his heydays he used to bamboozle batsmen with his prodigious swing. Dev was great not just with the ball; he was equally talented with the bat too. An expert at hooking and driving, he often provided India with the crucial runs needed to win a match even if the top-order failed to score. Born into a middle-class family in Haryana he became interested in cricket at a young age. He played for the Haryana cricket team at the beginning of his career eventually making his way into the national team, thanks to his aggressive play and high energy level. He cemented his place in the Indian team with his impressive performances and was soon made the captain. It was under his leadership that India went on to win the 1983 World Cup in spite of being the underdogs.
 </info>

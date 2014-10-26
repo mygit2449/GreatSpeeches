@@ -17,6 +17,8 @@
 		<type>Popular</type>
 		<name>John F. Kennedy</name>
 		<img>john_kennedy</img>
+		<bdate>May 29, 1917, Brookline, Massachusetts, United States</bdate>
+  		<ddate>November 22, 1963, Dallas, Texas, United States</ddate>  
 		<audio>kenedy.mp3</audio>
 		<quote>Forgive your enemies, but never forget their names</quote>
 		<!--  <video>http://www.youtube.com/watch?v=6DbhTwahqPg</video> -->
@@ -29,6 +31,8 @@
 		<type>Popular</type>
 		<name>Gandhi</name>
 		<img>gandhi</img>
+		<bdate>October 2, 1869, Porbandar, India</bdate>
+  		<ddate>January 30, 1948, New Delhi, India</ddate>  
 		<audio>gandhi.mp3</audio>
 		<!-- <video>http://www.youtube.com/watch?v=Dcn6OmGF5Rk</video> -->
 		<video>gandhi</video>
@@ -50,6 +54,8 @@
 		<type>Popular</type>
 		<name>Patrick Henry</name>
 		<img>patrick_henry</img>
+		<bdate>May 29, 1736, Hanover County, Virginia, United States</bdate>
+  		<ddate>June 6, 1799, Red Hill Patrick Henry National Memorial, Virginia, United States</ddate> 
 		<audio>henry.mp3</audio>
 		<!-- <video>http://www.youtube.com/watch?v=iEOets_L7vg</video> -->
 		<video>phenry</video>
@@ -80,6 +86,8 @@
 		<type>Popular</type>
 		<name>Winston Churchill</name>
 		<img>churchill</img>
+		<bdate>November 30, 1874, Blenheim Palace, Woodstock, United Kingdom</bdate>
+  		<ddate>January 24, 1965, Hyde Park Gate, United Kingdom</ddate>  
 		<audio>churchil.mp3</audio>
 		<!-- <video>http://www.youtube.com/watch?v=pgfdy5WJ6s4</video> -->
 		<video>wcc</video>
@@ -91,6 +99,8 @@
 		<type>Popular</type>
 		<name>Martin Luther King</name>
 		<img>martin_luther_king</img>
+		<bdate>January 15, 1929, Atlanta, Georgia, United States</bdate>
+  		<ddate>April 4, 1968, Memphis, Tennessee, United States</ddate>  
 		<audio>ll_king.mp3</audio>
 		<!-- <video>http://www.youtube.com/watch?v=Tb9m81OwYH0</video> -->
 		<video>mlk</video>
@@ -102,6 +112,8 @@
 		<type>Popular</type>
 		<name>Lyndon B. Johnson</name>
 		<img>lyndon_johnson</img>
+		<bdate>August 27, 1908, Stonewall, Texas, United States</bdate>
+  		<ddate>January 22, 1973, Stonewall, Texas, United States</ddate>  
 		<audio>lyndon_johnson.mp3</audio>
 		<!-- <video>http://www.youtube.com/watch?v=Lq_6NroQTWE</video> -->
 		<video>johson</video>
@@ -113,6 +125,8 @@
 		<type>Popular</type>
 		<name>Ronald Reagan</name>
 		<img>reagan</img>
+		<bdate>February 6, 1911, Tampico, Illinois, United States</bdate>
+  		<ddate>June 5, 2004, Bel-Air, Los Angeles, California, United States</ddate>  
 		<audio>regan.mp3</audio>
 		<!-- <video>http://www.youtube.com/watch?v=Wt8y18YFH70</video> -->
 		<video>regan</video>
@@ -125,6 +139,8 @@
 		<type>Popular</type>
 		<name>Swami Vivekananda</name>
 		<img>vivekananda</img>
+		<bdate>January 12, 1863, Kolkata,India</bdate>
+  		<ddate>July 4, 1902, Belur,  India</ddate>  
 		<audio>vivekananda.mp3</audio>
 		<!-- <video>http://www.youtube.com/watch?v=Yt9hN114mjE</video> -->
 		<video>sv</video>

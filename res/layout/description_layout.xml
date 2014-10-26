@@ -32,8 +32,7 @@
                 android:id="@+id/video_container"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                >
+                android:visibility="gone" >
             </FrameLayout>
 
             <ImageView
@@ -47,15 +46,85 @@
         </RelativeLayout>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/descLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mediaRel" 
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/bStrip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/bDateRel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/bDateTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#999999"
+                    android:padding="5dp"
+                    android:text="Born:"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bDateTitle"
+                    android:padding="5dp"
+                    android:text="October 2, 1869, Porbandar"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dDateRel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bDateRel" >
+
+                <TextView
+                    android:id="@+id/dDateTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#999999"
+                    android:padding="5dp"
+                    android:text="Died:"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dDateTitle"
+                    android:padding="5dp"
+                    android:text="October 2, 1869, Porbandar"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/person_info"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/mediaRel"
+        android:layout_below="@+id/descLayout"
         android:layout_marginTop="5dp"
         android:scrollbars="vertical"
         android:textColor="#ffffff"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textSize="16dp" />
 
 </RelativeLayout>

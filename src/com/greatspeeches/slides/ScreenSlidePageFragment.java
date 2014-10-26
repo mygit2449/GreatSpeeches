@@ -16,6 +16,8 @@
 
 package com.greatspeeches.slides;
 
+import java.lang.reflect.Field;
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.media.MediaPlayer;
@@ -25,7 +27,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
 import android.support.v4.app.FragmentTransaction;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -39,7 +40,6 @@ import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.greatspeeches.HomeScreen;
 import com.greatspeeches.R;
@@ -129,17 +129,31 @@ public class ScreenSlidePageFragment extends Fragment{
 			videoId = mPersonObj.getVideourl().substring(indexPos+1, mPersonObj.getVideourl().length());
 		}
 		
+		YouTubeVideoPlayer fragB = (YouTubeVideoPlayer) myContext.getSupportFragmentManager().findFragmentByTag("videoFrag");
+		
+		if(null != fragB){
+			FragmentManager manager =myContext.getSupportFragmentManager();
+			FragmentTransaction trans = manager.beginTransaction();
+			trans.hide(fragB);
+			trans.commit();
+			manager.popBackStack();
+		}
+		
     	personImg.setVisibility(View.GONE);
     	fragmentsLayout.setVisibility(View.VISIBLE);
 		myFragment = YouTubeVideoPlayer.newInstance(videoId, handler);
+		
+		
 		FragmentTransaction fts = myContext.getSupportFragmentManager().beginTransaction();
+
 		// Replace the content of the container
 		fts.replace(R.id.video_container, myFragment,"videoFrag"); 
 		
 		// Append this transaction to the backstack
-		fts.addToBackStack("video");
+		fts.addToBackStack(null);
 		// Commit the changes
 		fts.commit();
+		myContext.getSupportFragmentManager().executePendingTransactions();
 		
     }
     
@@ -169,20 +183,19 @@ public class ScreenSlidePageFragment extends Fragment{
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout containing a title and body text.
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.description_layout, container, false); 
         
-    	final FragmentManager fragmentManager = myContext.getSupportFragmentManager();
-    	fragmentManager.addOnBackStackChangedListener(new OnBackStackChangedListener() {
-            @Override
-            public void onBackStackChanged() {
-        		if (fragmentManager.getBackStackEntryCount() == 0) {
-        		    closeYVplayer();
-        		}
-            }
-        });
+//    	final FragmentManager fragmentManager = myContext.getSupportFragmentManager();
+//    	fragmentManager.addOnBackStackChangedListener(new OnBackStackChangedListener() {
+//            @Override
+//            public void onBackStackChanged() {
+//        		if (fragmentManager.getBackStackEntryCount() == 0) {
+//        		    closeYVplayer();
+//        		}
+//            }
+//        });
         
         
         fragmentsLayout = (FrameLayout)rootView.findViewById(R.id.video_container);
@@ -200,6 +213,18 @@ public class ScreenSlidePageFragment extends Fragment{
         videoRel.setOnTouchListener(customTouchListener);
         fragmentsLayout.setOnTouchListener(customTouchListener);
 
+        if(null != mPersonObj.getdDate() && mPersonObj.getdDate().length() == 0){
+        	RelativeLayout dRel = (RelativeLayout)rootView.findViewById(R.id.dDateRel);
+        	dRel.setVisibility(View.GONE);
+        }
+        
+        TextView bDateTxt = (TextView)rootView.findViewById(R.id.bDate);
+        bDateTxt.setText(""+mPersonObj.getbDate());
+        TextView dDateTxt = (TextView)rootView.findViewById(R.id.dDate);
+        dDateTxt.setText(""+mPersonObj.getdDate());
+
+        
+        
         closeImg.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -243,5 +268,18 @@ public class ScreenSlidePageFragment extends Fragment{
 		}
 	};
     
-    
+	 @Override
+	    public void onDetach() {
+	        super.onDetach();
+	        try {
+	            Field childFragmentManager = Fragment.class
+	                    .getDeclaredField("mChildFragmentManager");
+	            childFragmentManager.setAccessible(true);
+	            childFragmentManager.set(this, null);
+	        } catch (NoSuchFieldException e) {
+	            throw new RuntimeException(e);
+	        } catch (IllegalAccessException e) {
+	            throw new RuntimeException(e);
+	        }
+	    }
 }
