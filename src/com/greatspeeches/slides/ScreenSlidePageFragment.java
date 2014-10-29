@@ -40,6 +40,13 @@ import android.widget.MediaController;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayer.ErrorReason;
+import com.google.android.youtube.player.YouTubePlayer.OnInitializedListener;
+import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
+import com.google.android.youtube.player.YouTubePlayer.Provider;
+import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 import com.greatspeeches.HomeScreen;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.GreateSpeechesUtil;
@@ -63,8 +70,10 @@ public class ScreenSlidePageFragment extends Fragment{
     
 	private FrameLayout fragmentsLayout;
 
-	private YouTubeVideoPlayer myFragment = null;
-	
+	public YouTubePlayer activePlayer;
+	String videoId =  "";
+
+
     /**
      * Factory method for this fragment class. Constructs a new fragment for the given page number.
      */
@@ -90,6 +99,7 @@ public class ScreenSlidePageFragment extends Fragment{
 
     	if(mPersonObj.getType().equalsIgnoreCase("Popular")){
     		personImg.setVisibility(View.GONE);
+    		videoRel.setVisibility(View.VISIBLE);
     		cVideoView.setVisibility(View.VISIBLE);
     		cVideoView.setPlayPauseListener(new CustomVideoView.PlayPauseListener() {
     			@Override
@@ -120,35 +130,40 @@ public class ScreenSlidePageFragment extends Fragment{
     
     public void playYutubeVideo(){
     	
-		String videoId =  "";
-		int indexPos = mPersonObj.getVideourl().indexOf("=");
-		if(indexPos > 0){
-			videoId = mPersonObj.getVideourl().substring(indexPos+1, mPersonObj.getVideourl().length());
-		}
-		
-//		YouTubeVideoPlayer fragB = (YouTubeVideoPlayer) myContext.getSupportFragmentManager().findFragmentByTag("videoFrag");
-//		
-//		if(null != fragB){
-//			FragmentManager manager =myContext.getSupportFragmentManager();
-//			FragmentTransaction trans = manager.beginTransaction();
-//			trans.hide(fragB);
-//			trans.commit();
-//			manager.popBackStack();
-//		}
-		
-		myFragment = YouTubeVideoPlayer.newInstance(videoId, handler);
-		
-		
-		FragmentTransaction fts = myContext.getSupportFragmentManager().beginTransaction();
+		if(mPersonObj.getVideourl().length() > 0){
+			int indexPos = mPersonObj.getVideourl().indexOf("=");
+			if(indexPos > 0){
+				videoId = mPersonObj.getVideourl().substring(indexPos+1, mPersonObj.getVideourl().length());
+			}
 
-		// Replace the content of the container
-		fts.replace(R.id.video_container, myFragment,"videoFrag"); 
-		
-		// Append this transaction to the backstack
-		fts.addToBackStack(null);
-		// Commit the changes
-		fts.commit();
-		myContext.getSupportFragmentManager().executePendingTransactions();
+			YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
+			FragmentTransaction fts = myContext.getSupportFragmentManager().beginTransaction();
+			// Replace the content of the container
+			fts.replace(R.id.video_container, youTubePlayerFragment,"videoFrag"); 
+			// Append this transaction to the backstack
+			fts.addToBackStack("videoFrag");
+			// Commit the changes
+			fts.commit();
+			
+			youTubePlayerFragment.initialize(GreateSpeechesUtil.yOUTUBEdEVELOPERkEY, new OnInitializedListener() {
+			    @Override
+			    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
+			            // Play, cue or whatever you want to do with the player
+			    	 activePlayer = player;
+		                activePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+		                activePlayer.setPlayerStateChangeListener(videoListener);
+		                if (!wasRestored) {
+		                    activePlayer.loadVideo(videoId, 0);
+		                }
+			    }
+	
+				@Override
+				public void onInitializationFailure(Provider arg0,
+						YouTubeInitializationResult arg1) {
+					// TODO Auto-generated method stub
+				}
+			});
+		}
     }
     
     
@@ -161,6 +176,15 @@ public class ScreenSlidePageFragment extends Fragment{
     }
     
     public void closeYVplayer(){
+    	YouTubeVideoPlayer fragB = (YouTubeVideoPlayer) myContext.getSupportFragmentManager().findFragmentByTag("videoFrag");
+    	FragmentManager manager =myContext.getSupportFragmentManager();
+		if(null != fragB){
+			FragmentTransaction trans = manager.beginTransaction();
+			trans.remove(fragB);
+			trans.commit();
+			manager.popBackStack();
+		}
+		
       	FragmentManager fragmentManager = myContext.getSupportFragmentManager();
 		if (fragmentManager.getBackStackEntryCount() > 0) {
 		    fragmentManager.popBackStack();
@@ -216,8 +240,6 @@ public class ScreenSlidePageFragment extends Fragment{
         bDateTxt.setText(""+mPersonObj.getbDate());
         TextView dDateTxt = (TextView)rootView.findViewById(R.id.dDate);
         dDateTxt.setText(""+mPersonObj.getdDate());
-
-        
         
         closeImg.setOnClickListener(new OnClickListener() {
 			@Override
@@ -266,4 +288,40 @@ public class ScreenSlidePageFragment extends Fragment{
 		}
 	};
  
+
+	PlayerStateChangeListener videoListener = new   PlayerStateChangeListener() {
+		
+		@Override
+		public void onVideoStarted() {
+			// TODO Auto-generated method stub
+			handler.sendEmptyMessage(3);
+		}
+		
+		@Override
+		public void onVideoEnded() {
+			// TODO Auto-generated method stub
+			handler.sendEmptyMessage(2);
+		}
+		
+		@Override
+		public void onLoading() {
+			// TODO Auto-generated method stub
+		}
+		
+		@Override
+		public void onLoaded(String arg0) {
+			// TODO Auto-generated method stub
+		}
+		
+		@Override
+		public void onError(ErrorReason arg0) {
+			// TODO Auto-generated method stub
+		}
+		
+		@Override
+		public void onAdStarted() {
+			// TODO Auto-generated method stub
+		}
+	};
+	
 }

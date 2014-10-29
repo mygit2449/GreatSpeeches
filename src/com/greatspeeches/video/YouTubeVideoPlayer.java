@@ -1,7 +1,10 @@
 package com.greatspeeches.video;
 
+import java.lang.reflect.Field;
+
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +57,8 @@ public class YouTubeVideoPlayer extends YouTubePlayerSupportFragment{
         });
     }
 	
-PlayerStateChangeListener videoListener = new   PlayerStateChangeListener() {
+
+    PlayerStateChangeListener videoListener = new   PlayerStateChangeListener() {
 		
 		@Override
 		public void onVideoStarted() {

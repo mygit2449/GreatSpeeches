@@ -12,6 +12,7 @@ import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -294,8 +295,10 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
      */
     private class ScreenSlidePagerAdapter extends FixedFragmentStatePagerAdapter {
 		private SparseArray<WeakReference<ScreenSlidePageFragment>> mPageReferenceMap = new SparseArray<WeakReference<ScreenSlidePageFragment>>();
-        public ScreenSlidePagerAdapter(FragmentManager fm) {
+		FragmentManager fm;
+		public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
+            this.fm=fm;
         }
 
 //        @Override
@@ -326,11 +329,41 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
             }
         }
         
-        public Object instantiateItem(ViewGroup container, int position) {
+        @Override 
+        public void destroyItem(ViewGroup container, int position, Object object) {
+           mPageReferenceMap.remove(Integer.valueOf(position));
+           super.destroyItem(container, position, object);
+        } 
+        
+        /*
+         * pulled from FragmentStatePagerAdapter.java
+         * - capitalize on the fact that FSPA saves state as "f"+index
+         */
+        public void restoreState(Parcelable state, ClassLoader loader) {
+            super.restoreState(state, loader);
 
+            mPageReferenceMap.clear();
+
+            final Bundle bundle = (Bundle)state;
+            bundle.setClassLoader(loader);
+            final Parcelable[] fss = bundle.getParcelableArray("states");
+
+            final Iterable<String> keys = bundle.keySet();
+            for (final String key : keys) {
+                if (!key.startsWith("f")) continue;
+
+                final int position = Integer.parseInt(key.substring(1));
+                final Fragment f = fm.getFragment(bundle, key);
+                if (f != null) {
+                    // update our cache of fragments the same way
+                	mPageReferenceMap.put(position, new WeakReference<ScreenSlidePageFragment>((ScreenSlidePageFragment) f));
+                }
+            }
+        }
+        
+        public Object instantiateItem(ViewGroup container, int position) {
         	ScreenSlidePageFragment screenFragment = ScreenSlidePageFragment.create(dataList.get(position));
 			mPageReferenceMap.put(Integer.valueOf(position), new WeakReference<ScreenSlidePageFragment>(screenFragment));
-
 			return super.instantiateItem(container, position);
 		}
         
