@@ -16,17 +16,16 @@
 
 package com.greatspeeches.slides;
 
-import java.lang.reflect.Field;
-
 import android.app.Activity;
-import android.app.Fragment;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
 import android.support.v4.app.FragmentTransaction;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -89,10 +88,8 @@ public class ScreenSlidePageFragment extends Fragment{
         
     public void update(){
 
-    	videoRel.setVisibility(View.VISIBLE);
-    	personImg.setVisibility(View.GONE);
-    	
     	if(mPersonObj.getType().equalsIgnoreCase("Popular")){
+    		personImg.setVisibility(View.GONE);
     		cVideoView.setVisibility(View.VISIBLE);
     		cVideoView.setPlayPauseListener(new CustomVideoView.PlayPauseListener() {
     			@Override
@@ -129,18 +126,16 @@ public class ScreenSlidePageFragment extends Fragment{
 			videoId = mPersonObj.getVideourl().substring(indexPos+1, mPersonObj.getVideourl().length());
 		}
 		
-		YouTubeVideoPlayer fragB = (YouTubeVideoPlayer) myContext.getSupportFragmentManager().findFragmentByTag("videoFrag");
+//		YouTubeVideoPlayer fragB = (YouTubeVideoPlayer) myContext.getSupportFragmentManager().findFragmentByTag("videoFrag");
+//		
+//		if(null != fragB){
+//			FragmentManager manager =myContext.getSupportFragmentManager();
+//			FragmentTransaction trans = manager.beginTransaction();
+//			trans.hide(fragB);
+//			trans.commit();
+//			manager.popBackStack();
+//		}
 		
-		if(null != fragB){
-			FragmentManager manager =myContext.getSupportFragmentManager();
-			FragmentTransaction trans = manager.beginTransaction();
-			trans.hide(fragB);
-			trans.commit();
-			manager.popBackStack();
-		}
-		
-    	personImg.setVisibility(View.GONE);
-    	fragmentsLayout.setVisibility(View.VISIBLE);
 		myFragment = YouTubeVideoPlayer.newInstance(videoId, handler);
 		
 		
@@ -154,7 +149,6 @@ public class ScreenSlidePageFragment extends Fragment{
 		// Commit the changes
 		fts.commit();
 		myContext.getSupportFragmentManager().executePendingTransactions();
-		
     }
     
     
@@ -187,15 +181,15 @@ public class ScreenSlidePageFragment extends Fragment{
         // Inflate the layout containing a title and body text.
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.description_layout, container, false); 
         
-//    	final FragmentManager fragmentManager = myContext.getSupportFragmentManager();
-//    	fragmentManager.addOnBackStackChangedListener(new OnBackStackChangedListener() {
-//            @Override
-//            public void onBackStackChanged() {
-//        		if (fragmentManager.getBackStackEntryCount() == 0) {
-//        		    closeYVplayer();
-//        		}
-//            }
-//        });
+    	final FragmentManager fragmentManager = myContext.getSupportFragmentManager();
+    	fragmentManager.addOnBackStackChangedListener(new OnBackStackChangedListener() {
+            @Override
+            public void onBackStackChanged() {
+        		if (fragmentManager.getBackStackEntryCount() == 0) {
+        		    closeYVplayer();
+        		}
+            }
+        });
         
         
         fragmentsLayout = (FrameLayout)rootView.findViewById(R.id.video_container);
@@ -243,6 +237,10 @@ public class ScreenSlidePageFragment extends Fragment{
 		    	closeImg.setVisibility(View.GONE);
             }else if(msg.what==2){
             	closeYVplayer();
+            }else if(msg.what==3){
+            	personImg.setVisibility(View.GONE);
+            	fragmentsLayout.setVisibility(View.VISIBLE);
+        		videoRel.setVisibility(View.VISIBLE);
             }
         }
     };
@@ -267,19 +265,5 @@ public class ScreenSlidePageFragment extends Fragment{
 		return true;
 		}
 	};
-    
-	 @Override
-	    public void onDetach() {
-	        super.onDetach();
-	        try {
-	            Field childFragmentManager = Fragment.class
-	                    .getDeclaredField("mChildFragmentManager");
-	            childFragmentManager.setAccessible(true);
-	            childFragmentManager.set(this, null);
-	        } catch (NoSuchFieldException e) {
-	            throw new RuntimeException(e);
-	        } catch (IllegalAccessException e) {
-	            throw new RuntimeException(e);
-	        }
-	    }
+ 
 }

@@ -5,8 +5,6 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 import android.app.AlertDialog;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
@@ -14,8 +12,9 @@ import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
-import android.support.v13.app.FragmentStatePagerAdapter;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.util.SparseArray;
 import android.view.Menu;
@@ -48,6 +47,7 @@ import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.socialhub.TwitActivity;
 import com.greatspeeches.util.ConnectionDetector;
+import com.greatspeeches.util.FixedFragmentStatePagerAdapter;
 
 public class PersonsDescriptionView extends FragmentActivity implements OnClickListener, OnCompletionListener{
     /**
@@ -154,7 +154,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		selectPos = receiverIntent.getExtras().getInt("position");
 		// Instantiate a ViewPager and a PagerAdapter.
 		mPager = (ViewPager) findViewById(R.id.pager);
-		mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
+		mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
 		mPager.setAdapter(mPagerAdapter);
 		mPager.setCurrentItem(selectPos);
 		mPager.setOffscreenPageLimit(1);
@@ -292,20 +292,21 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
      * A simple pager adapter that represents 5 {@link ScreenSlidePageFragment} objects, in
      * sequence.
      */
-    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+    private class ScreenSlidePagerAdapter extends FixedFragmentStatePagerAdapter {
 		private SparseArray<WeakReference<ScreenSlidePageFragment>> mPageReferenceMap = new SparseArray<WeakReference<ScreenSlidePageFragment>>();
         public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
-        @Override
-		public Fragment getItem(int index) {
-			return getFragment(index);
-		}
 //        @Override
-//        public Fragment getItem(int position) {
-//            return ScreenSlidePageFragment.create(HomeScreen.homeDataarr.get(position));
-//        }
+//		public Fragment getItem(int index) {
+//			return getFragment(index);
+//		}
+        
+        @Override
+        public Fragment getItem(int position) {
+            return getFragment(position);
+        }
 
         @Override
         public int getItemPosition(Object object){
@@ -314,6 +315,15 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
         @Override
         public int getCount() {
             return dataList.size();
+        }
+        
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
+            if(object != null){
+                return ((Fragment)object).getView() == view;
+            }else{
+                return false;
+            }
         }
         
         public Object instantiateItem(ViewGroup container, int position) {

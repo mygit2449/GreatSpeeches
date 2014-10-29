@@ -28,6 +28,15 @@
                 android:layout_height="170dp"
                 android:visibility="gone" />
 
+            <!--
+            <fragment
+                android:id="@+id/youtubeplayerfragment"
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                 android:visibility="gone"/>
+            -->
+
             <FrameLayout
                 android:id="@+id/video_container"
                 android:layout_width="fill_parent"
@@ -50,8 +59,8 @@
         android:id="@+id/descLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mediaRel" 
-        android:layout_marginTop="10dp">
+        android:layout_below="@+id/mediaRel"
+        android:layout_marginTop="10dp" >
 
         <RelativeLayout
             android:id="@+id/bStrip"

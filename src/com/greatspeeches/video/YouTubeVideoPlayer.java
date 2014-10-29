@@ -59,6 +59,7 @@ PlayerStateChangeListener videoListener = new   PlayerStateChangeListener() {
 		@Override
 		public void onVideoStarted() {
 			// TODO Auto-generated method stub
+			parentHandler.sendEmptyMessage(3);
 		}
 		
 		@Override
@@ -70,19 +71,16 @@ PlayerStateChangeListener videoListener = new   PlayerStateChangeListener() {
 		@Override
 		public void onLoading() {
 			// TODO Auto-generated method stub
-			
 		}
 		
 		@Override
 		public void onLoaded(String arg0) {
 			// TODO Auto-generated method stub
-			
 		}
 		
 		@Override
 		public void onError(ErrorReason arg0) {
 			// TODO Auto-generated method stub
-			
 		}
 		
 		@Override
@@ -90,7 +88,5 @@ PlayerStateChangeListener videoListener = new   PlayerStateChangeListener() {
 			// TODO Auto-generated method stub
 		}
 	};
-    
-    
     
 }
