@@ -80,7 +80,7 @@ public class CategoriesListScreen extends Activity {
 		
 		 for (int i = 0; i < imagesHere.length(); i++) {
 				ImageView img = new ImageView(this);
-				img.setBackground(imagesHere.getDrawable(i));
+				img.setBackgroundResource(imagesHere.getResourceId(i, 0));
 				slideViewFlipper.addView(img);
 			}
 			

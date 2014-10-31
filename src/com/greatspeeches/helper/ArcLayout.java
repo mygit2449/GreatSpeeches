@@ -16,22 +16,24 @@
 
 package com.greatspeeches.helper;
 
-import com.greatspeeches.R;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationSet;
 import android.view.animation.Interpolator;
+import android.view.animation.LayoutAnimationController;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.view.animation.RotateAnimation;
-import android.view.animation.Animation.AnimationListener;
+
+import com.greatspeeches.R;
 
 /**
  * A Layout that arranges its children around its center. The arc can be set by
@@ -52,15 +54,15 @@ public class ArcLayout extends ViewGroup {
 
     private int mLayoutPadding = 10;
 
-    public static final float DEFAULT_FROM_DEGREES = 270.0f;
+    public static final float DEFAULT_FROM_DEGREES = 170.0f;
 
-    public static final float DEFAULT_TO_DEGREES = 360.0f;
+    public static final float DEFAULT_TO_DEGREES = 260.0f;
 
     private float mFromDegrees = DEFAULT_FROM_DEGREES;
 
     private float mToDegrees = DEFAULT_TO_DEGREES;
 
-    private static final int MIN_RADIUS = 360;
+    private static int MIN_RADIUS = 0;
 
     /* the distance between the layout's center and any child's center */
     private int mRadius;
@@ -73,13 +75,15 @@ public class ArcLayout extends ViewGroup {
 
     public ArcLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
+//        MIN_RADIUS = (int) GreateSpeechesUtil.convertDpToPixel(getResources().getDimension(R.dimen.minRadius), context);
+        MIN_RADIUS = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.minRadius), getResources().getDisplayMetrics());
 
+//        MIN_RADIUS = (int) GreateSpeechesUtil.convertDpToPixel(getResources().getDimension(R.dimen.minRadius), context);
         if (attrs != null) {
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.ArcLayout, 0, 0);
             mFromDegrees = a.getFloat(R.styleable.ArcLayout_fromDegrees, DEFAULT_FROM_DEGREES);
             mToDegrees = a.getFloat(R.styleable.ArcLayout_toDegrees, DEFAULT_TO_DEGREES);
             mChildSize = Math.max(a.getDimensionPixelSize(R.styleable.ArcLayout_childSize, 0), 0);
-
             a.recycle();
         }
     }
