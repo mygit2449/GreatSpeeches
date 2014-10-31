@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
@@ -70,14 +71,15 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	private RelativeLayout _playerLayout = null;
 	private ArcMenu arcMenu2;
 	private AudioPlayer _customPlayer = null;
-	private boolean isPlaying = false;
 	
 	private PendingAction pendingAction = PendingAction.NONE;
     private static final String PERMISSION = "publish_actions";
     private Session session = null;
     private ConnectionDetector network = null;
     public  ArrayList<HomeDataModel> dataList = null;
-
+    private ActionBar actionBar;
+    ScreenSlidePageFragment selecedFragment = null;
+    
     private Session.StatusCallback statusCallback = new Session.StatusCallback() {
         @Override
         public void call(Session session, SessionState state, Exception exception) {
@@ -104,6 +106,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+//		getWindow().requestFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
 		setContentView(R.layout.activity_persons_description_view); 
 		
 		network = new ConnectionDetector(PersonsDescriptionView.this);
@@ -115,7 +118,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		_customPlayer = new AudioPlayer();
 		_customPlayer.setOnCompletionListener(this);
 		
-		 getActionBar().setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		
 		 Settings.addLoggingBehavior(LoggingBehavior.INCLUDE_ACCESS_TOKENS);
 
@@ -159,8 +162,12 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		mPager.setAdapter(mPagerAdapter);
 		mPager.setCurrentItem(selectPos);
 		mPager.setOffscreenPageLimit(1);
-		getActionBar().setHomeButtonEnabled(true);
-		getActionBar().setTitle(""+dataList.get(selectPos).getName());
+		
+		actionBar = getActionBar();
+		actionBar.setHomeButtonEnabled(true);
+		actionBar.setTitle(""+dataList.get(selectPos).getName());
+//		actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#80000000")));
+//		actionBar.setStackedBackgroundDrawable(new ColorDrawable(Color.parseColor("#550000ff")));
 		_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(selectPos).getImageId(), R.drawable.class));
 		mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
 			@Override
@@ -170,20 +177,20 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				// on which page is currently active. An alternative approach is to have each
 				// fragment expose actions itself (rather than the activity exposing actions),
 				// but for simplicity, the activity provides the actions in this sample.
-				getActionBar().setTitle(""+dataList.get(position).getName());
+				actionBar.setTitle(""+dataList.get(position).getName());
 				_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(position).getImageId(), R.drawable.class));
 				invalidateOptionsMenu();
 //				mPagerAdapter.getFragment(position).closeVplayer();
 //				mPagerAdapter.getFragment(position).closeYVplayer();
 
 				if (_customPlayer.isPlaying()) {
-					_playBtn.setBackgroundResource(R.drawable.play_button_status);
+//					_playBtn.setBackgroundResource(R.drawable.play_button_status);
 					resetAudioPlayer();
 					Thread _playerThread = new Thread(_buttonUpdate);
 					_playerThread.start();
 				}else{
-					_playerLayout.setVisibility(View.GONE);
-					resetAudioPlayer();
+//					_playerLayout.setVisibility(View.GONE);
+//					resetAudioPlayer();
 				}
 				mPagerAdapter.notifyDataSetChanged();
 			}
@@ -421,30 +428,32 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		                			}
 		                			
 		                	}else if(ITEM_DRAWABLES[position] == R.drawable.headphone){
-		                		
-		                		_playerLayout.startAnimation(bottomToTopAnim);
-		                		bottomToTopAnim.setAnimationListener(new AnimationListener() {
-									
-									@Override
-									public void onAnimationStart(Animation animation) {
-										// TODO Auto-generated method stub
-										
-									}
-									
-									@Override
-									public void onAnimationRepeat(Animation animation) {
-										// TODO Auto-generated method stub
-										
-									}
-									
-									@Override
-									public void onAnimationEnd(Animation animation) {
-										// TODO Auto-generated method stub
-										_playerLayout.setVisibility(View.VISIBLE);
-										play(dataList.get(selectPos).audio);
-									}
-								});
-		                		
+		                		if(null  != selecedFragment && ((null != selecedFragment.cVideoView && selecedFragment.cVideoView.isPlaying()) || (null != selecedFragment.activePlayer && selecedFragment.activePlayer.isPlaying()))){
+		                			Toast.makeText(PersonsDescriptionView.this, "Not possible to play audio now, video is already playing.", Toast.LENGTH_SHORT).show();
+		                		}else{
+		                			_playerLayout.startAnimation(bottomToTopAnim);
+		                			bottomToTopAnim.setAnimationListener(new AnimationListener() {
+		                				
+		                				@Override
+		                				public void onAnimationStart(Animation animation) {
+		                					// TODO Auto-generated method stub
+		                					
+		                				}
+		                				
+		                				@Override
+		                				public void onAnimationRepeat(Animation animation) {
+		                					// TODO Auto-generated method stub
+		                					
+		                				}
+		                				
+		                				@Override
+		                				public void onAnimationEnd(Animation animation) {
+		                					// TODO Auto-generated method stub
+		                					_playerLayout.setVisibility(View.VISIBLE);
+		                					play(dataList.get(selectPos).audio);
+		                				}
+		                			});
+		                		}
 		                	}else if(ITEM_DRAWABLES[position] == R.drawable.twitter){
 		                		if(network.isConnectingToInternet()){
 		                			startActivity(new Intent(PersonsDescriptionView.this, TwitActivity.class).putExtra("img_name", dataList.get(selectPos).getImageId()).putExtra("quote", dataList.get(selectPos).getQuote()));
@@ -452,8 +461,8 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		                			Toast.makeText(PersonsDescriptionView.this, "oops!,Please check Internet connection and try again!", Toast.LENGTH_SHORT).show();
 		                		}
 		                	}else if(ITEM_DRAWABLES[position] == R.drawable.video_icon){
-		                		ScreenSlidePageFragment sFragment = mPagerAdapter.getFragment(selectPos);
-		        				sFragment.update();
+		                		selecedFragment = mPagerAdapter.getFragment(selectPos);
+		                		selecedFragment.update();
 		                	}
 					    }
 		            });
@@ -476,6 +485,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 			mPager.setCurrentItem(selectPos-1);
 			break;
 		case R.id.close_audio:
+			resetAudioPlayer();
 			stopAudioAnimation();
 			break;
 		default:

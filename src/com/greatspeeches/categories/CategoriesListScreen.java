@@ -2,25 +2,25 @@ package com.greatspeeches.categories;
 
 import java.util.ArrayList;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
-import android.widget.AdapterView.OnItemClickListener;
 
 import com.greatspeeches.HomeScreen;
 import com.greatspeeches.R;
@@ -29,7 +29,7 @@ import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.slides.PersonsDescriptionView;
 import com.greatspeeches.util.DataParser;
 
-public class CategoriesListScreen extends FragmentActivity {
+public class CategoriesListScreen extends Activity {
 
 	private TypedArray imagesHere = null;
 	private String typeStr = "";
@@ -50,6 +50,8 @@ public class CategoriesListScreen extends FragmentActivity {
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setTitle(typeStr);
+//		getActionBar().hide();
+		
 		
 		if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category1))){
 			catDatarr = new DataParser(CategoriesListScreen.this).parser("science.xml");

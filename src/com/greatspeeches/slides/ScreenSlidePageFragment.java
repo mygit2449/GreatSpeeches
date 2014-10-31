@@ -63,8 +63,8 @@ public class ScreenSlidePageFragment extends Fragment{
 
     private HomeDataModel mPersonObj;
     private TextView infoData = null;
-    private ImageView personImg = null, closeImg;
-    private CustomVideoView cVideoView = null;
+    public ImageView personImg = null, closeImg;
+    public CustomVideoView cVideoView = null;
     private RelativeLayout videoRel = null;
     private FragmentActivity myContext;
     
@@ -129,7 +129,8 @@ public class ScreenSlidePageFragment extends Fragment{
     
     
     public void playYutubeVideo(){
-    	
+    	fragmentsLayout.setVisibility(View.VISIBLE);
+		videoRel.setVisibility(View.VISIBLE);
 		if(mPersonObj.getVideourl().length() > 0){
 			int indexPos = mPersonObj.getVideourl().indexOf("=");
 			if(indexPos > 0){
@@ -261,8 +262,6 @@ public class ScreenSlidePageFragment extends Fragment{
             	closeYVplayer();
             }else if(msg.what==3){
             	personImg.setVisibility(View.GONE);
-            	fragmentsLayout.setVisibility(View.VISIBLE);
-        		videoRel.setVisibility(View.VISIBLE);
             }
         }
     };

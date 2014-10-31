@@ -10,9 +10,9 @@
     </string-array>
 
     <array name="science">
-        <item>@drawable/abdulkalam</item>
-        <item>@drawable/alberteinstein</item>
-        <item>@drawable/alfrednobel</item>
+        <item>@drawable/kalam_l</item>
+        <item>@drawable/albert_l</item>
+        <item>@drawable/nobel_l</item>
         <item>@drawable/cvraman</item>
         <item>@drawable/srinivasaramanujan</item>
         <item>@drawable/thomasedison</item>
@@ -26,7 +26,6 @@
         <item>@drawable/ayrton</item>
         <item>@drawable/milkhasingh</item>
         <item>@drawable/vishyanand</item>
-        <item>@drawable/sushilkumar</item>
         <item>@drawable/kapil</item>
     </array>
     <array name="womens">

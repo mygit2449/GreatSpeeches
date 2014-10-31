@@ -63,21 +63,9 @@ public class ParallaxScrollView extends ScrollView {
 		}
 	}
 	
-	public interface OnScrollViewListener {
-	    void onScrollChanged(ParallaxScrollView v, int l, int t, int oldl, int oldt );
-	}
-	
-	private OnScrollViewListener mOnScrollViewListener;
-
-	public void setOnScrollViewListener(OnScrollViewListener l) {
-	    this.mOnScrollViewListener = l;
-	}
-
-	
 	@Override
 	protected void onScrollChanged(int l, int t, int oldl, int oldt) {
 		super.onScrollChanged(l, t, oldl, oldt);
-		mOnScrollViewListener.onScrollChanged( this, l, t, oldl, oldt );
 		float parallax = parallaxFactor;
 		float alpha = alphaFactor;
 		for (ParallaxedView parallaxedView : parallaxedViews) {
