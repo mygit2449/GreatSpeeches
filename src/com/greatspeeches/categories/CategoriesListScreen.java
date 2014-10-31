@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.greatspeeches.HomeScreen;
+import com.greatspeeches.MainActivity;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.models.HomeDataModel;
@@ -176,7 +177,7 @@ public class CategoriesListScreen extends Activity {
         case android.R.id.home:
             // Navigate "up" the demo structure to the launchpad activity.
             // See http://developer.android.com/design/patterns/navigation.html for more.
-            startActivity(new Intent(CategoriesListScreen.this, HomeScreen.class).setAction("fromCat"));
+            startActivity(new Intent(CategoriesListScreen.this, MainActivity.class).setAction("fromCat"));
             finish();
             return true;
 
