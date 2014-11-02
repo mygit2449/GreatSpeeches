@@ -59,5 +59,6 @@
         <item>@drawable/gokhale</item>
         <item>@drawable/ambedkar</item>
         <item>@drawable/jintao</item>
+        <item>@drawable/bose</item>
     </array>
 </resources>

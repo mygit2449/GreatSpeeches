@@ -139,7 +139,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 					Random rand = new Random();  
 					pickedNumber = rand.nextInt(_imageaCount.length)+1;
 					updateBeautyBg(pickedNumber);
-					bgUpdatedHandler.postDelayed(runnable, 15000);
+					bgUpdatedHandler.postDelayed(runnable, 10000);
 				}
 			};
 			
@@ -147,7 +147,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 			handler.postDelayed(runnable, 5000);
 			
 			bgUpdatedHandler  = new Handler();
-			bgUpdatedHandler.postDelayed(runnable, 15000);
+			bgUpdatedHandler.postDelayed(runnable, 10000);
 	}
 
 	

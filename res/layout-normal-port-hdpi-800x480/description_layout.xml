@@ -8,7 +8,8 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical" 
+        android:paddingBottom="30dp">
 
         <RelativeLayout
             android:id="@+id/mediaRel"
@@ -75,9 +76,9 @@
                         android:layout_height="wrap_content"
                         android:background="#999999"
                         android:padding="5dp"
-                        android:text="Born:"
+                        android:text="Born"
                         android:textColor="#ffffff"
-                        android:textSize="16dp"
+                        android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -88,7 +89,7 @@
                         android:padding="5dp"
                         android:text="October 2, 1869, Porbandar"
                         android:textColor="#ffffff"
-                        android:textSize="16dp"
+                        android:textSize="18dp"
                         android:textStyle="normal" />
                 </RelativeLayout>
 
@@ -104,9 +105,9 @@
                         android:layout_height="wrap_content"
                         android:background="#999999"
                         android:padding="5dp"
-                        android:text="Died:"
+                        android:text="Died"
                         android:textColor="#ffffff"
-                        android:textSize="16dp"
+                        android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -117,7 +118,7 @@
                         android:padding="5dp"
                         android:text="October 2, 1869, Porbandar"
                         android:textColor="#ffffff"
-                        android:textSize="16dp"
+                        android:textSize="18dp"
                         android:textStyle="normal" />
                 </RelativeLayout>
             </RelativeLayout>
@@ -137,9 +138,9 @@
                 android:background="#999999"
                 android:padding="5dp"
                 android:tag="sticky"
-                android:text="A Life in Brief"
+                android:text="Life in Brief"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -150,7 +151,8 @@
             android:layout_marginTop="5dp"
             android:scrollbars="vertical"
             android:textColor="#ffffff"
-            android:textSize="16dp" />
+            android:textSize="18dp" 
+            android:padding="2dp"/>
     </LinearLayout>
 
 </com.greatspeeches.helper.StickyScrollView>
