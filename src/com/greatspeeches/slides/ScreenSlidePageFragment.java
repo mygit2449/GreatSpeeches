@@ -17,16 +17,14 @@
 package com.greatspeeches.slides;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
-import android.support.v4.app.FragmentTransaction;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -46,7 +44,7 @@ import com.google.android.youtube.player.YouTubePlayer.ErrorReason;
 import com.google.android.youtube.player.YouTubePlayer.OnInitializedListener;
 import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
 import com.google.android.youtube.player.YouTubePlayer.Provider;
-import com.google.android.youtube.player.YouTubePlayerSupportFragment;
+import com.google.android.youtube.player.YouTubePlayerFragment;
 import com.greatspeeches.HomeScreen;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.GreateSpeechesUtil;
@@ -136,15 +134,16 @@ public class ScreenSlidePageFragment extends Fragment{
 			if(indexPos > 0){
 				videoId = mPersonObj.getVideourl().substring(indexPos+1, mPersonObj.getVideourl().length());
 			}
-
-			YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
-			FragmentTransaction fts = myContext.getSupportFragmentManager().beginTransaction();
-			// Replace the content of the container
-			fts.replace(R.id.video_container, youTubePlayerFragment,"videoFrag"); 
-			// Append this transaction to the backstack
-			fts.addToBackStack("videoFrag");
-			// Commit the changes
+			 
+			android.app.FragmentTransaction fts = getChildFragmentManager().beginTransaction();
+			YouTubePlayerFragment youTubePlayerFragment = new YouTubePlayerFragment();
+//			YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();
+//			FragmentTransaction fts = myContext.getSupportFragmentManager().beginTransaction();
+			fts.add(R.id.video_container,youTubePlayerFragment);
+			fts.addToBackStack(null);
 			fts.commit();
+
+			myContext.getSupportFragmentManager().executePendingTransactions();
 			
 			youTubePlayerFragment.initialize(GreateSpeechesUtil.yOUTUBEdEVELOPERkEY, new OnInitializedListener() {
 			    @Override
@@ -178,15 +177,15 @@ public class ScreenSlidePageFragment extends Fragment{
     
     public void closeYVplayer(){
     	YouTubeVideoPlayer fragB = (YouTubeVideoPlayer) myContext.getSupportFragmentManager().findFragmentByTag("videoFrag");
-    	FragmentManager manager =myContext.getSupportFragmentManager();
+    	android.support.v4.app.FragmentManager manager =myContext.getSupportFragmentManager();
 		if(null != fragB){
-			FragmentTransaction trans = manager.beginTransaction();
+			android.support.v4.app.FragmentTransaction trans = manager.beginTransaction();
 			trans.remove(fragB);
 			trans.commit();
 			manager.popBackStack();
 		}
 		
-      	FragmentManager fragmentManager = myContext.getSupportFragmentManager();
+      	android.support.v4.app.FragmentManager fragmentManager = myContext.getSupportFragmentManager();
 		if (fragmentManager.getBackStackEntryCount() > 0) {
 		    fragmentManager.popBackStack();
 		}
@@ -206,7 +205,7 @@ public class ScreenSlidePageFragment extends Fragment{
         // Inflate the layout containing a title and body text.
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.description_layout, container, false); 
         
-    	final FragmentManager fragmentManager = myContext.getSupportFragmentManager();
+    	final android.support.v4.app.FragmentManager fragmentManager = myContext.getSupportFragmentManager();
     	fragmentManager.addOnBackStackChangedListener(new OnBackStackChangedListener() {
             @Override
             public void onBackStackChanged() {

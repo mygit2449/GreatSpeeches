@@ -39,9 +39,9 @@ import com.greatspeeches.R;
  * A custom view that looks like the menu in 
  */
 public class ArcMenu extends RelativeLayout {
-    private ArcLayout mArcLayout;
+    public ArcLayout mArcLayout;
 
-    private ImageView mHintView;
+    public  ImageView mHintView;
 
     public ArcMenu(Context context) {
         super(context);
@@ -177,7 +177,7 @@ public class ArcMenu extends RelativeLayout {
         return animationSet;
     }
 
-    private static Animation createHintSwitchAnimation(final boolean expanded) {
+    public static Animation createHintSwitchAnimation(final boolean expanded) {
         Animation animation = new RotateAnimation(expanded ? 180 : 0, expanded ? 0 : 180, Animation.RELATIVE_TO_SELF,
                 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         animation.setStartOffset(0);

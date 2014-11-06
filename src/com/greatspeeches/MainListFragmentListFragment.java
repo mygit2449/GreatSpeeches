@@ -20,6 +20,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.greatspeeches.categories.CategoriesListScreen;
 import com.greatspeeches.helper.GreateSpeechesUtil;
@@ -70,6 +71,7 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 		alextype = Typeface.createFromAsset(getActivity().getAssets(),"AlexBrush-Regular.ttf"); 
 		arimoype = Typeface.createFromAsset(getActivity().getAssets(),"Arimo-Regular.ttf");
 		View placeHolderView = inflater.inflate(R.layout.view_header_placeholder, mListView, false);
+		placeHolderView.setClickable(false);
 		mListView.addHeaderView(placeHolderView);
 		mListView.setAdapter(new PopularListAdapter(getActivity(), mPosition));
 		
@@ -78,11 +80,13 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 				// TODO Auto-generated method stub
-				if (mPosition == 0) {
-					startActivity(new Intent(getActivity(), PersonsDescriptionView.class).putExtra("position", arg2-1).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
-				}else {
-					startActivity(new Intent(getActivity(), CategoriesListScreen.class).putExtra("categoryType", categoriesList.get(arg2-1)).setAction("fromCat"));
-					getActivity().finish();
+				if(arg2 > 0){
+					if (mPosition == 0) {
+						startActivity(new Intent(getActivity(), PersonsDescriptionView.class).putExtra("position", arg2-1).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
+					}else {
+						startActivity(new Intent(getActivity(), CategoriesListScreen.class).putExtra("categoryType", categoriesList.get(arg2-1)).setAction("fromCat"));
+						getActivity().finish();
+					}
 				}
 			}
 		});

@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
@@ -13,10 +15,8 @@ import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.support.v4.app.Fragment;
+import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.util.SparseArray;
 import android.view.Menu;
@@ -49,7 +49,6 @@ import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.socialhub.TwitActivity;
 import com.greatspeeches.util.ConnectionDetector;
-import com.greatspeeches.util.FixedFragmentStatePagerAdapter;
 
 public class PersonsDescriptionView extends FragmentActivity implements OnClickListener, OnCompletionListener{
     /**
@@ -158,7 +157,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		selectPos = receiverIntent.getExtras().getInt("position");
 		// Instantiate a ViewPager and a PagerAdapter.
 		mPager = (ViewPager) findViewById(R.id.pager);
-		mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
+		mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
 		mPager.setAdapter(mPagerAdapter);
 		mPager.setCurrentItem(selectPos);
 		mPager.setOffscreenPageLimit(1);
@@ -183,6 +182,12 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 //				mPagerAdapter.getFragment(position).closeVplayer();
 //				mPagerAdapter.getFragment(position).closeYVplayer();
 
+				if(arcMenu2.mArcLayout.isExpanded()){
+					arcMenu2.mHintView.startAnimation(arcMenu2.createHintSwitchAnimation(true));
+					arcMenu2.mArcLayout.switchState(false);
+				}else{
+				}
+				
 				if (_customPlayer.isPlaying()) {
 //					_playBtn.setBackgroundResource(R.drawable.play_button_status);
 					resetAudioPlayer();
@@ -300,7 +305,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
      * A simple pager adapter that represents 5 {@link ScreenSlidePageFragment} objects, in
      * sequence.
      */
-    private class ScreenSlidePagerAdapter extends FixedFragmentStatePagerAdapter {
+    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
 		private SparseArray<WeakReference<ScreenSlidePageFragment>> mPageReferenceMap = new SparseArray<WeakReference<ScreenSlidePageFragment>>();
 		FragmentManager fm;
 		public ScreenSlidePagerAdapter(FragmentManager fm) {
@@ -342,31 +347,6 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
            super.destroyItem(container, position, object);
         } 
         
-        /*
-         * pulled from FragmentStatePagerAdapter.java
-         * - capitalize on the fact that FSPA saves state as "f"+index
-         */
-        public void restoreState(Parcelable state, ClassLoader loader) {
-            super.restoreState(state, loader);
-
-            mPageReferenceMap.clear();
-
-            final Bundle bundle = (Bundle)state;
-            bundle.setClassLoader(loader);
-            final Parcelable[] fss = bundle.getParcelableArray("states");
-
-            final Iterable<String> keys = bundle.keySet();
-            for (final String key : keys) {
-                if (!key.startsWith("f")) continue;
-
-                final int position = Integer.parseInt(key.substring(1));
-                final Fragment f = fm.getFragment(bundle, key);
-                if (f != null) {
-                    // update our cache of fragments the same way
-                	mPageReferenceMap.put(position, new WeakReference<ScreenSlidePageFragment>((ScreenSlidePageFragment) f));
-                }
-            }
-        }
         
         public Object instantiateItem(ViewGroup container, int position) {
         	ScreenSlidePageFragment screenFragment = ScreenSlidePageFragment.create(dataList.get(position));
