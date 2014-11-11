@@ -27,13 +27,13 @@
 
             <ViewFlipper
                 android:id="@+id/flipper"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="160dp"
+                android:layout_height="270dp"
                 android:layout_centerHorizontal="true"
                 android:flipInterval="3000"
                 android:inAnimation="@anim/slide_in_right_animation"
                 android:outAnimation="@anim/slide_out"
-                android:layout_marginTop="30dp" >
+                android:layout_marginTop="25dp" >
             </ViewFlipper>
         </RelativeLayout>
 

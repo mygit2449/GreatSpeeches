@@ -49,7 +49,6 @@ public class TwitActivity extends Activity {
 	static final String PREF_KEY_TWITTER_LOGIN = "isTwitterLogedIn";
 
 //	public static final String CALLBACK_URL = "oauth://connect";
-	private static  String CALLBACK_URL = "twitterapptest://connect";
 	// Twitter oauth urls
 	static final String URL_TWITTER_AUTH = "auth_url";
 	static final String URL_TWITTER_OAUTH_VERIFIER = "oauth_verifier";
@@ -290,12 +289,5 @@ public class TwitActivity extends Activity {
 	    super.onDestroy();
 	}
 	
-	/**
-	 * Check user already logged in your application using twitter Login flag is
-	 * fetched from Shared Preferences
-	 * */
-	private boolean isTwitterLoggedInAlready() {
-		// return twitter login status from Shared Preferences
-		return mSharedPreferences.getBoolean(PREF_KEY_TWITTER_LOGIN, false);
-	}
+	
 }

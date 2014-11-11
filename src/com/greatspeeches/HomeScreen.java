@@ -38,7 +38,7 @@ import com.greatspeeches.slides.PersonsDescriptionView;
 public class HomeScreen extends Activity implements OnClickListener{
 
 	private int[] _imageaCount = {R.drawable.abraham_lincoln, R.drawable.churchill, R.drawable.frederick_douglass,
-			R.drawable.gandhi,R.drawable.john_kennedy,R.drawable.lyndon_johnson,R.drawable.martin_luther_king,R.drawable.patrick_henry,
+			R.drawable.gandhi,R.drawable.john_kennedy,R.drawable.lyndon_johnson,R.drawable.martin_hh,R.drawable.patrick_henry,
 			R.drawable.reagan,R.drawable.socrates_louvre,R.drawable.susan_anthony};
 	
 	private ViewFlipper _slideViewFlipper;

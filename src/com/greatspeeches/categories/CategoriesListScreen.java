@@ -22,7 +22,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
-import com.greatspeeches.HomeScreen;
 import com.greatspeeches.MainActivity;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.GreateSpeechesUtil;
@@ -75,7 +74,7 @@ public class CategoriesListScreen extends Activity {
 		
 		slideViewFlipper = (ViewFlipper)findViewById(R.id.flipper);
 		
-		alextype = Typeface.createFromAsset(getAssets(),"AlexBrush-Regular.ttf"); 
+		alextype = Typeface.createFromAsset(getAssets(),"Sansation-Bold.ttf"); 
 		arimoype = Typeface.createFromAsset(getAssets(),"Arimo-Regular.ttf");
 		
 		
@@ -134,7 +133,7 @@ public class CategoriesListScreen extends Activity {
 					personName.setTypeface(alextype);
 					personQuote.setTypeface(arimoype);
 					personQuote.setText(""+catDatarr.get(position).getQuote());
-					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(catDatarr.get(position).getImageId(), R.drawable.class));
+					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(catDatarr.get(position).getImageId()+"_l", R.drawable.class));
 				} catch (Exception e) {
 					// TODO: handle exception
 					e.printStackTrace();

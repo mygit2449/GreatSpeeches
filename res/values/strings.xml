@@ -8,6 +8,7 @@
     <string name="title_activity_persons_description_view">PersonsDescriptionView</string>
     <string name="title_activity_persons_data_view">PersonsDataView</string>
     <string name="action_previous">Previous</string>
+    <string name="action_home">Home</string>
     <string name="action_next">Next</string>
     <string name="action_finish">Finish</string>
     <string name="app_id">1451809198381336</string>

@@ -54,7 +54,6 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	private int mMinHeaderHeight;
 	private int mHeaderHeight;
 	private int mMinHeaderTranslation;
-	private ImageView mHeaderLogo;
 
 	private RectF mRect1 = new RectF();
 	private RectF mRect2 = new RectF();
@@ -64,7 +63,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	private AlphaForegroundColorSpan mAlphaForegroundColorSpan;
 	
 	private int[] _imageaCount = {R.drawable.abraham_lincoln, R.drawable.churchill, R.drawable.frederick_douglass,
-			R.drawable.gandhi,R.drawable.john_kennedy,R.drawable.lyndon_johnson,R.drawable.martin_luther_king,R.drawable.patrick_henry,
+			R.drawable.gandhi,R.drawable.john_kennedy,R.drawable.lyndon_johnson,R.drawable.martin_hh,R.drawable.patrick_henry,
 			R.drawable.reagan,R.drawable.socrates_louvre,R.drawable.susan_anthony};
 	
 	private ViewFlipper _slideViewFlipper;
@@ -90,7 +89,6 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		categoriesList = Arrays.asList(getResources().getStringArray(R.array.categories));
 		
 		mHeaderPicture = (KenBurnsSupportView) findViewById(R.id.header_picture);
-		mHeaderLogo = (ImageView) findViewById(R.id.header_logo);
 		mHeader = findViewById(R.id.header);
 
 		mPagerSlidingTabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
@@ -101,7 +99,12 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		mPagerAdapter.setTabHolderScrollingContent(this);
 
 		mViewPager.setAdapter(mPagerAdapter);
-
+		if (null != getIntent() && getIntent().getAction().equalsIgnoreCase("fromSplash")) {
+			mViewPager.setCurrentItem(0);
+		}else if(null != getIntent() && getIntent().getAction().equalsIgnoreCase("fromCat")){
+			mViewPager.setCurrentItem(1);
+		}
+//		mViewPager.setCurrentItem(0);
 		mPagerSlidingTabStrip.setViewPager(mViewPager);
 		mPagerSlidingTabStrip.setOnPageChangeListener(this);
 		mSpannableString = new SpannableString(getString(R.string.app_name));

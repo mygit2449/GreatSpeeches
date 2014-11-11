@@ -20,7 +20,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.greatspeeches.categories.CategoriesListScreen;
 import com.greatspeeches.helper.GreateSpeechesUtil;
@@ -68,7 +67,7 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 		View v = inflater.inflate(R.layout.fragment_list, null);
 
 		mListView = (ListView) v.findViewById(R.id.listView);
-		alextype = Typeface.createFromAsset(getActivity().getAssets(),"AlexBrush-Regular.ttf"); 
+		alextype = Typeface.createFromAsset(getActivity().getAssets(),"Sansation-Bold.ttf"); 
 		arimoype = Typeface.createFromAsset(getActivity().getAssets(),"Arimo-Regular.ttf");
 		View placeHolderView = inflater.inflate(R.layout.view_header_placeholder, mListView, false);
 		placeHolderView.setClickable(false);
@@ -153,8 +152,9 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 					TextView personQuote = (TextView)convertView.findViewById(R.id.person_quote);
 					personName.setText(""+homeDataarr.get(position).getName());
 					personName.setTypeface(alextype);
+					personQuote.setTypeface(arimoype);
 					personQuote.setText(""+homeDataarr.get(position).getQuote());
-					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(homeDataarr.get(position).getImageId(), R.drawable.class));
+					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(homeDataarr.get(position).getImageId()+"_l", R.drawable.class));
 				} catch (Exception e) {
 					// TODO: handle exception
 					e.printStackTrace();

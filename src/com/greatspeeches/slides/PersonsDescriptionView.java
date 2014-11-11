@@ -68,7 +68,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	private ImageView _closeBtn, _personImage;
 	private Animation topToBottomanim, bottomToTopAnim;   
 	private RelativeLayout _playerLayout = null;
-	private ArcMenu arcMenu2;
+	public ArcMenu arcMenu2;
 	private AudioPlayer _customPlayer = null;
 	
 	private PendingAction pendingAction = PendingAction.NONE;
@@ -77,7 +77,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
     private ConnectionDetector network = null;
     public  ArrayList<HomeDataModel> dataList = null;
     private ActionBar actionBar;
-    ScreenSlidePageFragment selecedFragment = null;
+    private ScreenSlidePageFragment selecedFragment = null;
     
     private Session.StatusCallback statusCallback = new Session.StatusCallback() {
         @Override
@@ -265,12 +265,12 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.persons_description_view, menu);
-		menu.findItem(R.id.action_previous).setEnabled(mPager.getCurrentItem() > 0);
+		menu.findItem(R.id.action_previous).setVisible(mPager.getCurrentItem() > 0);
+		menu.findItem(R.id.action_next).setVisible(mPager.getCurrentItem() < mPagerAdapter.getCount() - 1);
         // Add either a "next" or "finish" button to the action bar, depending on which page
         // is currently selected.
-        MenuItem item = menu.add(Menu.NONE, R.id.action_next, Menu.NONE,(mPager.getCurrentItem() == mPagerAdapter.getCount() - 1)  ? R.string.action_finish : 
-        				R.string.action_next);
-        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+//        MenuItem item = menu.add(Menu.NONE, R.id.action_next);
+//        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 		return true;
 	}
 
@@ -307,16 +307,9 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
      */
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
 		private SparseArray<WeakReference<ScreenSlidePageFragment>> mPageReferenceMap = new SparseArray<WeakReference<ScreenSlidePageFragment>>();
-		FragmentManager fm;
 		public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
-            this.fm=fm;
         }
-
-//        @Override
-//		public Fragment getItem(int index) {
-//			return getFragment(index);
-//		}
         
         @Override
         public Fragment getItem(int position) {

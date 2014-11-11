@@ -1,10 +1,7 @@
 package com.greatspeeches.video;
 
-import com.greatspeeches.R;
-
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -22,6 +19,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+
+import com.greatspeeches.R;
 
 
 public class CustomWebView extends WebView {
@@ -61,7 +60,6 @@ public class CustomWebView extends WebView {
 	    s.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
 	    s.setUseWideViewPort(true);
 	    s.setLoadWithOverviewMode(true);
-	    s.setSavePassword(true);
 	    s.setSaveFormData(true);
 	    s.setJavaScriptEnabled(true); 
 	    
@@ -236,5 +234,5 @@ public class CustomWebView extends WebView {
 	}
 	
 	static final FrameLayout.LayoutParams COVER_SCREEN_PARAMS =
-        new FrameLayout.LayoutParams( ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT);
+        new FrameLayout.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 }

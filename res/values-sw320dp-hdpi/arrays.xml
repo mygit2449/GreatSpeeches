@@ -10,9 +10,9 @@
     </string-array>
 
     <array name="science">
-        <item>@drawable/kalam_l</item>
-        <item>@drawable/albert_l</item>
-        <item>@drawable/nobel_l</item>
+        <item>@drawable/kalam_h</item>
+        <item>@drawable/alberteinstein</item>
+        <item>@drawable/nobel_hh</item>
         <item>@drawable/cvraman</item>
         <item>@drawable/srinivasaramanujan</item>
         <item>@drawable/thomasedison</item>
@@ -20,6 +20,7 @@
     </array>
     <array name="sports">
         <item>@drawable/dhyanchand</item>
+        <item>@drawable/sachin</item>
         <item>@drawable/pele</item>
         <item>@drawable/carllewis</item>
         <item>@drawable/jackie</item>
@@ -39,7 +40,7 @@
         <item>@drawable/shakespeare</item>
         <item>@drawable/aliakbarkhan</item>
         <item>@drawable/mssubbulakshmi</item>
-        <item>@drawable/panditbhimsenjoshi</item>
+        <item>@drawable/new_bhimsen</item>
         <item>@drawable/latamangeshkar</item>
         <item>@drawable/williamhung</item>
         <item>@drawable/zakirhussain</item>
@@ -59,5 +60,6 @@
         <item>@drawable/gokhale</item>
         <item>@drawable/ambedkar</item>
         <item>@drawable/jintao</item>
+        <item>@drawable/bose</item>
     </array>
 </resources>

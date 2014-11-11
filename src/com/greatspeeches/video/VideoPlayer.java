@@ -1,7 +1,5 @@
 package com.greatspeeches.video;
 
-import com.greatspeeches.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -9,11 +7,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.MediaController;
-import android.widget.VideoView;
+
+import com.greatspeeches.R;
 
 public class VideoPlayer extends Activity
 {
-	private VideoView mVideoView;
 	private Intent receiverIntent;
 	
 	@Override

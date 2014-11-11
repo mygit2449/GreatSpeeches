@@ -16,7 +16,6 @@ public class EditTextLocker {
 
     private EditText editText;
     private TextView textView;
-    private String data;
     private Context context;
     private int charactersLimit;
 
@@ -25,7 +24,6 @@ public class EditTextLocker {
     public EditTextLocker(EditText editText, String  data, TextView textView, Context context) {
 
         this.editText = editText;
-        this.data = data;
         this.editText.setText(data);
         this.textView = textView;
         this.context =context;

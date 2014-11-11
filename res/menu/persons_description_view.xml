@@ -1,9 +1,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
+   
+     <!-- Adds an item to the list. -->
+    <item
+        android:id="@+id/action_home"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/menu_home"
+        android:title="@string/action_previous"/>
+    
     <!-- Adds an item to the list. -->
     <item
         android:id="@+id/action_previous"
-        android:showAsAction="ifRoom|withText"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/left"
         android:title="@string/action_previous"/>
+
+    <!-- Adds an item to the list. -->
+    <item
+        android:id="@+id/action_next"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/right"
+        android:title="@string/action_next"/>
 
 </menu>

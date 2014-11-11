@@ -23,7 +23,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -48,6 +47,7 @@ import com.google.android.youtube.player.YouTubePlayerFragment;
 import com.greatspeeches.HomeScreen;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.GreateSpeechesUtil;
+import com.greatspeeches.helper.StickyScrollView;
 import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.video.CustomVideoView;
 import com.greatspeeches.video.YouTubeVideoPlayer;
@@ -64,13 +64,13 @@ public class ScreenSlidePageFragment extends Fragment{
     public ImageView personImg = null, closeImg;
     public CustomVideoView cVideoView = null;
     private RelativeLayout videoRel = null;
-    private FragmentActivity myContext;
+    private PersonsDescriptionView myContext;
     
 	private FrameLayout fragmentsLayout;
 
 	public YouTubePlayer activePlayer;
-	String videoId =  "";
-
+	private String videoId =  "";
+	private StickyScrollView scroll = null;
 
     /**
      * Factory method for this fragment class. Constructs a new fragment for the given page number.
@@ -85,7 +85,7 @@ public class ScreenSlidePageFragment extends Fragment{
 
     @Override
     public void onAttach(Activity activity) {
-        myContext=(FragmentActivity) activity;
+        myContext=(PersonsDescriptionView) activity;
         super.onAttach(activity);
     }
     
@@ -94,7 +94,7 @@ public class ScreenSlidePageFragment extends Fragment{
 
         
     public void update(){
-
+    	scroll.fullScroll(View.FOCUS_UP);
     	if(mPersonObj.getType().equalsIgnoreCase("Popular")){
     		personImg.setVisibility(View.GONE);
     		videoRel.setVisibility(View.VISIBLE);
@@ -215,7 +215,7 @@ public class ScreenSlidePageFragment extends Fragment{
             }
         });
         
-        
+        scroll = (StickyScrollView)rootView.findViewById(R.id.topScroll);
         fragmentsLayout = (FrameLayout)rootView.findViewById(R.id.video_container);
         // Set the title view to show the page number.
         infoData =  ((TextView) rootView.findViewById(R.id.person_info));
