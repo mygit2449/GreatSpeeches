@@ -9,6 +9,7 @@ import java.util.Random;
 import org.xmlpull.v1.XmlPullParser;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.RectF;
 import android.os.Build;
@@ -25,10 +26,12 @@ import android.text.SpannableString;
 import android.util.TypedValue;
 import android.util.Xml;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.AbsListView;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.greatspeeches.helper.PagerSlidingTabStrip;
@@ -37,6 +40,7 @@ import com.greatspeeches.helper.ScrollTabHolderFragment;
 import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.notboringactionbar.AlphaForegroundColorSpan;
 import com.greatspeeches.notboringactionbar.KenBurnsSupportView;
+import com.greatspeeches.slides.PersonsDescriptionView;
 import com.nineoldandroids.view.ViewHelper;
 
 public class MainActivity extends FragmentActivity implements ScrollTabHolder, ViewPager.OnPageChangeListener {
@@ -62,9 +66,8 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	private SpannableString mSpannableString;
 	private AlphaForegroundColorSpan mAlphaForegroundColorSpan;
 	
-	private int[] _imageaCount = {R.drawable.abraham_lincoln, R.drawable.churchill, R.drawable.frederick_douglass,
-			R.drawable.gandhi,R.drawable.john_kennedy,R.drawable.lyndon_johnson,R.drawable.martin_hh,R.drawable.patrick_henry,
-			R.drawable.reagan,R.drawable.socrates_louvre,R.drawable.susan_anthony};
+	private int[] _imageaCount = {R.drawable.john_kennedy,
+			R.drawable.gandhi,R.drawable.patrick_henry,R.drawable.churchill,R.drawable.martin_hh,R.drawable.lyndon_johnson,R.drawable.reagan,R.drawable.swami_hh,R.drawable.abraham_lincoln};
 	
 	private ViewFlipper _slideViewFlipper;
     private Handler handler, bgUpdatedHandler;
@@ -119,7 +122,9 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		
 		 for (int i = 0; i < _imageaCount.length; i++) {
 				ImageView _img = new ImageView(this);
+				_img.setTag(i);
 				_img.setImageResource(_imageaCount[i]);
+				_img.setOnClickListener(flipClickListener);
 				_slideViewFlipper.addView(_img);
 			}
 			
@@ -153,6 +158,19 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 			bgUpdatedHandler.postDelayed(runnable, 10000);
 	}
 
+	
+	OnClickListener flipClickListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			if (null != v) {
+				startActivity(new Intent(MainActivity.this, PersonsDescriptionView.class).putExtra("position", (Integer) v.getTag()).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
+			}
+			
+		}
+	};
+	
 	
 	public void updateBeautyBg(int forimg){
 		int nextImg;

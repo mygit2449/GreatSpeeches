@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,6 +43,7 @@ import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.Settings;
 import com.facebook.model.GraphObject;
+import com.greatspeeches.MainActivity;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.ArcMenu;
 import com.greatspeeches.helper.AudioPlayer;
@@ -267,6 +269,12 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		getMenuInflater().inflate(R.menu.persons_description_view, menu);
 		menu.findItem(R.id.action_previous).setVisible(mPager.getCurrentItem() > 0);
 		menu.findItem(R.id.action_next).setVisible(mPager.getCurrentItem() < mPagerAdapter.getCount() - 1);
+		
+		if(dataList.get(selectPos).getType().equalsIgnoreCase("Popular")){
+			menu.findItem(R.id.action_home).setVisible(false);
+		}
+		
+		
         // Add either a "next" or "finish" button to the action bar, depending on which page
         // is currently selected.
 //        MenuItem item = menu.add(Menu.NONE, R.id.action_next);
@@ -295,6 +303,13 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	                // Advance to the next step in the wizard. If there is no next step, setCurrentItem
 	                // will do nothing.
 	                mPager.setCurrentItem(mPager.getCurrentItem() + 1);
+	                return true;
+	            case R.id.action_home:
+	                // Advance to the next step in the wizard. If there is no next step, setCurrentItem
+	                // will do nothing.
+	            	getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+	                startActivity(new Intent(PersonsDescriptionView.this, MainActivity.class).setAction(getIntent().getAction()));
+	                finish();
 	                return true;
 	        }
 

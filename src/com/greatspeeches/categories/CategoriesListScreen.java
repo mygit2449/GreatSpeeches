@@ -105,7 +105,7 @@ public class CategoriesListScreen extends Activity {
 				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 						long arg3) {
 					// TODO Auto-generated method stub
-					startActivity(new Intent(CategoriesListScreen.this, PersonsDescriptionView.class).putExtra("position", arg2).putParcelableArrayListExtra("popularItems", catDatarr));
+					startActivity(new Intent(CategoriesListScreen.this, PersonsDescriptionView.class).putExtra("position", arg2).putParcelableArrayListExtra("popularItems", catDatarr).setAction("fromCat"));
 				}
 			});
 	}
