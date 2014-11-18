@@ -27,7 +27,7 @@
         <item>@drawable/ayrton</item>
         <item>@drawable/milkhasingh</item>
         <item>@drawable/vishyanand</item>
-        <item>@drawable/kapil</item>
+<!--         <item>@drawable/kapil</item> -->
     </array>
     <array name="womens">
         <item>@drawable/teresa</item>

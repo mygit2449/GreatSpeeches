@@ -2,8 +2,8 @@
 <menu>
 
 <item>
-  <id>1</id>
-  <type>politicians</type>
+  <id>0</id>
+  <type>Politics</type>
   <name>Chandra Shekhar Azad</name>
   <img>chandrashekhar</img>
   <bdate>July 23, 1906, Bhavra,  India</bdate>
@@ -21,12 +21,17 @@
 		After the independence, to commemorate Chandrashekhar Azad, Alfred Park was renamed Chandrashekhar Azad Park. The patriotism of Azad, Rajguru, Pandit Ram Prasad Basil and Ashfaqula Khan was depicted in Rang De Besant, a contemporary Bollywood film starring Aimer Khan that was released in February 2006.
   </info>
   <video>http://www.youtube.com/watch?v=46gUdf5__MA</video> 
+  <achievements>
+		Chandrashekhar Azad was a great Indian freedom fighter. His fierce patriotism and courage inspired others of his generation to enter freedom struggle. Chandrasekhar Azad was the mentor Bhagat Singh, another great freedom fighter, and along with Bhagat Singh he is considered as one of the greatest revolutionaries that India has produced.
+
+		Involved in Kakori Train Robbery (1926), the attempt to blow up the Viceroy's train (1926), and the shooting of Saunders at Lahore (1928) to avenge the killing of Lala Lajpatrai; formed Hindustan Socialist Republican Association with fellow compatriots Bhagat Singh, Sukhdev, and Rajguru.
+  </achievements>
  </item>
  
  
  <item>
-  <id>2</id>
-  <type>politicians</type>
+  <id>1</id>
+  <type>Politics</type>
   <name>Bal Gangadhar Tilak</name>
   <img>baltilak</img>
   <bdate>July 23, 1856, Chikhli, India</bdate>
@@ -45,11 +50,16 @@
 
   </info>
   <video>http://www.youtube.com/watch?v=TucoZsr0CFE</video> 
+  <achievements>
+		Bal Gangadhar Tilak is considered as Father of Indian National Movement. Bal Gangadhar Tilak was a multifaceted personality. He was a social reformer, freedom fighter, national leader, and a scholar of Indian history, sanskrit, hinduism, mathematics and astronomy. Bal Gangadhar Tilak was popularly called as Lokmanya (Beloved of the people). During freedom struggle, his slogan “Swaraj is my birthright and I shall have it” inspired millions of Indians. 
+		
+		Considered as Father of Indian National Movement; Founded “Deccan Education Society” to impart quality education to India's youth; was a member of the Municipal Council of Pune, Bombay Legislature, and an elected 'Fellow' of the Bombay University; formed Home Rule League in 1916 to attain the goal of Swaraj. 
+  </achievements>
  </item>
  
  <item>
-  <id>8</id>
-  <type>politicians</type>
+  <id>2</id>
+  <type>Politics</type>
   <name>Abba Eban</name>
   <img>eban</img>
   <bdate>February 2, 1915, Cape Town, South Africa</bdate>
@@ -58,12 +68,18 @@
   <quote>You can't achieve anything without getting in someone's way.</quote>
   <info>Abba Eban was an Israeli politician, and diplomat. He was a man of great prominence in Israel's political scene post World War-II. Though his original name was Aubrey Solomon Meir Eban, he later changed it to Abba Solomon Meir Eban. In a career that spanned several decades, Eban held the portfolios of Deputy Prime Minister, Education Minister, and Foreign Affairs Minister. He also served as Israel's ambassador to the United States of America, and the United Nations. Eban made quite an impression with his oratory too. According to American diplomat Henry Kissinger, Abba was a great orator who had a really impressive style of speaking the English language. His sentences were often structured in a complex manner, challenging the listener's intelligence. Eban was also a linguist, who had mastered 10 different languages, and had a good understanding of history. It's perhaps because of these abilities that he was elected as the Vice President of the United Nations General Assembly, and offered various other diplomatic roles. Eban also authored nine books in a period of forty years.
   </info>	
-  <video>http://www.youtube.com/watch?v=9nVW09jdNng</video> 
+  <video>http://www.youtube.com/watch?v=9nVW09jdNng</video>
+  <achievements>
+		Abba Eban was honoured with the ‘Lifetime Achievement Award’, by the Government of Israel, in the year 2001..  
+		 
+		Post his death, an Israel news website ‘Ynet’, conducted a poll in the year 2005, to determine the ‘200 Greatest Israelis of All Time’. Eban stood 52nd on this list. 
+
+  </achievements> 
  </item>
  
  <item>
   <id>3</id>
-  <type>politicians</type>
+  <type>Politics</type>
   <name>Bhagat Singh</name>
   <img>bhagatsingh</img>
   <bdate>September 27, 1907, Jaranwala Tehsil, India</bdate>
@@ -87,12 +103,17 @@
 
 		Bhagat Singh along with other revolutionaries found responsible for the Assembly bombing and murder of Saunders. On March 23, 1931, Bhagat Singh was hanged in Lahore with his fellow comrades Rajguru and Sukhdev. Singh was cremated at Hussainiwala on banks of Sutlej river.
   </info>
-  <video>http://www.youtube.com/watch?v=yaVIcETRSxI</video> 
+  <video>http://www.youtube.com/watch?v=yaVIcETRSxI</video>
+  <achievements>
+		Bhagat Singh was one of the most prominent faces of Indian freedom struggle. He was a revolutionary ahead of his times. By Revolution he meant that the present order of things, which is based on manifest injustice must change. Bhagat Singh studied the European revolutionary movement and was greatly attracted towards socialism. He realised that the overthrow of British rule should be accompanied by the socialist reconstruction of Indian society and for this political power must be seized by the workers.
+		
+		Gave a new direction to revolutionary movement in India, formed 'Naujavan Bharat Sabha' to spread the message of revolution in Punjab, formed 'Hindustan Samajvadi Prajatantra Sangha' along with Chandrasekhar Azad to establish a republic in India, assassinated police official Saunders to avenge the death of Lala Lajpat Rai, dropped bomb in Central Legislative Assembly along with Batukeshwar Dutt.
+  </achievements> 
  </item>
  
  <item>
   <id>4</id>
-  <type>politicians</type>
+  <type>Politics</type>
   <name>Vallabhbhai Patel</name>
   <img>sardarpatel</img>
   <bdate>October 31, 1875, Nadiad, India</bdate>
@@ -106,10 +127,18 @@
 		As the first Home Minister and Deputy Prime Minister of India, Patel organised relief for refugees in Punjab and Delhi, and led efforts to restore peace across the nation. Patel took charge of the task to forge a united India from the British colonial provinces allocated to India and more than five hundred self-governing princely states, released from British suzerainty by the Indian Independence Act 1947. Using frank diplomacy, backed with the option and use of military force, Patel's leadership persuaded almost every princely state. Often known as the "Iron Man of India" or "Bismarck of India", he is also remembered as the "Patron Saint" of India's civil servants for establishing modern all-India services.
   </info>
   <video>http://www.youtube.com/watch?v=SLsfsQr7NmQ</video> 
+  <achievements>
+		Sardar Patel was popularly known as Iron Man of India. His full name was Vallabhbhai Patel. He played a leading role in the Indian freedom struggle and became the first Deputy Prime Minister and Home Minister of India. He is credited with achieving political integration of India.
+		
+		Vallabhbhai Patel was one of the great social leaders of India. He played a crucial role during the freedom struggle of India and was instrumental in the integration of over 500 princely states into the Indian Union. Despite the choice of the people, on the request of Mahatma Gandhi, Sardar Patel stepped down from the candidacy of Congress president. The election on that occasion eventually meant for the election of the first Prime Minister of independent India.
+		
+		Successfully led Kheda Satyagraha and Bardoli revolt against British government; elected Ahmedabad's municipal president in 1922, 1924 and 1927; elected Congress President in 1931; was independent India's first Deputy Prime Minister and Home Minister; played a key role in political integration of India; conferred Bharat Ratna in 1991.
+  </achievements>
  </item>
  
  <item>
-	<id>9</id>
+	<id>5</id>
+	<type>Politics</type>
 	<name>Abraham Lincoln</name>
 	<img>abraham_lincoln</img>
 	<bdate>February 12, 1809, Hodgenville, Kentucky, United States</bdate>
@@ -121,14 +150,39 @@
 		  Turn the pages of America's political history, and you are sure to find one man who clearly outshines all others and manages to attract the attention and interest of all, till date, - Abraham Lincoln! Nicknamed 'Honest Abe' or 'Father Abraham', Lincoln was, by far, one of the most powerful and greatest Presidents' that America has ever witnessed. Rising from a modest and humble beginning, it was his sheer determination and honest effort that led him to the nation's highest office. An astute politician and proficient lawyer, he played a vital role in unification of the states and led from the front for the cause of abolishing slavery from the country, eventually giving people equal rights, irrespective of caste, color or creed. He not only envisioned but actually brought to the forefront a truly democratic government which was led by the concept of 'by the people, of the people and for the people'. What's more, Lincoln led the country when it faced its greatest constitutional, military and moral crises. He not only turned up victorious but also was effective in strengthening the national government and modernizing the economy. He was a saviour of the Union and an emancipator for the slaves. However, just as astonishing was his rise to the top-notch position and his eventual governance, his death was equally bewildering as he became the first U.S President ever to be assassinated. Though in his life Abraham Lincoln has been felicitated with no awards and honors, as there did not exist any awards then, he has till date retained a spot in the Top Three Presidents since 1940s. As for the presidential ranking polls conducted since 1948, Lincoln has been rated at the very top in the majority of polls.
 		</info>
 		<video>http://www.youtube.com/watch?v=9TCMHVmNc5w</video> 
-
+<achievements>
+		Abraham Lincoln is remembered for his vital role as the leader in preserving the Union during the Civil War and beginning the process (Emancipation Proclamation) that led to the end of slavery in the United States. He is also remembered for his character and leadership, his speeches and letters, and as a man of humble origins whose determination and perseverance led him to the nation's highest office. 
+		   
+		President Lincoln endured extraordinary pressures during the long Civil War. He carried on despite generals who weren't ready to fight, assassination threats, bickering among his Cabinet members, huge loss of life on the battlefields, and opposition from groups such as the Copperheads. However, Lincoln remained brave and persevered. He didn't give in to the pressures and end the war early. He kept fighting until the Confederacy was defeated. A lesser man would have given in and stopped the war before the goals had been achieved. Lincoln did not do this. 
+		   
+		1. Abraham Lincoln made the decision to fight to prevent the nation from splitting apart.
+		
+		2. Abraham Lincoln was an unfaltering commander in chief during the Civil War which preserved the United States as one nation.
+		
+		3. Abraham Lincoln's foreign policy was successful in preventing other countries from intervening in America's Civil War.
+		
+		4. Abraham Lincoln issued the Emancipation Proclamation which began the process of freedom for America's slaves. The document also allowed black soldiers to fight for the Union.
+		
+		5. Abraham Lincoln was a strong supporter of the Thirteenth Amendment that formally ended slavery in the United States.
+		
+		6. Legislation Abraham Lincoln signed into law included the Homestead Act, the Morrill Act, the National Banking Act, and a bill that chartered the first transcontinental railroad.
+		
+		7. Abraham Lincoln set an example of strong character, leadership, and honesty which succeeding presidents tried to emulate. Barack Obama stated during his campaign that he would look to Lincoln as a model.
+		
+		8. Abraham Lincoln gave a series of great speeches before and during his presidency including the House Divided Speech, the Cooper Union Address, the First Inaugural Address, the Gettysburg Address, and the Second Inaugural Address.
+		
+		9. Abraham Lincoln wrote a series of famous letters including the letters to Grace Bedell, Horace Greeley, Fanny McCullough, and Lydia Bixby.
+		
+		10. Abraham Lincoln's quotes are among the most famous quotes in the world.
+		    
+</achievements>
 	</item>
  
  
  
  <item>
-  <id>5</id>
-  <type>politicians</type>
+  <id>6</id>
+  <type>Politics</type>
   <name>Rajendra Prasad</name>
   <img>rajendra</img>
   <bdate>December 3, 1884, Ziradei, India</bdate>
@@ -141,11 +195,22 @@
 
   </info>
   <video>http://www.youtube.com/watch?v=Fearhz8iAOs</video> 
+  <achievements>
+		First President of independent India; President of the Constituent Assembly; President of Congress in 1943 and 1939.
+		
+		Dr. Rajendra Prasad was the first President of independent India. He was the President of the Constituent Assembly that drafted the Constitution. He had also served as a Cabinet Minister briefly in the first Government of independent India. Dr. Rajendra Prasad was one of the foremost disciples of Gandhiji and he played a crucial role in Indian freedom struggle.
+		
+		Dr. Rajendra Prasad was born on December 3, 1884 in Ziradei village in Siwan district of Bihar. His father's name was Mahadev Sahay and his mother's name was Kamleshwari Devi. Rajendra Prasad was youngest among his siblings. Mahadev Sahay was a Persian and Sanskrit language scholar. Dr. Rajendra Prasad was greatly attached to his mother and elder brother Mahendra.
+		
+		At the age of five Rajendra Prasad was, according to the practice in the community to which he belonged, put under a Maulavi who taught him Persian. Later, he was taught Hindi and arithmetic. At the age of 12, Rajendra Prasad was married to Rajvanshi Devi.
+		
+		Dr. Rajendra Prasad was a brilliant student. He stood first in the entrance examination to the University of Calcutta, and was awarded a monthly scholarship of Rs.30. He joined the famous Calcutta Presidency College in 1902. Here his teachers included the great scientist Jagdish Chandra Ray and the highly respected Prafulla Chandra Roy. Later on he switched from Science to Arts and completed his M.A. and Masters in Law. Meanwhile, in 1905, Doctor, Rajendra Prasad was initiated into the Swadeshi Movement by his elder brother Mahendra. He also joined the Dawn Society run by Satish Chandra Mukherjee, and Sister Nivedita.
+  </achievements>
  </item>
  
  <item>
-  <id>6</id>
-  <type>politicians</type>
+  <id>7</id>
+  <type>Politics</type>
   <name>Gopal Krishna Gokhale</name>
   <img>gokhale</img>
   <bdate>May 9, 1866, Ratnagiri, India</bdate>
@@ -165,12 +230,18 @@
 		Gopal Krishna Gokhale was a diabetic and asthmatic. Excessive assertion took its toll on Gokhale's health and ultimately he died on February 19, 1915.
 
   </info>
+  <achievements>
+      Gopal Krishna Gokhale was one of the pioneers of the Indian national movement. He was a senior leader of the Indian National Congress. Gokhale gave voice to the aspirations of millions of Indians who were looking for freedom from the British rule. Gandhiji considered him as his political guru. Apart from being a political leader, Gopalkrishna Gokhale, was also a social reformer. He founded the "Servants of India Society"-an organization dedicated to the cause of common people. Gopal Krishna Gokhale's contribution to the making of Indian nation is invaluable.
+  
+	  Political guru of Mahatma Gandhi; one of the pioneers of the Indian national movement; founder of the Servants of India Society.
+
+  </achievements>
   <video>http://www.youtube.com/watch?v=myihBR--Lhw</video> 
  </item>
  
  <item>
-  <id>7</id>
-  <type>politicians</type>
+  <id>8</id>
+  <type>Politics</type>
   <name>B. R. Ambedkar</name>
   <img>ambedkar</img>
   <bdate>April 14, 1891, Mhow, India</bdate>
@@ -204,12 +275,20 @@
 		On May 24, 1956, on the occasion of Buddha Jayanti, he declared in Bombay, that he would adopt Buddhism in October. On 0ctober 14, 1956 he embraced Buddhism along with many of his followers. On December 6, 1956, Baba Saheb Dr. B.R. Ambedkar died peacefully in his sleep.
 
   </info>
-  <video>http://www.youtube.com/watch?v=F26OaGKAQdQ</video> 
+  <video>http://www.youtube.com/watch?v=F26OaGKAQdQ</video>
+  <achievements>
+
+		Dr. B.R. Ambedkar is viewed as messiah of dalits and downtrodden in India. He was the chairman of the drafting committee that was constituted by the Constituent Assembly in 1947 to draft a constitution for the independent India. He played a seminal role in the framing of the constitution. Bhimrao Ambedkar was also the first Law Minister of India. For his yeoman service to the nation, B.R. Ambedkar was bestowed with Bharat Ratna in 1990.
+		  
+		Dr. B.R. Ambedkar was elected as the chairman of the drafting committee that was constituted by the Constituent Assembly to draft a constitution for the independent India; he was the first Law Minister of India; conferred Bharat Ratna in 1990.
+ 
+  </achievements> 
  </item>
  
  <item>
-		<id>10</id>
+		<id>9</id>
 		<name>Hu Jintao</name>
+		<type>Politics</type>
 		<img>jintao</img>
 		<bdate>December 21, 1942, Taizhou, China</bdate>
 		<ddate></ddate> 
@@ -218,12 +297,46 @@
 		<info>Popularly adjudged by the media as the second most powerful person in the world, Hu Jintao is a former leader of the Communist Party of China. He served as the General Secretary of the Communist Party of China from 2002 to 2012, Chairman of the CPC Central Military Commission from 2004 to 2012 and President of the People's Republic of China from 2003 to 2013. He took the reins of the country at a time when China was facing immense internal social, political and environmental problems. There was a wide economic gap amongst the people of the country that caused dissatisfaction and anger in the minds of the citizen. Furthermore, the level of corruption was remarkably high and spread to all the sectors, including civil, military, educational, judicial and medical systems. Jntao, with his will power and futuristic vision, worked relentlessly introducing newer reforms and greater control to transform the country to being a major world power. He brought forth consistent economic growth and development and sought to bridge the socio-economic gap and bring about equality. For the same he launched several programs, including the '8 Honours and 8 Shames' movement which aimed to promote a selfless and moral outlook in people. To know more about his life and contributions, browse further.
 		</info>
 		<video>http://www.youtube.com/watch?v=Czpa-LAjfFc</video> 
+		<achievements>
+		November 2002 - Hu Jintao becomes party general secretary at 16th national congress.
+		
+		November 2002-June 2003 - Sars deaths in Guangdong covered up until disease spreads across nation and sparks global panic. Epidemic kills 348 on the mainland and 299 in Hong Kong. Health Minister Zhang Wenkang and Beijing mayor Meng Xuenong sacked in April.
+		
+		March 2003 - Hu becomes president and Wen Jiabao becomes premier.
+		
+		July 2003 - Half a million march in Hong Kong on July 1, protesting against anti-subversion legislation under Article 23. City government shelves proposal a week later.
+		
+		October 2003 - Yang Liwei becomes China's first astronaut aboard Shenzhou V.
+		
+		October-November 2004 - Tens of thousands of villagers in Sichuan's Hanyuan county protest against planned Pubugou Dam on Dadu River, clash with armed police in biggest protest since Hu took power.
+		
+		March 2005 - The NPC ratifies an anti-secession law endorsing the use of "non-peaceful means" of reunification if Taiwan moves towards independence.
+		
+		April 2005 - Lien Chan, honorary chairman of Taiwan's Kuomintang, meets Hu in Beijing, first meeting in more than half a century between leaders of erstwhile civil war adversaries.
+		
+		November 2005 - Massive benzene leak from Jilin city chemical plant contaminates Songhua River, leaving millions without drinking water for days. Environment Minister Xie Zhenhua sacked.
+		
+		January 2006 - Central government eliminates centuries-old rural taxes.
+		
+		May 2006 - Building of main structure of Three Gorges Dam on Yangtze River completed, 11 years after it began.
+		
+		September 2006 - Shanghai party boss and Politburo member Chen Liangyu sacked over corruption.
+		
+		March 2007 - Landmark property law protecting private-ownership rights passed by National People's Congress.
+		
+		April 2007 - Wen makes "ice-melting" visit to Japan, first by a Chinese premier in seven years.
+		
+		June 2007 - Thousands rally in Xiamen , Fujian , successfully blocking a petrochemical project because of health and environmental concerns.
+		
+		March 2008 - Nineteen people killed in rioting in Lhasa that spreads to other areas with large Tibetan populations.
+		</achievements>
 
  </item>
  
  <item>
-		<id>11</id>
+		<id>10</id>
 		<name>Subhas Chandra Bose</name>
+		<type>Politics</type>
 		<img>bose</img>
 		<bdate>January 23, 1897, Cuttack, India</bdate>
 		<ddate>August 18, 1945, Taihoku Prefecture</ddate> 
@@ -243,7 +356,11 @@
 
 		</info>
 		<video>http://www.youtube.com/watch?v=eOoru0GR3VY</video> 
-
+		<achievements>
+		Subhas Chandra Bose, affectionately called as Netaji, was one of the most prominent leaders of Indian freedom struggle. Though Mahatma Gandhi and Jawaharlal Nehru have garnered much of the credit for successful culmination of Indian freedom struggle, the contribution of Subash Chandra Bose is no less. He has been denied his rightful place in the annals of Indian history. He founded Indian National Army (Azad Hind Fauj) to overthrow British Empire from India and came to acquire legendary status among Indian masses. 
+		
+		Passed Indian Civil Services Exam; elected Congress President in 1938 and 1939; formed a new party All India Forward block; organized Azad Hind Fauj to overthrow British Empire from India. 
+		</achievements>
  </item>
  
 </menu>

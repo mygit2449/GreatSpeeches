@@ -2,8 +2,8 @@
 <menu>
 
 <item>
-  <id>1</id>
-  <type>ST</type>
+  <id>0</id>
+  <type>Science &amp; Technology</type>
   <name>A.P.J. Abdul Kalam</name>
   <img>kalam_h</img>
   <audio></audio>
@@ -17,12 +17,19 @@
 
 	   And Dr APJ Abdul Kalam regards his work on India's nuclear weapons program as a way to assert India's place as a future superpower. Even during his tenure as President, APJ Kalam took avid interest in the spheres of India's science and technology. He has even put forward a project plan for establishing bio-implants. He is also an ardent advocate of open source software over proprietary solutions to churn out more profits in the field of information technology in India.
  </info>
+ <achievements>
+     This eminent scientist and engineer has also served as the 11th President of India from the period 2002 to 2007. APJ Abdul Kalam is a man of vision, who is always full of ideas aimed at the development of the country. He firmly believes that India needs to play a more assertive role in international relations. 
+
+	 Apart from being a notable scientist and engineer, Dr APJ Abdul Kalam served as the 11th President of India from the period 2002 to 2007. He is a man of vision, who is always full of ideas aimed at the development of the country and is also often also referred to as the Missile Man of India. People loved and respected Dr APJ Abdul Kalam so much during his tenure as President that was popularly called the People's President.
+
+	 Dr.Kalam has been awarded Padma Bhushan in 1981, Padma Vibhushan in 1990 and BHARAT RATNA in 1997.
+ </achievements>
  </item>
 
 
 <item>
-  <id>2</id>
-  <type>ST</type>
+  <id>1</id>
+  <type>Science &amp; Technology</type>
   <name>Albert Einstein</name>
   <img>alberteinstein</img>
   <bdate>March 14, 1879, Ulm, Germany</bdate>
@@ -41,11 +48,30 @@
 
 		Einstein's gifts inevitably resulted in his dwelling much in intellectual solitude and, for relaxation, music played an important part in his life. He married Mileva Maric in 1903 and they had a daughter and two sons; their marriage was dissolved in 1919 and in the same year he married his cousin, Elsa Löwenthal, who died in 1936. He died on April 18, 1955 at Princeton, New Jersey.
   </info>
+  <achievements>
+      1. Einstein showed that absolute time had to be replaced by a new absolute: the speed of light. Einstein went against the grain and totally dismissed the "Old Physics." He envisioned a world where space and time are relative and the speed of light is absolute (at the time, it was believed that space and time were absolute and the speed of light was relative).
+
+	  2. He asserted the equivalence of mass and energy, which would lead to the famous formula E=mc2
+
+	  3. Einstein challenged the wave theory of light, suggesting that light could also be regarded as a collection of particles. This helped to open the door to a whole new world--that of quantum physics. For ideas in this paper, he won the Nobel Prize in 1921.
+
+	  4. His paper concerning the Brownian motion of particles. With profound insight, Einstein blended ideas from kinetic theory and classical hydrodynamics to derive an equation for the mean free path of such particles as a function of the time.
+
+	  5. Einstein showed how to calculate Avogadro's number and the size of molecules.
+
+	  6. In 1910, Einstein answered a basic question: 'Why is the sky blue?' His paper on the phenomenon called critical opalescence solved the problem by examining the cumulative effect of the scattering of light by individual molecules in the atmosphere.
+
+	  7. Einstein later published a paper in 1915 called "General Relativity." General Relativity took over when Special Relativity started to fail. Controversy started to rise when Einstein released his second paper called "General Relativity."
+
+      8. In 1917, Einstein published a paper which uses general relativity to model the behavior of an entire universe. General relativity has spawned some of the weirdest, and most important results in modern astronomy.
+
+	  9. Einstein recognized that there might be a problem with the classical notion of cause and effect. Given the peculiar, dual nature of quanta as both waves and particles, it might be impossible, he warns, to definitively tie effects to their causes.
+  </achievements>
  </item>  
  
  <item>
-  <id>3</id>
-  <type>ST</type>
+  <id>2</id>
+  <type>Science &amp; Technology</type>
   <name>Alfred Nobel</name>
   <img>nobel_hh</img>
   <audio></audio>
@@ -56,12 +82,23 @@
   <info>Alfred Bernhard Nobel was a Swedish inventor, engineer and industrialist who had obtained a total of 355 patents in his lifetime. He was most well-known for inventing dynamite, and for developing some more powerful explosives and detonators to effectively ignite them. He built a network of almost a hundred factories all over the world to manufacture explosives and ammunition, and amassed a massive fortune from his businesses. In fact, at the time of his death, he was one of the wealthiest persons on the world. Since he was unmarried and childless, there were many speculations about the contents of his last will which he had signed on 27th November, 1895. The contents of his will caused a lot of disappointment to his much hopeful extended family as Nobel had left much of his wealth for the establishment of an international prize fund! As the inventor of dynamite, he had earned the sobriquet, 'The Merchant of Death' which deeply traumatized Nobel who was a pacifist at heart. He did not want to be remembered as the reason behind mass destruction after his death, and in order to redeem his posthumous reputation, he left the major portion of his wealth for the establishment of the Nobel Prizes to be awarded for eminence in five different fields, without any discrimination on basis of nationality.
   </info>
   <video>http://www.youtube.com/watch?v=PC-sN5lbfhE</video>
+  <achievements>
+		There had to be a solution to the problem on reducing the economic cost ofconstruction and make it efficient,quick,and safe by inventing a brand new explosive(Alfred Nobel’s Life and Work).The only explosive they had around that time was black powder,but nitroglycerin,a new liquid explosive invented by Ascanio Sobrero became very useful that had a bigger impact when ignited, although it was very dangerous to handle (Industry History). This man,Alfred Nobel wants to create a safer production to stabilize nitroglycerin, so it would not cause a lot of trouble.(‘’History of Dynamite’’).
+  
+		The reasons why he did the whole process because his father’s company had bankrupt in and they moved back to Sweden, while they rely on Alfred’s mother for money as she owned a grocery store.Alfred returns after he was studying nitroglycerin in France.Alfred Nobel went back to Sweden to work on the some experiments with nitroglycerin with his father(‘’Famous Scientists’’).In 1864,one terrible accident had changed his life. One of his experiments failed and it blew up a factory killing several people including his Emil,his younger brother.This sent Stockholm to ban this project from the city limits(‘’Alfred Nobel’s Life and Work’’).
+ 		
+ 		He never gave up. One day he moved his project to Lake Malaren in Sweden on a boat.This is where the development of dynamite had begun.He had discovered Kieselguhr, a fine sand a.k.a Diatomaceous Earth, are used for absorbing liquids(‘’Diatomaceous’’). but which can make nitroglycerin into a solid(‘’Alfred Nobel’s Life and Work’’).He combined kieselguhr with nitroglycerin with wood pulp so it could absorb kieselguhr into nitroglycerin, so it would make a paste-like mixture.Then sodium nitrate was added to enhance the strength of the explosion upon detonation(Britannica).It formed into rods and dynamite was born.These rods are quite convenient,because it can be put into drilling holes.It can release its energy by detonating by heat or force so he created a new blasting cap where it can blow up by lighting a fuse.(‘’History of Dynamite’’)
+ 		
+ 		His invention blew up people’s mind. Companies started to use dynamite and Nobel had companies in about 90 different places in more than 20 countries(‘’Alfred Nobel’s Life and Work’’).This newly invented explosive outmatched the old-fashioned black powder. It helped make way through tunnels,make roads,structuring bridges which is fast,efficient,and cost effective. It became so popular that it went through globally, all the way to America.In one terrible earthquake in 1906 in San Francisco caused a fire. And they tried to affected destroy buildings with dynamite so that the fire won’t spread. This shows that dynamite is useful in a worse case scenario.(‘’Industry History’’)
+		
+		Morally, it really depends. It is safer, more efficient and it also encourages construction work(‘’Alfred Nobel’s Life and Work’’). Although they are great things, they do impact human health.Dynamites contain a lot of chemicals and when they explode, there is a hot gas filled with chemicals that puts pressure and eats up all the oxygen surrounding.That would be a difficult environment to breath in(‘‘HowStuffWorks’’).
+  </achievements>
  </item> 
  
  
  <item>
-  <id>4</id>
-  <type>ST</type>
+  <id>3</id>
+  <type>Science &amp; Technology</type>
   <name>C. V. Raman</name>
   <img>cvraman</img>
   <audio></audio>
@@ -85,12 +122,23 @@
 		
 		Raman has been honoured with a large number of honorary doctorates and memberships of scientific societies. He was elected a Fellow of the Royal Society early in his career (1924), and was knighted in 1929.
   </info>
+  <achievements>
+        C.V. Raman’s work in physics was influential in the growth of science in India. He was the recipient of the Nobel Prize for Physics (becoming the first Indian to win this honor) in 1930 for the discovery that when light traverses a transparent material, some of the light that is deflected changes in wavelength. This phenomenon was called “Raman Scattering” and is now more commonly known as the “Raman Effect”.
+		
+		He was the first Indian scholar who studied wholly in India received the Nobel Prize. 
+
+		C.V. Raman is one of the most renowned scientists produced by India. His full name was Chandrasekhara Venkata Raman. For his pioneering work on scattering of light, C.V. Raman won the Nobel Prize for Physics in 1930. 
+
+		His pioneering work also resulted in him becoming the member of Royal Society of London in 1924. He was awarded with the knight of the British Empire in 1929 by Great Britain.
+
+		Raman also worked as the director and Physics professor at the Indian Institute of Sciences in Bangalore for two years. Some of his other pioneering works include experimental and theoretical studies on the light diffraction by acoustic waves of hypersonic and ultrasonic frequencies. He also studied the effects produced by X-rays in crystals exposed to ordinary light on infrared vibrations. In addition, he established the Raman Research Institute after independence in Bangalore, where he worked until his death in 1970.
+  </achievements>
   <video>http://www.youtube.com/watch?v=L0IlhgZjQp0</video>
  </item> 
  
   <item>
-  <id>5</id>
-  <type>ST</type>
+  <id>4</id>
+  <type>Science &amp; Technology</type>
   <name>Srinivasa Ramanujan</name>
   <img>srinivasaramanujan</img>
   <audio></audio>
@@ -124,12 +172,21 @@
 
 		Ramanujan returned to Madras in April 1919 in a precarious state of health. A difficult patient who refused medical aid, he went for a while to his home district but was prevailed upon to return to Madras for treatment. Until his last days he continued his mathematical research.
   </info>
+  <achievements>
+		Ramanujan went to Cambridge in 1914 and it helped him a lot but by that time his mind worked on the patterns on which it had worked before and he seldom adopted new ways. By then, it was more about intuition than argument. Hardy said Ramanujan could have become an outstanding mathematician if his skills had been recognized earlier. It was said about his talents of continued fractions and hypergeometric series that, “he was unquestionably one of the great masters.” It was due to his sharp memory, calculative mind, patience and insight that he was a great formalist of his days. But it was due to his some methods of working in the work analysis and theories of numbers that did not let him excel that much.
+
+		He got elected as the fellow in 1918 at the Trinity College at Cambridge and the Royal Society. He departed from this world on April 26, 1920.
+	
+	    Ramanujan independently discovered results of Gauss, Kummer and others on hypergeometric series. Ramanujan's own work on partial sums and products of hypergeometric series have led to major development in the topic. His most famous work was on the number p(n) of partitions of an integer n into summands. 
+ 		
+ 		Srinivasa Ramanujan was a mathematician par excellence. He is widely believed to be the greatest mathematician of the 20th Century. Srinivasa Ramanujan made significant contribution to the analytical theory of numbers and worked on elliptic functions, continued fractions, and infinite series.
+  </achievements>
   <video>http://www.youtube.com/watch?v=rkqlrr43f9o</video>
  </item>
  
  <item>
-  <id>6</id>
-  <type>ST</type>
+  <id>5</id>
+  <type>Science &amp; Technology</type>
   <name>Thomas Alva Edison</name>
   <img>thomasedison</img>
   <bdate>February 11, 1847, Milan, Ohio, United States</bdate>
@@ -139,11 +196,35 @@
   <quote>Genius is one percent inspiration, ninety-nine percent perspiration.</quote>
   <info>Thomas Alva Edison was the most prolific inventor in American history. He amassed a record 1,093 patents covering key innovations and minor improvements in wide range of fields, including telecommunications, electric power, sound recording, motion pictures, primary and storage batteries, and mining and cement technology. As important, he broadened the notion of invention to encompass what we now call innovation-invention, research, development, and commercialization-and invented the industrial research laboratory. Edison's role as an innovator is evident not only in his two major laboratories at Menlo Park and West Orange in New Jersey but in more than 300 companies formed worldwide to manufacture and market his inventions, many of which carried the Edison name, including some 200 Edison illuminating companies.
   </info>
+  <achievements>
+		The Edison Lamp
+
+		Others before and in the same period with Edison toiled long and hard to produce a practical incandescent lamp.  The idea was not original with him, but it required the Edison genius to solve the difficult problems involved.
+
+		Many persons tried to deprive Edison of the honor of having been the first to perfect a practical incandescent electric lamp, but they all met with failure.  Edison’s claim was to genuine to be set aside, even by the courts which, for one reason or another, might have been inclined to bias.
+ 		
+ 		Edison realized that the invention of a practical lamp alone was not enough to replace gas as the most-used means of lighting.  Therefore, his work on the electric light is even more astonishing, because in addition to perfecting a commercially practical lamp he also invented a ‘complete generation and distribution system, including dynamos, conductors, fuses, meters, sockets, and numerous other devices.  Of 1,097 United States patents granted to Edison during his lifetime – by far the greatest number ever granted to one individual – 356 dealt with electric lighting and the generation and distribution of electricity.
+  
+  
+ 		The ‘Edison Effect”
+
+		The year 1883 was significant for Edison in that, by his discovery of what was to become known as the “Edison effect,” he pushed aside a veil of darkness behind which were to be found all the wonders of electronics.  Edison in this achievement discovered the previously unknown phenomenon by which an independent wire or plate, when placed between the legs of the filament in an electric bulb, serves as a valve to control the flow of current.  This discovery unearthed the fundamental principle on which rests the modern science of electronics.
+
+		In that year, 1883, Edison filed a patent on an electrical indicator employing the “Edison effect,” the first application in the field of electronics.
+
+		The facilities of Menlo Park were proving inadequate to meet the requirements of Edison’s amazing ability.  He began looking around for a place more suitable for his needs.  This he found in the little Essex County community of West Orange in northern New Jersey.  He gave the orders that set workmen to the task of building a new and greater research laboratory. 
+  
+ 		The Motion Picture Camera
+
+		Two things led Edison to the invention of the motion picture camera:  His idea that motion could be captured by having one camera that would take repeated pictures at high speed, and a new celluloid film developed by George Eastman for use in still photography that proved adaptable to Edison’s proposed camera.
+  
+  		No field of scientific endeavor seemed foreign to his talents.  When, in 1914, a shortage of carbolic acid developed because World War I had cut off European supplies, Edison quickly devised a method of making domestic carbolic acid and was producing a ton a day within a month.
+  </achievements>
  </item>  
  
  <item>
-  <id>7</id>
-  <type>ST</type>
+  <id>6</id>
+  <type>Science &amp; Technology</type>
   <name>Yellapragada Subbarow</name>
   <img>subbarao</img>
   <bdate>January 12, 1895, Bhimavaram, India</bdate>
@@ -155,6 +236,11 @@
   
 		With so many discoveries and developments to his credit, Subbarao never marketed his work and hence, was always left behind in terms of work recognition and appreciation. He always sat in the audience and had to be pushed to the stage by a colleague or a collaborator to take a bow as each of his researches was revealed to the public. Further, he was seen giving interviews to the press or visiting nations on lecture tours. When his colleague George Hitchings won the Nobel Prize in Physiology or Medicine, along with Gertrude Elion, in 1988, he stated that some of the works initiated by Subbarao had to be rediscovered for the simple reason that his partner Fiske did not allow his contributions earn name and fame, probably out of jealousy. American Cyanamid honored Subbarao by naming a new fungus under his name "Subbaromyces splendens".
   </info>
+ <achievements>
+		Subbarao discovered many more antibiotics for a wide range of cures, other than the already discovered penicillin and streptomycin. His research led him to the discovery of polymyxin which is still used in cattle-feed. This led to laying the foundation for the isolation of vitamin B9, the antipernicious anemia factor, based on the work conducted by Lucy Wills in 1945. He applied different inputs given by Dr. Sidney Farber to develop an anti-cancer drug Methotrexate, one of the first cancer chemotherapy agents, which is still used worldwide. He was also credited with the discovery of drug Hetrazen, a cure for filariasis at Lederle. Today, this drug is the most widely used medicine for treating filariasis, including World Health Organization. Under his directorship, Benjamin Duggar gave birth to his discovery of the world's first tetracycline antibiotic, Aureomycin in the same year. This resulted as one of the largest distributed scientific experiments till date with American soldiers being asked to collect soil samples during World War II and deposit them at Lederle Laboratories for anti-bacterial agents from natural soil fungi. Another medicine that he discovered was Isonicotinic acid Hydrazide, an effective cure for tuberculosis.
+
+		With so many discoveries and developments to his credit, Subbarao never marketed his work and hence, was always left behind in terms of work recognition and appreciation. He always sat in the audience and had to be pushed to the stage by a colleague or a collaborator to take a bow as each of his researches was revealed to the public. Further, he was seen giving interviews to the press or visiting nations on lecture tours. When his colleague George Hitchings won the Nobel Prize in Physiology or Medicine, along with Gertrude Elion, in 1988, he stated that some of the works initiated by Subbarao had to be rediscovered for the simple reason that his partner Fiske did not allow his contributions earn name and fame, probably out of jealousy. American Cyanamid honored Subbarao by naming a new fungus under his name "Subbaromyces splendens".
+ </achievements>
  </item> 
 </menu>
 

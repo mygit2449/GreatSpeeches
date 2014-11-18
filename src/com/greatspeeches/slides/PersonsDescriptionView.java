@@ -18,7 +18,6 @@ import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -290,6 +289,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	                // See http://developer.android.com/design/patterns/navigation.html for more.
 //	            	getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
 //	                startActivity(new Intent(PersonsDescriptionView.this, HomeScreen.class).setAction(getIntent().getAction()));
+	            	startActivity(new Intent(PersonsDescriptionView.this, MainActivity.class).setAction(getIntent().getAction()));
 	                finish();
 	                return true;
 
@@ -309,7 +309,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	                // will do nothing.
 	            	getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
 	                startActivity(new Intent(PersonsDescriptionView.this, MainActivity.class).setAction(getIntent().getAction()));
-	                finish();
+//	                finish();
 	                return true;
 	        }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu>
 <item>
-  <id>7</id>
+  <id>0</id>
   <type>Sports</type>
   <name>Dhyan Chand</name>
   <img>dhyanchand</img>
@@ -32,11 +32,17 @@
 		Chand was ultimately selected for the Indian Army team which was to tour New Zealand.
 		The team won 18 matches, drew 2 and lost only 1, receiving praises from all spectators. Returning to India, Chand was immediately promoted to Lance Naik.
   </info>
+  <achievements>
+      	Won 3 gold medals in Olympic games .Awarded the Padma Bhushan in 1956. 
+
+		Dhyan Chand Singh was an Indian Hockey player, and considered to be the all time greatest player the game of Hockey has ever seen the world over. He has probably been the only Indian player ever in any sport which skills so high that generated a number of myths about his abilities as a Hockey player. 
+
+  </achievements>
 </item>
 
 
 <item>
-  <id>6</id>
+  <id>1</id>
   <type>Sports</type>
   <name>Sachin Tendulkar</name>
   <img>sachin</img>
@@ -50,10 +56,39 @@
 
 		In December 2012, Tendulkar announced his retirement from ODIs.He retired from Twenty20 cricket in October 2013 and subsequently announced his retirement from all forms of cricket,retiring on 16 November 2013 after playing his 200th and final Test match, against the West Indies in Mumbai's Wankhede Stadium. Tendulkar played 664 international cricket matches in total, scoring 34,357 runs.
 </info>
+<achievements>
+		National honours
+
+		1994 – Arjuna Award, by the Government of India in recognition of his outstanding achievement in sports.
+		1997–98 – Rajiv Gandhi Khel Ratna, India's highest honour given for achievement in sports.
+		1999 – Padma Shri, India's fourth highest civilian award.
+		2001 – Maharashtra Bhushan Award, Maharashtra State's highest Civilian Award.
+		2008 – Padma Vibhushan, India's second highest civilian award.
+		2014 – Bharat Ratna, India's highest civilian award.
+
+		Other honours
+
+		1997 – Wisden Cricketer of the Year.
+		2002 – In commemorating Tendulkar's feat of equalling Don Bradman's 29 centuries in Test Cricket, automotive company Ferrari invited him to its paddock in Silverstone on the eve of the British Grand Prix on 23 July, to receive a Ferrari 360 Modena from the F1 world champion Michael Schumacher.
+		2003 – Player of the tournament in 2003 Cricket World Cup.
+		2004, 2007, 2010 – ICC World ODI XI.
+		2009, 2010, 2011 – ICC World Test XI.
+		2010 – Outstanding Achievement in Sport and the Peoples Choice Award at The Asian Awards in London.
+		2010 – Wisden Leading Cricketer in the World.
+		2010 – ICC Award-Sir Garfield Sobers trophy for cricketer of the year.
+		2010 – LG People's Choice Award.
+		2010 – Made an Honorary group captain by the Indian Air Force.
+		2011 – BCCI Cricketer of the Year award.
+		2011 – Castrol Indian Cricketer of the Year award.
+		2012 – Wisden India Outstanding Achievement award.
+		2012 – Honorary Life Membership of Sydney Cricket Ground (SCG)
+		2012 – Honorary Member of the Order of Australia, given by the Australian government.
+		2013 – Indian Postal Service released a stamp of Tendulkar and he became the second Indian after Mother Teresa to have such stamp released in their lifetime.
+</achievements>
 </item>
 
 <item>
-  <id>1</id>
+  <id>2</id>
   <type>Sports</type>
   <name>Pele</name>
   <img>pele</img>
@@ -71,10 +106,19 @@
 
 		Pele went on to score over 1,000 goals in professional games. (The 1000th goal coming as a penalty in the US league sparking celebrations around the world). His strike rate in international games was one of the highest ever. In 92 appearances, he scored 77 goals.
   </info>
+  <achievements>
+		Pele went on to lead Brazil in two more World Cup wins and play in another on top of that. This made him the only player to win three world cups, and one of the few players to play in four different World Cups!
+
+		Also, he scored 1281 goals in 1363 matches over the course of his career, making him FIFA's most prolific scorer!
+
+		On top of that, he set a record of 12 goals scored in one world cup, a record that was recently broken by another Brazilian named Ronaldo
+
+		Those are some of Pele's biggest accomplishments, though they are by no means all that he did.
+  </achievements>
  </item>
 
 <item>
-  <id>2</id>
+  <id>3</id>
   <type>Sports</type>
   <name>Muhammad Ali</name>
   <img>muhammad_ali</img>
@@ -88,10 +132,31 @@
   
 		In 1984, he was diagnosed with Parkinson’s Disease, which would eventually confine him to a wheelchair and make it hard for him to communicate.
   </info>
+  <achievements>
+		1959	National Golden Gloves Light Heavyweight Champion
+		1959	National Amateur Athletic Union champion
+		1960	National Golden Gloves Light Heavyweight Champion
+		1960	National Amateur Athletic Union champion
+		1960	Gold medal, Rome Olympics, light-heavyweight boxing
+		1964-67	World Heavyweight Champion
+		1970	Dr. Martin Luther King Memorial Award
+		1974	Sportsman of the Year, Sports Illustrated
+		1974	Fighter of the Year, Boxing Writers Association
+		1974-78	World Heavyweight Champion
+		1978-79	World Heavyweight Champion
+		1979	Honorary Doctorate of Humane Letters, Texas Southern Univesity
+		1979	Street named after him in Louisville, Kentucky
+		1985	Recognized for long, meritorious service, World Boxing Association
+		1987	Elected to Boxing Hall of Fame
+		1990	Inducted into International Boxing Hall of Fame
+		1996	Lights Olympic torch, Atlanta
+		1997	Arthur Ashe Award for Courage, ESPN
+		1997	Essence Living Legend Award
+  </achievements>
  </item>
  
  <item>
-  <id>3</id>
+  <id>4</id>
   <type>Sports</type>
   <name>Carl Lewis</name>
   <img>carllewis</img>
@@ -105,10 +170,16 @@
 
 		He has been voted Sportsman of the Century by the International Olympic Committee IOC.
   </info>
+  <achievements>
+ 		In his active years, he was the undisputed athlete of track and field, his medals standing as a testimony of the same. While his Olympic record stands at 9 gold and 1 silver, his World Championship medals tally include: 8 gold, 1 silver and 1 bronze. At the Pan American and Goodwill Games, he won 2 and 3 gold medals respectively.  
+
+		Publications around the world have honoured him with various titles including ‘Sportman of the Century’, ‘World Athlete of the Century’ and ‘Olympian of the Century’. 
+
+  </achievements>
  </item>
  
   <item>
-  <id>4</id>
+  <id>5</id>
   <type>Sports</type>
   <name>Jackie Joyner-Kersee</name>
   <img>jackie</img>
@@ -120,10 +191,25 @@
   
 		Joyner-Kersee’s best heptathlon events were the long jump, 100-metre hurdles, 200-metre run, and high jump. She often competed in single events, particularly the long jump, in which she tied the world record (7.45 metres [24 feet 5.5 inches]) in 1987 and won the gold medal in 1988 and the bronze in 1992. After the 1996 Olympics, Joyner-Kersee played professional basketball with the Richmond Rage; she left the team midway through her first season to compete in the long jump indoors. In 1997 she published A Kind of Grace: The Autobiography of the World’s Greatest Female Athlete.
   </info>
+ <achievements>
+		1974-78	Wins four consecutive national junior pentathlon championships
+		1984	Silver medal, Olympic heptathlon
+		1985	Sets U.S. record in long jump
+		1986	Sets two world records in heptathlon
+		1986	Sullivan Award for Best Amateur Athlete; Jesse Owens Award; Track and Field Athlete of the Year
+		1987	McDonald's Amateur Athlete of the Year
+		1988	Olympic gold medals in heptathlon and long jump
+		1989	Honorary doctorate, University of Missouri
+		1992	Olympic gold medal, heptathlon; Olympic bronze medal, long jump
+		1996	Olympic bronze medal, long jump
+		1998	Gold medal, heptathlon, Goodwill Games
+
+ </achievements>
+ 
  </item>
  
    <item>
-  <id>5</id>
+  <id>6</id>
   <type>Sports</type>
   <name>Ayrton Senna</name>
   <img>ayrton</img>
@@ -136,10 +222,27 @@
 
 		He died in 1994, at the peak of his motor racing career in a tragic accident at Imola, San Marino.
   </info>
+  <achievements>
+		Ayrton Senna’s extraordinary feats at the wheel of a racing car yielded three world championship titles and 41 grand prix victories. He was probably the greatest exponent of the flat-out qualifying lap the sport has ever seen, taking 65 pole positions in 162 races.
+	
+		These achievements alone ensured his name would be forever writ large in the history books long before the tragic circumstances of his death while leading the 1994 San Marino Grand Prix.
+
+		Senna first came to the attention of Formula One teams in 1983 as he was on his way to winning the British Formula Three championship. Williams were first to test the 23-year-old, and McLaren and Brabham also put him in their cars.
+
+		At the latter Nelson Piquet bristled at the prospect of being paired with another bright Brazilian talent and moved to block Senna’s arrival. Neither Williams nor McLaren were prepared to offer him a race seat for the coming season, so Senna secured a drive at the tiny Toleman outfit, who were entering their fourth season and were yet to finish a race higher than fourth place.
+
+		That changed soon after Senna’s arrival. In dreadful conditions at Monaco he guided his TG184 between the barriers on a near-flooded track whole seconds faster than the front runners. He was gaining on race leader – and future arch-rival – Alain Prost when the race was controversially red-flagged.
+
+		To that second place he added two more podium finishes before the end of the season. But he also incurred the wrath of Toleman boss Alex Hawkridge, who barred Senna from racing at Monza after his driver broke their contract to sign a deal with Lotus.
+
+		Again the results came quickly. Just two races into his Lotus career Senna became a race winner. Again he prevailed in dire conditions, this time at Estoril in Portugal, finishing a minute clear of his rivals. Seven pole positions that year underlined his status as the sport’s foremost qualifier.
+
+		But on race days the reliability of the Lotus and the fuel consumption of its Renault engine was often found wanting. Nonetheless he led the 1986 championship in its early stages and remained in the hunt until late in the year.
+  </achievements>
  </item>
 
 <item>
-  <id>8</id>
+  <id>7</id>
   <type>Sports</type>
   <name>Milkha Singh</name>
   <img>milkhasingh</img>
@@ -153,10 +256,18 @@
 		
 		Honoring the incredible and hitherto the best performance by any Indian Athlete that Milkha Singh delivered throughout his sports career, he was bestowed upon the Padma Shri award (1958) and the Arjuna Award by the Government of India.
 </info>
+<achievements>
+		Milkha Singh has been an Indian Athlete, and considered to be one of the greatest Athletes the nation has ever produced. Also, nicknamed as the Flying Sikh, Milkha has been the only Indian Athlete till date to have broken an Olympic Record, still he lost the Bronze Medal in the 400m event at Rome Olympic Games 1960 by just 0.1 seconds. 
+
+		Won the 200 and 400 meters events in the 1956 Tokyo Asian Games
+		Won the 400 meters at the 1958 Cardiff Commonwealth Games
+		Broke the Olympic record for the 400 meters event while finishing fourth in the 1960 Rome Olympic Games
+
+</achievements>
 </item>
 
 <item>
-  <id>9</id>
+  <id>8</id>
   <type>Sports</type>
   <name>Viswanathan Anand</name>
   <img>vishyanand</img>
@@ -170,6 +281,15 @@
 
 		In July 1999, Anand outplayed the most popular chess software programme, Fritz. Subsequently, Viswanathan Anand became the first Asian to win the World Chess Championship title. Anand won the world title on 24th December 2000, defeating Spain's Alexei Shirov at Teheran. For his outstanding performance and achievements Anand has received many awards; the Arjuna Award for Outstanding Indian Sportsman in 1985, Padmashree, National Citizens Award and Soviet Land Nehru Award in 1987. Viswanathan Anand was also awarded the prestigious Rajiv Gandhi Khel Ratna Award. Anand has also won the coveted Chess Oscars in 1997, 1998 and 2004.
   </info>
+  <achievements>
+		Viswanathan Anand been the epitome of chess in India and has gained worldwide recognition. In a glorious career spanning 25 years (and still counting), Anand has taken Indian chess to new heights. He has registered success in both the national and the international levels and has been entitled to a number of prestigious awards, for his excellence in chess. Born on 11 December 1969 in Chennai, Tamil Nadu, Viswanathan Anand is the role model for the aspiring chess players of India and has proved to be the prominent figure in the field of the sport, since the beginning of his career. 
+
+		Became India's first Grandmaster in 1988
+		Became the first Indian to win the FIDE World Chess Championship in 2000
+		Won , the Chess Oscar many times
+		World Chess Champion in 2007 and 2008
+
+  </achievements>
 </item>
 
 <!--  
@@ -190,18 +310,18 @@
   </info>
 </item>
  -->
- <item>
-  <id>11</id>
-  <type>Sports</type>
-  <name>Kapil Dev</name>
-  <img>kapil</img>
-  <audio></audio>
-  <video>http://www.youtube.com/watch?v=78sh10Bz_YY</video>
-  <bdate>January 6, 1959, Chandigarh, India</bdate> 
-  <quote>When you have to work, work with a smile.</quote>
-  <info>Considered to be one of the greatest cricketing all-rounders of all time, Kapil Dev is a former Indian cricketer best known for leading his team to a World Cup victory in 1983. Confident, charismatic and highly skilled, he was the Indian team's main strike bowler for the major part of his career. During his heydays he used to bamboozle batsmen with his prodigious swing. Dev was great not just with the ball; he was equally talented with the bat too. An expert at hooking and driving, he often provided India with the crucial runs needed to win a match even if the top-order failed to score. Born into a middle-class family in Haryana he became interested in cricket at a young age. He played for the Haryana cricket team at the beginning of his career eventually making his way into the national team, thanks to his aggressive play and high energy level. He cemented his place in the Indian team with his impressive performances and was soon made the captain. It was under his leadership that India went on to win the 1983 World Cup in spite of being the underdogs.
-</info>
-</item>
+<!--  <item> -->
+<!--   <id>11</id> -->
+<!--   <type>Sports</type> -->
+<!--   <name>Kapil Dev</name> -->
+<!--   <img>kapil</img> -->
+<!--   <audio></audio> -->
+<!--   <video>http://www.youtube.com/watch?v=78sh10Bz_YY</video> -->
+<!--   <bdate>January 6, 1959, Chandigarh, India</bdate>  -->
+<!--   <quote>When you have to work, work with a smile.</quote> -->
+<!--   <info>Considered to be one of the greatest cricketing all-rounders of all time, Kapil Dev is a former Indian cricketer best known for leading his team to a World Cup victory in 1983. Confident, charismatic and highly skilled, he was the Indian team's main strike bowler for the major part of his career. During his heydays he used to bamboozle batsmen with his prodigious swing. Dev was great not just with the ball; he was equally talented with the bat too. An expert at hooking and driving, he often provided India with the crucial runs needed to win a match even if the top-order failed to score. Born into a middle-class family in Haryana he became interested in cricket at a young age. He played for the Haryana cricket team at the beginning of his career eventually making his way into the national team, thanks to his aggressive play and high energy level. He cemented his place in the Indian team with his impressive performances and was soon made the captain. It was under his leadership that India went on to win the 1983 World Cup in spite of being the underdogs. -->
+<!-- </info> -->
+<!-- </item> -->
  </menu>
 
 

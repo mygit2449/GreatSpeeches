@@ -2,8 +2,8 @@
 <menu>
 
 <item>
-  <id>1</id>
-  <type>Entertainment</type>
+  <id>0</id>
+  <type>Cultural</type>
   <name>Ravi Shankar</name>
   <img>ravishankar</img>
   <bdate>April 7, 1920, Varanasi, India</bdate>
@@ -19,12 +19,17 @@
 		Pandit Ravi Shankar has won several honours and awards. These include: Padma Vibhushan, Magsaysay Award, two Grammy Awards, Fukuoka Grand Prize from Japan, and the Crystal Award from Davos. In 1999, Ravi Shankar was awarded with Bharat Ratna, India's highest civilian honour. He was also a nominated member of the Rajya Sabha, India's upper house of Parliament, from 1986 to 1992.
   </info>
   <video>http://www.youtube.com/watch?v=4gWCiLexilY</video>
+  <achievements>
+		Ravi Shankar is a legendary sitar player and one of India's most esteemed classical musicians. Pandit Ravi Shankar has made a major contribution in popularizing Indian classical music in the West through his association with The Beatles (especially George Harrison). 
+
+		Made a major contribution in popularizing Indian classical music in the West; Recipient of Padma Vibhushan, Magsaysay Award, AND two Grammy Awards. 
+  </achievements>
   <video_id>4gWCiLexilY</video_id> 
  </item>
 
 <item>
-  <id>8</id>
-  <type>Entertainment</type>
+  <id>1</id>
+  <type>Cultural</type>
   <name>William Shakespeare</name>
   <img>shakespeare</img>
   <bdate>April 26, 1564, Stratford-upon-Avon, United Kingdom</bdate>
@@ -57,12 +62,19 @@
 		Today William Shakespeare is remembered as one of the greatest English playwrights.
 	</info>
   <video>http://www.youtube.com/watch?v=xc2MQh_GwkQ</video>
+  <achievements>
+		Throghout his short life, Shakespeare had many great achievements. Altogether, he wrote 154 sonnets, 38 plays and 2 narratives. His most famous plays include Romeo and Juliet, A Midsummer Nights Dream, Hamlet and Macbeth.He wrote tradgedies and comedies, and histories.
+  
+		Since the 19th century, Shakespeare's achievements have been more consistently recognized, and throughout the Western world he has come to be regarded as the greatest dramatist ever.
+ 
+		One of Shakespeare's most renown plays would probably be Romeo and Juliet. Everyone knows of the undeniable love between the two lovers, of the tragic story of two people who want nothing more than to see each other only to be thwarted by their family.
+  </achievements>
   <video_id>xc2MQh_GwkQ</video_id> 
  </item>
  
  <item>
   <id>2</id>
-  <type>Entertainment</type>
+  <type>Cultural</type>
   <name>Ali Akbar Khan</name>
   <img>aliakbarkhan</img>
   <bdate>April 14, 1922, Comilla, Bangladesh</bdate>
@@ -82,12 +94,17 @@
 		Ustad Ali Akbar Khan left for the holy abode on June 19, 2009, in San Francisco (United States Of America), after suffering from a kidney ailment for quite sometime. He was on dialysis and his condition had deteriorated in the last four months preceding his death. He breathed his last at his music centre, at the age of 88. The Sarod maestro is survived by his wife Mary and eleven children, apart from his musical legacy that includes the Ali Akbar College of Music in San Rafael, California.
   </info>
   <video>http://www.youtube.com/watch?v=r17LmpFCAFQ</video> 
-  <video_id>r17LmpFCAFQ</video_id> 
+  <video_id>r17LmpFCAFQ</video_id>
+  <achievements>
+		Ustad Ali Akbar Khan was one of the most accomplished Indian classical musicians, admired all over the world for his brilliant compositions and his mastery of the sarode. Ustad Ali Akbar Khan is considered by many as the "Indian Johann Sebastian Bach."
+
+		Popularized Indian classical music in the West; Recipient of the Asian Paints Shiromani Award.
+  </achievements> 
  </item>
  
  <item>
   <id>3</id>
-  <type>Entertainment</type>
+  <type>Cultural</type>
   <name>M. S. Subbulakshmi</name>
   <img>mssubbulakshmi</img>
   <bdate>September 16, 1916, Madurai, India</bdate>
@@ -112,12 +129,21 @@
   </info>
   <video>http://www.youtube.com/watch?v=lGuuavo2JHU</video>
   <video_id>lGuuavo2JHU</video_id> 
+  <achievements>
+		MS subbulakshmi was received many awards and honours. She was honored with padma bhushan award in 1954. She was achieved awards like Sangget Natak Academy in 1956 and Sangeetha Kalanidhi in 1968(she was the first women for this award). And she was got Ramon Magsaysay award in 1974, the Padma Vibhushan in 1975, the Kalidas Samman in 1988, the Indira Gandhi Award for National Integration in 1990, and the Bharat Ratna in 1998. She was honored as a singer of Tirumala Tirupati Devasthanams.
+
+		MS Subbalakshmi called with different names like Tapaswini, Suswaralakshmi and Aathuvaan Sur.
+
+		MS subbalakshmi Bhajans and songs.
+
+		Some of her most famous bhajans are Bhaja Govindam, Vishnu sahasranama, Venkateswara Suprabhatam.
+  </achievements>
  </item>
  
  
  <item>
   <id>4</id>
-  <type>Entertainment</type>
+  <type>Cultural</type>
   <name>Bhimsen Joshi</name>
   <img>new_bhimsen</img>
   <bdate>February 4, 1922, Gadag-Betageri, India</bdate>
@@ -133,13 +159,27 @@
 		His most memorable performance that is remembered till date is of course the national integration song "Mile Sur Mera Tumhara". His golden voice appealing to Indians to come together and stand as one nation is an evergreen number that is hummed by one and all even today. He has collaborated with many other renowned musicians like Hariprasad Chaurasiya, Pandit Ravi Shankar and Dr. Balamuralikrishna and has come out with many albums. He is a living legend who continues to weave magic with his unique voice even today.
 	</info>
   <video>http://www.youtube.com/watch?v=TMpRu8yYjTA</video>
-  <video_id>TMpRu8yYjTA</video_id>  
+  <video_id>TMpRu8yYjTA</video_id>
+  <achievements>
+		Pandit Bhimsen Joshi was the numero uno amongst Hindustani classical vocalists. He was considered as the leading light of the Kirana gharana. Bhimsen Joshi is renowned for his unique style and mastery over ragas. 
+
+		1971-Padma Shree
+		1976- Sangeet Natak Akademi Award
+		1985- Padma Bhushan
+		1985- National Award For Best Playback Singer
+		1999- Padma Vibhushan
+		2002- Maharashtra Bhushan
+		2005- Karnataka Ratna
+		2008- Bharat Ratna
+		2009- Lifetime Achievement Award by Delhi Government
+		'Swathi Sangeet Puraskaram' by The Government of Kerala
+  </achievements>  
  </item>
  
  
   <item>
   <id>5</id>
-  <type>Entertainment</type>
+  <type>Cultural</type>
   <name>Lata Mangeshkar</name>
   <img>latamangeshkar</img>
   <bdate>September 28, 1929 (age 85), Indore, India</bdate>
@@ -157,12 +197,31 @@
 		Lata Mangeshkar has been honored with innumerable awards but the one that truly deserves a special mention is that she is the only second singer in the non-classical category (after M.S Subbulakshmi) in India to have received the highest civilian award, Bharat Ratna. She has received three national awards and eight Filmfare awards after which she stopped accepting awards in order to promote new talent. She continues to sing every now and then for Hindi movies and perform live. Truly a living legend, Lata Mangeshkar has a talent that is second to none.
   </info>
   <video>http://www.youtube.com/watch?v=Ou0B9T89L0g</video>
-  <video_id>Ou0B9T89L0g</video_id>   
+  <video_id>Ou0B9T89L0g</video_id> 
+  <achievements>
+		Filmfare Awards (1958, 1962, 1965, 1969, 1993 and 1994)
+		National Awards (1972, 1975 and 1990)
+		Maharashtra State Award (1966 and 1967)
+		1969 - Padma Bhushan 
+		1974 - Recorded in the Guinness Book of World Records for having sung the maximum number of songs in the world 
+		1989 - Dada Saheb Phalke Award
+		1993 - Filmfare Lifetime Achievement Award 
+		1996 - Star Screen Lifetime Achievement Award 
+		1997 - Rajiv Gandhi Award 
+		1999 - NTR Award 
+		1999 - Padma Vibhushan 
+		1999 - Zee Cine Award for Lifetime Achievement 
+		2000 - Lifetime Achievement Award by IIFA in London 
+		2001 - Best Playback Singer of the Millennium (female) by Hero Honda and magazine "Stardust"
+		2001 - Bharat Ratna, India's highest civilian award
+		2001 - Noorjehan Award 
+		2001 - Maharashtra Ratna
+  </achievements>  
  </item>
  
   <item>
-  <id>9</id>
-  <type>Entertainment</type>
+  <id>6</id>
+  <type>Cultural</type>
   <name>William Hung</name>
   <img>williamhung</img>
   <bdate>January 13, 1983</bdate>
@@ -172,14 +231,17 @@
   <info>William Hung became famous by performing badly in a televised audition for the talent show American Idol. Hung's tone-deaf performance of the Ricky Martin tune "She Bangs" was greeted with sneers by judge Simon Cowell, but Hung's plucky reply became famous: "I already gave my best, and I have no regrets at all." Video of his comically clumsy dance moves began circulating on the Internet early in 2004 and Hung grew into a public phenomenon. He went along with the gag and began accepting invitations to perform "She Bangs" at Cal events, then on TV talk shows and even in concerts nationwide, often with a backing chorus of dancing girls. It was never quite clear if fans were mocking Hung's lack of talent or saluting his cheerful persistence, and Hung himself has continued to insist that he wants to pursue a career in music. His album Inspiration debuted at #34 on the Billboard album charts upon its release in April of 2004.
   </info>
   <video>http://www.youtube.com/watch?v=9RrLQUN8UJg</video>
-  <video_id>9RrLQUN8UJg</video_id> 
+  <video_id>9RrLQUN8UJg</video_id>
+  <achievements>
+ 		William Hung was offered a $25,000 advance on a record deal from Koch Entertainment in 2004, and released three albums on that label in 2004 and 2005. His first album was titled Inspiration and was produced by Giuseppe D. It was recorded over a March 2004 weekend with Hung singing vocals over karaoke music. To promote it, Hung performed before nearly 20,000 fans during half-time at a Golden State Warriors game on April 6 and performed "She Bangs", included on the album, on such shows as The Tonight Show with Jay Leno. The album received highly negative reviews, but ultimately went on to sell about 200,000 copies and reached Number One on Billboard's Top Independent Album Chart. His two follow-up albums were far less successful, as Hung for the Holidays (a Christmas album) only sold 35,000 copies and Miracle: Happy Summer from William Hung (another karaoke cover album) only sold 7,000. In a February 2006 interview, he said he was working on a 5 or 6-track fourth album,though with his retirement in 2011, it is not likely such an album will ever be released.
+  </achievements> 
  </item>
  
  
  
  <item>
-  <id>6</id>
-  <type>Entertainment</type>
+  <id>7</id>
+  <type>Cultural</type>
   <name>Zakir Hussain</name>
   <img>zakirhussain</img>
   <bdate>March 9, 1951, Mumbai</bdate>
@@ -198,12 +260,19 @@
 
   </info>
   <video>http://www.youtube.com/watch?v=As1OMMcHXFs</video>
-  <video_id>As1OMMcHXFs</video_id> 
+  <video_id>As1OMMcHXFs</video_id>
+  <achievements>
+		Zakir Hussain is a classical tabla virtuoso and the most famous tabla player in India today. His contribution in the field of percussion and in the music world at large is highly appreciated. 
+ 
+		Considered as the chief architect of the contemporary world music movement; youngest percussionist to ever be awarded the title of Padma Shri 
+
+		He not only founded Jamia Milia Islamia University but served as its Vice Chancellor as well. He has contributed so much to the institution that the history of the two has become inseparable and identical  
+  </achievements> 
  </item>
  
  <item>
-  <id>11</id>
-  <type>Entertainment</type>
+  <id>8</id>
+  <type>Cultural</type>
   <name>Michael Jackson</name>
   <img>michaeljackson</img>
   <bdate>August 29, 1958, Gary, Indiana, United States</bdate>
@@ -215,13 +284,54 @@
 	   In the wake of his death, everyone in the world seemed to talk of his or her favorite Jackson song, or favorite Jackson dance move or favorite Jackson video. I'll never forget that night back in early 1983, when onstage in Pasadena, California, at the Motown 25th anniversary show, Michael Jackson gave his first public performance as a mature artist staking his own claim, vaulting into that astonishingly graceful, electrifying version of "Billie Jean." Dancing, spinning, sending out impassioned, fierce glares at the overcome audience, Jackson did a powerful job of animating and mythologizing his own blend of mystery and sexuality. I'd never seen anything quite like it before. Maybe I never will again. Michael Jackson didn't just grab the gold ring: He hooked it to a new bar and set it even higher, and nobody has yet snatched it with quite the same flair or results.
   </info>
   <video>http://www.youtube.com/watch?v=_4IRMYuE1hI</video>
-  <video_id>_4IRMYuE1hI</video_id> 
+  <video_id>_4IRMYuE1hI</video_id>
+  <achievements>
+		Michael Jackson has set many records throughout his career and won many awards. From the early days of the Jackson 5 to the current day. Michael Jackson has been in a league of his own with his best competition being himself and trying to improve on what he has already achieved. 
+		He are a just a few of the record breaking achievements. 
+
+		Biggest Selling Album Of All Time - Guiness Book Of World Records
+		Michael Jackson's "Thriller" Album is the biggest selling album of all time, with over 50 million copies sold worldwide. Thriller is also the biggest selling U.S album with sales of 25 million copies.
+
+		Most No1 Hits in 1980's
+		By The End of the 1980's MIchael Jackson had more #1 hits than any other artist for the decade.
+
+		Greatest Audience - Guiness Book Of World Records
+		The highest-ever viewership was 133.4 million viewers watching the NBC transmission of Super Bowl XXVII on June 31, 1993. Michael was spotlighted during the half-time peformance.
+
+		Bad Tour - Guiness Book Of World Records
+		Michael Jackson's world tour brought in a record gross revenue of over $124 million during September 1987-December 1988.
+
+		100 Million Records
+		Michael has sold over 100 million singles and albums outside of the U.S.
+
+		Billboard Charts
+		Michael Jackson is the first person in the 37 year history of the Billboard chart to enter straight in at No1, with his single "You Are Not Alone". The previous record "Earth Song" which had debuted at No5 and also Michael Jacksons.
+
+		Biggest Selling Video
+		Michael Jackson's "The Making Of Thriller" is the biggest selling video to be released by an artist.
+
+		Billboard "Hot 100" Singles Chart
+		Most No1 Hits by Male Artist (13)
+
+		No1 Debuts
+		Michael Jacksons "Bad", "Dangerous", and "HIStory" albums all debuted in at No1.
+
+		Awards
+		Michael has won more awards than any other artist.
+
+		No1 On Charts
+		In 1983 Michael became the first artist to simultaneously hold the number one spots on Billboard's rock albums and rock singles charts, as well as the R&B albums and singles charts.
+
+		Consecutive No1 Singles
+		Jackson 5 were the first group to ever have four consecutive No1 singles.
+		
+  </achievements> 
  </item>
  
  
  <item>
-  <id>7</id>
-  <type>Entertainment</type>
+  <id>9</id>
+  <type>Cultural</type>
   <name>A. R. Rahman</name>
   <img>rahman</img>
   <bdate>January 6, 1967, Chennai, India</bdate>
@@ -240,12 +350,40 @@
   </info>
   <video>http://www.youtube.com/watch?v=Sp6wUe9gMrw</video>
   <video_id>Sp6wUe9gMrw</video_id> 
+  <achievements>
+		1995 – Kalaimamani
+		Contributions to music awarded by the Government of Tamil Nadu
+		1995 – Mauritius National Award
+		Contributions to music awarded by Mauritius
+		1995 – Malaysian Award
+		Contributions to music awarded by Malaysia
+		2000 – Padma Shri
+		Fourth highest civilian award awarded by Government of India
+		2004 – National Lata Mangeshkar Award
+		Contributions to music awarded by the Government of Madhya Pradesh
+		2005 – Mahavir-Mahatma Award
+		2006 – Swaralaya Yesudas Award
+		Swaralaya-Kairali-Yesudas Award for outstanding performance in the music field
+		2006 – Honorary Award from Stanford University
+		2008 – Rotary Club of Madras
+		
+		2009 – Honorary Doctorate from Anna University
+		2009 – Honorary Doctorate from Aligarh University
+		2009 – Honorary Doctorate from Middlesex University
+		2010 – Padma Bhushan
+		Third highest civilian award awarded by Government of India
+		
+		1993 – National Film Award for Best Music Direction – Roja
+		1997 – National Film Award for Best Music Direction – Minsaara Kanavu
+		2002 – National Film Award for Best Music Direction – Lagaan
+		2003 – National Film Award for Best Music Direction – Kannathil Muthamittal
+  </achievements>
  </item>
  
  
    <item>
   <id>10</id>
-  <type>Entertainment</type>
+  <type>Cultural</type>
   <name>Ludwig van Beethoven</name>
   <img>beethoven</img>
   <bdate>December 16, 1770, Bonn, Germany</bdate>
@@ -257,7 +395,16 @@
 		Ludwig van Beethoven is widely considered the greatest composer of all time. He is the crucial transitional figure connecting the Classical and Romantic ages of Western music. Beethoven's body of musical compositions stands with Shakespeare's plays at the outer limits of human accomplishment.
   </info>
   <video>http://www.youtube.com/watch?v=_4IRMYuE1hI</video>
-  <video_id>_4IRMYuE1hI</video_id> 
+  <video_id>_4IRMYuE1hI</video_id>
+  <achievements>
+		Ludwig van Beethoven was one of the great musicians and composers during the transition from the Classical to the Romantic periods in Western music.
+		
+		He was first recognized as an outstanding instrumentalist, playing both piano and violin in the homes of wealthy patrons and, on the piano, on the concert stage. His repetoire quickly expanded to include his own compositions as well as music featuring his improvisations based on works by others, such as Bach and Mozart.
+		
+		By 1800, Beethoven was widely known as a composer of great ability. His "melodies, musical development, use of modulation and texture, and characterization of emotion" introduced new methods of presenting and developing musical themes. His musical innovations continued throughout his career, including his expansion of the format of the symphony.
+		
+		Beethoven set new standards for conveying emotion and passion through his music, created intricate melodies and harmonies that continue to challenge and delight musicians today, and showed himself to be a master of composition for many instruments and musical formats.
+  </achievements> 
  </item>
  </menu>
 

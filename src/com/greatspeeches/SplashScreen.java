@@ -4,9 +4,16 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 public class SplashScreen extends Activity {
 
+	private ImageView animImg;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -14,6 +21,31 @@ public class SplashScreen extends Activity {
 		
 		Thread _splashThread = new Thread(null, _splashRunnable);
 		_splashThread.start();
+		
+		animImg = (ImageView)findViewById(R.id.sample_img);
+		animImg.setVisibility(View.GONE);
+		 final Animation animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fadein);
+	     animImg.startAnimation(animationFadeIn);
+	     
+	     animationFadeIn.setAnimationListener(new AnimationListener() {
+			
+			@Override
+			public void onAnimationStart(Animation animation) {
+				// TODO Auto-generated method stub
+				animImg.setVisibility(View.VISIBLE);
+			}
+			
+			@Override
+			public void onAnimationRepeat(Animation animation) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onAnimationEnd(Animation animation) {
+				// TODO Auto-generated method stub
+			}
+		});
 	}
 
 	private Runnable _splashRunnable = new Runnable() {
@@ -22,7 +54,7 @@ public class SplashScreen extends Activity {
 		public void run() {
 			// TODO Auto-generated method stub
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

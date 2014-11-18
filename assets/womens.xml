@@ -2,8 +2,8 @@
 <menu>
 
  <item>
-  <id>1</id>
-  <type>womens</type>
+  <id>0</id>
+  <type>Women\'s History</type>
   <name>Mother Teresa</name>
   <img>teresa</img>
   <bdate>August 26, 1910, Skopje, Republic of Macedonia</bdate>
@@ -16,11 +16,22 @@
 		Today the order comprises Active and Contemplative branches of Sisters and Brothers in many countries. In 1963 both the Contemplative branch of the Sisters and the Active branch of the Brothers was founded. In 1979 the Contemplative branch of the Brothers was added, and in 1984 the Priest branch was established.
   </info>
   <video>http://www.youtube.com/watch?v=sBVVvOSbcLU</video> 
+  <achievements>
+		Mother Teresa was one of the great servants of humanity. She was an Albanian Catholic nun who came to India and founded the Missionaries of Charity in Kolkata. Later on Mother Teresa attained Indian citizenship. Her selfless work among the poverty-stricken people of Kolkata (Calcutta) is an inspiration for people all over the world and she was honored with Nobel Prize for her work.
+		
+		For her unwavering commitment and unflinching love and compassion that she devoutly shared, the Government of India honoured her with Padma Shri, Jawaharlal Nehru Award for International Understanding and Bharat Ratna, India’s highest civilian award.  
+		
+		In 1962, she was honoured with Ramon Magsaysay Award for International Understanding, for her merciful cognizance of the abject poor of a foreign land, in whose service she led a new congregation.  
+		
+		In 1971, she was awarded the first Pope John XXIII Peace Prize for her work with the poor, display of Christian charity and efforts for peace.  
+		
+		In 1979, Mother Teresa was awarded the Nobel Peace Prize, "for work undertaken in the struggle to overcome poverty and distress, which also constitutes a threat to peace."  
+  </achievements>
  </item>
  
  <item>
-  <id>2</id>
-  <type>womens</type>
+  <id>1</id>
+  <type>Women\'s History</type>
   <name>Florence Nightingale</name>
   <img>florencenightingale</img>
   <bdate>May 12, 1820, Florence, Italy</bdate>
@@ -36,11 +47,16 @@
 		Nightingale was a prodigious and versatile writer. In her lifetime much of her published work was concerned with spreading medical knowledge. Some of her tracts were written in simple English so that they could easily be understood by those with poor literary skills. She also helped popularise the graphical presentation of statistical data. Much of her writing, including her extensive work on religion and mysticism, has only been published posthumously.
   </info>
   <video>http://www.youtube.com/watch?v=68-vsJhcosg</video> 
+  <achievements>
+		Florence Nightingale's achievements as a nurse and activist in sanitation were a major turning point in the history of health care. Before Miss Nightingale,nurses were either poor servant-class workers, or Roman Catholic nuns. Nurses were usually uneducated in medicine, and did not have much experience in the field. Florence started the Florence Nightingale School of Nursing, she felt all nurses should be well educated. Nightingale helped to break down class barriers, by allowing members of all classes into her school. Before Florence, most hospitals were dirty and poorly planned buildings. Florence's observation, that cleanliness decreased the death rate influenced others to impose sanitation requirements. Florence Nightingale had a major impact on the development of medicine by changing the way nurses were viewed and creating higher sanitary standards for hospitals. 
+		
+		Florence Nightingale became very involved with the Crimean War in November 1854 when she was asked to assist doctors in the Barrack Hospital. Nightingale brought 38 of the most qualified nurses, mostly well educated nuns, when she accepted the opportunity. Nightingale's goals for her trip were to help the soldiers, and give nurses a better reputation. When Florence first arrived in Turkey the hospitals were dirty, and overcrowded. Nightingale cleaned up the hospitals, made a more pleasing atmosphere for the patients and cleaned the fresh water pipes. Florence's involvement in the war was truly a turning point in the way Europe viewed nurses. The media was very interested in Nightingale's work in the hospitals and during this time. Nightingale became a famous female nurse and the social status of all nurses was improved.
+  </achievements>
  </item>
  
  <item>
-  <id>3</id>
-  <type>womens</type>
+  <id>2</id>
+  <type>Women\'s History</type>
   <name>Rani Lakshmibai</name>
   <img>ranijhansi</img>
    <bdate>November 19, 1828, Varanasi, India</bdate>
@@ -57,13 +73,23 @@
 		Because Damodar Rao was adopted and not biologically related to the Raja, the East India Company, under Governor-General Lord Dalhousie, was able to install the Doctrine of Lapse, rejecting Rao's rightful claim to the throne. Dalhousie then annexed Jhansi, saying that the throne had become "lapsed" and thus put Jhansi under his "protection". In March 1854, the Rani was given a pension of 60,000 rupees and ordered to leave the palace at the Jhansi fort.
   </info>
   <video>http://www.youtube.com/watch?v=m54M0HlECOE</video> 
+  <achievements>
+		Of all the characters in the epic mutiny of 1857; 150 years later there is one name which stands tall over all others and yet ironically was one who was neither the initiator of the mutiny; neither among the leaders until the last stage. Yet, in many ways she was alone in her magnificence, a singular figure among a gallery of heroes. [1] She was Lakshmi Bai; and that small town immortalized forever is Jhansi. 
+		
+		Jhansi is a small town in the province of Uttar Pradesh, part of the region known as Bundelkhand. The town still feels that it owes its fame to the young Rani; who ruled for barely four and half years. It keeps alive the memory of its beloved Rani with her image on horseback imprinted all over; at crossroads; on hoardings; in parks her ubiquity conforming what people believe. 
+  
+		Because of her bravery, courage, and wisdom, and her progressive views on women's empowerment in 19th century India, and due to her sacrifices, she became an icon of Indian independence movement. The Rani was memorialized in bronze statues at both Jhansi and Gwalior, both of which portray her on horseback.  Her story became a beacon for the upcoming generations of freedom fighters. 
+
+		Lot of literature has been written on the life history of Rani Lakshmibai of Jhansi. Heroic poems have been composed in her honor.
+
+  </achievements>
  </item>
  
 
 
   <item>
-  <id>4</id>
-  <type>womens</type>
+  <id>3</id>
+  <type>Women\'s History</type>
   <name>Sarojini Naidu</name>
   <img>sarojininaidu</img>
   <bdate> February 13, 1879, Hyderabad, India</bdate>
@@ -75,6 +101,14 @@
   <info>Sarojini Naidu was an India political leader born on February 13, 1879 in Hyderabad, India. At a young age she wrote poetry and plays, a hobby she kept throughout her life. She later studied in England, and in 1916 she met Mahatma Gandhi which sparked her interest in the fight for India’s freedom. In 1925 she was elected as the first female President of the India National Congress. After India’s independence from England, Naidu became the first woman Governor of Uttar Pradesh. Naidu died on March 02, 1949 at Lucknow, Uttar Pradesh.
   </info>
   <video>https://www.youtube.com/watch?v=3jpJx0KmF3k</video> 
+  <achievements>
+		Sarojini Naidu was a distinguished poet, renowned freedom fighter and one of the great orators of her time. She was famously known as Bharatiya Kokila (The Nightingale of India). Sarojini Naidu was the first Indian woman to become the President of the Indian National Congress and the first woman to become the governor of a state in India.
+		
+		She was the first Indian woman to become the President of the Indian National Congress and the first woman to become the governor of a state in India.
+		
+		Sarojini Naidu was truly one of the gems of the 20th century India. She was known by the sobriquet "The Nightingale of India". Her contribution was not confined to the fields of politics only but she was also a renowned poet. The play "Maher Muneer", written by Naidu at an early age, fetched a scholarship to study abroad. She briefed the struggles of freedom for independence to the political stalwarts of European nations, she had visited. She married Dr. Muthyala Govindarajulu Naidu, a South India. The marriage took place at a time when inter-caste marriage was not acceptable in the society. Her acts helped in raising many eyebrows. In 1905, a collection of poems, she had composed, was published under the title of "Golden Threshold". 
+  </achievements>
+  
  </item>
  
  

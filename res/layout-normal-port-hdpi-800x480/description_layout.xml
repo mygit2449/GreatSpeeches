@@ -125,36 +125,81 @@
             </RelativeLayout>
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/contentRel"
-            android:layout_width="fill_parent"
+         <RelativeLayout
+            android:id="@+id/acRel"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/bDateRel"
-            android:tag="sticky-nonconstant-hastransparancy" >
+            android:layout_below="@+id/bDateRel" >
 
-            <TextView
-                android:id="@+id/historyTitle"
+            <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="#999999"
-                android:padding="5dp"
-                android:tag="sticky"
-                android:text="Life in Brief"
-                android:textColor="#ffffff"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-        </RelativeLayout>
+                android:id="@+id/acTitle"
+                android:tag="sticky-nonconstant-hastransparancy" >
 
-        <TextView
-            android:id="@+id/person_info"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginBottom="50dp"
-            android:layout_marginTop="5dp"
-            android:padding="2dp"
-            android:scrollbars="vertical"
-            android:textColor="#ffffff"
-            android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/acTitleTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#999999"
+                    android:padding="5dp"
+                    android:tag="sticky"
+                    android:text="@string/achievement"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/C_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:scrollbars="vertical"
+                android:textColor="#ffffff"
+                android:textSize="18dp" 
+                android:layout_below="@+id/acTitle"/>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/contentRel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acRel" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="sticky-nonconstant-hastransparancy" 
+                android:id="@+id/title">
+
+                <TextView
+                    android:id="@+id/historyTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#999999"
+                    android:padding="5dp"
+                    android:tag="sticky"
+                    android:text="Life in Brief"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/person_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:scrollbars="vertical"
+                android:textColor="#ffffff"
+                android:textSize="18dp" 
+                android:layout_below="@+id/title"/>
+        </RelativeLayout>
     </LinearLayout>
 
 </com.greatspeeches.helper.StickyScrollView>

@@ -1,15 +1,22 @@
 package com.greatspeeches;
 
+
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
 import org.xmlpull.v1.XmlPullParser;
 
 import android.annotation.TargetApi;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.RectF;
 import android.os.Build;
@@ -23,6 +30,7 @@ import android.support.v4.util.SparseArrayCompat;
 import android.support.v4.view.ViewPager;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.util.Log;
 import android.util.TypedValue;
 import android.util.Xml;
 import android.view.View;
@@ -34,13 +42,16 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.greatspeeches.helper.ObjectSerializer;
 import com.greatspeeches.helper.PagerSlidingTabStrip;
 import com.greatspeeches.helper.ScrollTabHolder;
 import com.greatspeeches.helper.ScrollTabHolderFragment;
 import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.notboringactionbar.AlphaForegroundColorSpan;
 import com.greatspeeches.notboringactionbar.KenBurnsSupportView;
+import com.greatspeeches.receivers.NotificationReceiver;
 import com.greatspeeches.slides.PersonsDescriptionView;
+import com.greatspeeches.util.DataParser;
 import com.nineoldandroids.view.ViewHelper;
 
 public class MainActivity extends FragmentActivity implements ScrollTabHolder, ViewPager.OnPageChangeListener {
@@ -73,21 +84,54 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
     private Handler handler, bgUpdatedHandler;
     private Runnable runnable, bgupdateRunnable; 
 
-    int pickedNumber;
+    private int pickedNumber;
     private List<String> categoriesList = null;
     public  ArrayList<HomeDataModel> homeDataarr = null;
+    private FragmentManager fManager;
+    private boolean doubleback = false;
 
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		getWindow().requestFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
 		mMinHeaderHeight = getResources().getDimensionPixelSize(R.dimen.min_header_height);
 		mHeaderHeight = getResources().getDimensionPixelSize(R.dimen.header_height);
 		mMinHeaderTranslation = -mMinHeaderHeight + getActionBarHeight();
-
 		setContentView(R.layout.activity_main);
 
+//		if (null != getIntent() && getIntent().getAction().equalsIgnoreCase("fromNotification")) {
+//			handleNotificationLaunch(getIntent());
+//		}else{
+//			setContentView(R.layout.activity_main);
+//			forFirstStep();
+//		}
+		
+		fManager = getSupportFragmentManager();
+		
+		if (null != getIntent() && getIntent().getAction().equalsIgnoreCase("fromNotification")) {
+			getIntent().setAction("Noneed");
+			handleNotificationLaunch(getIntent());
+		}else{
+			forFirstStep();
+		}
+		
+	}
+
+//	@Override
+//	public void onResume(){
+//		super.onResume();
+//		if (null != getIntent() && getIntent().getAction().equalsIgnoreCase("fromNotification")) {
+//			getIntent().setAction("Noneed");
+//			handleNotificationLaunch(getIntent());
+//		}else{
+//			forFirstStep();
+//		}
+//	}
+	
+	
+	public void forFirstStep(){
 		homeDataarr = parser();
 		categoriesList = Arrays.asList(getResources().getStringArray(R.array.categories));
 		
@@ -98,7 +142,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setOffscreenPageLimit(4);
 
-		mPagerAdapter = new PagerAdapter(getSupportFragmentManager());
+		mPagerAdapter = new PagerAdapter(fManager);
 		mPagerAdapter.setTabHolderScrollingContent(this);
 
 		mViewPager.setAdapter(mPagerAdapter);
@@ -107,7 +151,6 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		}else if(null != getIntent() && getIntent().getAction().equalsIgnoreCase("fromCat")){
 			mViewPager.setCurrentItem(1);
 		}
-//		mViewPager.setCurrentItem(0);
 		mPagerSlidingTabStrip.setViewPager(mViewPager);
 		mPagerSlidingTabStrip.setOnPageChangeListener(this);
 		mSpannableString = new SpannableString(getString(R.string.app_name));
@@ -156,8 +199,58 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 			
 			bgUpdatedHandler  = new Handler();
 			bgUpdatedHandler.postDelayed(runnable, 10000);
+			savingPersistentDataForfistTime();
+		
 	}
+	
+	
+	
+	
+	private void  savingPersistentDataForfistTime(){
+		ArrayList<HomeDataModel> totalDataArrayList  = new ArrayList<HomeDataModel>();
+		SharedPreferences sharedPreferences;
+	    sharedPreferences = this.getSharedPreferences("gl", MODE_PRIVATE);
+		SharedPreferences.Editor preferencesEdit;
+		preferencesEdit = sharedPreferences.edit();
+		int iCheckCount = sharedPreferences.getInt("alarmCount", 0);
 
+		if (iCheckCount == 0) {
+			totalDataArrayList.addAll(homeDataarr);
+			Log.v(this.getClass().getSimpleName(), "totalDataArrayList...11.."+totalDataArrayList.size());
+			for (int iCheck = 0; iCheck < categoriesList.size(); iCheck++) {
+				ArrayList<HomeDataModel> innerDataArrayList  = null;
+				if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category1))) {
+					innerDataArrayList = new DataParser(this).parser("science.xml");
+				}else if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category2))) {
+					innerDataArrayList = new DataParser(this).parser("sports.xml");
+				}else if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category3))) {
+					innerDataArrayList = new DataParser(this).parser("cultural.xml");
+				}else if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category4))) {
+					innerDataArrayList = new DataParser(this).parser("politicians.xml");
+				}else if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category5))) {
+					innerDataArrayList = new DataParser(this).parser("womens.xml");
+				}
+				totalDataArrayList.addAll(innerDataArrayList);
+			}
+			
+			try {
+				preferencesEdit.putString("popularItems", ObjectSerializer.serialize(totalDataArrayList));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if(totalDataArrayList.size() > 0){
+				preferencesEdit.putInt("alarmCount", totalDataArrayList.size());
+			}
+			preferencesEdit.commit();
+			
+			Log.v(this.getClass().getSimpleName(), "totalDataArrayList...22.."+totalDataArrayList.size());
+			setQoutationReminders();
+		}
+		
+	}
+	
+	
 	
 	OnClickListener flipClickListener = new OnClickListener() {
 		
@@ -229,6 +322,8 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 						mHomeDataModelObj.setbDate(parser.nextText());
 					}else if (name.equalsIgnoreCase("ddate")) {
 						mHomeDataModelObj.setdDate(parser.nextText());
+					}else if (name.equalsIgnoreCase("achievements")) {
+						mHomeDataModelObj.setAchievement(parser.nextText());
 					}
 					break;
 				case XmlPullParser.END_TAG:
@@ -250,6 +345,23 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	@Override
 	public void onPageScrollStateChanged(int arg0) {
 		// nothing
+	}
+	
+	private AlarmManager alarmMgr;
+	private PendingIntent alarmIntent;
+	
+	public void setQoutationReminders(){
+		
+		alarmMgr = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE); 
+		Intent intent = new Intent(this, NotificationReceiver.class);
+		alarmIntent = PendingIntent.getBroadcast(this, 0, intent, 0); 
+		// Set the alarm to start at approximately 8:00 a.m. 
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTimeInMillis(System.currentTimeMillis());
+		calendar.set(Calendar.HOUR_OF_DAY, 8);
+		calendar.set(Calendar.MINUTE, 00);
+		calendar.set(Calendar.SECOND, 00);
+		alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 1000*60*60*24, alarmIntent); 		
 	}
 
 	@Override
@@ -358,7 +470,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	public class PagerAdapter extends FragmentPagerAdapter {
 
 		private SparseArrayCompat<ScrollTabHolder> mScrollTabHolders;
-		private final String[] TITLES = { "          Popular           ","         Categories        "};
+		private final String[] TITLES = { "           Popular            ","          Categories         "};
 		private ScrollTabHolder mListener;
 
 		public PagerAdapter(FragmentManager fm) {
@@ -402,4 +514,60 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		}
 
 	}
+	
+	public void handleNotificationLaunch(Intent receiverIntent){
+		HomeDataModel receivedObj = receiverIntent.getExtras().getParcelable("notiObject");
+		int selectedPos = -1;
+		if (receivedObj.getType().equalsIgnoreCase("Popular")) {
+			homeDataarr = parser();
+			selectedPos = Integer.parseInt(receivedObj.getId());
+			if (selectedPos > -1 && selectedPos <= homeDataarr.size()) {
+				startActivity(new Intent(this, PersonsDescriptionView.class).putExtra("position", selectedPos).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
+				finish();
+			}
+		}else{
+			if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category1))){
+				homeDataarr = new DataParser(this).parser("science.xml");
+			}else if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category2))){
+				homeDataarr = new DataParser(this).parser("sports.xml");
+			}else if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category3))){
+				homeDataarr = new DataParser(this).parser("cultural.xml");
+			}else if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category4))){
+				homeDataarr = new DataParser(this).parser("politicians.xml");
+			}else if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category5))){
+				homeDataarr = new DataParser(this).parser("womens.xml");
+			}
+			
+			
+			selectedPos = Integer.parseInt(receivedObj.getId());
+			
+			Log.v(this.getClass().getSimpleName(), "...Sizes.."+homeDataarr.size()+"...Check"+selectedPos);
+			
+			if (selectedPos > -1 && selectedPos <= homeDataarr.size()) {
+				startActivity(new Intent(this, PersonsDescriptionView.class).putExtra("position", selectedPos).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
+				finish();
+			}
+		}
+	}
+	
+	@Override
+ 	public void onBackPressed() {
+ 		if (doubleback) {
+ 			android.app.FragmentManager fm = getFragmentManager();
+ 			for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {    
+ 			    fm.popBackStack();
+ 			}
+            finish();
+        } else {
+        	doubleback = true;
+            Toast.makeText(MainActivity.this, "Press the back key again to close the app.", Toast.LENGTH_SHORT).show();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                	doubleback = false;
+                }
+            }, 2000);
+        }
+ 	}
+	
 }

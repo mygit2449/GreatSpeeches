@@ -3,7 +3,7 @@
 
 
 	<item>
-		<id>2</id>
+		<id>0</id>
 		<type>Popular</type>
 		<name>John F. Kennedy</name>
 		<img>kennedy_h</img>
@@ -18,10 +18,21 @@
 			  
 			  Kennedy was the youngest person elected U.S. President and the first Roman Catholic to serve in that office. For many observers, his presidency came to represent the ascendance of youthful idealism in the aftermath of World War II. The promise of this energetic and telegenic leader was not to be fulfilled, as he was assassinated near the end of his third year in office. For many Americans, the public murder of President Kennedy remains one of the most traumatic events in memory—countless Americans can remember exactly where they were when they heard that President Kennedy had been shot. His shocking death stood at the forefront of a period of political and social instability in the country and the world.
 		</info>
+		<achievements>			 
+		        1. John F. Kennedy accomplished what no other American had done — he became the first Catholic president of the United States.
+
+				2.  To this day, John F. Kennedy's call for Americans to serve their country has remained an inspiring and memorable appeal.
+
+			    3.  Among John F. Kennedy's most notable and long-standing accomplishments was the establishment of the Peace Corps, an organization that is now responsible for sending thousands of American volunteers around the world to help the needy.
+
+			    4.  It was John F. Kennedy's cautious and sensible approach to the standoff during the Cuban missile crisis that ultimately diverted a nuclear war with the Soviet Union and secured the removal of missiles from Cuba.
+
+			    5.  John F. Kennedy was committed to landing a man on the moon, and although it occurred after his death, it was his support of space exploration that helped make it happen.
+		</achievements>
 	</item>
 	
 	<item>
-		<id>3</id>
+		<id>1</id>
 		<type>Popular</type>
 		<name>Mahatma Gandhi</name>
 		<img>mahatma_h</img>
@@ -44,19 +55,29 @@
 
 			  His birthday, 2 October, is commemorated as Gandhi Jayanti, a national holiday, and world-wide as the International Day of Nonviolence.
 		</info>
+		<achievements>			 
+		    	1. Satyagrah
+		    
+				Gandhiji went to South Africa in 1893 as a barrister to practice. There he was thrown out of a train because he was not a ‘white’ person. Shook by this unjust encounter, he set on a non-violent movement based on satyagrah to expose the evils of racial discrimination (apartheid). His tireless efforts bore fruit and he succeeded in his mission to liberate people against apartheid.
+
+				2. Non-cooperation Movement
+				
+ 					  When he returned to India, he became determined to liberate the country and the countrymen from shackles of slavery. He instituted Non Co-operation Movement in 1920. It lasted for two years. The Indian National Congress supported it vehemently. The protestors refused to use British goods and started using every thing manufactured in India. Everything and every institution that was British was boycotted. This movement was marching towards success when in 1922, Gandhiji took it back as his followers indulged in non- violence and his doctrine was violated.
+
+				3. Civil Disobedience Movement
+					  
+					  Mahatma Gandhi led the Civil Disobedience Movement in the year 1930. It proved to be a significant milestone in the annals of Indian Nationalism. With his followers he indulged in Dandi March and prepared salt and broke the salt law of the British. The chief ideology of this movement was to defy the laws made by the British. As the hand and guidance of Mahatma Gandhi was in this movement, success was bound to follow and the same happened.
+
+			    4. Quit India Movement
+					
+					  The Quit India Movement is also known as Bharat Chhodo Andolan or the August Movement. This movement was launched in August 1942. This movement was a response to Gandhiji’s call for immediate independence. The British put all their atrocities into practice to curb it but the spark ignited by Gandhiji had been turned into a blazing flame. His efforts bore fruits and India got independence in next five years.
+
+					  Mahatma Gandhi’s accomplishments can’t be bound in words. Throughout his life, he was indulged in the work of serving his country and countrymen. It was under his forceful guidance that National Movements of India took shape, were put into practice and succeeded. His life was dedicated to selflessness. No wonder, he accomplished so much without any desire for name and fame.
+		</achievements>
 	</item>
-	<!--  
+	
 	<item>
-		<id>4</id>
-		<name>Socrates</name>
-		<img>socrates_louvre</img>
-		<quote>The only true wisdom is in knowing you know nothing</quote>
-		<audio>regan.mp3</audio>
-		<info>Viewed by many as the founding figure of Western philosophy, Socrates (469-399 B.C.) is at once the most exemplary and the strangest of the Greek philosophers. He grew up during the golden age of Pericles' Athens, served with distinction as a soldier, but became best known as a questioner of everything and everyone. His style of teaching—immortalized as the Socratic Method—involved not conveying knowledge but rather asking question after clarifying question until his students arrived at their own understanding. He wrote nothing himself, so all that is known about him is filtered through the writings of a few contemporaries and followers, most of all, his student Plato. He was accused of corrupting the youth of Athens and sentenced to death. Choosing not to flee, he spent his final days in the company of his friends before drinking the executioner’s cup of poisonous hemlock.</info>
-	</item>
-	-->
-	<item>
-		<id>5</id>
+		<id>2</id>
 		<type>Popular</type>
 		<name>Patrick Henry</name>
 		<img>patrick_henry</img>
@@ -67,28 +88,23 @@
 		<video>phenry</video>
 		<quote>The great object is that every man be armed</quote>
 		<info>"Radical," is a title that few men can wear with ease. The name Patrick Henry, during the revolution and for some time after, was synonymous with that word in the minds of colonists and Empire alike. Henry's reputation as a passionate and fiery orator exceeded even that of Samuel Adams. His Stamp Act Resolutions were, arguably, the first shot fired in the Revolutionary War. Patrick Henry's personality was a curious antidote to the stern honor of Washington, the refined logic of Jefferson, and the well-tempered industry of Franklin. Young Henry was an idler and by many accounts a derelict; though everyone knew he was bright, he simply would not lift a finger except to his own pleasure. By the age of 10, his family knew that he would not be a farmer, and tried instead to train him toward academe. He would not apply himself to studies either. At age 21 his father set him up in a business that he bankrupted shortly thereafter. Finally the general public disgust in Hanover and pressure from his young family (he had married at the age of eighteen) caused him to study for six weeks and take the bar exam, which he passed, and begin work as a lawyer.</info>
-	</item>
-	<!--  
-	<item>
-		<id>6</id>
-		<name>Frederick Douglass</name>
-		<img>frederick_douglass</img>
-		<audio>regan.mp3</audio>
-		<quote>It is easier to build strong children than to repair broken men</quote>
-		<info>Frederick Douglass (1818-95) was a prominent American abolitionist, author and orator. Born a slave, Douglass escaped at age 20 and went on to become a world-renowned anti-slavery activist. His three autobiographies are considered important works of the slave narrative tradition as well as classics of American autobiography. Douglass' work as a reformer ranged from his abolitionist activities in the early 1840s to his attacks on Jim Crow and lynching in the 1890s. For 16 years he edited an influential black newspaper and achieved international fame as an inspiring and persuasive speaker and writer. In thousands of speeches and editorials, he levied a powerful indictment against slavery and racism, provided an indomitable voice of hope for his people, embraced antislavery politics and preached his own brand of American ideals.</info>
+		<achievements>			 
+		         1. Patrick Henry was not only one of the Founding Fathers of America, he was also a well-known orator. He was responsible for starting the move for independence in the state of Virginia during the 1770s.
+
+				 2. The list of Patrick Henry accomplishments are pretty long, but here is a brief insight into what he achieved as a politician for his state and indirectly for his country.
+
+				 3. After the British rule came to an end in America, Henry served as the 1st governor of the state of Virginia from the year 1776 to the year 1779. Thereafter, he came back to the post as the 6th governor from the year 1784 to the year 1786.
+
+				 4. He was one of the politicians who was responsible for leading the protest against the Stamp Act that was levied by the British in 1765. He is most remembered for his speech where he used the famous words: "Give me liberty or give me death.", which were said when he was advocating to the people of Virginia to carry arms for self defense.
+
+				 5. Henry was also one of the most ardent supporters of Republicanism along with peers like Samuel Adams and Thomas Paine. He was one of the supporters for starting the war of independence and he was outspoken in his opinion of corrupt government officials.
+
+				 6. Once American achieved its independence, Patrick Henry became the leader of the anti federalist in the state of Virginia and these people were against the US Constitution. They were worried that the Constitution would jeopardize the rights of individual states and would also imperil the freedom of people.
+		</achievements>
 	</item>
 	
 	<item>
-		<id>7</id>
-		<name>Susan B. Anthony</name>
-		<img>susan_anthony</img>
-		<audio>regan.mp3</audio>
-		<quote>Organize, agitate, educate, must be our war cry</quote>
-		<info>Susan B. Anthony was born February 15, 1820 in Adams, Massachusetts. She was brought up in a Quaker family with long activist traditions. Early in her life she developed a sense of justice and moral zeal. After teaching for fifteen years, she became active in temperance. Because she was a woman, she was not allowed to speak at temperance rallies. This experience, and her acquaintance with Elizabeth Cady Stanton, led her to join the women's rights movement in 1852. Soon after, she dedicated her life to woman suffrage. Ignoring opposition and abuse, Anthony traveled, lectured, and canvassed across the nation for the vote. She also campaigned for the abolition of slavery, the right for women to own their own property and retain their earnings, and she advocated for women's labor organizations. In 1900, Anthony persuaded the University of Rochester to admit women. Anthony, who never married, was aggressive and compassionate by nature. She had a keen mind and a great ability to inspire. She remained active until her death on March 13, 1906.</info>
-	</item>
-	-->
-	<item>
-		<id>8</id>
+		<id>3</id>
 		<type>Popular</type>
 		<name>Winston Churchill</name>
 		<img>churchill_hhh</img>
@@ -105,9 +121,33 @@
 
 			 Churchill, a gifted amateur painter, wrote Painting as a Pastime (1948). An autobiographical account of his youth, My Early Life, appeared in 1930.
 	   </info>
+	   <achievements>			 
+	             1. Sir Winston Churchill was elected to British Parliament as a conservitive in 1900.
+					
+				 2. He changed parties and became a liberal and then became the President of the Board of Trade in 1904.
+					 
+				 3. Served as Undersecretary of the colonies 1906 through 1908.
+					 
+				 4. He served in the British military in France during World War 1.
+					 
+				 5. Became the Secretary of War 1918 through 1921.
+					
+				 6. Chancellour of Exchequer from 1924 to 1929
+					 
+				 7. Was serving as First Lord of Admirality when World War Two broke out.
+					 
+				 8. Shortly after he became the Prime Minister of Britain and led them out of the war.
+						
+				 9. He served as Prime Minister of Britain from 1940 to 1945 and from 1951 to 1955.
+
+				 10. He coined the term "Iron Curtain" in a speech he made in 1946 about Soviet Russia's nature of expansion.
+					 
+				 11. He was knighted and awared the Nobel Prize in literature in 1953 for his six volume history of World War Two.
+				
+				 12. He graced the cover of Time magazine multiple times winning the title of Man of the Year in 1940 and Man of the Half Century in 1949.</achievements>
 	</item>
 	<item>
-		<id>9</id>
+		<id>4</id>
 		<type>Popular</type>
 		<name>Martin Luther King</name>
 		<img>martin_hh</img>
@@ -128,9 +168,26 @@
 
 			  On the evening of April 4, 1968, while standing on the balcony of his motel room in Memphis, Tennessee, where he was to lead a protest march in sympathy with striking garbage workers of that city, he was assassinated.
 		</info>
+		<achievements>			 
+		    	 1. The greatest achievement of King was undoubtedly as a leader of the American Civil Rights Movement. He defended the Americans with African descent and fought for their rights. Martin Luther was greatly influenced by Howard Thurman, a civil rights leader, theologian and educator. He was a classmate of Martin Luther's father at Morehouse College. King was also inspired by Mahatma Gandhi's philosophy of non-violence and believed that resistance to non-violence is the only weapon to fight against inequality and injustice. He visited the birthplace of Mahatma Gandhi in India in 1959. This trip was a turning point in his life and deepened his belief in the principle of non-violence and his commitment to the civil rights movement. 
+
+				 2. Martin Luther played a prominent role in the Montgomery Bus Boycott, 1955. The boycott was called for in Montgomery, Alabama to fight against racial discrimination on the city's public transit system. The situation became worse following the arrest of Rosa Parks, as she refused to vacate her seat to a white passenger. The king's house was bombed and he was arrested during this agitation, which marked the end to racial segregation on Montgomery public buses.
+
+				 3. Another major accomplishment of Martin Luther was the institution of the Southern Christian Leadership Conference (SCLC), an American civil rights organization in 1957. The organization aimed at supporting the philosophy of non-violence. It was led by King as the President along with Ralph Abernathy and other activists. As an ardent believer of the Gandhian principles of non-violence, he enforced the non-violent techniques in the protests organized by SCLC. Luther also fought for the civil rights of blacks, like, right to vote, labor rights, etc. These rights were incorporated with the enactment of the Civil Rights Act, 1964 and the Voting Rights Act, 1965.
+
+				 4. Yet another substantial achievement of Martin Luther was in the Birmingham campaign, which aimed at promoting civil rights for African-Americans. The campaign was basically directed to mark an end to preferential and segregated civil and economic policies. The King and SCLC were also actively involved in the protests in St. Augustine, Florida, in 1964. Nightly marches were organized in the city; several marchers were assaulted by the whites and even jailed.
+
+				 5. Martin Luther, along with other prominent leaders like, Roy Wilkins, Whitney Young, A. Philip Randolph, John Lewis, and James L. Farmer, Jr. was instrumental in organizing the March on Washington in 1963. The demands behind the march were putting an end to racial separatism in school, abolition of racial discrimination in employment, minimum wage for all workers, etc. Millions of protesters from diverse backgrounds attended the march, making it a success. It was the largest gathering in the history of Washington. Luther's speech, "I Have a Dream" was one of the most vibrant speeches of American history along with Abraham Lincoln's Gettysburg Address and Franklin D. Roosevelt's Infamy Speech.
+
+        		 6. Martin Luther also had several awards and recognition to his credit. He was awarded at least fifty honorary degrees from various colleges and universities across the United States. Luther was the recipient of the Nobel Peace Prize on October 14, 1964 for his significant role in bringing racial discrimination to an end in the United States. Besides these, he was awarded other significant awards like: American Liberties Medallion by the American Jewish Committee, the John Dewey Award, the John F. Kennedy Award and many more. He was posthumously awarded the Marcus Garvey Prize for Human Rights, the Rosa L. Parks Award, Grammy Award for his speech " Why I oppose the war in Vietnam.", etc. 
+
+				 7. He published several books where he highlighted the oppression faced by the blacks and their brutal conditions. 'Stride Toward Freedom', 'The Measure of a Man' and 'Why We Can't Wait' are some of his publications. He was also an excellent orator and delivered remarkable speeches during his career span. "I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character", is a line from one of his most recognizable speeches, "I Have a Dream". 
+
+				 8. Martin Luther King Jr. is an iconic figure not only in the United States of America but around the world as well. He was assassinated on 4th April, 1968, in Memphis, Tennessee. King will be revered forever as someone who sought equal rights for all irrespective of race and color. The third Monday of January is celebrated as Martin Luther King Jr. Day in his commemoration and is an official holiday in the United States.
+		</achievements>
 	</item>
 	<item>
-		<id>10</id>
+		<id>5</id>
 		<type>Popular</type>
 		<name>Lyndon B. Johnson</name>
 		<img>lyndon_johnson</img>
@@ -141,9 +198,24 @@
 		<video>johnson</video>
 		<quote>Doing what's right isn't the problem. It is knowing what's right</quote>
 		<info>"A Great Society" for the American people and their fellow men elsewhere was the vision of Lyndon B. Johnson. In his first years of office he obtained passage of one of the most extensive legislative programs in the Nation's history. Maintaining collective security, he carried on the rapidly growing struggle to restrain Communist encroachment in Viet Nam. Johnson was born on August 27, 1908, in central Texas, not far from Johnson City, which his family had helped settle. He felt the pinch of rural poverty as he grew up, working his way through Southwest Texas State Teachers College (now known as Texas State University-San Marcos); he learned compassion for the poverty of others when he taught students of Mexican descent.During World War II he served briefly in the Navy as a lieutenant commander, winning a Silver Star in the South Pacific. After six terms in the House, Johnson was elected to the Senate in 1948. In 1953, he became the youngest Minority Leader in Senate history, and the following year, when the Democrats won control, Majority Leader. With rare skill he obtained passage of a number of key Eisenhower measures.</info>
+		<achievements>			 
+		         1. Designed his signature "Great Society" legislation, which included laws upholding civil rights, public broadcasting, Medicare, Medicaid, environmental protection, aid to education, and the abolition of poverty
+ 
+ 				 2. Signed the Civil Rights Acts of 1964 and 1968 outlawing most forms of racial segregation and providing equal housing opportunities regardless of race, creed, or national origin, and passed the Voting Rights Act of 1965 outlawing discrimination in voting
+ 					  
+ 				 3.Appointed Thurgood Marshall as the first African American justice on the Supreme Court
+ 					  
+ 				 4.Signed the Elementary and Secondary Education Act and Higher Education Act to improve funding to schools, especially those in poor districts
+ 					  
+ 				 5.Established the National Endowment for the Humanities and the National Endowment for the Arts to support humanists and artists
+ 					  
+ 				 6.Created programs to tackle poverty such as Head Start, food stamps, Work Study, Medicare, and Medicaid
+ 
+ 				 7.Presided over the first manned flight to the Moon with the Apollo 8 program
+		</achievements>
 	</item>
 	<item>
-		<id>11</id>
+		<id>6</id>
 		<type>Popular</type>
 		<name>Ronald Reagan</name>
 		<img>reagan_h</img>
@@ -154,10 +226,23 @@
 		<video>regan</video>
 		<quote>We can't help everyone, but everyone can help someone</quote>
 		<info>At the end of his two terms in office, Ronald Reagan viewed with satisfaction the achievements of his innovative program known as the Reagan Revolution, which aimed to reinvigorate the American people and reduce their reliance upon Government. He felt he had fulfilled his campaign pledge of 1980 to restore "the great, confident roar of American progress and growth and optimism." On February 6, 1911, Ronald Wilson Reagan was born to Nelle and John Reagan in Tampico, Illinois. He attended high school in nearby Dixon and then worked his way through Eureka College. There, he studied economics and sociology, played on the football team, and acted in school plays. Upon graduation, he became a radio sports announcer. A screen test in 1937 won him a contract in Hollywood. During the next two decades he appeared in 53 films.As president of the Screen Actors Guild, Reagan became embroiled in disputes over the issue of Communism in the film industry; his political views shifted from liberal to conservative. He toured the country as a television host, becoming a spokesman for conservatism. In 1966 he was elected Governor of California by a margin of a million votes; he was re-elected in 1970.</info>
+		<achievements>			 
+		         1. Ending the Cold War:  The Cold War had raged since World War II and communism‘s quest for world domination remained an existential threat to the United States when President Reagan took office.  Reagan reversed the policy of detente and stood firm against the Soviet Union, calling it the Evil Empire and telling Mikhail Gorbachev to “tear down this wall” in Berlin.  He was relentless in pushing his Strategic Defense Initiative and gave aid to rebels battling Soviet-backed Marxists from Nicaragua to Angola.  Those efforts were critical in the ultimate collapse of the Soviet empire and essentially ended the Cold War.
+
+				 2. Reaganomics:  Reagan’s mix of across-the-board tax cuts, deregulation, and domestic spending restraint helped fuel an economic boom that lasted two decades.  Reagan inherited a misery index (the sum of the inflation and unemployment rates) of 19.99%, and when he left office it had dropped to 9.72%.  President Obama take note:  Under Reaganomics, 16 million new jobs were created.
+
+					  
+				 3. Revitalizing the GOP and the conservative movement:  The Republican Party was at its nadir after Watergate, but Reagan was able to form a winning coalition of fiscal conservatives, family-values voters, blue-collar Reagan Democrats and neo-conservative intellectuals and set the stage for future GOP electoral gains.  His free-market, small-government, pro-liberty conservatism helped to revitalize the GOP and his influence resonates today as conservative candidates still invoke Reagan as their standard-bearer.
+
+				 4. Peace through Strength:  The military was diminished during the Carter years, but Reagan reversed that by rebuilding the armed forces.  His Peace Through Strength philosophy was manifested by his reviving the B-1 bomber that Carter canceled, starting production of the MX missile, and pushing NATO to deploy Pershing missiles in West Germany.  He increased defense spending by more than 40%, increased troop levels, and even got much-needed space parts into the pipeline.  Those efforts ensured that America remained a military superpower.
+
+				 5. Morning in America:  It was basically a slogan for Reagan’s 1984 reelection bid, but Morning in America symbolized a new beginning for the country.  Reagan’s jaunty optimism and an economic boom was a much-needed tonic for a country that had experienced the malaise of the Carter years and the traumas of Watergate and Vietnam.
+
+			     6. Star Wars:  Reagan’s Strategic Defense Initiative was derided by his opponents as being technologically unfeasible, but the mere threat of the U.S. building the system was instrumental in the Soviet Union’s collapse.  The successful use of Patriot missile batteries in the first Gulf War proved the critics wrong, and the missile defense system that ensued has lessened the threat of ballistic missiles.</achievements>
 	</item>
 
 	<item>
-		<id>12</id>
+		<id>7</id>
 		<type>Popular</type>
 		<name>Swami Vivekananda</name>
 		<img>swami_hh</img>
@@ -171,10 +256,29 @@
 		<info>Vivekananda also known as Swami Vivekananda, born Narendra Nath Datta , was an Indian Hindu monk and chief disciple of the 19th-century saint Ramakrishna. He was a key figure in the introduction of the Indian philosophies of Vedanta and Yoga to the Western world and is credited with raising interfaith awareness, bringing Hinduism to the status of a major world religion during the late 19th century. He was a major force in the revival of Hinduism in India, and contributed to the concept of nationalism in colonial India. Vivekananda founded the Ramakrishna Math and the Ramakrishna Mission. He is perhaps best known for his inspiring speech which began, "Sisters and brothers of America ...," in which he introduced Hinduism at the Parliament of the World's Religions in Chicago in 1893.
 
 			  Born into an aristocratic Bengali family of Calcutta, Vivekananda was inclined towards spirituality. He was influenced by his guru, Ramakrishna, from whom he learnt that all living beings were an embodiment of the divine self; therefore, service to God could be rendered by service to mankind. After Ramakrishna's death, Vivekananda toured the Indian subcontinent extensively and acquired first-hand knowledge of the conditions prevailing in British India. He later travelled to the United States, representing India at the 1893 Parliament of the World Religions. Vivekananda conducted hundreds of public and private lectures and classes, disseminating tenets of Hindu philosophy in the United States, England and Europe. In India, Vivekananda is regarded as a patriotic saint and his birthday is celebrated as National Youth Day in India.</info>
+		<achievements>			  
+		    		1. With Sri Ramakrishna
+					  
+					At the threshold of youth Narendra had to pass through a period of spiritual crisis when he was assailed by doubts about the existence of God. It was at that time he first heard about Sri Ramakrishna from one of his English professors at college. One day in November 1881, Narendra went to meet Sri Ramakrishna who was staying at the Kali Temple in Dakshineshwar. He straightaway asked the Master a question which he had put to several others but had received no satisfactory answer: “Sir, have you seen God?” Without a moment’s hesitation, Sri Ramakrishna replied: “Yes, I have. I see Him as clearly as I see you, only in a much intenser sense.” 
+	
+					2. Difficult Situations
+					
+					After a few years two events took place which caused Narendra considerable distress. One was the sudden death of his father in 1884. This left the family penniless, and Narendra had to bear the burden of supporting his mother, brothers and sisters. The second event was the illness of Sri Ramakrishna which was diagnosed to be cancer of the throat. In September 1885 Sri Ramakrishna was moved to a house at Shyampukur, and a few months later to a rented villa at Cossipore. In these two places the young disciples nursed the Master with devoted care. In spite of poverty at home and inability to find a job for himself, Narendra joined the group as its leader.
+	  				  
+	  				3. Awareness of Life’s Mission
+					  
+					After establishing the new monastic order, Vivekananda heard the inner call for a greater mission in his life. While most of the followers of Sri Ramakrishna thought of him in relation to their own personal lives, Vivekananda thought of the Master in relation to India and the rest of the world. As the prophet of the present age, what was Sri Ramakrishna’s message to the modern world and to India in particular? This question and the awareness of his own inherent powers urged Swamiji to go out alone into the wide world. So in the middle of 1890, after receiving the blessings of Sri Sarada Devi, the divine consort of Sri Ramakrishna, known to the world as Holy Mother, who was then staying in Kolkata, Swamiji left Baranagar Math and embarked on a long journey of exploration and discovery of India.
+	
+					4. Discovery of Real India
+					
+					During his travels all over India, Swami Vivekananda was deeply moved to see the appalling poverty and backwardness of the masses. He was the first religious leader in India to understand and openly declare that the real cause of India’s downfall was the neglect of the masses. The immediate need was to provide food and other bare necessities of life to the hungry millions. For this they should be taught improved methods of agriculture, village industries, etc. It was in this context that Vivekananda grasped the crux of the problem of poverty in India (which had escaped the attention of social reformers of his days): owing to centuries of oppression, the downtrodden masses had lost faith in their capacity to improve their lot. It was first of all necessary to infuse into their minds faith in themselves. For this they needed a life-giving, inspiring message. Swamiji found this message in the principle of the Atman, the doctrine of the potential divinity of the soul, taught in Vedanta, the ancient system of religious philosophy of India. He saw that, in spite of poverty, the masses clung to religion, but they had never been taught the life-giving, ennobling principles of Vedanta and how to apply them in practical life.
+					
+					Thus the masses needed two kinds of knowledge: secular knowledge to improve their economic condition, and spiritual knowledge to infuse in them faith in themselves and strengthen their moral sense. The next question was, how to spread these two kinds of knowledge among the masses? Through education – this was the answer that Swamiji found.
+	</achievements>
 	</item>
 	
 	<item>
-		<id>1</id>
+		<id>8</id>
 		<type>Popular</type>
 		<name>Abraham Lincoln</name>
 		<img>lincon_h</img>
@@ -196,6 +300,28 @@
 
 			  Lincoln has been consistently ranked both by scholars and the public as one of the greatest U.S. presidents.
 		</info>
+	
+	 <achievements>			 
+	     		1. Abraham Lincoln made the decision to fight to prevent the nation from splitting apart.
+
+				2. Abraham Lincoln was an unfaltering commander in chief during the Civil War which preserved the United States as one nation.
+
+				3. Abraham Lincoln's foreign policy was successful in preventing other countries from intervening in America's Civil War.
+
+				4. Abraham Lincoln issued the Emancipation Proclamation which began the process of freedom for America's slaves. The document also allowed black soldiers to fight for the Union.
+
+				5. Abraham Lincoln was a strong supporter of the Thirteenth Amendment that formally ended slavery in the United States.
+
+				6. Legislation Abraham Lincoln signed into law included the Homestead Act, the Morrill Act, the National Banking Act, and a bill that chartered the first transcontinental railroad.
+
+				7. Abraham Lincoln set an example of strong character, leadership, and honesty which succeeding presidents tried to emulate. Barack Obama stated during his campaign that he would look to Lincoln as a model.
+
+				8. Abraham Lincoln gave a series of great speeches before and during his presidency including the House Divided Speech, the Cooper Union Address, the First Inaugural Address, the Gettysburg Address, and the Second Inaugural Address.
+
+				9. Abraham Lincoln wrote a series of famous letters including the letters to Grace Bedell, Horace Greeley, Fanny McCullough, and Lydia Bixby.
+
+				10. Abraham Lincoln's quotes are among the most famous quotes in the world.
+	 </achievements>
 	</item>
 	
 

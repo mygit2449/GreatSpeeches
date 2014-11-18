@@ -1,9 +1,11 @@
 package com.greatspeeches.models;
 
+import java.io.Serializable;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class HomeDataModel implements Parcelable{
+public class HomeDataModel implements Parcelable,Serializable{
 
 	public String name = "";
 	public String quote = "";
@@ -15,6 +17,8 @@ public class HomeDataModel implements Parcelable{
 	public String bDate = "";
 	public String dDate = "";
 	public String type = "";
+	public String achievement = "";
+
 	
 //	public HomeDataModel(String name,String quote,String id,String imageId,String info,String audio,String videourl,String bDate,String dDate){
 //		this.name=name;
@@ -28,6 +32,14 @@ public class HomeDataModel implements Parcelable{
 //		this.dDate=dDate;
 //	}
 	
+	public String getAchievement() {
+		return achievement;
+	}
+
+	public void setAchievement(String achievement) {
+		this.achievement = achievement;
+	}
+
 	public String getType() {
 		return type;
 	}
@@ -51,6 +63,7 @@ public class HomeDataModel implements Parcelable{
 		bDate=in.readString();
 		dDate=in.readString();
 		type=in.readString();
+		achievement=in.readString();
 	}
 	
 	
@@ -140,6 +153,7 @@ public class HomeDataModel implements Parcelable{
 		dest.writeString(bDate);
 		dest.writeString(dDate);
 		dest.writeString(type);
+		dest.writeString(achievement);
 	}
 
 	

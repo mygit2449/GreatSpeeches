@@ -1,4 +1,5 @@
 /*
+
  * Copyright 2012 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -152,6 +153,7 @@ public class ScreenSlidePageFragment extends Fragment{
 			    	 activePlayer = player;
 		                activePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
 		                activePlayer.setPlayerStateChangeListener(videoListener);
+		                activePlayer.setFullscreen(false);
 		                if (!wasRestored) {
 		                    activePlayer.loadVideo(videoId, 0);
 		                }
@@ -238,6 +240,10 @@ public class ScreenSlidePageFragment extends Fragment{
         
         TextView bDateTxt = (TextView)rootView.findViewById(R.id.bDate);
         bDateTxt.setText(""+mPersonObj.getbDate());
+        TextView bachievementTxt = (TextView)rootView.findViewById(R.id.C_info);
+        bachievementTxt.setText(""+mPersonObj.getAchievement());
+        TextView pNameTxt = (TextView)rootView.findViewById(R.id.acTitleTxt);
+        pNameTxt.setText(""+getResources().getString(R.string.achievement, mPersonObj.getName()));
         TextView dDateTxt = (TextView)rootView.findViewById(R.id.dDate);
         dDateTxt.setText(""+mPersonObj.getdDate());
         
