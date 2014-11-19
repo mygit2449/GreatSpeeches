@@ -194,6 +194,8 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 					resetAudioPlayer();
 					Thread _playerThread = new Thread(_buttonUpdate);
 					_playerThread.start();
+//					resetAudioPlayer();
+//					stopAudioAnimation();
 				}else{
 //					_playerLayout.setVisibility(View.GONE);
 //					resetAudioPlayer();

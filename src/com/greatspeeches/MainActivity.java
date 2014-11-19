@@ -137,6 +137,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		
 		mHeaderPicture = (KenBurnsSupportView) findViewById(R.id.header_picture);
 		mHeader = findViewById(R.id.header);
+		mHeaderPicture.setResourceIds(R.drawable.parallax_gs1, R.drawable.parallax_gs2);
 
 		mPagerSlidingTabStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
 		mViewPager = (ViewPager) findViewById(R.id.pager);
@@ -177,7 +178,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 					// TODO Auto-generated method stub
 					Random rand = new Random();  
 					pickedNumber = rand.nextInt(_imageaCount.length)+1;
-					updateBeautyBg(pickedNumber);
+//					updateBeautyBg(pickedNumber);
 					handler.postDelayed(runnable, 5000);
 					_slideViewFlipper.showNext();
 				}
@@ -189,7 +190,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 					// TODO Auto-generated method stub
 					Random rand = new Random();  
 					pickedNumber = rand.nextInt(_imageaCount.length)+1;
-					updateBeautyBg(pickedNumber);
+//					updateBeautyBg(pickedNumber);
 					bgUpdatedHandler.postDelayed(runnable, 10000);
 				}
 			};
@@ -470,7 +471,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	public class PagerAdapter extends FragmentPagerAdapter {
 
 		private SparseArrayCompat<ScrollTabHolder> mScrollTabHolders;
-		private final String[] TITLES = { "           Popular            ","          Categories         "};
+		private final String[] TITLES = { "         Popular          ","         Categories        "};
 		private ScrollTabHolder mListener;
 
 		public PagerAdapter(FragmentManager fm) {
