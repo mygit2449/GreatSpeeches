@@ -45,7 +45,6 @@ import com.google.android.youtube.player.YouTubePlayer.OnInitializedListener;
 import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
 import com.google.android.youtube.player.YouTubePlayer.Provider;
 import com.google.android.youtube.player.YouTubePlayerFragment;
-import com.greatspeeches.HomeScreen;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.helper.StickyScrollView;
@@ -96,7 +95,7 @@ public class ScreenSlidePageFragment extends Fragment{
         
     public void update(){
     	scroll.fullScroll(View.FOCUS_UP);
-    	if(mPersonObj.getType().equalsIgnoreCase("Popular")){
+    	if(mPersonObj.getType().equalsIgnoreCase("Popular") && !mPersonObj.getVideourl().contains("youtube")){
     		personImg.setVisibility(View.GONE);
     		videoRel.setVisibility(View.VISIBLE);
     		cVideoView.setVisibility(View.VISIBLE);
@@ -154,6 +153,7 @@ public class ScreenSlidePageFragment extends Fragment{
 		                activePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
 		                activePlayer.setPlayerStateChangeListener(videoListener);
 		                activePlayer.setFullscreen(false);
+		                activePlayer.setShowFullscreenButton(false);
 		                if (!wasRestored) {
 		                    activePlayer.loadVideo(videoId, 0);
 		                }
@@ -222,7 +222,6 @@ public class ScreenSlidePageFragment extends Fragment{
         // Set the title view to show the page number.
         infoData =  ((TextView) rootView.findViewById(R.id.person_info));
         infoData.setMaxLines(Integer.MAX_VALUE);
-        infoData.setTypeface(HomeScreen.arimoype);
         infoData.setMovementMethod(new ScrollingMovementMethod());
         infoData.setText("\t\t\t"+mPersonObj.getInfo());
         personImg = (ImageView) rootView.findViewById(R.id.person_image);
@@ -242,8 +241,8 @@ public class ScreenSlidePageFragment extends Fragment{
         bDateTxt.setText(""+mPersonObj.getbDate());
         TextView bachievementTxt = (TextView)rootView.findViewById(R.id.C_info);
         bachievementTxt.setText(""+mPersonObj.getAchievement());
-        TextView pNameTxt = (TextView)rootView.findViewById(R.id.acTitleTxt);
-        pNameTxt.setText(""+getResources().getString(R.string.achievement, mPersonObj.getName()));
+//        TextView pNameTxt = (TextView)rootView.findViewById(R.id.acTitleTxt);
+//        pNameTxt.setText(""+getResources().getString(R.string.achievement, mPersonObj.getName()));
         TextView dDateTxt = (TextView)rootView.findViewById(R.id.dDate);
         dDateTxt.setText(""+mPersonObj.getdDate());
         

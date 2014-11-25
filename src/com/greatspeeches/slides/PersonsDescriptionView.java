@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
@@ -24,12 +25,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.FacebookAuthorizationException;
@@ -79,6 +82,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
     public  ArrayList<HomeDataModel> dataList = null;
     private ActionBar actionBar;
     private ScreenSlidePageFragment selecedFragment = null;
+    
     
     private Session.StatusCallback statusCallback = new Session.StatusCallback() {
         @Override
@@ -136,6 +140,18 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	            }
 	        }
 		
+	        
+	        
+	        final int abTitleId = getResources().getIdentifier("action_bar_title", "id", "android");
+	        View v = findViewById(abTitleId);
+	        v.setPadding(10, 20, 2, 20);
+	        v.setBackgroundResource(R.drawable.background_tab);
+	        v.setOnClickListener(new View.OnClickListener() {
+	            @Override 
+	            public void onClick(View v) {
+	            	designQuoteDialog(""+dataList.get(selectPos).quote);
+	            } 
+	        }); 
 	}
 
 	public void initializeUI(){
@@ -152,10 +168,12 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		_nextBtn.setOnClickListener(this);
 		_closeBtn.setOnClickListener(this);
 		arcMenu2 = (ArcMenu) findViewById(R.id.arc_menu_2); 
-		initArcMenu(arcMenu2, ITEM_DRAWABLES);
 		
 		receiverIntent = getIntent();
 		selectPos = receiverIntent.getExtras().getInt("position");
+
+		initArcMenu(arcMenu2, ITEM_DRAWABLES);
+		
 		// Instantiate a ViewPager and a PagerAdapter.
 		mPager = (ViewPager) findViewById(R.id.pager);
 		mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
@@ -165,7 +183,14 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		
 		actionBar = getActionBar();
 		actionBar.setHomeButtonEnabled(true);
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setTitle(""+dataList.get(selectPos).getName());
+		actionBar.setCustomView(R.layout.action_title);
+//		actionBar.setDisplayShowTitleEnabled(false);
+//		View v = actionBar.getCustomView();
+	
+		
+		
 //		actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#80000000")));
 //		actionBar.setStackedBackgroundDrawable(new ColorDrawable(Color.parseColor("#550000ff")));
 		_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(selectPos).getImageId(), R.drawable.class));
@@ -177,11 +202,15 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				// on which page is currently active. An alternative approach is to have each
 				// fragment expose actions itself (rather than the activity exposing actions),
 				// but for simplicity, the activity provides the actions in this sample.
-				actionBar.setTitle(""+dataList.get(position).getName());
+				actionBar.setTitle(""+dataList.get(selectPos).getName());
 				_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(position).getImageId(), R.drawable.class));
 				invalidateOptionsMenu();
 //				mPagerAdapter.getFragment(position).closeVplayer();
 //				mPagerAdapter.getFragment(position).closeYVplayer();
+				
+				if(dataList.get(position).getType().equalsIgnoreCase("Popular")){
+					initArcMenu(arcMenu2, ITEM_DRAWABLES);
+				}
 
 				if(arcMenu2.mArcLayout.isExpanded()){
 					arcMenu2.mHintView.startAnimation(arcMenu2.createHintSwitchAnimation(true));
@@ -392,10 +421,8 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	
 	 private void initArcMenu(ArcMenu menu, int[] itemDrawables) {
 	        final int itemCount = itemDrawables.length;
+	        menu.mArcLayout.removeAllViews();	
 	        for (int i = 0; i < itemCount; i++) {
-	        	
-	        	
-	        	
 	        	if(itemDrawables[i] == R.drawable.headphone && (null == dataList.get(selectPos).audio || dataList.get(selectPos).audio.length() == 0)){
 	        		continue ;
 	        	}
@@ -451,13 +478,15 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		                			Toast.makeText(PersonsDescriptionView.this, "oops!,Please check Internet connection and try again!", Toast.LENGTH_SHORT).show();
 		                		}
 		                	}else if(ITEM_DRAWABLES[position] == R.drawable.video_icon){
+//		                		arcMenu2.setVisibility(View.GONE);
 		                		selecedFragment = mPagerAdapter.getFragment(selectPos);
 		                		selecedFragment.update();
 		                	}
 					    }
 		            });
 	        	}
-	    }
+	
+	    	}
 
 	
 	@Override
@@ -648,5 +677,50 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	        
 	    }
 	 
+	  
+	 Dialog dialog;
+	 public void designQuoteDialog(String quote){
+		  dialog = new Dialog(PersonsDescriptionView.this);
+		  dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		  dialog.setContentView(R.layout.quote_layout);
+		  dialog.setCanceledOnTouchOutside(true);
+		  final TextView quoteTxt = (TextView)dialog.findViewById(R.id.quoteTxt);
+		  quoteTxt.setText('"' + quote + '"');
+		  ImageView personImage = (ImageView)dialog.findViewById(R.id.popular_img);
+		  personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(selectPos).getImageId()+"_l", R.drawable.class));
+		  final TextView nameTxt = (TextView)dialog.findViewById(R.id.nameTxt);
+		  nameTxt.setText(""+dataList.get(selectPos).getName());
+		  Button mCloseBtn= (Button)dialog.findViewById(R.id.closeBtn);
+		  mCloseBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				dialog.dismiss();
+			}
+		});
+		  
+		  
+		  Button mShareBtn= (Button)dialog.findViewById(R.id.shareBtn);
+		  mShareBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				StringBuilder sb = new StringBuilder();
+				sb.append(""+nameTxt.getText().toString()+"\r\n  ");
+				sb.append(""+quoteTxt.getText().toString());
+				
+				Intent sendIntent = new Intent();
+				sendIntent.setAction(Intent.ACTION_SEND);
+				sendIntent.putExtra(Intent.EXTRA_TEXT, sb.toString());
+				sendIntent.setType("text/plain");
+				startActivity(sendIntent);
+				
+			}
+		});
+		  
+		  dialog.show();
+	 }	 
 	 
 }

@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu>
+
 <item>
   <id>0</id>
+  <type>Sports</type>
+  <name>Usain Bolt</name>
+  <img>usain</img>
+  <audio></audio>
+  <video>https://www.youtube.com/watch?v=q4FN5aWnz8M</video>
+  <bdate> August 21, 1986, Sherwood Content, Jamaica</bdate>
+  <quote>Come on... when you're running, if you see you're going to win, you're going to celebrate.</quote>
+  <info>
+		Usain St. Leo Bolt OJ CD is a Jamaican sprinter. Widely regarded as the fastest person ever, he is the first man to hold both the 100 metres and 200 metres world records since fully automatic time measurements became mandatory in 1977. Along with his teammates, he also set the world record in the 4×100 metres relay. He is the reigning Olympic champion in these three events, the first man to win six Olympic gold medals in sprinting, and an eight-time World champion. He was the first to achieve a "double double" by winning 100 m and 200 m titles at consecutive Olympics (2008 and 2012), and topped this through the first "double triple" (including 4×100 m relays).
+
+		Although gaining worldwide popularity for a sprint double victory at the Beijing Games, Bolt has had more victories as a 200 m runner. While he had not won any significant 100 m title prior to the 2008 Olympics, he had won numerous crowns in the 200 m event at the youth, junior and senior levels. Further, at the 2013 World Championships in Moscow, Bolt completed a hat-trick of 200 m world titles by winning his third straight gold in the event. His 2009 record breaking margin for 100 m, from 9.69 seconds (his own previous world record) to 9.58, is the highest since the start of fully automatic time measurements.
+
+		Bolt's achievements in sprinting have earned him the media nickname "Lightning Bolt", and awards including the IAAF World Athlete of the Year, Track  &amp; Field Athlete of the Year, and Laureus World Sportsman of the Year (three times). He is the highest paid athlete ever in track and field. He has been called the world's most marketable athlete. By winning three gold medals at the 2013 World Championships, Bolt became one of the most successful athletes in the 30-year history of the athletics world championships.
+  
+  </info>
+  <achievements>
+		Olympic Results
+
+		2008 Beijing
+		Gold – 100 m
+		Gold – 200 m
+		Gold – 4×100 m relay
+		
+		2012 London
+		Gold – 100 m
+		Gold – 200 m
+		Gold – 4×100 m relay
+		
+		World Championships
+		2013 Gold – 100 m
+		2013 Gold – 200 m
+		2011 Gold – Daegu 4×100 m relay
+		2011 Gold – Daegu 200 m
+		2009 Gold – Berlin 100 m
+		2009 Gold – Berlin 200 m
+		2009 Gold – Berlin 4×100 m relay
+		2007 Silver – Osaka 200 m
+		2007 Silver – Osaka 4×100 m relay
+		
+  </achievements>
+ </item>
+
+<item>
+  <id>1</id>
   <type>Sports</type>
   <name>Dhyan Chand</name>
   <img>dhyanchand</img>
@@ -42,7 +87,7 @@
 
 
 <item>
-  <id>1</id>
+  <id>2</id>
   <type>Sports</type>
   <name>Sachin Tendulkar</name>
   <img>sachin</img>
@@ -88,7 +133,7 @@
 </item>
 
 <item>
-  <id>2</id>
+  <id>3</id>
   <type>Sports</type>
   <name>Pele</name>
   <img>pele</img>
@@ -118,7 +163,7 @@
  </item>
 
 <item>
-  <id>3</id>
+  <id>4</id>
   <type>Sports</type>
   <name>Muhammad Ali</name>
   <img>muhammad_ali</img>
@@ -156,7 +201,7 @@
  </item>
  
  <item>
-  <id>4</id>
+  <id>5</id>
   <type>Sports</type>
   <name>Carl Lewis</name>
   <img>carllewis</img>
@@ -179,7 +224,7 @@
  </item>
  
   <item>
-  <id>5</id>
+  <id>6</id>
   <type>Sports</type>
   <name>Jackie Joyner-Kersee</name>
   <img>jackie</img>
@@ -209,7 +254,7 @@
  </item>
  
    <item>
-  <id>6</id>
+  <id>7</id>
   <type>Sports</type>
   <name>Ayrton Senna</name>
   <img>ayrton</img>
@@ -242,7 +287,7 @@
  </item>
 
 <item>
-  <id>7</id>
+  <id>8</id>
   <type>Sports</type>
   <name>Milkha Singh</name>
   <img>milkhasingh</img>
@@ -267,7 +312,7 @@
 </item>
 
 <item>
-  <id>8</id>
+  <id>9</id>
   <type>Sports</type>
   <name>Viswanathan Anand</name>
   <img>vishyanand</img>
@@ -292,36 +337,37 @@
   </achievements>
 </item>
 
-<!--  
 <item>
   <id>10</id>
   <type>Sports</type>
-  <name>Sushil Kumar</name>
-  <img>sushilkumar</img>
+  <name>Donald Bradman</name>
+  <img>donald</img>
   <audio></audio>
-  <video>http://www.youtube.com/watch?v=DBI24NT1tIQ</video>
-  <bdate>May 26, 1983</bdate> 
-  <quote></quote>
-  <info>Sushil Kumar led the Indian contingent at the 2012 London Summer Olympic Games and was India's flag bearer for the London Olympics opening ceremony on July 27.
- 
-		Sushil Kumar is an Indian wrestler who won the bronze medal in the Men's 66kg Freestyle Wrestling event at the 2008 Beijing Olympics. Kumar defeated Leonid Spiridonov of Kazakhstan in the repechage round to win the bronze.
- 
-		This was the second medal for India at the Beijing Olympics after shooter Abhinav Bindra claimed the first ever individual Olympic gold medal for the country in the 10 m Air Rifle event. This was also the second medal for India in wrestling, and the first since K D Jadhav's bronze medal at the 1952 Helsinki Olympic Games.
+  <video>https://www.youtube.com/watch?v=hvrOHYp8nRY</video>
+  <bdate>27 August 1908, Cootamundra, New South Wales, Australia</bdate>
+  <ddate>25 February 2001, Kensington Park, South Australia, Australia</ddate>  
+  <quote>The game of cricket existed long before I was born. It will be played centuries after my demise. During my career I was privileged to give the public my interpretation of its character in the same way that a pianist might interpret the works of Beethoven.</quote>
+  <info>
+		Sir Donald George Bradman, often referred to as "The Don", was an Australian cricketer, widely acknowledged as the greatest Test batsman of all time.Bradman's career Test batting average of 99.94 is often cited as the greatest achievement by any sportsman in any major sport.
+
+		The story that the young Bradman practised alone with a cricket stump and a golf ball is part of Australian folklore. Bradman's meteoric rise from bush cricket to the Australian Test team took just over two years. Before his 22nd birthday, he had set many records for top scoring, some of which still stand, and became Australia's sporting idol at the height of the Great Depression.
+
+		During a 20-year playing career, Bradman consistently scored at a level that made him, in the words of former Australia captain Bill Woodfull, "worth three batsmen to Australia". A controversial set of tactics, known as Bodyline, was specifically devised by the England team to curb his scoring. As a captain and administrator, Bradman was committed to attacking, entertaining cricket; he drew spectators in record numbers. He hated the constant adulation, however, and it affected how he dealt with others. The focus of attention on his individual performances strained relationships with some team-mates, administrators and journalists, who thought him aloof and wary. Following an enforced hiatus due to the Second World War, he made a dramatic comeback, captaining an Australian team known as "The Invincibles" on a record-breaking unbeaten tour of England.
+
+		A complex, highly driven man, not given to close personal relationships, Bradman retained a pre-eminent position in the game by acting as an administrator, selector and writer for three decades following his retirement. Even after he became reclusive in his declining years his opinion was highly sought, and his status as a national icon was still recognised—more than 50 years after his retirement as a Test player, in 2001, the Australian Prime Minister John Howard called him the "greatest living Australian". Bradman's image has appeared on postage stamps and coins, and a museum dedicated to his life was opened while he was still living. On the centenary of his birth, 27 August 2008, the Royal Australian Mint issued a $5 commemorative gold coin with Bradman's image, and on 19 November 2009, he was inducted into the ICC Cricket Hall of Fame.
+
   </info>
+  <achievements>
+		Bradman was an exceptional batsman; in fact he was probably one of the best that the world will ever see. Bradman's almost unbelievable achievements were a result of nothing more than pure talent and ability. His overall statistics were superior to his peers' not only during the time of his own career but also remain unrivalled today. While nothing should ever detract from the Bradman legacy, it needs to be explained how context played a role in elevating him to the almost-surreal cult status which continues to surround his memory today.
+
+		At the time that Bradman was beginning to become a significant figure not only in the sporting domain but also on the international scene, Australia itself was still finding its place in the world. It was a comparatively young nation compared to the rest of the world, and while it managed to escape the First World War with some heavy casualties and a newly-established national character, it now faced the Great Depression. See animation
+
+		During the Depression, the majority of the Australian public were without food, jobs and even homes. Every day was a constant struggle for them. It was a period of severe hardships and as a result many of them turned their attention to sport to take their minds off their situations. Cricket, in particular, has always been a sport for which Australians have felt deep affection. Even before the separate colonies of Australia were united by Federation and recognised as a nation, there was an Australian cricket team. In 1882 the first Australian cricket team travelled to England, the birthplace of modern cricket, where they defeated the English cricket team. This simple victory in a game of cricket against their motherland instilled a great amount of national pride in Australians.
+
+		In much in the same way as that game of cricket had done in 1882, the heroic abilities of Bradman during the 1930s boosted the morale of society and renewed their sense of national pride. Ordinary people could escape the worries of their daily lives by immersing themselves in stories of Bradman's heroic sporting feats. As a result, he was often described by others at the time as a 'bright star,' owing to the way he inspired people, even in the most desolate of times.
+
+  </achievements>
 </item>
- -->
-<!--  <item> -->
-<!--   <id>11</id> -->
-<!--   <type>Sports</type> -->
-<!--   <name>Kapil Dev</name> -->
-<!--   <img>kapil</img> -->
-<!--   <audio></audio> -->
-<!--   <video>http://www.youtube.com/watch?v=78sh10Bz_YY</video> -->
-<!--   <bdate>January 6, 1959, Chandigarh, India</bdate>  -->
-<!--   <quote>When you have to work, work with a smile.</quote> -->
-<!--   <info>Considered to be one of the greatest cricketing all-rounders of all time, Kapil Dev is a former Indian cricketer best known for leading his team to a World Cup victory in 1983. Confident, charismatic and highly skilled, he was the Indian team's main strike bowler for the major part of his career. During his heydays he used to bamboozle batsmen with his prodigious swing. Dev was great not just with the ball; he was equally talented with the bat too. An expert at hooking and driving, he often provided India with the crucial runs needed to win a match even if the top-order failed to score. Born into a middle-class family in Haryana he became interested in cricket at a young age. He played for the Haryana cricket team at the beginning of his career eventually making his way into the national team, thanks to his aggressive play and high energy level. He cemented his place in the Indian team with his impressive performances and was soon made the captain. It was under his leadership that India went on to win the 1983 World Cup in spite of being the underdogs. -->
-<!-- </info> -->
-<!-- </item> -->
  </menu>
 
 

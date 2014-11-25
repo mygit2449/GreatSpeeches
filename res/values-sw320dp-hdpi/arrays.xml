@@ -10,6 +10,9 @@
     </string-array>
 
     <array name="science">
+        <item>@drawable/aristotle</item>
+        <item>@drawable/newton</item>
+        <item>@drawable/darwin</item>
         <item>@drawable/kalam_h</item>
         <item>@drawable/alberteinstein</item>
         <item>@drawable/nobel_hh</item>
@@ -17,8 +20,12 @@
         <item>@drawable/srinivasaramanujan</item>
         <item>@drawable/thomasedison</item>
         <item>@drawable/subbarao</item>
+        <item>@drawable/charles</item>
+        <item>@drawable/marie</item>
+         <item>@drawable/jobs</item>
     </array>
     <array name="sports">
+        <item>@drawable/usain</item>
         <item>@drawable/dhyanchand</item>
         <item>@drawable/sachin</item>
         <item>@drawable/pele</item>
@@ -27,7 +34,7 @@
         <item>@drawable/ayrton</item>
         <item>@drawable/milkhasingh</item>
         <item>@drawable/vishyanand</item>
-<!--         <item>@drawable/kapil</item> -->
+        <item>@drawable/donald</item>
     </array>
     <array name="womens">
         <item>@drawable/teresa</item>
@@ -36,11 +43,15 @@
         <item>@drawable/sarojininaidu</item>
     </array>
     <array name="cultural">
+        <item>@drawable/bob</item>
+        <item>@drawable/sting</item>
         <item>@drawable/ravishankar</item>
         <item>@drawable/shakespeare</item>
         <item>@drawable/aliakbarkhan</item>
         <item>@drawable/mssubbulakshmi</item>
+        <item>@drawable/john</item>
         <item>@drawable/new_bhimsen</item>
+        <item>@drawable/paul</item>
         <item>@drawable/latamangeshkar</item>
         <item>@drawable/williamhung</item>
         <item>@drawable/zakirhussain</item>
@@ -48,12 +59,14 @@
         <item>@drawable/rahman</item>
         <item>@drawable/beethoven</item>
     </array>
-
     <array name="politicians">
+        <item>@drawable/lenin</item>
+        <item>@drawable/thomas</item>
         <item>@drawable/chandrashekhar</item>
         <item>@drawable/baltilak</item>
         <item>@drawable/eban</item>
         <item>@drawable/bhagatsingh</item>
+        <item>@drawable/franklin</item>
         <item>@drawable/sardarpatel</item>
         <item>@drawable/abraham_lincoln</item>
         <item>@drawable/rajendra</item>
@@ -62,4 +75,5 @@
         <item>@drawable/jintao</item>
         <item>@drawable/bose</item>
     </array>
+
 </resources>

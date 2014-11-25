@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -39,7 +38,6 @@ public class CategoriesListScreen extends Activity {
     private Runnable runnable; 
     public  ArrayList<HomeDataModel> catDatarr = null;
     private ListView popularList;
-    public static Typeface arimoype,alextype;
 
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +60,6 @@ public class CategoriesListScreen extends Activity {
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category3))){
 			catDatarr = new DataParser(CategoriesListScreen.this).parser("cultural.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.cultural);
-
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category4))){
 			catDatarr = new DataParser(CategoriesListScreen.this).parser("politicians.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.politicians);
@@ -73,10 +70,7 @@ public class CategoriesListScreen extends Activity {
 		
 		
 		slideViewFlipper = (ViewFlipper)findViewById(R.id.flipper);
-		
-		alextype = Typeface.createFromAsset(getAssets(),"Sansation-Bold.ttf"); 
-		arimoype = Typeface.createFromAsset(getAssets(),"Arimo-Regular.ttf");
-		
+	
 		
 		 for (int i = 0; i < imagesHere.length(); i++) {
 				ImageView img = new ImageView(this);
@@ -130,8 +124,6 @@ public class CategoriesListScreen extends Activity {
 					ImageView personImage = (ImageView)convertView.findViewById(R.id.popular_img);
 					TextView personQuote = (TextView)convertView.findViewById(R.id.person_quote);
 					personName.setText(""+catDatarr.get(position).getName());
-					personName.setTypeface(alextype);
-					personQuote.setTypeface(arimoype);
 					personQuote.setText(""+catDatarr.get(position).getQuote());
 					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(catDatarr.get(position).getImageId()+"_l", R.drawable.class));
 				} catch (Exception e) {

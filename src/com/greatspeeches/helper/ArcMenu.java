@@ -98,6 +98,11 @@ public class ArcMenu extends RelativeLayout {
         mArcLayout.addView(item);
         item.setOnClickListener(getItemClickListener(listener));
     }
+    
+    public void removeItem(View item){
+    	mArcLayout.removeView(item);
+    	mArcLayout.invalidate();
+    }
 
     private OnClickListener getItemClickListener(final OnClickListener listener) {
         return new OnClickListener() {

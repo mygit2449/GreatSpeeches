@@ -30,6 +30,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.greatspeeches.R;
+import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.util.ConnectionDetector;
 
 public class TwitActivity extends Activity {
@@ -39,14 +40,13 @@ public class TwitActivity extends Activity {
 
 	private LinearLayout _loadingLL = null;
 	
-	static String TWITTER_CONSUMER_KEY = "OvTiZpfMEI442aY1tPHrwQ"; // place your cosumer key here
-	static String TWITTER_CONSUMER_SECRET = "LKSg5iyz3VtxSnvYZa7cBJ1XTK1GOCeSxBp2kURSqYI"; // place your consumer secret here
+	private static String TWITTER_CONSUMER_KEY = "OvTiZpfMEI442aY1tPHrwQ"; // place your cosumer key here
+	private static String TWITTER_CONSUMER_SECRET = "LKSg5iyz3VtxSnvYZa7cBJ1XTK1GOCeSxBp2kURSqYI"; // place your consumer secret here
 
 	// Preference Constants
-	static String PREFERENCE_NAME = "twitter_oauth";
-	static final String PREF_KEY_OAUTH_TOKEN = "oauth_token";
-	static final String PREF_KEY_OAUTH_SECRET = "oauth_token_secret";
-	static final String PREF_KEY_TWITTER_LOGIN = "isTwitterLogedIn";
+	private static final String PREF_KEY_OAUTH_TOKEN = "oauth_token";
+	private static final String PREF_KEY_OAUTH_SECRET = "oauth_token_secret";
+	private static final String PREF_KEY_TWITTER_LOGIN = "isTwitterLogedIn";
 
 //	public static final String CALLBACK_URL = "oauth://connect";
 	// Twitter oauth urls
@@ -57,7 +57,7 @@ public class TwitActivity extends Activity {
 	// Twitter
 	private static Twitter twitter;
 	private static RequestToken requestToken;
-	static final String TWITTER_CALLBACK_URL = "oauth://sample";
+	private static final String TWITTER_CALLBACK_URL = "oauth://sample";
 
 		
 	// Shared Preferences
@@ -236,11 +236,15 @@ public class TwitActivity extends Activity {
 				AccessToken accessToken = new AccessToken(access_token, access_token_secret);
 				Twitter twitter = new TwitterFactory(builder.build()).getInstance(accessToken);
 				StatusUpdate status = new StatusUpdate(message);
+		
+				int resId = GreateSpeechesUtil.getResId(_receiverIntent.getStringExtra("img_name"), R.drawable.class);
 				dummyFile = new File(getCacheDir()+"/"+_receiverIntent.getStringExtra("img_name")+".jpg");
 				 
 				if (!dummyFile.exists()) try {
 
-				    InputStream is = getAssets().open("images/"+_receiverIntent.getStringExtra("img_name")+".jpg");
+					 InputStream is = (InputStream) 
+							 TwitActivity.this.getResources() 
+                                       .openRawResource(resId);
 				    int size = is.available();
 				    byte[] buffer = new byte[size];
 				    is.read(buffer);

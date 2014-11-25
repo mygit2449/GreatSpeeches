@@ -36,7 +36,6 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 	private int mPosition;
 	public  static  ArrayList<HomeDataModel> homeDataarr = null;
 	private static List<String> categoriesList = null;
-    public static Typeface arimoype,alextype;
 
 	public static Fragment newInstance(int position,  ArrayList<HomeDataModel> homeDataarr1) {
 		MainListFragmentListFragment f = new MainListFragmentListFragment();
@@ -67,8 +66,6 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 		View v = inflater.inflate(R.layout.fragment_list, null);
 
 		mListView = (ListView) v.findViewById(R.id.listView);
-		alextype = Typeface.createFromAsset(getActivity().getAssets(),"Sansation-Bold.ttf"); 
-		arimoype = Typeface.createFromAsset(getActivity().getAssets(),"Arimo-Regular.ttf");
 		View placeHolderView = inflater.inflate(R.layout.view_header_placeholder, mListView, false);
 		placeHolderView.setClickable(false);
 		mListView.addHeaderView(placeHolderView);
@@ -151,8 +148,6 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 					ImageView personImage = (ImageView)convertView.findViewById(R.id.popular_img);
 					TextView personQuote = (TextView)convertView.findViewById(R.id.person_quote);
 					personName.setText(""+homeDataarr.get(position).getName());
-					personName.setTypeface(alextype);
-					personQuote.setTypeface(arimoype);
 					personQuote.setText(""+homeDataarr.get(position).getQuote());
 					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(homeDataarr.get(position).getImageId()+"_l", R.drawable.class));
 				} catch (Exception e) {
@@ -161,9 +156,9 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 				}
 			}else{
 				TextView categoryName = (TextView)convertView.findViewById(android.R.id.text1);
-				categoryName.setTypeface(arimoype);
 				categoryName.setText(""+categoriesList.get(position));
 				categoryName.setTextColor(Color.parseColor("#ffffff"));
+				categoryName.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
 			}
 			
 			 

@@ -1,9 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu>
 
-
 	<item>
 		<id>0</id>
+		<type>Popular</type>
+		<name>Nelson Mandela</name>
+		<img>nelson_h</img>
+		<bdate>July 18, 1918, Mvezo, South Africa</bdate>
+  		<ddate>December 5, 2013, Houghton Estate, Johannesburg, South Africa</ddate>  
+		<audio></audio>
+		<video>https://www.youtube.com/watch?v=g5OJ205MdKI</video>
+		<!-- <video>regan</video> -->
+		<quote>I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.</quote>
+		<info>
+			Nelson Mandela was born in Transkei, South Africa on July 18, 1918. He was the son of a local tribal leader of the Tembu tribe. As a youngster Nelson, took part in the activities and initiation ceremonies of his local tribe. However, unlike his father Nelson Mandela gained a full education, studying at the University College of Fort Hare and also the University of Witwatersrand. Nelson was a good student and qualified with a law degree in 1942.
+
+			During his time at University, Nelson Mandela became increasingly aware of the racial inequality and injustice faced by non-white people. In 1943, he decided to join the ANC and actively take part in the struggle against apartheid.
+
+			nelson mandelaAs one of the few qualified lawyers, Nelson Mandela was in great demand; also his commitment to the cause saw him promoted through the ranks of the ANC. In 1956, Nelson Mandela, along with several other members of the ANC were arrested and charged with treason. After a lengthy and protracted court case the defendants were finally acquitted in 1961. However, with the ANC now banned, Nelson Mandela suggested an active armed resistance to the apartheid regime. This led to the formation of Umkhonto we Sizwe, which would act as a guerilla resistance movement. Receiving training in other African countries, the Umkhonto we Sizwe took part in active sabotage.
+
+			In 1963, Mandela was again arrested and put on trial for treason. This time the State succeeded in convicting Mandela of plotting to overthrow the government. However, the case received considerable international attention and the apartheid regime of South Africa became under the glare of the international community. At the end of his trial, Nelson Mandela made a long speech, in which he was able to affirm his commitment to the ideals of democracy.
+
+
+		</info>
+		<achievements>			 
+			Mandela was the founding member of the ANC Youth League. It was during his service at the ANCYL that he transformed the organization from its root level, trashing out all the old methods and employing fresh methods of boycotting, striking, civil disobedience and non-cooperation. His main aim was to kill racism, allow full citizenship to people, redistribute land, bestow trade union rights, and provide free and compulsory education for all children.  
+
+			He rose to prominence for his Defiance Campaign in 1952 and Congress of the People in 1955. The campaign involved non-violent action of defiance against South African government and its racist policy.  
+
+			He was the founder of the Umkhonto we Sizwe or ‘Spear of the Nation’, popularly known as MK. One of the cell of ANC, it was devoted to portraying violent action against the government. 
+
+			Nelson Mandela is the proud recipient of the Nobel Peace Prize, which he received along with de Klerk in 1993. He dedicated the award to Mahatma Gandhi, whom he was deeply influenced from.  
+
+			In 2009, The United Nations General Assembly declared Mandela’s birthday as ‘Mandela Day’, as an effort to pay tribute and homage to his great work in the anti-apartheid movement.  
+
+			Queen Elizabeth II decorated Mandela by bestowing upon him the Bailiff Grand Cross of the Order of St. John and the Order of Merit.  
+
+			Mandela became the only living person to be awarded with the honorary Canadian citizenship when he received the Order of Canada.  
+
+
+		</achievements>
+	</item>
+
+	<item>
+		<id>1</id>
+		<type>Popular</type>
+		<name>Mikhail Gorbachev</name>
+		<img>mikhail_h</img>
+		<bdate>March 2, 1931, Privolnoye, Krasnogvardeysky District, Stavropol Krai</bdate>
+  		<ddate></ddate>  
+		<audio></audio>
+		<video>https://www.youtube.com/watch?v=GLujNV-9cf0</video>
+		<!-- <video>regan</video> -->
+		<quote>Sometimes it's difficult to accept, to recognise one's own mistakes, but one must do it. I was guilty of overconfidence and arrogance, and I was punished for that.
+		</quote>
+		<info>
+			Gorbachev was born in March 1931 in Stavropol, the North Caucuses to a poor peasant family. At the age of 11, the district was occupied by the Germans for three years, a torrid time for all in the village. In 1950 he enrolled at Moscow university where he became a member of the Soviet Union Communist party. It was here that Gorbachev met his future wife, Raisa Maximova, they married soon after meeting.
+
+			After gaining a degree in law, Gorbachev made much progress within the Communist party.
+
+			In 1980 he was the youngest politburo member and in 1985 he was elected General Secretary of the Communist Party.
+
+		</info>
+		<achievements>			 
+			For his outstanding leadership skills and remarkable contributions to the overall betterment of world development, he was conferred with the prestigious Nobel Peace Prize on October 15, 1990.  
+
+			In his lifetime, he has received various national and foreign decorations including Russia’s highest state decoration Order of St. Andrew, Order of the Badge of Honour, Order of Lenin, Order of Honour, Order of October Revolution, and so on.  
+
+			Various universities across the globe have felicitated him with honorary doctorate degree. Furthermore, he also received the Indira Gandhi Prize (India) and Ronald Reagan Freedom Award (US).  
+
+			Mikhail Gorbachev was general secretary of the Soviet Union Communist Party from 1985-1991. He was also the first democratically elected President in 1990.
+
+			Mikhail Gorbachev played a key role in dismantling the Communist grip on power in both the Soviet Union and Eastern Europe. His aspirations for democracy and reform opened up the way for the end of the Cold War and the bringing down of the Berlin Wall. He was removed from Presidential office in 1991, during a failed coup attempt. Since leaving office, Gorbachev has worked tirelessly promoting new efforts at social justice and concern for the environment through his own organisation the Green Cross.
+			Mikhail Gorbachev was awarded the Nobel Peace Prize in October 1990
+
+		</achievements>
+	</item>
+
+	<item>
+		<id>2</id>
 		<type>Popular</type>
 		<name>John F. Kennedy</name>
 		<img>kennedy_h</img>
@@ -11,8 +86,8 @@
   		<ddate>November 22, 1963, Dallas, Texas, United States</ddate>  
 		<audio>kenedy.mp3</audio>
 		<quote>Forgive your enemies, but never forget their names</quote>
-		<!--  <video>http://www.youtube.com/watch?v=6DbhTwahqPg</video> -->
-		<video>jfk</video>
+		 <video>http://www.youtube.com/watch?v=6DbhTwahqPg</video>
+<!-- 		<video>jfk</video> -->
 <!-- 		<info>On November 22, 1963, when he was hardly past his first thousand days in office, John Fitzgerald Kennedy was killed by an assassin's bullets as his motorcade wound through Dallas, Texas. Kennedy was the youngest man elected President; he was the youngest to die. Of Irish descent, he was born in Brookline, Massachusetts, on May 29, 1917. Graduating from Harvard in 1940, he entered the Navy. In 1943, when his PT boat was rammed and sunk by a Japanese destroyer, Kennedy, despite grave injuries, led the survivors through perilous waters to safety. Back from the war, he became a Democratic Congressman from the Boston area, advancing in 1953 to the Senate. He married Jacqueline Bouvier on September 12, 1953. In 1955, while recuperating from a back operation, he wrote Profiles in Courage, which won the Pulitzer Prize in history. In 1956 Kennedy almost gained the Democratic nomination for Vice President, and four years later was a first-ballot nominee for President. Millions watched his television debates with the Republican candidate, Richard M. Nixon. Winning by a narrow margin in the popular vote, Kennedy became the first Roman Catholic President.</info> -->
 		<info>John F. Kennedy was born into a rich, politically connected Boston family of Irish-Catholics. He and his eight siblings enjoyed a privileged childhood of elite private schools, sailboats, servants, and summer homes. During his childhood and youth, "Jack" Kennedy suffered frequent serious illnesses. Nevertheless, he strove to make his own way, writing a best-selling book while still in college at Harvard and volunteering for hazardous combat duty in the Pacific during World War II. Kennedy's wartime service made him a hero. After a short stint as a journalist, Kennedy entered politics, serving in the U.S. House of Representatives from 1947 to 1953 and the U.S. Senate from 1953 to 1961.
 			  
@@ -32,15 +107,15 @@
 	</item>
 	
 	<item>
-		<id>1</id>
+		<id>3</id>
 		<type>Popular</type>
 		<name>Mahatma Gandhi</name>
 		<img>mahatma_h</img>
 		<bdate>October 2, 1869, Porbandar, India</bdate>
   		<ddate>January 30, 1948, New Delhi, India</ddate>  
 		<audio>gandhi.mp3</audio>
-		<!-- <video>http://www.youtube.com/watch?v=Dcn6OmGF5Rk</video> -->
-		<video>gandhi</video>
+		<video>http://www.youtube.com/watch?v=Dcn6OmGF5Rk</video>
+<!-- 		<video>gandhi</video> -->
 		<quote>Where there is love there is life</quote>
 <!-- 		<info>Mohandas Gandhi is considered the father of the Indian independence movement. Gandhi spent 20 years in South Africa working to fight discrimination. It was there that he created his concept of satyagraha, a non-violent way of protesting against injustices. While in India, Gandhi's obvious virtue, simplistic lifestyle, and minimal dress endeared him to the people. He spent his remaining years working diligently to both remove British rule from India as well as to better the lives of India's poorest classes. Many civil rights leaders, including Martin Luther King Jr., used Gandhi's concept of non-violent protest as a model for their own struggles.Even after his death, Gandhi's commitment to non-violence and his belief in simple living—making his own clothes, eating a vegetarian diet and using fasts for self-purification as well as a means of protest—have been a beacon of hope for oppressed and marginalized people throughout the world.</info> -->
 		<info>Mohandas Karamchand Gandhi was the preeminent leader of Indian independence movement in British-ruled India. Employing nonviolent civil disobedience, Gandhi led India to independence and inspired movements for civil rights and freedom across the world. The honorific Mahatma (Sanskrit: "high-souled", "venerable")—applied to him first in 1914 in South Africa, is now used worldwide. He is also called Bapu (Gujarati: endearment for "father", "papa") in India.
@@ -77,15 +152,135 @@
 	</item>
 	
 	<item>
-		<id>2</id>
+		<id>4</id>
+		<type>Popular</type>
+		<name>William Wilberforce</name>
+		<img>william_h</img>
+		<bdate>August 24, 1759, Kingston upon Hull, United Kingdom</bdate>
+  		<ddate>July 29, 1833, London, United Kingdom</ddate> 
+		<audio></audio>
+		<video>https://www.youtube.com/watch?v=eLU182rj0pA</video>
+		<!-- <video>phenry</video> -->
+		<quote>God Almighty has set before me two great objects, the suppression of the slave trade and the reformation of manners.</quote>
+		<info>
+			William Wilberforce was born in Hull, to a wealthy family. At a young age he moved to London where he lived with some nonconformist relatives. These puritan ideals appealed to the young William and he became closely attached to his London relatives. However, at the age of 12, his Mother brought him back to Hull. His mother was keen to see William brought up in the traditional Anglican Church tradition and was not keen on her son having a nonconformist upbringing.
+
+			At the age of 18, William went to St John’s College, Cambridge University. As a student he lived a fairly carefree life, his early religious intensity had diminished and he was an active participant in the social life of University. However, he distanced himself from some of the social and drinking excesses his student colleagues participated in. William was not the best student (he had come into an inheritance and so felt little need to work very hard) However, he was well liked; he was an excellent conversationist with a pleasing voice and renowned singing voice. It was at Cambridge that he became friends with William Pitt the younger. William Pitt, a future Prime Minister, would remain a good friend and mostly a loyal supporter of William in later life. (except during the war with France, when they fell out on politics)
+
+			william wilberforceAs his time at University was drawing to a close, William decided to run for parliament. Spending £8,000 he was able to win the seat in his native Hull, entering parliament at the age of 21. He decided to be an independent, although he would lean towards the reform element of the Tory party.
+
+			After four years in Parliament, William travelled to Europe with his sister and Mother. It was during their European vacation that the religious urge came back to William. A key factor was reading the evangelical book, Rise and Progress of Religion in the Soul together. This encouraged him to lead a religious life, such as, getting up early to read the Bible; he lost interest in card games and drinking. He became a committed Christian for the remainder of his life and his religion deeply influenced his outlook on life. On returning to England he spoke with John Newton, one of the leading Anglican churchman of his day. This further encouraged him to lead a religious life, but also he was encouraged to stay in Politics and work for social reform.
+
+			William Wilberforce and Anti Slavery Movement
+
+			It was shortly after this ‘conversion’ period in 1786 that Wilberforce was invited to take an active role in the abolitionist movement. The Leading figures in the anti slavery campaign (such as Thomas Clarkson) wished Wilberforce to be their figurehead for passing legislation through parliament. Although Wilberforce was in complete sympathy with their aims, initially he was sceptical of his own abilities. However, after deliberation he decided to take the campaign on.
+	
+
+
+	</info>
+		<achievements>
+			William Wilberforce's greatest and most important political achievement was his long but successful fight to end Britain's involvement in the slave trade. He used his position as a spokesperson for the abolition movement and was the first member or parliament to raise the issue in the House of Commons. His abolition bill was finally passed by parliament in 1807, but his battle to change the law was not an easy one. Wilberforce tried and failed several times before the bill was finally passed.
+
+			William achieved the abolishment of the slave trade, with the passing of the bill, in 1807. He remained concerned about the many people still held in slavery and carried on his campaign until the bill outlawing slavery in Britain and all its colonies was passed in 1833 - just days before he died.
+
+			Wilberforce also devoted himself to other causes and campaigns such as the limiting of the hours children should work.		
+		
+			Like Elizabeth Fry, he also fought for improvements in England's prisons. He appealed for amendments to the poor law (to improve the conditions for the poor) and in 1796 became a founding member of the 'society for the bettering condition and increasing comforts of the poor'. This organisation worked to reform parish relief and workhouses for the poor and improves their general living conditionsIn October 1784, Wilberforce went on a tour of Europe which changed his life and his future career. He travelled with his mother and sister in the company of Isaac Milner. They visited the French Riviera and enjoyed the usual pastimes of dinners, cards, and gambling. In February 1785, Wilberforce returned to England temporarily, to support William Pitt's proposals for parliamentary reforms. He rejoined the party in Genoa, Italy, from where they continued their tour to Switzerland. Milner accompanied Wilberforce to England, and on the journey they read The Rise and Progress of Religion in the Soul by Philip Doddridge.
+
+			The abolitionist Thomas Clarkson had an enormous influence on Wilberforce. He and others were campaigning for an end to the trade in which British ships were carrying black slaves from Africa, in terrible conditions, to the West Indies as goods to be bought and sold. Wilberforce was persuaded to lobby for the abolition of the slave trade and for 18 years he regularly introduced anti-slavery motions in parliament. The campaign was supported by many members of the Clapham Sect and other abolitionists who raised public awareness of their cause with pamphlets, books, rallies and petitions.
+
+			William's best and most important political achievement was to abolish the slave trade in the British Empire. His abolition bill was finally passed by parliament in 1807, but his battle to change the law was not an easy one. Wilberforce tried and failed several times before the bill was finally passed.
+		
+		
+		</achievements>
+	</item>
+		
+	
+	<item>
+		<id>5</id>
+		<type>Popular</type>
+		<name>Helen Keller</name>
+		<img>helen_h</img>
+		<bdate>June 27, 1880, Tuscumbia, Alabama, United States</bdate>
+  		<ddate>June 1, 1968, Easton, Connecticut, United States</ddate> 
+		<audio></audio>
+		<video>https://www.youtube.com/watch?v=rfr6YO-zLZc</video>
+		<!-- <video>phenry</video> -->
+		<quote>Once I knew the depth where no hope was, and darkness lay on the face of all things. Then love came and set my soul free. Once I knew only darkness and stillness. Now I know hope and joy.</quote>
+		<info>
+			Helen Keller was born 27 June 1880 in Tusculum, Alabama. When she was only 19 months old, she experienced a severe childhood illness, which left her deaf and blind (only a very partial sight). For the first few years of her life, she was only able to communicate with her family through a rudimentary number of signs; she had a little more success communicating with the six year old daughter of the family cook. However, unable to communicate properly, she was considered to be badly behaved, for example, eating from the plates of anyone on the table with her fingers.
+
+			In 1886, Helen was sent to see an eye, ear and nose specialist in Baltimore. He put them in touch with Alexander Graham Bell, who was currently investigate issues of deafness and sound (he would also develop the first telephone) Bell, helped Keller to visit the Perkins Institute for the Blind, and this led to a long relationship with Anne Sullivan – who was a former student herself. Sullivan was visually impaired, but aged only 20 and with no prior experience, she set about teaching Helen how to communicate. The two maintained a long relationship of 49 years.
+		
+		</info>
+		<achievements>			 
+			When she was nineteen months old, an illness left Helen deaf, blind, and mute. 
+
+			Though a wild, destructive child, she showed such signs of intelligence that her mother sent for a special teacher. The teacher, young Anne Sullivan, herself formerly blind, managed to break through to communicate with Helen. The child loved to learn, and her remarkable achievements in reading, writing and even speaking soon made her internationally famous. 
+
+			Helen earned a bachelor's degree from Radcliffe College, where Anne Sullivan accompanied her to every class and spelled the lectures into her hand. Keller wrote poetry, toured on the Chautauqua lecture circuit, and published an autobiography, The Story of My Life. Helen became a member of the Socialist Party. She also supported controversial groups like the Industrial Workers of the World, the American Civil Liberties Union, the National Association for the Advancement of Colored People, and Margaret Sanger's birth control crusade. 
+
+			In the 1920s, the newly established American Foundation for the Blind asked Helen Keller to help them raise funds. She was living testimony to the capabilities of a group once assumed to be retarded and helpless, and she spent most of the rest of her life as the most prominent advocate for the needs and rights of the handicapped. She lobbied for measures to aid the blind, including reading services and Social Security acceptance.
+		
+		</achievements>
+	</item>
+	
+	<item>
+		<id>6</id>
+		<type>Popular</type>
+		<name>Anne Frank</name>
+		<img>anne_h</img>
+		<bdate>June 12, 1929, Frankfurt, Germany</bdate>
+  		<ddate>March 1945, Bergen-Belsen concentration camp, Lohheide, Germany</ddate> 
+		<audio></audio>
+		<video>https://www.youtube.com/watch?v=5Rv0TB4CevM</video>
+		<!-- <video>phenry</video> -->
+		<quote>Whoever is happy will make others happy too.</quote>
+		<info>
+			Holocaust victim and famous diarist Anne Frank was born Annelies Marie Frank on June 12, 1929, in Frankfurt, Germany. Her mother was Edith Frank, and her father, Otto Frank, was a lieutenant in the German army during World War I, later becoming a businessman in Germany and the Netherlands. Frank also had a sister named Margot who was three years her senior.
+
+			The Franks were a typical upper middle-class German-Jewish family living in a quiet, religiously diverse neighborhood near the outskirts of Frankfurt. However, Frank was born on the eve of dramatic changes in German society that would soon disrupt her family's happy, tranquil life as well as the lives of all other German Jews.
+
+			Due in large part to the harsh sanctions imposed on Germany by the 1919 Treaty of Versailles that ended World War I, the German economy struggled terribly in the 1920s. During the late 1920s and early 1930s, the virulently anti-Semitic National German Socialist Workers Party (Nazi Party) led by Adolph Hitler became Germany's leading political force, winning control of the government in 1933.
+
+			"I can remember that as early as 1932, groups of Storm Troopers came marching by, singing, 'When Jewish blood splatters from the knife,'" Otto Frank later recalled. When Hitler became chancellor of Germany on January 20, 1933, the Frank family immediately realized that it was time to flee. Otto later said, "Though this did hurt me deeply, I realized that Germany was not the world, and I left my country forever."
+
+			The Franks moved to Amsterdam, Netherlands, in the fall of 1933. Anne Frank described the circumstances of her family's emigration years later in her diary: "Because we're Jewish, my father immigrated to Holland in 1933, where he became the managing director of the Dutch Opekta Company, which manufactures products used in making jam." After years of enduring anti-Semitism in Germany, the Franks were relieved to once again enjoy freedom in their new hometown of Amsterdam. "In those days, it was possible for us to start over and to feel free," Otto recalled.
+
+			Anne Frank began attending Amsterdam's Sixth Montessori School in 1934, and throughout the rest of the 1930s, she lived a relatively happy and normal childhood. Frank had many friends, Dutch and German, Jewish and Christian, and she was a bright and inquisitive student.
+
+			
+		</info>
+		<achievements>			 
+			When Anne Frank turned thirteen, she received a red and white checkered autograph book from her parents that she decided to use as a diary. Anne named her diary “Kitty” and began to write to her on a regular basis. Although no one could have predicted it at the time, Anne was writing the beginning to what would be a famous first person account of the holocaust. 
+
+            Anne aspired to be famous, and therefore, with her love of writing came a desire to be a published writer. On March 28, 1944, Anne heard a public announcement from the Dutch Cabinet Minister Gerritt Bolkestein, announcing that they would be collecting all first hand documents, or “ordinary documents” in order to reveal and preserve the truth about what Jewish citizens were going through during this time. After hearing this announcement, Anne began to aspire to her journal being published. 
+
+            In order to prepare, Anne Frank began to revisit and revise every entry from her journal, rewriting each one onto sheets of paper. In her revising process, Anne shortened some entries, made others longer, changed wording, and made sure every entry started with “Dear Kitty”. During her reworking of her journal, Anne filled in all the gaps of times when she was not able to write, as well as continued to write new entries as she was altering her old entries.
+
+            Unfortunately, although Anne was working rapidly in order to publish her journal once the war was over, she was still in the process of modification when she was arrested alongside her family and the others staying in the secret annex. However, once Otto Frank returned to Amsterdam from Auschwitz, Miep Gies returned to him the pages of Anne’s Diary that she had been saving in order to return to Anne. 
+
+            Otto Frank finished editing Anne’s diary for her, and then attempted for years to get it published. First Frank gave it to a historian who unsuccessfully tried to have it published. Then, the historian give it to her husband, Jan Romein, who had it published in the newspaper Het Parool in an article called “Kinderstem” which means “a child’s voice”. 
+
+            Being published in this newspaper brought about attention from publishers, and was quickly published in the Netherlands. Then, in 1950, the diary, under the title Het Achterhuis, was published in Germany and France. In 1952, it was published in the United States for the first time as Anne Frank: The Diary of A Young Girl. While the book was successful in all of these places, its biggest success was in Japan, where more than 100,000 copies were sold while in its first edition. Anne Frank had aspired to famous and to have her journal published, and after all of her hard work, even though she had died before being able to see it published, Anne achieved her goal.
+			
+			
+		</achievements>
+	</item>
+	
+	
+	
+	
+	<item>
+		<id>7</id>
 		<type>Popular</type>
 		<name>Patrick Henry</name>
 		<img>patrick_henry</img>
 		<bdate>May 29, 1736, Hanover County, Virginia, United States</bdate>
   		<ddate>June 6, 1799, Red Hill Patrick Henry National Memorial, Virginia, United States</ddate> 
-		<audio>henry.mp3</audio>
-		<!-- <video>http://www.youtube.com/watch?v=iEOets_L7vg</video> -->
-		<video>phenry</video>
+		<audio></audio>
+		<video>http://www.youtube.com/watch?v=iEOets_L7vg</video>
+<!-- 		<video>phenry</video> -->
 		<quote>The great object is that every man be armed</quote>
 		<info>"Radical," is a title that few men can wear with ease. The name Patrick Henry, during the revolution and for some time after, was synonymous with that word in the minds of colonists and Empire alike. Henry's reputation as a passionate and fiery orator exceeded even that of Samuel Adams. His Stamp Act Resolutions were, arguably, the first shot fired in the Revolutionary War. Patrick Henry's personality was a curious antidote to the stern honor of Washington, the refined logic of Jefferson, and the well-tempered industry of Franklin. Young Henry was an idler and by many accounts a derelict; though everyone knew he was bright, he simply would not lift a finger except to his own pleasure. By the age of 10, his family knew that he would not be a farmer, and tried instead to train him toward academe. He would not apply himself to studies either. At age 21 his father set him up in a business that he bankrupted shortly thereafter. Finally the general public disgust in Hanover and pressure from his young family (he had married at the age of eighteen) caused him to study for six weeks and take the bar exam, which he passed, and begin work as a lawyer.</info>
 		<achievements>			 
@@ -104,15 +299,15 @@
 	</item>
 	
 	<item>
-		<id>3</id>
+		<id>8</id>
 		<type>Popular</type>
 		<name>Winston Churchill</name>
 		<img>churchill_hhh</img>
 		<bdate>November 30, 1874, Blenheim Palace, Woodstock, United Kingdom</bdate>
   		<ddate>January 24, 1965, Hyde Park Gate, United Kingdom</ddate>  
 		<audio>churchil.mp3</audio>
-		<!-- <video>http://www.youtube.com/watch?v=pgfdy5WJ6s4</video> -->
-		<video>wcc</video>
+		<video>http://www.youtube.com/watch?v=pgfdy5WJ6s4</video>
+<!-- 		<video>wcc</video> -->
 		<quote>The empires of the future are the empires of the mind</quote>
 <!-- 		<info>Winston Churchill was an inspirational statesman, writer, orator and leader who led Britain to victory in the Second World War. He served as Conservative Prime Minister twice - from 1940 to 1945 (before being defeated in the 1945 general election by the Labour leader Clement Attlee) and from 1951 to 1955. Winston Churchill was born on 30 November 1874, in Blenheim Palace, Oxfordshire and was of rich, aristocratic ancestry. Although achieving poor grades at school, his early fascination with militarism saw him join the Royal Cavalry in 1895. As a soldier and part-time journalist, Churchill travelled widely, including trips to Cuba, Afghanistan, Egypt and South Africa. Churchill was elected as Conservative MP for Oldham in 1900, before defecting to the Liberal Party in 1904 and spending the next decade climbing the ranks of the Liberal government. He was First Lord of the Admiralty (the civil/political head of the Royal Navy) by the time of the disastrous Gallipoli campaign, which he created. Heavily criticised for this error, he resigned from this position and travelled to the Western Front to fight himself.</info> -->
 	   <info>The Right Honourable Sir Winston Leonard Spencer Churchill (1874-1965), the son of Lord Randolph Churchill and an American mother, was educated at Harrow and Sandhurst. After a brief but eventful career in the army, he became a Conservative Member of Parliament in 1900. He held many high posts in Liberal and Conservative governments during the first three decades of the century. At the outbreak of the Second World War, he was appointed First Lord of the Admiralty - a post which he had earlier held from 1911 to 1915. In May, 1940, he became Prime Minister and Minister of Defence and remained in office until 1945. He took over the premiership again in the Conservative victory of 1951 and resigned in 1955. However, he remained a Member of Parliament until the general election of 1964, when he did not seek re-election. Queen Elizabeth II conferred on Churchill the dignity of Knighthood and invested him with the insignia of the Order of the Garter in 1953. Among the other countless honours and decorations he received, special mention should be made of the honorary citizenship of the United States which President Kennedy conferred on him in 1963.
@@ -147,15 +342,15 @@
 				 12. He graced the cover of Time magazine multiple times winning the title of Man of the Year in 1940 and Man of the Half Century in 1949.</achievements>
 	</item>
 	<item>
-		<id>4</id>
+		<id>9</id>
 		<type>Popular</type>
 		<name>Martin Luther King</name>
 		<img>martin_hh</img>
 		<bdate>January 15, 1929, Atlanta, Georgia, United States</bdate>
   		<ddate>April 4, 1968, Memphis, Tennessee, United States</ddate>  
 		<audio>ll_king.mp3</audio>
-		<!-- <video>http://www.youtube.com/watch?v=Tb9m81OwYH0</video> -->
-		<video>mlk</video>
+		<video>http://www.youtube.com/watch?v=Tb9m81OwYH0</video>
+<!-- 		<video>mlk</video> -->
 		<quote>A man who won't die for something is not fit to live</quote>
 <!-- 		<info>Martin Luther King is probably the most famous person associated with the civil rights movement. King was active from the start of the Montgomery Bus Boycott of 1955 to 1956 until his murder in April 1968. To many Martin Luther King epitomised what the civil rights campaign was all about and he brought massive international cover to the movement.Martin Luther King was born in Atlanta, Georgia on January 15th, 1929. The church was very much a part of his life as both his father and grandfather had been Baptist preachers. They themselves were involved in the civil rights movement. By the standards of the time, King came from a reasonably comfortable background and after graduating from college in 1948 he was not sure about which profession to join. He considered a career in medicine and law but rejected both and joined the Baptist Church. He studied at the Crozer Theological Seminary in Pennsylvania. It was while studying here, that King learned about the non-violent methods used by Mahatma Gandhi against the British in India. King became convinced that such methods would be of great value to the civil rights movement.</info> -->
 		<info>Martin Luther King, Jr., (January 15, 1929-April 4, 1968) was born Michael Luther King, Jr., but later had his name changed to Martin. His grandfather began the family's long tenure as pastors of the Ebenezer Baptist Church in Atlanta, serving from 1914 to 1931; his father has served from then until the present, and from 1960 until his death Martin Luther acted as co-pastor. Martin Luther attended segregated public schools in Georgia, graduating from high school at the age of fifteen; he received the B. A. degree in 1948 from Morehouse College, a distinguished Negro* institution of Atlanta from which both his father and grandfather had graduated. After three years of theological study at Crozer Theological Seminary in Pennsylvania where he was elected president of a predominantly white senior class, he was awarded the B.D. in 1951. With a fellowship won at Crozer, he enrolled in graduate studies at Boston University, completing his residence for the doctorate in 1953 and receiving the degree in 1955. In Boston he met and married Coretta Scott, a young woman of uncommon intellectual and artistic attainments. Two sons and two daughters were born into the family
@@ -187,15 +382,15 @@
 		</achievements>
 	</item>
 	<item>
-		<id>5</id>
+		<id>10</id>
 		<type>Popular</type>
 		<name>Lyndon B. Johnson</name>
 		<img>lyndon_johnson</img>
 		<bdate>August 27, 1908, Stonewall, Texas, United States</bdate>
   		<ddate>January 22, 1973, Stonewall, Texas, United States</ddate>  
-		<audio>lyndon_johnson.mp3</audio>
-		<!-- <video>http://www.youtube.com/watch?v=Lq_6NroQTWE</video> -->
-		<video>johnson</video>
+		<audio></audio>
+		<video>http://www.youtube.com/watch?v=Lq_6NroQTWE</video>
+<!-- 		<video>johnson</video> -->
 		<quote>Doing what's right isn't the problem. It is knowing what's right</quote>
 		<info>"A Great Society" for the American people and their fellow men elsewhere was the vision of Lyndon B. Johnson. In his first years of office he obtained passage of one of the most extensive legislative programs in the Nation's history. Maintaining collective security, he carried on the rapidly growing struggle to restrain Communist encroachment in Viet Nam. Johnson was born on August 27, 1908, in central Texas, not far from Johnson City, which his family had helped settle. He felt the pinch of rural poverty as he grew up, working his way through Southwest Texas State Teachers College (now known as Texas State University-San Marcos); he learned compassion for the poverty of others when he taught students of Mexican descent.During World War II he served briefly in the Navy as a lieutenant commander, winning a Silver Star in the South Pacific. After six terms in the House, Johnson was elected to the Senate in 1948. In 1953, he became the youngest Minority Leader in Senate history, and the following year, when the Democrats won control, Majority Leader. With rare skill he obtained passage of a number of key Eisenhower measures.</info>
 		<achievements>			 
@@ -215,15 +410,15 @@
 		</achievements>
 	</item>
 	<item>
-		<id>6</id>
+		<id>11</id>
 		<type>Popular</type>
 		<name>Ronald Reagan</name>
 		<img>reagan_h</img>
 		<bdate>February 6, 1911, Tampico, Illinois, United States</bdate>
   		<ddate>June 5, 2004, Bel-Air, Los Angeles, California, United States</ddate>  
-		<audio>regan.mp3</audio>
-		<!-- <video>http://www.youtube.com/watch?v=Wt8y18YFH70</video> -->
-		<video>regan</video>
+		<audio></audio>
+		<video>http://www.youtube.com/watch?v=Wt8y18YFH70</video>
+<!-- 		<video>regan</video> -->
 		<quote>We can't help everyone, but everyone can help someone</quote>
 		<info>At the end of his two terms in office, Ronald Reagan viewed with satisfaction the achievements of his innovative program known as the Reagan Revolution, which aimed to reinvigorate the American people and reduce their reliance upon Government. He felt he had fulfilled his campaign pledge of 1980 to restore "the great, confident roar of American progress and growth and optimism." On February 6, 1911, Ronald Wilson Reagan was born to Nelle and John Reagan in Tampico, Illinois. He attended high school in nearby Dixon and then worked his way through Eureka College. There, he studied economics and sociology, played on the football team, and acted in school plays. Upon graduation, he became a radio sports announcer. A screen test in 1937 won him a contract in Hollywood. During the next two decades he appeared in 53 films.As president of the Screen Actors Guild, Reagan became embroiled in disputes over the issue of Communism in the film industry; his political views shifted from liberal to conservative. He toured the country as a television host, becoming a spokesman for conservatism. In 1966 he was elected Governor of California by a margin of a million votes; he was re-elected in 1970.</info>
 		<achievements>			 
@@ -242,15 +437,15 @@
 	</item>
 
 	<item>
-		<id>7</id>
+		<id>12</id>
 		<type>Popular</type>
 		<name>Swami Vivekananda</name>
 		<img>swami_hh</img>
 		<bdate>January 12, 1863, Kolkata,India</bdate>
   		<ddate>July 4, 1902, Belur,  India</ddate>  
 		<audio>vivekananda.mp3</audio>
-		<!-- <video>http://www.youtube.com/watch?v=Yt9hN114mjE</video> -->
-		<video>sv</video>
+		<video>http://www.youtube.com/watch?v=Yt9hN114mjE</video>
+<!-- 		<video>sv</video> -->
 		<quote>You cannot believe in God until you believe in yourself</quote>
 <!-- 		<info>A spiritual genius of commanding intellect and power, Vivekananda crammed immense labor and achievement into his short life, 1863-1902. Born in the Datta family of Calcutta, the youthful Vivekananda embraced the agnostic philosophies of the Western mind along with the worship of science. At the same time, vehement in his desire to know the truth about God, he questioned people of holy reputation, asking them if they had seen God. He found such a person in Sri Ramakrishna, who became his master, allayed his doubts, gave him God vision, and transformed him into sage and prophet with authority to teach. After Sri Ramakrishna's death, Vivekananda renounced the world and criss-crossed India as a wandering monk. His mounting compassion for India's people drove him to seek their material help from the West. Accepting an opportunity to represent Hinduism at Chicago's Parliament of Religions in 1893, Vivekananda won instant celebrity in America and a ready forum for his spiritual teaching. For three years he spread the Vedanta philosophy and religion in America and England and then returned to India to found the Ramakrishna Math and Mission. Exhorting his nation to spiritual greatness, he wakened India to a new national consciousness. He died July 4, 1902, after a second, much shorter sojourn in the West. His lectures and writings have been gathered into nine volumes.</info> -->
 		<info>Vivekananda also known as Swami Vivekananda, born Narendra Nath Datta , was an Indian Hindu monk and chief disciple of the 19th-century saint Ramakrishna. He was a key figure in the introduction of the Indian philosophies of Vedanta and Yoga to the Western world and is credited with raising interfaith awareness, bringing Hinduism to the status of a major world religion during the late 19th century. He was a major force in the revival of Hinduism in India, and contributed to the concept of nationalism in colonial India. Vivekananda founded the Ramakrishna Math and the Ramakrishna Mission. He is perhaps best known for his inspiring speech which began, "Sisters and brothers of America ...," in which he introduced Hinduism at the Parliament of the World's Religions in Chicago in 1893.
@@ -278,7 +473,7 @@
 	</item>
 	
 	<item>
-		<id>8</id>
+		<id>14</id>
 		<type>Popular</type>
 		<name>Abraham Lincoln</name>
 		<img>lincon_h</img>
@@ -286,7 +481,7 @@
   		<ddate>April 15, 1865, Washington, D.C., United States</ddate>  
 		<quote>I'm a slow walker but I never walk back</quote>
 		<audio>linkan.mp3</audio>
-		<video>ablincon</video>
+		<video>https://www.youtube.com/watch?v=mpec3pW76ag</video>
 <!-- 		<info>Abraham Lincoln, a self-taught Illinois lawyer and legislator with a reputation as an eloquent opponent of slaveryn shocked many when he overcame several more prominent contenders to win the Republican Party's nomination for president in 1860. His election that November pushed several Southern states to secede by the time of his inauguration in March 1861, and the Civil War began barely a month later. Contrary to expectations, Lincoln proved to be a shrewd military strategist and a savvy leader during what became the costliest conflict ever fought on American soil. His Emancipation Proclamation, issued in 1863, freed all slaves in the rebellious states and paved the way for slavery's eventual abolition, while his Gettysburg Address later that year stands as one of the most famous and influential pieces of oratory in American history. In April 1865, with the Union on the brink of victory, Abraham Lincoln was shot and killed by the Confederate sympathizer John Wilkes Booth; his untimely death made him a martyr to the cause of liberty and Union. Over the years Lincoln's mythic stature has only grown, and he is widely regarded as one of the greatest presidents in the nation's history.</info> -->
 	    <info>Abraham Lincoln was the 16th president of the United States, serving from March 1861 until his assassination in April 1865. Lincoln led the United States through its Civil War—its bloodiest war and its greatest moral, constitutional and political crisis. In doing so, he preserved the Union, abolished slavery, strengthened the federal government, and modernized the economy.
 
@@ -324,7 +519,51 @@
 	 </achievements>
 	</item>
 	
+	<item>
+		<id>15</id>
+		<type>Popular</type>
+		<name>Sri Chinmoy</name>
+		<img>sri_h</img>
+		<bdate>August 27, 1931, Chittagong District, Bangladesh</bdate>
+  		<ddate>October 11, 2007, Jamaica, New York City, New York, United States</ddate> 
+		<audio></audio>
+		<video>https://www.youtube.com/watch?v=cUiSZZcLBEY</video>
+		<!-- <video>phenry</video> -->
+		<quote>By hating that person, you have lost something very sweet in yourself.</quote>
+		<info>
+			Chinmoy Kumar Ghose was born 27th August 1931 in the tiny Bengali village of sri chinmoyShakpura, Chittagong. It was then part of India, although Chittagong now forms part of modern Bangladesh. As a young boy Chinmoy or "Madal" as his nickname was at the time, was full of energy and enjoyed being very active and not a little mischievous.(2) However at an early age he experienced an intense mystical vision which encouraged him to spend many hours in meditation.
 
+			Soon after this experience, he entered the Sri Aurobindo ashram where he was able to pursue meditation and religious studies.(3) It was here at the ashram that his brother Chitta gave him the name of Chinmoy which means "full of divine consciousness." (4) He lived at the ashram for twenty years, spending much of his time writing poetry and practising meditation. He mentions how waking very early he became absorbed in his meditation for many hours. Chinmoy also participated in the ashram activities and was a good footballer and athlete. He won the ashram decathlon twice and was the fastest at 100 metres for several consecutive years. (5)
+
+			In 1964, Chinmoy heeded an inner command to come to the United States to teach his spiritual ideas and practices. In the late 1960s America was undergoing social change with young people beginning to question established ideas. In this climate there was a marked interest in Eastern ideas and the Yoga of India. Perhaps best epitomized by the Beatles visiting the Maharishi’s ashram in India.
+
+			Teaching the spirituality of the East in an accessible manner Sri Chinmoy quickly attracted a group of disciples and was able to establish the first of the Sri Chinmoy Centres where his followers gather for meetings and meditation. Over 350 centres now exist in the United States, Europe, Australia, South Africa and the Far East. For several years Sri Chinmoy with his disciples published AUM Magazine. AUM magazine was dedicated to the publishing of Chinmoy’s talks and writings, and became an important early introduction to his philosophy. The first copy of AUM was sent to India’s president Dr S. Radhakrishnan. He offered very generous praise for its spiritual vision and clarity. (6) AUM magazine is no longer published, instead Sri Chinmoy’ prolific literary output has been printed in over 1,500 books. Most of these books have been published by AUM publications but other titles have been published by mainstream publishers including Wings of Joy by Simon and Schuster
+
+			Sri Chinmoy has spread his spiritual message by lecturing at universities throughout the world. Since his first lecture tour in 1968, Sri Chinmoy has spoken at Oxford University, Cambridge University, Harvard University, Dartmouth College, Princeton University, and many other institutions. His national lecture tour of 1974 took him to a university in each of the fifty states. These fifty speeches were later gathered together and published under the title Fifty Freedom-Boats to One Golden Shore.(7) Since 1970, Chinmoy has served as director of the United Nations Meditation Group at the U.N. headquarters in New York City. He began meditations at the United Nations at the invitation of the then secretary general U Thant. In 1972, U Thant paid this complement to Sri Chinmoy.
+		
+		
+		</info>
+		
+		<achievements>			 
+			1. Visva Sama Duta, meaning "Ambassador of Universal Peace", title conferred by the Asgiriya Order of Buddhist Monks in 1990. The first non-Buddhist in Sri Lankan history to receive such an honorary degree.
+
+			2. Mahatma Gandhi Universal Harmony Award received jointly with Martin Luther King’s wife Coretta Scott King, from the American branch of the Indian cultural institute Bharatiya Vidya Bhavan in 1994.
+
+			3. Fred Lebow Award, in the name of the founder of the New York City Marathon, presented by NYC Marathon Director Allan Steinfeld and Umberto Silvestri, President of the Rome Marathon in 1996.
+
+			4. Hindu of the Year (1997) and Hindu Renaissance Award presented by the international magazine ‘Hinduism Today’ in 1997, honouring him for teaching a yoga which combines aspects of ancient Hinduism in a modern setting.
+
+			5. Pilgrim of Peace prize from the 'International Center of Assisi for Peace among Peoples' in 1998.
+
+			6. Mother Teresa Award presented by President of the Republic of Macedonia Boris Trajkovski in 2001.
+
+			7. Medal of Honor For the Cause of Peace and Friendship Among Nations presented by Vietnamese Ambassador to the United Nations Le Luong Minh in 2004.
+
+			8. Honorary Doctorate of Humanities in Peace Studies presented by the Science Council committee of Cambodia's International University in a unanimous decision in 2005.
+
+			9. 2012 Class of Honorees, International Marathon Swimming Hall of Fame, including honouring the Sri Chinmoy Marathon Team with swimming the English Channel 38 times.
+		</achievements>
+	</item>
 </menu>
 
 

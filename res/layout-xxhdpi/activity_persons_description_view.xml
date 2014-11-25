@@ -14,11 +14,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_marginBottom="-90dp"
         arc:childSize="@dimen/menuChildSize"
         arc:fromDegrees="@dimen/menuFromDegrees"
-        arc:toDegrees="@dimen/menuToDegrees" />
+        arc:toDegrees="@dimen/menuToDegrees" 
+        android:visibility="gone"/>
 
     <RelativeLayout
         android:id="@+id/audio_rel1"

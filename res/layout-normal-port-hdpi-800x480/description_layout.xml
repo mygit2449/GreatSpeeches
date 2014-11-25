@@ -20,7 +20,7 @@
             <ImageView
                 android:id="@+id/person_image"
                 android:layout_width="fill_parent"
-                android:layout_height="280dp"
+                android:layout_height="200dp"
                 android:scaleType="fitXY" />
 
             <RelativeLayout
@@ -32,14 +32,14 @@
                 <com.greatspeeches.video.CustomVideoView
                     android:id="@+id/surface_video"
                     android:layout_width="match_parent"
-                    android:layout_height="280dp"
+                    android:layout_height="200dp"
                     android:layout_centerInParent="true"
                     android:visibility="gone" />
 
                 <FrameLayout
                     android:id="@+id/video_container"
                     android:layout_width="fill_parent"
-                    android:layout_height="280dp"
+                    android:layout_height="200dp"
                     android:visibility="gone" >
                 </FrameLayout>
 
@@ -91,7 +91,8 @@
                         android:text="October 2, 1869, Porbandar"
                         android:textColor="#ffffff"
                         android:textSize="18dp"
-                        android:textStyle="normal" />
+                        android:textStyle="normal"
+                        android:fontFamily="sans-serif-light" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -120,7 +121,8 @@
                         android:text="October 2, 1869, Porbandar"
                         android:textColor="#ffffff"
                         android:textSize="18dp"
-                        android:textStyle="normal" />
+                        android:textStyle="normal"
+                        android:fontFamily="sans-serif-light" />
                 </RelativeLayout>
             </RelativeLayout>
         </RelativeLayout>
@@ -160,7 +162,8 @@
                 android:scrollbars="vertical"
                 android:textColor="#ffffff"
                 android:textSize="18dp" 
-                android:layout_below="@+id/acTitle"/>
+                android:layout_below="@+id/acTitle"
+                android:fontFamily="sans-serif-light"/>
         </RelativeLayout>
         
         <RelativeLayout
@@ -198,7 +201,8 @@
                 android:scrollbars="vertical"
                 android:textColor="#ffffff"
                 android:textSize="18dp" 
-                android:layout_below="@+id/title"/>
+                android:layout_below="@+id/title"
+                android:fontFamily="sans-serif-light"/>
         </RelativeLayout>
     </LinearLayout>
 

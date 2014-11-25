@@ -26,8 +26,7 @@
             <RelativeLayout
                 android:id="@+id/forVideo"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone" >
+                android:layout_height="wrap_content" >
 
                 <com.greatspeeches.video.CustomVideoView
                     android:id="@+id/surface_video"
@@ -91,7 +90,8 @@
                         android:text="October 2, 1869, Porbandar"
                         android:textColor="#ffffff"
                         android:textSize="18dp"
-                        android:textStyle="normal" />
+                        android:textStyle="normal" 
+                        android:fontFamily="sans-serif-light"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -120,7 +120,8 @@
                         android:text="October 2, 1869, Porbandar"
                         android:textColor="#ffffff"
                         android:textSize="18dp"
-                        android:textStyle="normal" />
+                        android:textStyle="normal"
+                        android:fontFamily="sans-serif-light" />
                 </RelativeLayout>
             </RelativeLayout>
         </RelativeLayout>
@@ -160,7 +161,8 @@
                 android:scrollbars="vertical"
                 android:textColor="#ffffff"
                 android:textSize="18dp"
-                android:layout_below="@+id/acTitle" />
+                android:layout_below="@+id/acTitle"
+                android:fontFamily="sans-serif-light" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -198,7 +200,8 @@
                 android:scrollbars="vertical"
                 android:textColor="#ffffff"
                 android:textSize="18dp"
-                android:layout_below="@+id/title" />
+                android:layout_below="@+id/title" 
+                android:fontFamily="sans-serif-light"/>
         </RelativeLayout>
     </LinearLayout>
 

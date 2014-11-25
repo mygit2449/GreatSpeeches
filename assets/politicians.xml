@@ -1,8 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu>
 
-<item>
+ <item>
   <id>0</id>
+  <type>Politics</type>
+  <name>Lenin</name>
+  <img>lenin</img>
+  <bdate>April 22, 1870, Ulyanovsk, Russia</bdate>
+  <ddate>January 21, 1924, Gorki Leninskiye, Russia</ddate>  
+  <audio></audio>
+  <quote>Without a revolutionary theory there cannot be a revolutionary movement.</quote>
+  <info>
+		Vladimir Ilyich Ulyanov, better known as Lenin (April 22, 1870 – January 21, 1924) was a Russian revolutionary, and the leader of the Bolshevik party. He was the first leader of the USSR and the Communist government that took over Russia in 1917. Lenin is also known as the creator of Leninism a version of Communism that Lenin adapted for the Soviet Union.
+  
+		Lenin was born in the town of Simbirsk in the Russian Empire. His mother was a schoolteacher and his father was an education official.
+
+		Lenin was an able student, learning Latin and Greek. In 1887, he was thrown out of Kazan State University because he protested against the Tsar who was the king of the Russian Empire. He continued to read books and study ideas by himself, and in 1891 he got a license to become a lawyer.
+
+		In the same year that Lenin was expelled from University, his brother Alexander was hanged for his part in a bomb plot to kill Tsar Alexander III, and their sister Anna was sent to Tatarstan. This made Lenin furious, and he promised to get revenge for his brother’s death.
+
+		Before the Revolution
+
+		Whilst studying law in St. Petersburg he learned about the writings of Karl Marx and Friedrich Engels, both radical Marxist philosophers from Germany. Lenin developed a lifelong philosophy of seeking to overthrow Capitalist society and replace it with a fairer Communist society. He saw existing Capitalist society as inherently unjust.
+
+  </info>	
+  <video>https://www.youtube.com/watch?v=gXUgia1qS8I</video>
+  <achievements>
+		‘What is to be Done?’ is regarded as one of his most influential works and was published in 1902. Similarly, ‘Imperialism, the Highest Stage of Capitalism’, ‘The State and the Revolution’, the ‘April Theses’ and ‘Left-Wing’ Communism: An Infantile Disorder’ are considered some of his most significant works that promoted ‘Marxism-Leninism’.  
+  
+		One of Lenin’s greatest works was the ‘New Economic Policy’, which was established to revive the Russian economy by means of foreign trade, nationalization and agriculture produce requisition. 
+
+  </achievements> 
+ </item>
+
+
+ <item>
+  <id>1</id>
+  <type>Politics</type>
+  <name>Thomas Jefferson</name>
+  <img>thomas</img>
+  <bdate>April 13, 1743, Shadwell, Virginia, United States</bdate>
+  <ddate>July 4, 1826, Charlottesville, Virginia, United States</ddate>  
+  <audio></audio>
+  <quote>Honesty is the first chapter in the book of wisdom.</quote>
+  <info>
+		Thomas Jefferson was an American Founding Father, the principal author of the Declaration of Independence (1776), and the third President of the United States (1801–1809). He was a spokesman for democracy, and embraced the principles of republicanism and the rights of the individual with worldwide influence. At the beginning of the American Revolution, he served in the Continental Congress, representing Virginia, and then served as a wartime Governor of Virginia (1779–1781). In May 1785, he became the United States Minister to France and later the first United States Secretary of State (1790–1793) serving under President George Washington. In opposition to Alexander Hamilton's Federalism, Jefferson and his close friend, James Madison, organized the Democratic-Republican Party, and later resigned from Washington's cabinet. Elected Vice President in 1796, Jefferson opposed Adams, and with Madison secretly wrote the Kentucky and Virginia Resolutions, which attempted to nullify the Alien and Sedition Acts.
+
+		Elected president in what Jefferson called the Revolution of 1800, he oversaw acquisition of the vast Louisiana Territory from France (1803), and sent out the Lewis and Clark Expedition (1804–1806), and later three others, to explore the new west. Jefferson doubled the size of the United States during his presidency. His second term was beset with troubles at home, such as the failed treason trial of his former Vice President Aaron Burr. When Britain threatened American shipping challenging U.S. neutrality during its war with Napoleon, he tried economic warfare with his embargo laws, which only impeded American foreign trade. In 1803, President Jefferson initiated a process of Indian tribal removal to the Louisiana Territory west of the Mississippi River, having opened lands for eventual American settlers. In 1807 Jefferson drafted and signed into law a bill that banned slave importation into the United States.
+  </info>	
+  <video>https://www.youtube.com/watch?v=Zt4lmLK_OUc</video>
+  <achievements>
+		Jefferson authored the original Declaration of Independence (without any mention of God) while serving on the secret Committee of Five. Being involved in this endeavor would have meant death for the entire committee if they had been found out by the British as it would have been considered treason. He was also a Deist. And he was mad about the references to God...which were inserted to appease of few of the Reverend signers...to the day he died. 
+
+		Jefferson studied horticulture in a way that had never been done before in America. He farmed and was a naturalist. He recognized that America had contained civilizations that were being lost due to the European invasion therefore he had Lewis and Clark send him Native American collections like have never been seen before. He preserved these collections at Monticello, his home. Unfortunately, after he died, the collections were sold and dispersed...an important part of American history lost. 
+
+		He not only founded the University of Virginia (as he was dedicated to education) but designed and had it built. It is today a beautiful and inspiring campus. It has a great architectural program. Jefferson, himself, was quite the architect. 
+
+		Jefferson introduced the decimal system to the United States which was adopted and the dollar became the monetary unit instead of the British pound (Jefferson was not fond of the British...and his references as such were omitted from the final Declaration). 
+  </achievements> 
+ </item>
+
+
+
+<item>
+  <id>1</id>
   <type>Politics</type>
   <name>Chandra Shekhar Azad</name>
   <img>chandrashekhar</img>
@@ -30,7 +91,7 @@
  
  
  <item>
-  <id>1</id>
+  <id>3</id>
   <type>Politics</type>
   <name>Bal Gangadhar Tilak</name>
   <img>baltilak</img>
@@ -58,7 +119,7 @@
  </item>
  
  <item>
-  <id>2</id>
+  <id>4</id>
   <type>Politics</type>
   <name>Abba Eban</name>
   <img>eban</img>
@@ -78,7 +139,7 @@
  </item>
  
  <item>
-  <id>3</id>
+  <id>5</id>
   <type>Politics</type>
   <name>Bhagat Singh</name>
   <img>bhagatsingh</img>
@@ -111,8 +172,51 @@
   </achievements> 
  </item>
  
+ 
  <item>
-  <id>4</id>
+  <id>6</id>
+  <type>Politics</type>
+  <name>Franklin D. Roosevelt</name>
+  <img>franklin</img>
+  <bdate>January 30, 1882, Hyde Park, New York, United States</bdate>
+  <ddate>April 12, 1945, Warm Springs, Georgia, United States</ddate>  
+  <audio></audio>
+  <quote>Happiness lies in the joy of achievement and the thrill of creative effort.</quote>
+  <info>
+		Franklin Delano Roosevelt (January 30, 1882 – April 12, 1945), often referred to by his initials FDR, was the thirty-second President of the United States. He served through the Great Depression and the Second World War.
+		
+		FDR was elected during the height of the Great Depression in 1932 and remained President until his death in 1945. During his period of presidency he oversaw an expansion of the Federal Government and helped America lose its isolationist stance as it joined World War Two and helped formulate the United Nations. He was an influential figure in both American and world politics.
+
+		Roosevelt came from a privileged background, but was influenced by his headmaster at Groton School in Massachusetts who inculcated the importance of Christian duty in  helping less fortunate people.
+
+		Franklin married a distant cousin Eleanor in 1905. They had 6 children in quick succession, 2 of them who went on to be elected to the House of Representatives. FDR has several affairs outside of his marriage including Lucy Mercer, his social secretary.  His wife Eleanor offered a divorce at one point, but for a variety of reasons it was not taken up. She later became a dedicated wife / nurse during Franklin’s slow disability brought on by polio.
+
+  </info>	
+  <video>https://www.youtube.com/watch?v=YhtuMrMVJDk</video>
+  <achievements>
+		Roosevelt spent 12 years in office and had an enormous impact on America. He took office in the depths of the Great Depression. He immediately called Congress to special session and declared a four-day banking holiday. The first "Hundred Days" of Roosevelt's term were marked by the passage of 15 major laws. Some of the important legislative acts of his New Deal included:
+
+		Civilian Conservation Corps (CCC)- hired more than three million men to work on various projects.
+
+		Tennessee Valley Authority (TVA)- used the Tennessee River to provide electricity for the depressed area.
+
+		National Industrial Recovery Act (NIRA)- created the Public Works Administration to provide aid to cities for construction and the National Recovery Administration to help businesses.
+		
+		Securities and Exchange Commission (SEC)- corrected abuses which led to the stock market crash.
+		
+		Works Progress Administration (WPA)- hired many people for a variety of projects including in the arts.
+
+		Social Security Act - Created the Social Security System.
+
+  </achievements> 
+ </item>
+
+ 
+ 
+ 
+ 
+ <item>
+  <id>7</id>
   <type>Politics</type>
   <name>Vallabhbhai Patel</name>
   <img>sardarpatel</img>
@@ -137,7 +241,7 @@
  </item>
  
  <item>
-	<id>5</id>
+	<id>8</id>
 	<type>Politics</type>
 	<name>Abraham Lincoln</name>
 	<img>abraham_lincoln</img>
@@ -150,7 +254,7 @@
 		  Turn the pages of America's political history, and you are sure to find one man who clearly outshines all others and manages to attract the attention and interest of all, till date, - Abraham Lincoln! Nicknamed 'Honest Abe' or 'Father Abraham', Lincoln was, by far, one of the most powerful and greatest Presidents' that America has ever witnessed. Rising from a modest and humble beginning, it was his sheer determination and honest effort that led him to the nation's highest office. An astute politician and proficient lawyer, he played a vital role in unification of the states and led from the front for the cause of abolishing slavery from the country, eventually giving people equal rights, irrespective of caste, color or creed. He not only envisioned but actually brought to the forefront a truly democratic government which was led by the concept of 'by the people, of the people and for the people'. What's more, Lincoln led the country when it faced its greatest constitutional, military and moral crises. He not only turned up victorious but also was effective in strengthening the national government and modernizing the economy. He was a saviour of the Union and an emancipator for the slaves. However, just as astonishing was his rise to the top-notch position and his eventual governance, his death was equally bewildering as he became the first U.S President ever to be assassinated. Though in his life Abraham Lincoln has been felicitated with no awards and honors, as there did not exist any awards then, he has till date retained a spot in the Top Three Presidents since 1940s. As for the presidential ranking polls conducted since 1948, Lincoln has been rated at the very top in the majority of polls.
 		</info>
 		<video>http://www.youtube.com/watch?v=9TCMHVmNc5w</video> 
-<achievements>
+	<achievements>
 		Abraham Lincoln is remembered for his vital role as the leader in preserving the Union during the Civil War and beginning the process (Emancipation Proclamation) that led to the end of slavery in the United States. He is also remembered for his character and leadership, his speeches and letters, and as a man of humble origins whose determination and perseverance led him to the nation's highest office. 
 		   
 		President Lincoln endured extraordinary pressures during the long Civil War. He carried on despite generals who weren't ready to fight, assassination threats, bickering among his Cabinet members, huge loss of life on the battlefields, and opposition from groups such as the Copperheads. However, Lincoln remained brave and persevered. He didn't give in to the pressures and end the war early. He kept fighting until the Confederacy was defeated. A lesser man would have given in and stopped the war before the goals had been achieved. Lincoln did not do this. 
@@ -181,7 +285,7 @@
  
  
  <item>
-  <id>6</id>
+  <id>9</id>
   <type>Politics</type>
   <name>Rajendra Prasad</name>
   <img>rajendra</img>
@@ -209,7 +313,7 @@
  </item>
  
  <item>
-  <id>7</id>
+  <id>10</id>
   <type>Politics</type>
   <name>Gopal Krishna Gokhale</name>
   <img>gokhale</img>
@@ -240,7 +344,7 @@
  </item>
  
  <item>
-  <id>8</id>
+  <id>11</id>
   <type>Politics</type>
   <name>B. R. Ambedkar</name>
   <img>ambedkar</img>
@@ -286,7 +390,7 @@
  </item>
  
  <item>
-		<id>9</id>
+		<id>12</id>
 		<name>Hu Jintao</name>
 		<type>Politics</type>
 		<img>jintao</img>
@@ -334,7 +438,7 @@
  </item>
  
  <item>
-		<id>10</id>
+		<id>13</id>
 		<name>Subhas Chandra Bose</name>
 		<type>Politics</type>
 		<img>bose</img>
@@ -363,6 +467,7 @@
 		</achievements>
  </item>
  
+  
 </menu>
 
 

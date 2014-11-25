@@ -17,7 +17,6 @@ import android.widget.RemoteViews;
 
 import com.greatspeeches.MainActivity;
 import com.greatspeeches.R;
-import com.greatspeeches.SplashScreen;
 import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.helper.ObjectSerializer;
 import com.greatspeeches.models.HomeDataModel;

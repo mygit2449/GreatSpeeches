@@ -24,7 +24,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-bold"/>
 
         <TextView
             android:id="@+id/person_quote"
@@ -33,7 +34,7 @@
             android:layout_below="@+id/person_name"
             android:textColor="#ffffff"
             android:textSize="13sp"
-            android:textStyle="bold" />
+            android:fontFamily="sans-serif-light" />
     </RelativeLayout>
 
 </RelativeLayout>

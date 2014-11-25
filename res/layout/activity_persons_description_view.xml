@@ -18,7 +18,7 @@
         android:layout_marginBottom="-120dp"
         arc:childSize="@dimen/menuChildSize"
         arc:fromDegrees="@dimen/menuFromDegrees"
-        arc:toDegrees="@dimen/menuToDegrees" />
+        arc:toDegrees="@dimen/menuToDegrees"/>
 
     <RelativeLayout
         android:id="@+id/audio_rel1"

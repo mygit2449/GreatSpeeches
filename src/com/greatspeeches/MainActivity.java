@@ -77,8 +77,9 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	private SpannableString mSpannableString;
 	private AlphaForegroundColorSpan mAlphaForegroundColorSpan;
 	
-	private int[] _imageaCount = {R.drawable.john_kennedy,
-			R.drawable.gandhi,R.drawable.patrick_henry,R.drawable.churchill,R.drawable.martin_hh,R.drawable.lyndon_johnson,R.drawable.reagan,R.drawable.swami_hh,R.drawable.abraham_lincoln};
+	private int[] _imageaCount = {R.drawable.nelson,R.drawable.mikhail,R.drawable.john_kennedy,
+			R.drawable.gandhi,R.drawable.william,R.drawable.helen,R.drawable.anne,R.drawable.patrick_henry,R.drawable.churchill,R.drawable.martin_hh,R.drawable.lyndon_johnson,R.drawable.reagan,
+			R.drawable.swami_hh,R.drawable.abraham_lincoln,R.drawable.sri};
 	
 	private ViewFlipper _slideViewFlipper;
     private Handler handler, bgUpdatedHandler;
@@ -191,7 +192,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 					Random rand = new Random();  
 					pickedNumber = rand.nextInt(_imageaCount.length)+1;
 //					updateBeautyBg(pickedNumber);
-					bgUpdatedHandler.postDelayed(runnable, 10000);
+//					bgUpdatedHandler.postDelayed(runnable, 10000);
 				}
 			};
 			
@@ -542,9 +543,8 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 			
 			selectedPos = Integer.parseInt(receivedObj.getId());
 			
-			Log.v(this.getClass().getSimpleName(), "...Sizes.."+homeDataarr.size()+"...Check"+selectedPos);
 			
-			if (selectedPos > -1 && selectedPos <= homeDataarr.size()) {
+			if (null != homeDataarr && selectedPos > -1 && selectedPos <= homeDataarr.size()) {
 				startActivity(new Intent(this, PersonsDescriptionView.class).putExtra("position", selectedPos).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
 				finish();
 			}

@@ -4,6 +4,119 @@
 <item>
   <id>0</id>
   <type>Science &amp; Technology</type>
+  <name>Aristotle</name>
+  <img>aristotle</img>
+  <audio></audio>
+  <video>https://www.youtube.com/watch?v=csIW4W_DYX4</video>
+  <bdate>384 BC, Chalkidiki, Greece</bdate>
+  <ddate>322 BC, Chalcis, Greece</ddate>
+  <quote>Love is composed of a single soul inhabiting two bodies.</quote>
+<!--   <info>Little did Jainulabdeen and Ashiamma know that their son would grow up to be the first citizen of India. An Indian scientist and administrator, Kalam served as the 11th President of India from 2002 until 2007. One amongst the most respected people of the country, Kalam has contributed immensely both as a scientist and as a president. His contribution at the Indian Space Research Organization (ISRO) has been immense. He was responsible for numerous projects such as Project Devil and Project Valiant and launch of the Rohini-1, besides developing missiles under the missions Agni and Prithvi. For the same, he has been popularly tagged as the "Missile Man of India". Kalam has been honored with great laurels and awards for his work by both the Government of India and other countries. Currently, Kalam serves as a visiting professor in various esteemed institutes and universities of India.</info> -->
+ <info>
+		Aristotle was a Greek philosopher and scientist born in the Macedonian city of Stagirus, in 384 BCE. His father, Nicomachus, died when Aristotle was a child, whereafter Proxenus of Atarneus became his guardian.At eighteen, he joined Plato's Academy in Athens and remained there until the age of thirty-seven (c. 347 BCE). His writings cover many subjects – including physics, biology, zoology, metaphysics, logic, ethics, aesthetics, poetry, theater, music, rhetoric, linguistics, politics and government – and constitute the first comprehensive system of Western philosophy. Shortly after Plato died, Aristotle left Athens and, at the request of Philip of Macedon, tutored Alexander the Great between 356 and 323 BCE. According to the Encyclopædia Britannica, "Aristotle was the first genuine scientist in history ... [and] every scientist is in his debt."
+
+		Teaching Alexander the Great gave Aristotle many opportunities and an abundance of supplies. He established a library in the Lyceum which aided in the production of many of his hundreds of books. The fact that Aristotle was a pupil of Plato contributed to his former views of Platonism, but, following Plato's death, Aristotle immersed himself in empirical studies and shifted from Platonism to empiricism. He believed all peoples' concepts and all of their knowledge was ultimately based on perception. Aristotle's views on natural sciences represent the groundwork underlying many of his works.
+
+		Aristotle's views on physical science profoundly shaped medieval scholarship. Their influence extended into the Renaissance and were not replaced systematically until the Enlightenment and theories such as classical mechanics. Some of Aristotle's zoological observations were not confirmed or refuted until the 19th century.[examples needed] His works contain the earliest known formal study of logic, which was incorporated in the late 19th century into modern formal logic.
+
+		In metaphysics, Aristotelianism profoundly influenced Judeo-Islamic philosophical and theological thought during the Middle Ages and continues to influence Christian theology, especially the scholastic tradition of the Catholic Church. Aristotle was well known among medieval Muslim intellectuals and revered as "The First Teacher".
+
+		His ethics, though always influential, gained renewed interest with the modern advent of virtue ethics. All aspects of Aristotle's philosophy continue to be the object of active academic study today. Though Aristotle wrote many elegant treatises and dialogues – Cicero described his literary style as "a river of gold" – it is thought that only around a third of his original output has survived.
+
+
+ </info>
+ <achievements>
+		Aristotle is famous for his introduction of scientific method and also known for providing important term of science called ‘empiricism’. Like his teacher, his philosophy quite lies in universal approach. He said that universal truths can be known from some particular things through induction. Even when induction was sufficient enough to discover universals by generalizations, it wasn’t succeeding in identifying causes. For this cause, Aristotle had to use deductive reasoning in the form of syllogisms. He developed a complete normative approach to scientific enquiry with the help of syllogism. But there was a difficulty with this scheme; it had problems in showing that derived truths have solid primary premises. Perhaps he could have showed that demonstrations were circular in which conclusions have supported premises and premises must have supported conclusions. But he didn’t allow that.
+ 
+		He didn’t allow the inclusion of infinite number of middle terms between the primary premises and the conclusion. Induction was the only method suitable for this purpose. Aristotle’s writings were more qualitative than quantitative. The main reason of his failings was the lack of concepts like mass, temperature, velocity and force in his research. His writings were considered as a mixture of curious errors and precocious accuracy. For example, his theory of heavier objects fall faster than lighter ones was proved incorrect by the simple experiments of Galileo and John Philoponus. He was also criticized for his simple observation and over-stretched reason in deriving the “laws of universe”. In today’s scientific method, his observations without sufficient facts are considered ineffective. His theory of geocentric cosmology also was proved wrong in terms of modern metaphysics.  
+
+		Aristotle’s approach towards science was different from that of his teacher, Plato. While the latter dedicated his wholly and solely to ‘first philosophy’, that of metaphysics and mathematics, Aristotle believed that it was also very important to study ‘second philosophy’: the world around us, from physics and mechanics to biology. It can be said that Aristotle single handedly invented science as it is today, including various fields and categories. Also, unlike Plato who was only involved with abstract form, Aristotle chose to study minutely the natural world, plants and animals, how they worked, what were they made up of and to understand how each of them fitted in the larger picture of nature. His research and study of nature was idolized on four important causes – matter, form, moving cause and final cause. He wrote in detail about five hundred different animals in his works, including a hundred and twenty kinds of fish and sixty kinds of insect. He was the first to use dissection extensively.
+ </achievements>
+ </item>
+
+<item>
+  <id>1</id>
+  <type>Science &amp; Technology</type>
+  <name>Sir Isaac Newton</name>
+  <img>newton</img>
+  <audio></audio>
+  <video>https://www.youtube.com/watch?v=Cn_L1BvUGvg</video>
+  <bdate>January 4, 1643, Woolsthorpe-by-Colsterworth, United Kingdom</bdate>
+  <ddate>March 31, 1727, Kensington, London, United Kingdom</ddate>
+  <quote>To every action there is always opposed an equal reaction.</quote>
+<!--   <info>Little did Jainulabdeen and Ashiamma know that their son would grow up to be the first citizen of India. An Indian scientist and administrator, Kalam served as the 11th President of India from 2002 until 2007. One amongst the most respected people of the country, Kalam has contributed immensely both as a scientist and as a president. His contribution at the Indian Space Research Organization (ISRO) has been immense. He was responsible for numerous projects such as Project Devil and Project Valiant and launch of the Rohini-1, besides developing missiles under the missions Agni and Prithvi. For the same, he has been popularly tagged as the "Missile Man of India". Kalam has been honored with great laurels and awards for his work by both the Government of India and other countries. Currently, Kalam serves as a visiting professor in various esteemed institutes and universities of India.</info> -->
+ <info>
+		Sir Isaac Newton was born on Christmas Day, in 1643, to a relatively poor farming family. His father died 3 months before he was born. His mother later remarried, but her second husband did not get on with Isaac; leading to friction between Isaac and his parents. The young Isaac attended school at King’s School, Grantham in Lincolnshire (where his signature is still inscribed in the walls.. Isaac was one of the top students, but before completing his studies his mother withdrew him from school, so Isaac could work as a farmer. It was only through the intervention of the headmaster that Isaac was able to return to finish his studies; he passed his final exams with very good results, and was able to go to Trinity College, Cambridge.
+
+		Newton at Cambridge
+		Isaac Newton At Cambridge he was able to pursue his interests in mathematics, science and physics. At the time the prevailing education was based on Aristotle, but Isaac was more interested in modern mathematicians such as Descartes. Isaac Newton had a prodigious capacity to consider mathematical problems, and then focus on them until he had solved the mystery behind them. His one pointed nature led him to, at times, be detached from the world. For example, he had little time for women. An early teenage romance came to nothing, and he remained single throughout his life.
+
+		Sir Isaac Newton, has been referred to as one of the greatest genius’ of history. His mathematical and scientific achievements give credence to such a view. Amongst his many accomplishments in the field of science include:
+
+		Developing a theory of Calculus.
+		Unfortunately, at the same time as Newton, calculus was being developed by Leibinz.  When Leibinz published his results, there was a bitter feud between the two men, with Newton claiming plagiarism. This bitter feud lasted until Leibinz death in 1713, it also extended between British mathematicians and the continent.
+
+ </info>
+ <achievements>
+		Mathematical Achievements of Newton
+		
+		Generalized binomial theorem
+		Newton’s identities,
+		Newton’s method,
+		classified cubic plane curves (polynomials of degree three in two variables),
+		Substantial contributions to the theory of finite differences,
+		Use of fractional indices
+		Used geometry to derive solutions to Diophantine equations.
+		Used power series with confidence and to revert power series.
+		Discovered a new formula for pi.
+		
+		Scientific Achievements of Newton
+
+		Optics – Newton made great advancements into the study of optics. In particular he developed the spectrum by splitting white light through a prism.
+		Telescope – Made significant improvements to the development of the telescope. However, when his ideas were criticised by Hooke, Newton withdrew from the public debate. He developed an antagonistic and hostile attitude to Hooke, throughout his life.
+		Mechanics and Gravitation. In his famous book Principa Mathematica. Newton explained the three laws of motion that laid the framework for modern physics.
+		This involved explaining planetary movements.
+</achievements>
+</item>
+
+<item>
+  <id>2</id>
+  <type>Science &amp; Technology</type>
+  <name>Charles Darwin</name>
+  <img>darwin</img>
+  <audio></audio>
+  <video>https://www.youtube.com/watch?v=XKnqj3YFXU8</video>
+  <bdate>February 12, 1809, The Mount, Shrewsbury, United Kingdom</bdate>
+  <ddate>April 19, 1882, Down House, Downe, United Kingdom</ddate>
+  <quote>A man's friendships are one of the best measures of his worth.</quote>
+<!--   <info>Little did Jainulabdeen and Ashiamma know that their son would grow up to be the first citizen of India. An Indian scientist and administrator, Kalam served as the 11th President of India from 2002 until 2007. One amongst the most respected people of the country, Kalam has contributed immensely both as a scientist and as a president. His contribution at the Indian Space Research Organization (ISRO) has been immense. He was responsible for numerous projects such as Project Devil and Project Valiant and launch of the Rohini-1, besides developing missiles under the missions Agni and Prithvi. For the same, he has been popularly tagged as the "Missile Man of India". Kalam has been honored with great laurels and awards for his work by both the Government of India and other countries. Currently, Kalam serves as a visiting professor in various esteemed institutes and universities of India.</info> -->
+ <info>
+		Charles Robert Darwin, was an English naturalist and geologist, best known for his contributions to evolutionary theory. He established that all species of life have descended over time from common ancestors, and in a joint publication with Alfred Russel Wallace introduced his scientific theory that this branching pattern of evolution resulted from a process that he called natural selection, in which the struggle for existence has a similar effect to the artificial selection involved in selective breeding.
+
+		Darwin published his theory of evolution with compelling evidence in his 1859 book On the Origin of Species, overcoming scientific rejection of earlier concepts of transmutation of species. By the 1870s the scientific community and much of the general public had accepted evolution as a fact. However, many favoured competing explanations and it was not until the emergence of the modern evolutionary synthesis from the 1930s to the 1950s that a broad consensus developed in which natural selection was the basic mechanism of evolution. In modified form, Darwin's scientific discovery is the unifying theory of the life sciences, explaining the diversity of life.
+
+		Darwin's early interest in nature led him to neglect his medical education at the University of Edinburgh; instead, he helped to investigate marine invertebrates. Studies at the University of Cambridge (Christ's College) encouraged his passion for natural science. His five-year voyage on HMS Beagle established him as an eminent geologist whose observations and theories supported Charles Lyell's uniformitarian ideas, and publication of his journal of the voyage made him famous as a popular author.
+
+		Puzzled by the geographical distribution of wildlife and fossils he collected on the voyage, Darwin began detailed investigations and in 1838 conceived his theory of natural selection. Although he discussed his ideas with several naturalists, he needed time for extensive research and his geological work had priority. He was writing up his theory in 1858 when Alfred Russel Wallace sent him an essay which described the same idea, prompting immediate joint publication of both of their theories. Darwin's work established evolutionary descent with modification as the dominant scientific explanation of diversification in nature. In 1871 he examined human evolution and sexual selection in The Descent of Man, and Selection in Relation to Sex, followed by The Expression of the Emotions in Man and Animals. His research on plants was published in a series of books, and in his final book, he examined earthworms and their effect on soil.
+
+		Darwin became internationally famous, and his pre-eminence as a scientist was honoured by burial in Westminster Abbey.Darwin has been described as one of the most influential figures in human history.
+
+</info>
+ <achievements>
+		Darwin got his big break in 1831. A naturalist was needed to travel along on a scientific expedition – a voyage around the world in the brigantine HMBS Beagle under the supervision of Captain Fits Roy. Luckily, some of his Cambridge fellows also recommended him for the place. The voyage took around five years.
+
+		Throughout this voyage, Darwin collected bones of extinct animals. He was curious about the relationship between the extinct animals and the existing ones. The unusual marine iguana, the tortoises and the finches on the Galapagos Islands in the pacific made him perplexed, since similar, yet rather distinct, forms of the same animals were found on separate islands. These observations led to his legendary ideas on evolution.
+
+		After the return, Darwin moved to London for a while and compiled an account of his travels. Darwin got married to his cousin Emma Wedgowood in 1839. The coupled moved to Downe House in Kent in 1844. There, Darwin got a letter from the naturalist Alfred Russel Wallace, who had made similar observations about evolution separately. A collaborative report by Darwin and Wallace was published in 1858. Darwin publicized the theory of evolution in his famous book, “The Origin of Species by Natural Selection”, in 1859. The book, which asserted that all the varied forms of life on earth could, in the course of time, have evolved from a common ancestry, was a huge success. Darwin also commented that in the struggle for life, only the ‘fittest’ creatures would survive while others fail.
+
+		The book became controversial due to its conflict with the religious belief about the creation of the world. However, in later years, it was embraced by all biologists. Darwin’s another book, “The Variation of Animals and Plants Under Domestication”, came out in 1868. It is considered to be his second most significant work. The book maintains that man, by selective breeding, could make rather different breeds of pigeons, dogs, and some species of plants also. His work also included “The Various Contrivances by which Orchids are Fertilised by Insects”, “Insectivorous Plants”, “The Power of Movement in Plants”, “Descent of Man”, and “The Formation of Vegetable Mould Through the Action of Worms”.
+ </achievements>
+ </item>
+
+
+<item>
+  <id>3</id>
+  <type>Science &amp; Technology</type>
   <name>A.P.J. Abdul Kalam</name>
   <img>kalam_h</img>
   <audio></audio>
@@ -28,7 +141,7 @@
 
 
 <item>
-  <id>1</id>
+  <id>4</id>
   <type>Science &amp; Technology</type>
   <name>Albert Einstein</name>
   <img>alberteinstein</img>
@@ -70,7 +183,7 @@
  </item>  
  
  <item>
-  <id>2</id>
+  <id>5</id>
   <type>Science &amp; Technology</type>
   <name>Alfred Nobel</name>
   <img>nobel_hh</img>
@@ -97,7 +210,7 @@
  
  
  <item>
-  <id>3</id>
+  <id>6</id>
   <type>Science &amp; Technology</type>
   <name>C. V. Raman</name>
   <img>cvraman</img>
@@ -137,7 +250,7 @@
  </item> 
  
   <item>
-  <id>4</id>
+  <id>7</id>
   <type>Science &amp; Technology</type>
   <name>Srinivasa Ramanujan</name>
   <img>srinivasaramanujan</img>
@@ -185,7 +298,7 @@
  </item>
  
  <item>
-  <id>5</id>
+  <id>8</id>
   <type>Science &amp; Technology</type>
   <name>Thomas Alva Edison</name>
   <img>thomasedison</img>
@@ -223,7 +336,7 @@
  </item>  
  
  <item>
-  <id>6</id>
+  <id>9</id>
   <type>Science &amp; Technology</type>
   <name>Yellapragada Subbarow</name>
   <img>subbarao</img>
@@ -242,6 +355,118 @@
 		With so many discoveries and developments to his credit, Subbarao never marketed his work and hence, was always left behind in terms of work recognition and appreciation. He always sat in the audience and had to be pushed to the stage by a colleague or a collaborator to take a bow as each of his researches was revealed to the public. Further, he was seen giving interviews to the press or visiting nations on lecture tours. When his colleague George Hitchings won the Nobel Prize in Physiology or Medicine, along with Gertrude Elion, in 1988, he stated that some of the works initiated by Subbarao had to be rediscovered for the simple reason that his partner Fiske did not allow his contributions earn name and fame, probably out of jealousy. American Cyanamid honored Subbarao by naming a new fungus under his name "Subbaromyces splendens".
  </achievements>
  </item> 
+ 
+ 
+ 
+ <item>
+  <id>10</id>
+  <type>Science &amp; Technology</type>
+  <name>Charles Babbage</name>
+  <img>charles</img>
+  <bdate>December 26, 1791, Teignmouth, United Kingdom</bdate>
+  <ddate>October 18, 1871, Marylebone, United Kingdom</ddate>
+  <audio></audio>
+  <video>https://www.youtube.com/watch?v=_mldLwKvT-M</video>
+  <quote>The economy of human time is the next advantage of machinery in manufactures.</quote>
+  <info>
+		Charles Babbage was born in London Dec. 26, 1791, St. Stephan day, in London. He was son of Benjamin Babbage, a banking partner of the Praeds who owned the Bitton Estate in Teignmouth and Betsy Plumleigh Babbage. It was about 1808 when the Babbage family decided to move into the old Rowdens house, located in East Teignmouth, and Benjamin Babbage became a warden of the nearby church of St. Michael. 
+
+		The father of Charles was a rich man, so it was possible for Charles to receive instruction from several elite schools and teachers during the course of his elementary education. He was about eight when he had to move to a country school to recover from a dangerous fever. His parents sentenced that his "brain was not to be taxed too much"; Babbage wrote: "this great idleness may have led to some of my childish reasonings." 
+		Then, he joined King Edward VI Grammar School in Totnes, South Devon, a thriving comprehensive school that's still operative today, but his fragile health status forced him back to private teaching for a period. Then, he finally joined a 30-student closed number academy managed by Reverend Stephen Freeman. The academy had a big library, where Babbage used to study mathematics by himself, and learned to love it. He had two more personal tutors after leaving the academy. One was a clergyman of Cambridge, and about him Babbage said: "I fear I did not derive from it all the advantages that I might have done.". The other one was an Oxford tutor who teached Babbage the Classics, so that he could be accepted to Cambridge. 
+
+		Babbage arrived at Trinity College, Cambridge in October 1810. He had a big culture - he knew Lagrange, Leibniz, Lacroix, Simpson... and he was seriously disappointed about the math programs available at Cambridge. So he, with J.Herschel, G.Peacock, and other friends, decided to form the Analytical Society. 
+
+		When, in 1812, Babbage transferred to Peterhouse, Cambridge, he was the best mathematician; but he failed to graduate with honours. 
+		He received an honorary degree later, without even being examinated, in 1814. 
+
+		In 1814, Charles Babbage married Georgiana Whitmore at St. Michael's Church in Teignmouth, Devon. His father, for some reason, never gave his approvation. They lived in tranquility at 5 Devonshire Street, Portland Place, London. 
+		Only Three of their 8 children became adult.
+		Tragically, Charles' father, his wife and one of his sons all died in 1827.
+  
+  </info>
+ <achievements>
+		charles babbage received many honors and awards. In 1816, he was elected fellow of the royal society. He got his first gold medal from the astronomical society of london, and then received an honorary degree from the peter house. 
+ </achievements>
+ </item> 
+ 
+  <item>
+  <id>11</id>
+  <type>Science &amp; Technology</type>
+  <name>Marie Curie</name>
+  <img>marie</img>
+  <bdate>November 7, 1867, Warsaw, Poland</bdate>
+  <ddate>July 4, 1934, Passy, Haute-Savoie, France</ddate>
+  <audio></audio>
+  <video>https://www.youtube.com/watch?v=0vTRrZU-LKQ</video>
+  <quote>Be less curious about people and more curious about ideas.</quote>
+  <info>
+		Marie Skłodowska-Curie was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person (and only woman) to win twice, the only person to win twice in multiple sciences, and was part of the Curie family legacy of five Nobel Prizes. She was also the first woman to become a professor at the University of Paris, and in 1995 became the first woman to be entombed on her own merits in the Panthéon in Paris.
+
+		She was born Maria Salomea Skłodowska in Warsaw, in what was then the Kingdom of Poland, part of the Russian Empire. She studied at Warsaw's clandestine Floating University and began her practical scientific training in Warsaw. In 1891, aged 24, she followed her older sister Bronisława to study in Paris, where she earned her higher degrees and conducted her subsequent scientific work. She shared the 1903 Nobel Prize in Physics with her husband Pierre Curie and with physicist Henri Becquerel. She won the 1911 Nobel Prize in Chemistry.
+
+		Her achievements included a theory of radioactivity , techniques for isolating radioactive isotopes, and the discovery of two elements, polonium and radium. Under her direction, the world's first studies were conducted into the treatment of neoplasms, using radioactive isotopes. She founded the Curie Institutes in Paris and in Warsaw, which remain major centres of medical research today. During World War I, she established the first military field radiological centres.
+
+		While a French citizen, Marie Skłodowska Curie (she used both surnames) never lost her sense of Polish identity. She taught her daughters the Polish language and took them on visits to Poland. She named the first chemical element that she discovered – polonium, which she first isolated in 1898 – after her native country.
+
+		Curie died in 1934 at the sanatorium of Sancellemoz (Haute-Savoie), France, due to aplastic anemia brought on by exposure to radiation – including carrying test tubes of radium in her pockets during research and her World War I service in mobile X-ray units created by her.	
+  
+  
+  </info>
+ <achievements>
+		Marie Curie was famous for being an accomplished Chemist. She worked in the field of radiation. Marie Curie was the first person to discover radiation in 1898. Marie 
+
+		Curie identified there was radiation in many things.
+
+		She was the first scientist to use the term radioactive, to describe elements that give off radiations as their nuclei break down.
+
+		In 1903 Marie Curie was awarded the Nobel Prize in Physics for the discovery of radioactive elements. Marie Curie became the first woman to win the Nobel Prize.
+
+		She was again awarded the Nobel Prize in 1911, this time in chemistry, for her work in radium and radium compounds. This was an important achievement, as no one had ever been awarded a second Nobel Prize, made even more remarkable as women were not commonly involved in this sort of work.
+
+		In 1914 Marie Curie was further recognised by being appointed head of the Paris Institute of Radium. She then went on to help found the Curie Institute.
+
+		Marie Curie died on 4 July 1934 of an illness caused by excess exposure to radiation.
+		
+		
+ </achievements>
+ </item> 
+
+   <item>
+  <id>12</id>
+  <type>Science &amp; Technology</type>
+  <name>Steve Jobs</name>
+  <img>jobs</img>
+  <bdate>February 24, 1955, San Francisco, California, United States</bdate>
+  <ddate>October 5, 2011, Palo Alto, California, United States</ddate>
+  <audio></audio>
+  <video>https://www.youtube.com/watch?v=UF8uR6Z6KLc</video>
+  <quote>Everyone here has the sense that right now is one of those moments when we are influencing the future.</quote>
+  <info>
+		Steven Paul "Steve" Jobs was an American entrepreneur,marketer,and inventor, who was the co-founder, chairman, and CEO of Apple Inc. Through Apple, he is widely recognized as a charismatic and design-driven pioneer of the personal computer revolution and for his influential career in the computer and consumer electronics fields, transforming "one industry after another, from computers and smartphones to music and movies." Jobs also co-founded and served as chief executive of Pixar Animation Studios; he became a member of the board of directors of The Walt Disney Company in 2006, when Disney acquired Pixar. Jobs was among the first to see the commercial potential of Xerox PARC's mouse-driven graphical user interface, which led to the creation of the Apple Lisa and, a year later, the Macintosh. He also played a role in introducing the LaserWriter, one of the first widely available laser printers, to the market.
+
+		After a power struggle with the board of directors in 1985, Jobs left Apple and founded NeXT, a computer platform development company specializing in the higher-education and business markets. In 1986, he acquired the computer graphics division of Lucasfilm, which was spun off as Pixar. He was credited in Toy Story (1995) as an executive producer. He served as CEO and majority shareholder until Disney's purchase of Pixar in 2006. In 1996, after Apple had failed to deliver its operating system, Copland, Gil Amelio turned to NeXT Computer, and the NeXTSTEP platform became the foundation for the Mac OS X. Jobs returned to Apple as an advisor, and took control of the company as an interim CEO. Jobs brought Apple from near bankruptcy to profitability by 1998.
+
+		As the new CEO of the company, Jobs oversaw the development of the iMac, iTunes, iPod, iPhone, and iPad, and on the services side, the company's Apple Retail Stores, iTunes Store and the App Store. The success of these products and services provided several years of stable financial returns, and propelled Apple to become the world's most valuable publicly traded company in 2011. The reinvigoration of the company is regarded by many commentators as one of the greatest turnarounds in business history.
+
+		In 2003, Jobs was diagnosed with a pancreas neuroendocrine tumor. Though it was initially treated, he reported a hormone imbalance, underwent a liver transplant in 2009, and appeared progressively thinner as his health declined. On medical leave for most of 2011, Jobs resigned in August that year, and was elected Chairman of the Board. He died of respiratory arrest related to the tumor on October 5, 2011.
+
+		Jobs received a number of honors and public recognition for his influence in the technology and music industries. He has been referred to as "legendary", a "futurist" and a "visionary", and has been described as the "Father of the Digital Revolution," a "master of innovation," "the master evangelist of the digital age" and a "design perfectionist."
+  
+  </info>
+ <achievements>
+		During his life, he received several awards including National Medal of Technology and Jefferson Award for Public Service.
+
+		He was inducted into California Hall of Fame in 2007. Same year, he was named the most powerful person in business by Fortune magazine.
+ 
+		In 2009, Fortune magazine named him as the CEO of the decade. Following year, he ranked at No 17 in Forbes list of The World's Most Powerful People.
+
+		In 2010, he was named person of the year by Financial Times.
+
+   </achievements>
+ </item> 
+  
+  
 </menu>
+ 
 
 
