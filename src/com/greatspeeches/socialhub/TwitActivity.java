@@ -103,10 +103,6 @@ public class TwitActivity extends Activity {
 
 					try {
 						requestToken = twitter.getOAuthRequestToken(TWITTER_CALLBACK_URL);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-					
 					runOnUiThread(new Runnable() {
 						
 						@Override
@@ -123,6 +119,9 @@ public class TwitActivity extends Activity {
 							});
 						}
 					});
+			  }catch (Exception e) {
+						e.printStackTrace();
+					}
 			}
 		}).start();
         

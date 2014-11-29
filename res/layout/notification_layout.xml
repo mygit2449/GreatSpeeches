@@ -23,6 +23,7 @@
             android:id="@+id/person_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
             android:textColor="#ffffff"
             android:textSize="13sp" />
 
@@ -31,10 +32,11 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/person_name"
-            android:textColor="#ffffff"
-            android:textSize="11sp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
             android:maxLines="3"
-            android:ellipsize="end" />
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
     </RelativeLayout>
 
 </RelativeLayout>

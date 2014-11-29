@@ -13,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Parcelable;
+import android.support.v4.app.NotificationCompat;
 import android.widget.RemoteViews;
 
 import com.greatspeeches.MainActivity;
@@ -85,11 +86,12 @@ public class NotificationReceiver extends BroadcastReceiver{
 	     .setContentTitle("Great Lives")
 	     .setContent(contentView)
 	     .setDefaults(Notification.DEFAULT_LIGHTS| Notification.DEFAULT_VIBRATE| Notification.DEFAULT_SOUND)
-	     .setContentIntent(contentIntent) ;
+	     .setContentIntent(contentIntent);
 		
 		mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-		Notification notification = new Notification.BigTextStyle(builder).bigText(""+objHome.getQuote()).build();
-		notification.bigContentView = contentView;
-		mNotificationManager.notify(NOTIFICATION_ID, notification);
+//		Notification notification = new Notification.BigTextStyle(builder).bigText(""+objHome.getQuote()).build();
+//		Notification notification = new NotificationCompat.Builder(context);
+//		notification.bigContentView = contentView;
+		mNotificationManager.notify(NOTIFICATION_ID, builder.build());
 	}
 }
