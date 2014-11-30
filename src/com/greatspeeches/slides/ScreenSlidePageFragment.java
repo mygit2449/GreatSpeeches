@@ -67,19 +67,19 @@ public class ScreenSlidePageFragment extends Fragment{
     private PersonsDescriptionView myContext;
     
 	private FrameLayout fragmentsLayout;
-
 	public YouTubePlayer activePlayer;
 	private String videoId =  "";
 	private StickyScrollView scroll = null;
-
+	private static Handler touchHandler;
     /**
      * Factory method for this fragment class. Constructs a new fragment for the given page number.
      */
-    public static ScreenSlidePageFragment create(HomeDataModel dataObj) {
+    public static ScreenSlidePageFragment create(HomeDataModel dataObj,Handler touchHandlera) {
         ScreenSlidePageFragment fragment = new ScreenSlidePageFragment();
         Bundle args = new Bundle();
         args.putParcelable("data_obj", dataObj);
         fragment.setArguments(args);
+        touchHandler=touchHandlera;
         return fragment;
     }
 
@@ -92,7 +92,13 @@ public class ScreenSlidePageFragment extends Fragment{
     public ScreenSlidePageFragment() {
     }
 
-        
+   
+//    public void setHandler(Handler touchHandler){
+//    	scroll.setTouchListener(touchHandler);
+//    	
+//    }
+//    
+    
     public void update(){
     	scroll.fullScroll(View.FOCUS_UP);
     	if(mPersonObj.getType().equalsIgnoreCase("Popular") && !mPersonObj.getVideourl().contains("youtube")){
@@ -200,6 +206,7 @@ public class ScreenSlidePageFragment extends Fragment{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPersonObj = (HomeDataModel) getArguments().getParcelable("data_obj");
+
     }
 
     @Override
@@ -218,6 +225,7 @@ public class ScreenSlidePageFragment extends Fragment{
         });
         
         scroll = (StickyScrollView)rootView.findViewById(R.id.topScroll);
+        scroll.setTouchListener(touchHandler);
         fragmentsLayout = (FrameLayout)rootView.findViewById(R.id.video_container);
         // Set the title view to show the page number.
         infoData =  ((TextView) rootView.findViewById(R.id.person_info));

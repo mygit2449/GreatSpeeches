@@ -2,19 +2,20 @@ package com.greatspeeches.helper;
 
 import java.util.ArrayList;
 
-import com.greatspeeches.R;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.ScrollView;
+
+import com.greatspeeches.R;
 
 /**
  * 
@@ -53,6 +54,7 @@ public class StickyScrollView extends ScrollView {
 
 	private int mShadowHeight;
 	private Drawable mShadowDrawable;
+	private Handler touchHandler = null;
 
 	private final Runnable invalidateRunnable = new Runnable() {
 
@@ -201,6 +203,13 @@ public class StickyScrollView extends ScrollView {
 		findStickyViews(child);
 	}
 
+	
+	public void setTouchListener(Handler touchHandler){
+		this.touchHandler=touchHandler;
+	}
+	
+	
+	
 	@Override
 	protected void dispatchDraw(Canvas canvas) {
 		super.dispatchDraw(canvas);
@@ -263,12 +272,14 @@ public class StickyScrollView extends ScrollView {
 		if(redirectTouchesToStickyView){
 			ev.offsetLocation(0, ((getScrollY() + stickyViewTopOffset) - getTopForViewRelativeOnlyChild(currentlyStickingView)));
 		} 
-		
+
 		if(ev.getAction()==MotionEvent.ACTION_DOWN){
 			hasNotDoneActionDown = false;
+			touchHandler.sendEmptyMessage(0);
 		}
 		
 		if(hasNotDoneActionDown){
+			touchHandler.sendEmptyMessage(0);
 			MotionEvent down = MotionEvent.obtain(ev);
 			down.setAction(MotionEvent.ACTION_DOWN);
 			super.onTouchEvent(down);
@@ -277,8 +288,15 @@ public class StickyScrollView extends ScrollView {
 		
 		if(ev.getAction()==MotionEvent.ACTION_UP || ev.getAction()==MotionEvent.ACTION_CANCEL){
 			hasNotDoneActionDown = true;
+			touchHandler.sendEmptyMessage(1);
 		}
 		
+//		if(hasNotDoneActionDown == false){
+//			touchHandler.sendEmptyMessage(0);
+//		}else{
+//			touchHandler.sendEmptyMessage(1);
+//		}
+
 		return super.onTouchEvent(ev);
 	}
 

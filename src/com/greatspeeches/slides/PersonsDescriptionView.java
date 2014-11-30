@@ -16,6 +16,8 @@ import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -82,7 +84,8 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
     public  ArrayList<HomeDataModel> dataList = null;
     private ActionBar actionBar;
     private ScreenSlidePageFragment selecedFragment = null;
-    
+	private Animation topToBottomanimForicon, bottomToTopAnimForicon;
+
     
     private Session.StatusCallback statusCallback = new Session.StatusCallback() {
         @Override
@@ -206,7 +209,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				_personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(position).getImageId(), R.drawable.class));
 				invalidateOptionsMenu();
 //				mPagerAdapter.getFragment(position).closeVplayer();
-//				mPagerAdapter.getFragment(position).closeYVplayer();
+//				mPagerAdapter.getFragment(position).setHandler(touchHandle);
 				
 				if(dataList.get(position).getType().equalsIgnoreCase("Popular")){
 					initArcMenu(arcMenu2, ITEM_DRAWABLES);
@@ -236,6 +239,10 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		
 		topToBottomanim = AnimationUtils.loadAnimation(PersonsDescriptionView.this, R.anim.slide_top_to_bottom);
 		bottomToTopAnim = AnimationUtils.loadAnimation(PersonsDescriptionView.this, R.anim.slide_bottom_to_top);
+		
+		
+		topToBottomanimForicon = AnimationUtils.loadAnimation(PersonsDescriptionView.this, R.anim.slide_top_to_bottom_icon);
+		bottomToTopAnimForicon = AnimationUtils.loadAnimation(PersonsDescriptionView.this, R.anim.slide_bottom_to_top_icon);
 		
 	}
 	
@@ -388,7 +395,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
         
         
         public Object instantiateItem(ViewGroup container, int position) {
-        	ScreenSlidePageFragment screenFragment = ScreenSlidePageFragment.create(dataList.get(position));
+        	ScreenSlidePageFragment screenFragment = ScreenSlidePageFragment.create(dataList.get(position),touchHandle);
 			mPageReferenceMap.put(Integer.valueOf(position), new WeakReference<ScreenSlidePageFragment>(screenFragment));
 			return super.instantiateItem(container, position);
 		}
@@ -722,5 +729,65 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		  
 		  dialog.show();
 	 }	 
+	 
+	 
+	 
+	 Handler touchHandle = new Handler(){
+
+			@Override
+			public void handleMessage(Message msg) {
+				// TODO Auto-generated method stub
+				super.handleMessage(msg);
+				if (msg.what==0) {
+//					arcMenu2.setVisibility(View.GONE);
+					
+					arcMenu2.startAnimation(topToBottomanimForicon);
+					topToBottomanimForicon.setAnimationListener(new AnimationListener() {
+						@Override
+						public void onAnimationStart(Animation animation) {
+							// TODO Auto-generated method stub
+							
+						}
+						@Override
+						public void onAnimationRepeat(Animation animation) {
+							// TODO Auto-generated method stub
+							
+						}
+						@Override
+						public void onAnimationEnd(Animation animation) {
+							// TODO Auto-generated method stub
+							arcMenu2.setVisibility(View.GONE);
+						}
+					});
+					
+					
+				}else{
+					arcMenu2.startAnimation(bottomToTopAnimForicon);
+					bottomToTopAnimForicon.setAnimationListener(new AnimationListener() {
+        				
+        				@Override
+        				public void onAnimationStart(Animation animation) {
+        					// TODO Auto-generated method stub
+        					
+        				}
+        				
+        				@Override
+        				public void onAnimationRepeat(Animation animation) {
+        					// TODO Auto-generated method stub
+        					
+        				}
+        				
+        				@Override
+        				public void onAnimationEnd(Animation animation) {
+        					// TODO Auto-generated method stub
+        					arcMenu2.setVisibility(View.VISIBLE);
+        				}
+        			});
+					
+					
+				}
+			}
+	    	
+	    };
 	 
 }
