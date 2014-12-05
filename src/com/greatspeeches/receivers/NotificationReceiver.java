@@ -69,29 +69,36 @@ public class NotificationReceiver extends BroadcastReceiver{
 	
 	private void sendNotification(Context context,  Intent check_intent, HomeDataModel objHome) {
 		
-		Intent notiintent = new Intent(context, MainActivity.class);
-		notiintent.setAction("fromNotification");
-		notiintent.putExtra("notiObject", (Parcelable)objHome);
-		PendingIntent contentIntent = PendingIntent.getActivity(context, 0,notiintent, PendingIntent.FLAG_UPDATE_CURRENT);
 		
-		Builder builder = new Builder(context.getApplicationContext());
- 		RemoteViews contentView = new RemoteViews(context.getPackageName(), R.layout.notification_layout);
- 	    contentView.setImageViewResource(R.id.popular_img, GreateSpeechesUtil.getResId(objHome.getImageId()+"_l", R.drawable.class));
- 	    contentView.setTextViewText(R.id.person_name, objHome.getName());
- 	    contentView.setTextViewText(R.id.person_quote, objHome.getQuote());
- 	    builder.setAutoCancel(true)
-	     .setDefaults(Notification.DEFAULT_ALL)
-	     .setWhen(System.currentTimeMillis())         
-	     .setSmallIcon(R.drawable.app_icon144_5)
-	     .setContentTitle("Great Lives")
-	     .setContent(contentView)
-	     .setDefaults(Notification.DEFAULT_LIGHTS| Notification.DEFAULT_VIBRATE| Notification.DEFAULT_SOUND)
-	     .setContentIntent(contentIntent);
+		try {
+			Intent notiintent = new Intent(context, MainActivity.class);
+			notiintent.setAction("fromNotification");
+			notiintent.putExtra("notiObject", (Parcelable)objHome);
+			PendingIntent contentIntent = PendingIntent.getActivity(context, 0,notiintent, PendingIntent.FLAG_UPDATE_CURRENT);
+			
+			android.support.v4.app.NotificationCompat.Builder builder = new android.support.v4.app.NotificationCompat.Builder(context.getApplicationContext());
+	 		RemoteViews contentView = new RemoteViews(context.getPackageName(), R.layout.notification_layout);
+	 	    contentView.setImageViewResource(R.id.popular_img, GreateSpeechesUtil.getResId(objHome.getImageId()+"_l", R.drawable.class));
+	 	    contentView.setTextViewText(R.id.person_name, objHome.getName());
+	 	    contentView.setTextViewText(R.id.person_quote, objHome.getQuote());
+	 	    builder.setAutoCancel(true)
+		     .setDefaults(Notification.DEFAULT_ALL)
+		     .setWhen(System.currentTimeMillis())         
+		     .setSmallIcon(R.drawable.app_icon144_5)
+		     .setContentTitle("Great Lives")
+		     .setContent(contentView)
+		     .setDefaults(Notification.DEFAULT_LIGHTS| Notification.DEFAULT_VIBRATE| Notification.DEFAULT_SOUND)
+		     .setContentIntent(contentIntent);
+			
+			mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+//			Notification notification = new Notification.BigTextStyle(builder).bigText(""+objHome.getQuote()).build();
+//			Notification notification = new NotificationCompat.Builder(context);
+//			notification.bigContentView = contentView;
+			mNotificationManager.notify(NOTIFICATION_ID, builder.getNotification());
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 		
-		mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-//		Notification notification = new Notification.BigTextStyle(builder).bigText(""+objHome.getQuote()).build();
-//		Notification notification = new NotificationCompat.Builder(context);
-//		notification.bigContentView = contentView;
-		mNotificationManager.notify(NOTIFICATION_ID, builder.build());
 	}
 }

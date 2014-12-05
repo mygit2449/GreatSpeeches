@@ -34,14 +34,13 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 	private ListView mListView;
 
 	private int mPosition;
-	public  static  ArrayList<HomeDataModel> homeDataarr = null;
-	private static List<String> categoriesList = null;
+//	public   ArrayList<HomeDataModel> homeDataarr = null;
+//	private  List<String> categoriesList = null;
 
 	public static Fragment newInstance(int position,  ArrayList<HomeDataModel> homeDataarr1) {
 		MainListFragmentListFragment f = new MainListFragmentListFragment();
 		Bundle b = new Bundle();
 		b.putInt(ARG_POSITION, position);
-		homeDataarr=homeDataarr1;
 		f.setArguments(b);
 		return f;
 	}
@@ -50,7 +49,6 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 		MainListFragmentListFragment f = new MainListFragmentListFragment();
 		Bundle b = new Bundle();
 		b.putInt(ARG_POSITION, position);
-		categoriesList = categoriesList1;
 		f.setArguments(b);
 		return f;
 	}
@@ -59,6 +57,17 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mPosition = getArguments().getInt(ARG_POSITION);
+	}
+	
+	
+	@Override
+	public void onResume(){
+		super.onResume();
+//		if(mPosition == 0){
+//			homeDataarr =  ((MainActivity) getActivity()).homeDataarr;
+//		}else{
+//			categoriesList = ((MainActivity) getActivity()).categoriesList;
+//		}
 	}
 
 	@Override
@@ -78,10 +87,10 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 				// TODO Auto-generated method stub
 				if(arg2 > 0){
 					if (mPosition == 0) {
-						startActivity(new Intent(getActivity(), PersonsDescriptionView.class).putExtra("position", arg2-1).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
+						startActivity(new Intent(getActivity(), PersonsDescriptionView.class).putExtra("position", arg2-1).putParcelableArrayListExtra("popularItems", ((MainActivity) getActivity()).homeDataarr).setAction("fromPop").setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 					}else {
-						startActivity(new Intent(getActivity(), CategoriesListScreen.class).putExtra("categoryType", categoriesList.get(arg2-1)).setAction("fromCat"));
-						getActivity().finish();
+						startActivity(new Intent(getActivity(), CategoriesListScreen.class).putExtra("categoryType", ((MainActivity) getActivity()).categoriesList.get(arg2-1)).setAction("fromCat").setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+//						getActivity().finish();
 					}
 				}
 			}
@@ -147,16 +156,16 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 					TextView personName = (TextView)convertView.findViewById(R.id.person_name);
 					ImageView personImage = (ImageView)convertView.findViewById(R.id.popular_img);
 					TextView personQuote = (TextView)convertView.findViewById(R.id.person_quote);
-					personName.setText(""+homeDataarr.get(position).getName());
-					personQuote.setText(""+homeDataarr.get(position).getQuote());
-					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(homeDataarr.get(position).getImageId()+"_l", R.drawable.class));
+					personName.setText(""+((MainActivity) getActivity()).homeDataarr.get(position).getName());
+					personQuote.setText(""+((MainActivity) getActivity()).homeDataarr.get(position).getQuote());
+					personImage.setBackgroundResource(GreateSpeechesUtil.getResId(((MainActivity) getActivity()).homeDataarr.get(position).getImageId()+"_l", R.drawable.class));
 				} catch (Exception e) {
 					// TODO: handle exception
 					e.printStackTrace();
 				}
 			}else{
 				TextView categoryName = (TextView)convertView.findViewById(android.R.id.text1);
-				categoryName.setText(""+categoriesList.get(position));
+				categoryName.setText(""+((MainActivity) getActivity()).categoriesList.get(position));
 				categoryName.setTextColor(Color.parseColor("#ffffff"));
 				categoryName.setTypeface(Typeface.create("sans-serif-light", Typeface.NORMAL));
 			}
@@ -171,9 +180,9 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 			// TODO Auto-generated method stub
 			int count;
 			if (type == 0) {
-				count = homeDataarr.size();
+				count = ((MainActivity) getActivity()).homeDataarr.size();
 			}else{
-				count = categoriesList.size();
+				count = ((MainActivity) getActivity()).categoriesList.size();
 			}
 			return count;
 		}
@@ -192,9 +201,9 @@ public class MainListFragmentListFragment extends ScrollTabHolderFragment implem
 			// TODO Auto-generated method stub
 			Object item;
 			if (type == 0) {
-				item = homeDataarr.get(position);
+				item = ((MainActivity) getActivity()).homeDataarr.get(position);
 			}else{
-				item = categoriesList.get(position);
+				item = ((MainActivity) getActivity()).categoriesList.get(position);
 			}
 			return item;
 		}

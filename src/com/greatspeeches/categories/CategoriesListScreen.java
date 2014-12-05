@@ -3,13 +3,13 @@ package com.greatspeeches.categories;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -154,25 +154,20 @@ public class CategoriesListScreen extends Activity {
 		}
 		
 	}
+	
+	
+	 @Override
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	        switch (item.getItemId()) {
+	            case android.R.id.home:
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.categories_list_screen, menu);
-		return true;
-	}
+	            		finish();
+	                return true;
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-        case android.R.id.home:
-            // Navigate "up" the demo structure to the launchpad activity.
-            // See http://developer.android.com/design/patterns/navigation.html for more.
-            startActivity(new Intent(CategoriesListScreen.this, MainActivity.class).setAction("fromCat"));
-            finish();
-            return true;
+	         
+	        }
 
-		}
-		return super.onOptionsItemSelected(item);
-	}
+	        return super.onOptionsItemSelected(item);
+	    }
+
 }

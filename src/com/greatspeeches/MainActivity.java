@@ -86,7 +86,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
     private Runnable runnable, bgupdateRunnable; 
 
     private int pickedNumber;
-    private List<String> categoriesList = null;
+    public List<String> categoriesList = null;
     public  ArrayList<HomeDataModel> homeDataarr = null;
     private FragmentManager fManager;
     private boolean doubleback = false;
@@ -558,7 +558,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
  			for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {    
  			    fm.popBackStack();
  			}
-            finish();
+ 			finish();
         } else {
         	doubleback = true;
             Toast.makeText(MainActivity.this, "Press the back key again to close the app.", Toast.LENGTH_SHORT).show();

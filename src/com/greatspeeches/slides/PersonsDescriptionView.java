@@ -327,8 +327,13 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	                // See http://developer.android.com/design/patterns/navigation.html for more.
 //	            	getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
 //	                startActivity(new Intent(PersonsDescriptionView.this, HomeScreen.class).setAction(getIntent().getAction()));
-	            	startActivity(new Intent(PersonsDescriptionView.this, MainActivity.class).setAction(getIntent().getAction()));
-	                finish();
+	            	
+	            	if(dataList.get(selectPos).getType().equalsIgnoreCase("Popular")){
+	            		startActivity(new Intent(PersonsDescriptionView.this, MainActivity.class).setAction(getIntent().getAction()));
+	            		finish();
+	            	}else{
+	            		finish();
+	            	}
 	                return true;
 
 	            case R.id.action_previous:
