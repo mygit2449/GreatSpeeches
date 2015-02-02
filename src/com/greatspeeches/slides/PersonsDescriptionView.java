@@ -1,27 +1,36 @@
 package com.greatspeeches.slides;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+import org.apache.commons.io.FileUtils;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.SparseArray;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,6 +59,7 @@ import com.facebook.model.GraphObject;
 import com.greatspeeches.MainActivity;
 import com.greatspeeches.R;
 import com.greatspeeches.helper.ArcMenu;
+import com.greatspeeches.helper.AudioDownloaderTask;
 import com.greatspeeches.helper.AudioPlayer;
 import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.models.HomeDataModel;
@@ -221,13 +231,9 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				}else{
 				}
 				
-				if (_customPlayer.isPlaying()) {
-//					_playBtn.setBackgroundResource(R.drawable.play_button_status);
+				if (_playerLayout.getVisibility() == View.VISIBLE) {
 					resetAudioPlayer();
-					Thread _playerThread = new Thread(_buttonUpdate);
-					_playerThread.start();
-//					resetAudioPlayer();
-//					stopAudioAnimation();
+					stopAudioAnimation();
 				}else{
 //					_playerLayout.setVisibility(View.GONE);
 //					resetAudioPlayer();
@@ -460,28 +466,15 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		                		if(null  != selecedFragment && ((null != selecedFragment.cVideoView && selecedFragment.cVideoView.isPlaying()) || (null != selecedFragment.activePlayer && selecedFragment.activePlayer.isPlaying()))){
 		                			Toast.makeText(PersonsDescriptionView.this, "Not possible to play audio now, video is already playing.", Toast.LENGTH_SHORT).show();
 		                		}else{
-		                			_playerLayout.startAnimation(bottomToTopAnim);
-		                			bottomToTopAnim.setAnimationListener(new AnimationListener() {
-		                				
-		                				@Override
-		                				public void onAnimationStart(Animation animation) {
-		                					// TODO Auto-generated method stub
-		                					
-		                				}
-		                				
-		                				@Override
-		                				public void onAnimationRepeat(Animation animation) {
-		                					// TODO Auto-generated method stub
-		                					
-		                				}
-		                				
-		                				@Override
-		                				public void onAnimationEnd(Animation animation) {
-		                					// TODO Auto-generated method stub
-		                					_playerLayout.setVisibility(View.VISIBLE);
-		                					play(dataList.get(selectPos).audio);
-		                				}
-		                			});
+		                			if (!isFileExisted(dataList.get(selectPos).audio)) {
+		                				if(network.isConnectingToInternet()){
+		                					new AudioDownloaderTask(PersonsDescriptionView.this, GreateSpeechesUtil.AUDIO_LINK+dataList.get(selectPos).audio, touchHandle).execute();
+				                		}else{
+				                			Toast.makeText(PersonsDescriptionView.this, "oops!,Please check Internet connection and try again!", Toast.LENGTH_SHORT).show();
+				                		}
+		                			}else{
+		                				touchHandle.sendEmptyMessage(2);
+		                			}
 		                		}
 		                	}else if(ITEM_DRAWABLES[position] == R.drawable.twitter){
 		                		if(network.isConnectingToInternet()){
@@ -555,25 +548,27 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	}
 	
 	private void play(final String fileName){
-		AssetFileDescriptor afd = null;
-		try {
-			afd = getAssets().openFd(fileName);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    try {
-	    	_customPlayer.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
-		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalStateException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		 try {
+		    	_customPlayer.setDataSource(fileName);
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalStateException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		    try {
+		    	_customPlayer.prepare();
+			} catch (IllegalStateException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	    try {
 	    	_customPlayer.prepare();
 		} catch (IllegalStateException e) {
@@ -696,8 +691,78 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		  dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		  dialog.setContentView(R.layout.quote_layout);
 		  dialog.setCanceledOnTouchOutside(true);
-		  final TextView quoteTxt = (TextView)dialog.findViewById(R.id.quoteTxt);
-		  quoteTxt.setText('"' + quote + '"');
+		  final TextView quoteCountTxt = (TextView)dialog.findViewById(R.id.countTxt);
+		  final ArrayList<String> quoteList = new ArrayList<String>();
+		  quoteList.add("Sample1");
+		  quoteList.add("Sample2");
+		  quoteList.add("Sample3");
+		  quoteList.add("Sample4");
+		  quoteList.add("Sample5");
+		  quoteCountTxt.setText("1"+"/"+quoteList.size());
+		  ViewPager quotePager = (ViewPager)dialog.findViewById(R.id.quote_viewpager);
+		  
+		  quotePager.setAdapter(new PagerAdapter() {
+
+	            @Override
+	            public Object instantiateItem(final ViewGroup collection, final int position) {
+	                int resId =  R.layout.onlyquote;
+	                LayoutInflater inflater = (LayoutInflater)PersonsDescriptionView.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	                View view = inflater.inflate(resId, null);
+
+	      		   TextView quoteTxt = (TextView)view.findViewById(R.id.quoteTxt);
+	      		   quoteTxt.setText('"' + quoteList.get(position) + '"');
+
+	                int viewCount = collection.getChildCount();
+//	                if (viewCount == 0 && position == 1) {
+//	                    collection.addView(view);
+//	                } else {
+//	                    collection.addView(view, position);
+//	                }
+
+	                collection.addView(view);
+	                return view;
+	            }
+
+
+	            @Override
+	            public int getCount() {
+	                return quoteList.size();
+	            }
+
+	            @Override
+	            public boolean isViewFromObject(View view, Object object) {
+	                return view == object;
+	            }
+
+	            @Override
+	            public void destroyItem(ViewGroup container, int position, Object object) {
+	                container.removeView((View)object);
+	            }
+
+	        });
+		  
+		  
+		  quotePager.setOnPageChangeListener(new OnPageChangeListener() {
+			
+			@Override
+			public void onPageSelected(int arg0) {
+				// TODO Auto-generated method stub
+				quoteCountTxt.setText(arg0+1+"/"+quoteList.size());
+			}
+			
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		  
 		  ImageView personImage = (ImageView)dialog.findViewById(R.id.popular_img);
 		  personImage.setBackgroundResource(GreateSpeechesUtil.getResId(dataList.get(selectPos).getImageId()+"_l", R.drawable.class));
 		  final TextView nameTxt = (TextView)dialog.findViewById(R.id.nameTxt);
@@ -712,7 +777,6 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 			}
 		});
 		  
-		  
 		  Button mShareBtn= (Button)dialog.findViewById(R.id.shareBtn);
 		  mShareBtn.setOnClickListener(new OnClickListener() {
 			
@@ -721,7 +785,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				// TODO Auto-generated method stub
 				StringBuilder sb = new StringBuilder();
 				sb.append(""+nameTxt.getText().toString()+"\r\n  ");
-				sb.append(""+quoteTxt.getText().toString());
+				sb.append(""+"");
 				
 				Intent sendIntent = new Intent();
 				sendIntent.setAction(Intent.ACTION_SEND);
@@ -744,8 +808,6 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				// TODO Auto-generated method stub
 				super.handleMessage(msg);
 				if (msg.what==0) {
-//					arcMenu2.setVisibility(View.GONE);
-					
 					arcMenu2.startAnimation(topToBottomanimForicon);
 					topToBottomanimForicon.setAnimationListener(new AnimationListener() {
 						@Override
@@ -766,6 +828,36 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 					});
 					
 					
+				}else if (msg.what==2){
+					_playerLayout.invalidate();
+					_playerLayout.setVisibility(View.INVISIBLE);
+					_playerLayout.startAnimation(bottomToTopAnim);
+        			bottomToTopAnim.setAnimationListener(new AnimationListener() {
+        				
+        				@Override
+        				public void onAnimationStart(Animation animation) {
+        					// TODO Auto-generated method stub
+        					
+        				}
+        				
+        				@Override
+        				public void onAnimationRepeat(Animation animation) {
+        					// TODO Auto-generated method stub
+        					
+        				}
+        				
+        				@Override
+        				public void onAnimationEnd(Animation animation) {
+        					// TODO Auto-generated method stub
+        					_playerLayout.setVisibility(View.VISIBLE);
+        					int indexPos = dataList.get(selectPos).audio.lastIndexOf("/");
+        					String fileName = dataList.get(selectPos).audio.substring(indexPos+1, dataList.get(selectPos).audio.length());
+        					String sdcard_path = String.format(Environment.getExternalStorageDirectory().getAbsolutePath()+"/GreatLives"+"/"+fileName);
+        					play(sdcard_path);
+        				}
+        			});
+				}else if(msg.what==4){
+        			Toast.makeText(PersonsDescriptionView.this, "oops!,A problem occured while playing audio, please try again!", Toast.LENGTH_SHORT).show();
 				}else{
 					arcMenu2.startAnimation(bottomToTopAnimForicon);
 					bottomToTopAnimForicon.setAnimationListener(new AnimationListener() {
@@ -795,4 +887,42 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	    	
 	    };
 	 
+	    /**
+		 * Checking whether the file existed in SD card or not
+		 * @param fileName
+		 * @return  true if file existed and false if file not existed.
+		 */
+		 private boolean  isFileExisted(String fileName)
+		    {
+			    boolean iChecker = false;
+
+		    	File root = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/GreatLives");
+		    	try
+		    	{
+		    		boolean recursive = true;
+		    		Collection files = FileUtils.listFiles(root, null, recursive);
+		    		for (Iterator iterator = files.iterator(); iterator.hasNext();)
+		    		{
+		    			File file = (File) iterator.next();
+		    			if (file.getName().startsWith(fileName))
+		    			{
+		    				File isFile = new File(file.getAbsolutePath());
+		    				if(isFile.exists())
+		    				{
+		    					iChecker = true; 
+		    				}else{
+		    					iChecker = false;
+		    				}
+		    			}
+		    			
+		    		}
+		    	} 
+		    	catch (Exception e) 
+		    	{
+		              e.printStackTrace();
+		    	}
+		    	
+		    	return iChecker;
+		    }
+	    
 }

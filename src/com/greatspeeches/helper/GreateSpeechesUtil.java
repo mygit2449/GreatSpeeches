@@ -11,6 +11,7 @@ import android.util.DisplayMetrics;
 public class GreateSpeechesUtil {
 
 	  public static final String 	yOUTUBEdEVELOPERkEY = "AIzaSyBXQz3Hm2vdDThGelmJc6731S9etuzb1Nc";
+	  public  static final String AUDIO_LINK = "https://81ccbf467f07ea9920c08612ae7f36a6c5656fbf.googledrive.com/host/0Byk9-iyvqqzcbF9GSDdHYU81Rms/";
 
 	 public static int getResId(String variableName, Class<?> c) {
 	    	
