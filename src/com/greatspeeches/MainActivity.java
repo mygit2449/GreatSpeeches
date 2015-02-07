@@ -2,14 +2,10 @@ package com.greatspeeches;
 
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
-import java.util.Random;
-
-import org.xmlpull.v1.XmlPullParser;
 
 import android.annotation.TargetApi;
 import android.app.AlarmManager;
@@ -17,7 +13,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.AssetManager;
 import android.graphics.RectF;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,9 +25,7 @@ import android.support.v4.util.SparseArrayCompat;
 import android.support.v4.view.ViewPager;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.util.Log;
 import android.util.TypedValue;
-import android.util.Xml;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -42,6 +35,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.greatspeeches.database.GreatLivesDataBaseHelper;
 import com.greatspeeches.helper.ObjectSerializer;
 import com.greatspeeches.helper.PagerSlidingTabStrip;
 import com.greatspeeches.helper.ScrollTabHolder;
@@ -51,7 +45,6 @@ import com.greatspeeches.notboringactionbar.AlphaForegroundColorSpan;
 import com.greatspeeches.notboringactionbar.KenBurnsSupportView;
 import com.greatspeeches.receivers.NotificationReceiver;
 import com.greatspeeches.slides.PersonsDescriptionView;
-import com.greatspeeches.util.DataParser;
 import com.nineoldandroids.view.ViewHelper;
 
 public class MainActivity extends FragmentActivity implements ScrollTabHolder, ViewPager.OnPageChangeListener {
@@ -77,20 +70,19 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	private SpannableString mSpannableString;
 	private AlphaForegroundColorSpan mAlphaForegroundColorSpan;
 	
-	private int[] _imageaCount = {R.drawable.nelson,R.drawable.mikhail,R.drawable.john_kennedy,
+	private int[] _imageaCount = {R.drawable.mikhail,R.drawable.john_kennedy,
 			R.drawable.gandhi,R.drawable.william,R.drawable.helen,R.drawable.anne,R.drawable.patrick_henry,R.drawable.churchill,R.drawable.martin_hh,R.drawable.lyndon_johnson,R.drawable.reagan,
-			R.drawable.swami_hh,R.drawable.abraham_lincoln,R.drawable.sri};
+			R.drawable.swami_hh,R.drawable.abraham_lincoln,R.drawable.sri,R.drawable.nelson};
 	
 	private ViewFlipper _slideViewFlipper;
     private Handler handler, bgUpdatedHandler;
-    private Runnable runnable, bgupdateRunnable; 
-
-    private int pickedNumber;
+    private Runnable runnable;
     public List<String> categoriesList = null;
     public  ArrayList<HomeDataModel> homeDataarr = null;
     private FragmentManager fManager;
     private boolean doubleback = false;
 
+    private GreatLivesDataBaseHelper mDataBaseHelper = null;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -102,12 +94,8 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		mMinHeaderTranslation = -mMinHeaderHeight + getActionBarHeight();
 		setContentView(R.layout.activity_main);
 
-//		if (null != getIntent() && getIntent().getAction().equalsIgnoreCase("fromNotification")) {
-//			handleNotificationLaunch(getIntent());
-//		}else{
-//			setContentView(R.layout.activity_main);
-//			forFirstStep();
-//		}
+		mDataBaseHelper = new GreatLivesDataBaseHelper(MainActivity.this);
+		mDataBaseHelper.openDataBase();
 		
 		fManager = getSupportFragmentManager();
 		
@@ -120,20 +108,9 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		
 	}
 
-//	@Override
-//	public void onResume(){
-//		super.onResume();
-//		if (null != getIntent() && getIntent().getAction().equalsIgnoreCase("fromNotification")) {
-//			getIntent().setAction("Noneed");
-//			handleNotificationLaunch(getIntent());
-//		}else{
-//			forFirstStep();
-//		}
-//	}
-	
-	
+
 	public void forFirstStep(){
-		homeDataarr = parser();
+		homeDataarr = mDataBaseHelper.getData("Popular");
 		categoriesList = Arrays.asList(getResources().getStringArray(R.array.categories));
 		
 		mHeaderPicture = (KenBurnsSupportView) findViewById(R.id.header_picture);
@@ -177,25 +154,11 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 				@Override
 				public void run() {
 					// TODO Auto-generated method stub
-					Random rand = new Random();  
-					pickedNumber = rand.nextInt(_imageaCount.length)+1;
-//					updateBeautyBg(pickedNumber);
 					handler.postDelayed(runnable, 5000);
 					_slideViewFlipper.showNext();
 				}
 			};
-			
-			bgupdateRunnable = new Runnable() {
-				@Override
-				public void run() {
-					// TODO Auto-generated method stub
-					Random rand = new Random();  
-					pickedNumber = rand.nextInt(_imageaCount.length)+1;
-//					updateBeautyBg(pickedNumber);
-//					bgUpdatedHandler.postDelayed(runnable, 10000);
-				}
-			};
-			
+	
 			handler  = new Handler();
 			handler.postDelayed(runnable, 5000);
 			
@@ -218,20 +181,9 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 
 		if (iCheckCount == 0) {
 			totalDataArrayList.addAll(homeDataarr);
-			Log.v(this.getClass().getSimpleName(), "totalDataArrayList...11.."+totalDataArrayList.size());
 			for (int iCheck = 0; iCheck < categoriesList.size(); iCheck++) {
 				ArrayList<HomeDataModel> innerDataArrayList  = null;
-				if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category1))) {
-					innerDataArrayList = new DataParser(this).parser("science.xml");
-				}else if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category2))) {
-					innerDataArrayList = new DataParser(this).parser("sports.xml");
-				}else if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category3))) {
-					innerDataArrayList = new DataParser(this).parser("cultural.xml");
-				}else if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category4))) {
-					innerDataArrayList = new DataParser(this).parser("politicians.xml");
-				}else if (categoriesList.get(iCheck).equalsIgnoreCase(getResources().getString(R.string.category5))) {
-					innerDataArrayList = new DataParser(this).parser("womens.xml");
-				}
+				innerDataArrayList =  mDataBaseHelper.getData(categoriesList.get(iCheck));
 				totalDataArrayList.addAll(innerDataArrayList);
 			}
 			
@@ -245,8 +197,6 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 				preferencesEdit.putInt("alarmCount", totalDataArrayList.size());
 			}
 			preferencesEdit.commit();
-			
-			Log.v(this.getClass().getSimpleName(), "totalDataArrayList...22.."+totalDataArrayList.size());
 			setQoutationReminders();
 		}
 		
@@ -279,69 +229,6 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 				mHeaderPicture.setResourceIds(_imageaCount[forimg], _imageaCount[nextImg]);
 			}
 		}
-	}
-	
-	public ArrayList<HomeDataModel> parser() {
-		// TODO Auto-generated method stub
-		XmlPullParser parser = Xml.newPullParser();
-		ArrayList<HomeDataModel> HomeDataModelList = null;
-		try {
-	        AssetManager assetManager = getApplicationContext().getAssets();
-			InputStream is = assetManager.open("field.xml");
-			parser.setInput(is, null);
-			int eventType = parser.getEventType();
-			HomeDataModel mHomeDataModelObj = null;
-			while (eventType != XmlPullParser.END_DOCUMENT) {
-				String name = null;
-				switch (eventType) {
-				case XmlPullParser.START_DOCUMENT:
-					
-
-					break;
-				case XmlPullParser.START_TAG:
-					name = parser.getName();
-					if (name.equalsIgnoreCase("Menu")) {
-						HomeDataModelList = new ArrayList<HomeDataModel>();						
-					}else if (name.equalsIgnoreCase("item")) {
-						mHomeDataModelObj = new HomeDataModel();					
-					}else if (name.equalsIgnoreCase("id")) {
-						mHomeDataModelObj.setId(parser.nextText());
-					}else if (name.equalsIgnoreCase("name")) {
-						mHomeDataModelObj.setName(parser.nextText());
-					}else if (name.equalsIgnoreCase("img")) {
-						mHomeDataModelObj.setImageId(parser.nextText());
-					}else if (name.equalsIgnoreCase("quote")) {
-						mHomeDataModelObj.setQuote(parser.nextText());
-					}else if (name.equalsIgnoreCase("info")) {
-						mHomeDataModelObj.setInfo(parser.nextText());
-					}else if (name.equalsIgnoreCase("audio")) {
-						mHomeDataModelObj.setAudio(parser.nextText());
-					}else if (name.equalsIgnoreCase("video")) {
-						mHomeDataModelObj.setVideourl(parser.nextText());
-					}else if (name.equalsIgnoreCase("type")) {
-						mHomeDataModelObj.setType(parser.nextText());
-					}else if (name.equalsIgnoreCase("bdate")) {
-						mHomeDataModelObj.setbDate(parser.nextText());
-					}else if (name.equalsIgnoreCase("ddate")) {
-						mHomeDataModelObj.setdDate(parser.nextText());
-					}else if (name.equalsIgnoreCase("achievements")) {
-						mHomeDataModelObj.setAchievement(parser.nextText());
-					}
-					break;
-				case XmlPullParser.END_TAG:
-					name = parser.getName();
-					if (name.equalsIgnoreCase("item")) {
-						HomeDataModelList.add(mHomeDataModelObj);
-						mHomeDataModelObj = null;
-					}
-					break;
-				}
-				eventType = parser.next();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return HomeDataModelList;
 	}
 	
 	@Override
@@ -520,34 +407,11 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	public void handleNotificationLaunch(Intent receiverIntent){
 		HomeDataModel receivedObj = receiverIntent.getExtras().getParcelable("notiObject");
 		int selectedPos = -1;
-		if (receivedObj.getType().equalsIgnoreCase("Popular")) {
-			homeDataarr = parser();
-			selectedPos = Integer.parseInt(receivedObj.getId());
-			if (selectedPos > -1 && selectedPos <= homeDataarr.size()) {
+		homeDataarr = mDataBaseHelper.getData(receivedObj.getType());
+		selectedPos = Integer.parseInt(receivedObj.getId());
+		if (null != homeDataarr && selectedPos > -1 && selectedPos <= homeDataarr.size()) {
 				startActivity(new Intent(this, PersonsDescriptionView.class).putExtra("position", selectedPos).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
 				finish();
-			}
-		}else{
-			if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category1))){
-				homeDataarr = new DataParser(this).parser("science.xml");
-			}else if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category2))){
-				homeDataarr = new DataParser(this).parser("sports.xml");
-			}else if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category3))){
-				homeDataarr = new DataParser(this).parser("cultural.xml");
-			}else if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category4))){
-				homeDataarr = new DataParser(this).parser("politicians.xml");
-			}else if(receivedObj.getType().equalsIgnoreCase(""+getResources().getString(R.string.category5))){
-				homeDataarr = new DataParser(this).parser("womens.xml");
-			}
-			
-			
-			selectedPos = Integer.parseInt(receivedObj.getId());
-			
-			
-			if (null != homeDataarr && selectedPos > -1 && selectedPos <= homeDataarr.size()) {
-				startActivity(new Intent(this, PersonsDescriptionView.class).putExtra("position", selectedPos).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
-				finish();
-			}
 		}
 	}
 	
@@ -570,5 +434,12 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
             }, 2000);
         }
  	}
+	
+	@Override
+	public void onDestroy(){
+		super.onDestroy();
+		if(null != mDataBaseHelper)
+			mDataBaseHelper.close();
+	}
 	
 }

@@ -3,7 +3,6 @@ package com.greatspeeches.categories;
 import java.util.ArrayList;
 
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -21,12 +20,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
-import com.greatspeeches.MainActivity;
 import com.greatspeeches.R;
+import com.greatspeeches.database.GreatLivesDataBaseHelper;
 import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.slides.PersonsDescriptionView;
-import com.greatspeeches.util.DataParser;
 
 public class CategoriesListScreen extends Activity {
 
@@ -38,33 +36,29 @@ public class CategoriesListScreen extends Activity {
     private Runnable runnable; 
     public  ArrayList<HomeDataModel> catDatarr = null;
     private ListView popularList;
-
+    private GreatLivesDataBaseHelper mDataBaseHelper = null;
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_categories_list_screen);
 		
 		typeStr = getIntent().getStringExtra("categoryType");
-
+		mDataBaseHelper = new GreatLivesDataBaseHelper(CategoriesListScreen.this);
+		mDataBaseHelper.openDataBase();
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setTitle(typeStr);
 //		getActionBar().hide();
 		
-		
+		catDatarr = mDataBaseHelper.getData(typeStr);
 		if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category1))){
-			catDatarr = new DataParser(CategoriesListScreen.this).parser("science.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.science);
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category2))){
-			catDatarr = new DataParser(CategoriesListScreen.this).parser("sports.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.sports);
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category3))){
-			catDatarr = new DataParser(CategoriesListScreen.this).parser("cultural.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.cultural);
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category4))){
-			catDatarr = new DataParser(CategoriesListScreen.this).parser("politicians.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.politicians);
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category5))){
-			catDatarr = new DataParser(CategoriesListScreen.this).parser("womens.xml");
 			imagesHere = getResources().obtainTypedArray(R.array.womens);
 		}
 		

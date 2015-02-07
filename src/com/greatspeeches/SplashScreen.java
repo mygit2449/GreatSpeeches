@@ -1,9 +1,12 @@
 package com.greatspeeches;
 
+import java.io.IOException;
+
+import com.greatspeeches.database.GreatLivesDataBaseHelper;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -13,12 +16,12 @@ import android.widget.ImageView;
 public class SplashScreen extends Activity {
 
 	private ImageView animImg;
-	
+	private GreatLivesDataBaseHelper mDataBaseHelper = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash_screen);
-		
+		mDataBaseHelper = new GreatLivesDataBaseHelper(SplashScreen.this);
 		Thread _splashThread = new Thread(null, _splashRunnable);
 		_splashThread.start();
 		
@@ -54,6 +57,12 @@ public class SplashScreen extends Activity {
 		public void run() {
 			// TODO Auto-generated method stub
 			try {
+				try {
+					mDataBaseHelper.createDataBase();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -74,4 +83,10 @@ public class SplashScreen extends Activity {
 		}
 	};
 
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		mDataBaseHelper.close();
+	}
+	
 }

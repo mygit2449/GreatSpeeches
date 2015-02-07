@@ -16,6 +16,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
@@ -29,6 +30,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -58,11 +61,13 @@ import com.facebook.Settings;
 import com.facebook.model.GraphObject;
 import com.greatspeeches.MainActivity;
 import com.greatspeeches.R;
+import com.greatspeeches.database.GreatLivesDataBaseHelper;
 import com.greatspeeches.helper.ArcMenu;
 import com.greatspeeches.helper.AudioDownloaderTask;
 import com.greatspeeches.helper.AudioPlayer;
 import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.models.HomeDataModel;
+import com.greatspeeches.models.Quotes;
 import com.greatspeeches.socialhub.TwitActivity;
 import com.greatspeeches.util.ConnectionDetector;
 
@@ -83,7 +88,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	private Button _playBtn, _prevBtn, _nextBtn;
 	private ImageView _closeBtn, _personImage;
 	private Animation topToBottomanim, bottomToTopAnim;   
-	private RelativeLayout _playerLayout = null;
+	private RelativeLayout _playerLayout = null, hintRel = null;
 	public ArcMenu arcMenu2;
 	private AudioPlayer _customPlayer = null;
 	
@@ -95,8 +100,11 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
     private ActionBar actionBar;
     private ScreenSlidePageFragment selecedFragment = null;
 	private Animation topToBottomanimForicon, bottomToTopAnimForicon;
-
-    
+	private SharedPreferences appPrefs = null;
+	private boolean isFirstTime = true;
+	private GreatLivesDataBaseHelper mDataBaseHelper = null;
+	private  TextView personText;
+	
     private Session.StatusCallback statusCallback = new Session.StatusCallback() {
         @Override
         public void call(Session session, SessionState state, Exception exception) {
@@ -125,6 +133,11 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		super.onCreate(savedInstanceState);
 //		getWindow().requestFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
 		setContentView(R.layout.activity_persons_description_view); 
+		
+		appPrefs = this.getSharedPreferences("gl", MODE_PRIVATE);
+		isFirstTime  = appPrefs.getBoolean("firstTime", true);
+		mDataBaseHelper = new GreatLivesDataBaseHelper(PersonsDescriptionView.this);
+		mDataBaseHelper.openDataBase();
 		
 		network = new ConnectionDetector(PersonsDescriptionView.this);
 		
@@ -185,14 +198,24 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		receiverIntent = getIntent();
 		selectPos = receiverIntent.getExtras().getInt("position");
 
+		hintRel = (RelativeLayout)findViewById(R.id.hintRel);
+		personText = (TextView)findViewById(R.id.hint);
+		personText.setText(this.getResources().getString(R.string.demo_hint,dataList.get(selectPos).getName()));
 		initArcMenu(arcMenu2, ITEM_DRAWABLES);
-		
+
 		// Instantiate a ViewPager and a PagerAdapter.
 		mPager = (ViewPager) findViewById(R.id.pager);
 		mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
 		mPager.setAdapter(mPagerAdapter);
 		mPager.setCurrentItem(selectPos);
 		mPager.setOffscreenPageLimit(1);
+		selecedFragment = mPagerAdapter.getFragment(selectPos);
+		
+		if(isFirstTime) {
+			hintRel.setVisibility(View.VISIBLE);
+		}else{
+			hintRel.setVisibility(View.GONE);
+		}
 		
 		actionBar = getActionBar();
 		actionBar.setHomeButtonEnabled(true);
@@ -692,35 +715,26 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		  dialog.setContentView(R.layout.quote_layout);
 		  dialog.setCanceledOnTouchOutside(true);
 		  final TextView quoteCountTxt = (TextView)dialog.findViewById(R.id.countTxt);
-		  final ArrayList<String> quoteList = new ArrayList<String>();
-		  quoteList.add("Sample1");
-		  quoteList.add("Sample2");
-		  quoteList.add("Sample3");
-		  quoteList.add("Sample4");
-		  quoteList.add("Sample5");
+		  final ArrayList<Quotes> quoteList =mDataBaseHelper.getQuotes(dataList.get(selectPos).getId());
+		  Log.v(PersonsDescriptionView.this.getClass().getName(), "quoteList..."+quoteList.size());
 		  quoteCountTxt.setText("1"+"/"+quoteList.size());
-		  ViewPager quotePager = (ViewPager)dialog.findViewById(R.id.quote_viewpager);
-		  
+		  final ViewPager quotePager = (ViewPager)dialog.findViewById(R.id.quote_viewpager);
+		   
 		  quotePager.setAdapter(new PagerAdapter() {
 
 	            @Override
 	            public Object instantiateItem(final ViewGroup collection, final int position) {
-	                int resId =  R.layout.onlyquote;
-	                LayoutInflater inflater = (LayoutInflater)PersonsDescriptionView.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-	                View view = inflater.inflate(resId, null);
+	                
+	               int resId =  R.layout.onlyquote;
+	               LayoutInflater inflater = (LayoutInflater)PersonsDescriptionView.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	               View view = inflater.inflate(resId, null);
 
 	      		   TextView quoteTxt = (TextView)view.findViewById(R.id.quoteTxt);
-	      		   quoteTxt.setText('"' + quoteList.get(position) + '"');
-
-	                int viewCount = collection.getChildCount();
-//	                if (viewCount == 0 && position == 1) {
-//	                    collection.addView(view);
-//	                } else {
-//	                    collection.addView(view, position);
-//	                }
-
-	                collection.addView(view);
-	                return view;
+	      		   quoteTxt.setText('"' + quoteList.get(position).getqMessage().trim() + '"');
+	      		   quoteTxt.setMovementMethod(new ScrollingMovementMethod());
+	               collection.addView(view);
+	               
+	               return view;
 	            }
 
 
@@ -796,6 +810,26 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 			}
 		});
 		  
+		  
+		  dialog.findViewById(R.id.leftArrow).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				quotePager.setCurrentItem(quotePager.getCurrentItem()-1);
+			}
+		});
+		  
+		  
+		  dialog.findViewById(R.id.rightArrow).setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					quotePager.setCurrentItem(quotePager.getCurrentItem()+1);
+				}
+			});
+		  
 		  dialog.show();
 	 }	 
 	 
@@ -807,7 +841,19 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 			public void handleMessage(Message msg) {
 				// TODO Auto-generated method stub
 				super.handleMessage(msg);
+				
 				if (msg.what==0) {
+					
+					if(isFirstTime){
+						SharedPreferences.Editor preferencesEdit;
+						preferencesEdit = appPrefs.edit();
+						preferencesEdit.putBoolean("firstTime", !isFirstTime);
+						preferencesEdit.commit();
+						selecedFragment = mPagerAdapter.getFragment(selectPos);
+						hintRel.setVisibility(View.GONE);
+						return;
+					}
+					
 					arcMenu2.startAnimation(topToBottomanimForicon);
 					topToBottomanimForicon.setAnimationListener(new AnimationListener() {
 						@Override
@@ -829,6 +875,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 					
 					
 				}else if (msg.what==2){
+										
 					_playerLayout.invalidate();
 					_playerLayout.setVisibility(View.INVISIBLE);
 					_playerLayout.startAnimation(bottomToTopAnim);
@@ -859,6 +906,11 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				}else if(msg.what==4){
         			Toast.makeText(PersonsDescriptionView.this, "oops!,A problem occured while playing audio, please try again!", Toast.LENGTH_SHORT).show();
 				}else{
+					if(isFirstTime){
+						isFirstTime = !isFirstTime;
+						return;
+					}
+						
 					arcMenu2.startAnimation(bottomToTopAnimForicon);
 					bottomToTopAnimForicon.setAnimationListener(new AnimationListener() {
         				

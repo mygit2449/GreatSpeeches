@@ -27,4 +27,5 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
     <string name="achievement">Significance</string>
+    <string name="demo_hint">Tap here to find  more from \n %s</string>
 </resources>

@@ -50,7 +50,6 @@ import com.greatspeeches.helper.GreateSpeechesUtil;
 import com.greatspeeches.helper.StickyScrollView;
 import com.greatspeeches.models.HomeDataModel;
 import com.greatspeeches.video.CustomVideoView;
-import com.greatspeeches.video.YouTubeVideoPlayer;
 
 /**
  * A fragment representing a single step in a wizard. The fragment shows a dummy title indicating
@@ -61,13 +60,13 @@ public class ScreenSlidePageFragment extends Fragment{
 
     private HomeDataModel mPersonObj;
     private TextView infoData = null;
-    public ImageView personImg = null, closeImg;
-    public CustomVideoView cVideoView = null;
-    private RelativeLayout videoRel = null;
+    public  ImageView personImg = null, closeImg;
+    public  CustomVideoView cVideoView = null;
+    public  RelativeLayout videoRel = null;
     private PersonsDescriptionView myContext;
     
 	private FrameLayout fragmentsLayout;
-	public YouTubePlayer activePlayer;
+	public  YouTubePlayer activePlayer;
 	private String videoId =  "";
 	private StickyScrollView scroll = null;
 	private static Handler touchHandler;
@@ -184,15 +183,6 @@ public class ScreenSlidePageFragment extends Fragment{
     }
     
     public void closeYVplayer(){
-    	YouTubeVideoPlayer fragB = (YouTubeVideoPlayer) myContext.getSupportFragmentManager().findFragmentByTag("videoFrag");
-    	android.support.v4.app.FragmentManager manager =myContext.getSupportFragmentManager();
-		if(null != fragB){
-			android.support.v4.app.FragmentTransaction trans = manager.beginTransaction();
-			trans.remove(fragB);
-			trans.commit();
-			manager.popBackStack();
-		}
-		
       	android.support.v4.app.FragmentManager fragmentManager = myContext.getSupportFragmentManager();
 		if (fragmentManager.getBackStackEntryCount() > 0) {
 		    fragmentManager.popBackStack();
@@ -224,6 +214,7 @@ public class ScreenSlidePageFragment extends Fragment{
             }
         });
         
+    	
         scroll = (StickyScrollView)rootView.findViewById(R.id.topScroll);
         scroll.setTouchListener(touchHandler);
         fragmentsLayout = (FrameLayout)rootView.findViewById(R.id.video_container);

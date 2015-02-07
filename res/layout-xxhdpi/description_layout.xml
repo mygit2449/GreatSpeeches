@@ -1,209 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.greatspeeches.helper.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/topScroll"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ab_stacked_solid_dark_holo"
     android:orientation="vertical" >
 
-    <LinearLayout
+    <com.greatspeeches.helper.StickyScrollView
+        android:id="@+id/topScroll"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="30dp" >
+        android:layout_height="match_parent"
+        android:background="@drawable/ab_stacked_solid_dark_holo"
+        android:orientation="vertical" >
 
-        <RelativeLayout
-            android:id="@+id/mediaRel"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-
-            <ImageView
-                android:id="@+id/person_image"
-                android:layout_width="fill_parent"
-                android:layout_height="280dp"
-                android:scaleType="fitXY" />
-
-            <RelativeLayout
-                android:id="@+id/forVideo"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone" >
-
-                <com.greatspeeches.video.CustomVideoView
-                    android:id="@+id/surface_video"
-                    android:layout_width="match_parent"
-                    android:layout_height="280dp"
-                    android:layout_centerInParent="true"
-                    android:visibility="gone" />
-
-                <FrameLayout
-                    android:id="@+id/video_container"
-                    android:layout_width="fill_parent"
-                    android:layout_height="280dp"
-                    android:visibility="gone" >
-                </FrameLayout>
-
-                <ImageView
-                    android:id="@+id/closeBtn"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:src="@drawable/icon_cancel"
-                    android:visibility="gone" />
-            </RelativeLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/descLayout"
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/mediaRel"
-            android:layout_marginTop="10dp" >
+            android:orientation="vertical"
+            android:paddingBottom="30dp" >
 
             <RelativeLayout
-                android:id="@+id/bStrip"
+                android:id="@+id/mediaRel"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" >
 
+                <ImageView
+                    android:id="@+id/person_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="280dp"
+                    android:scaleType="fitXY" />
+
                 <RelativeLayout
-                    android:id="@+id/bDateRel"
+                    android:id="@+id/forVideo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <com.greatspeeches.video.CustomVideoView
+                        android:id="@+id/surface_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:id="@+id/video_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="280dp"
+                        android:visibility="gone" >
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/closeBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/icon_cancel"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/descLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mediaRel"
+                android:layout_marginTop="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/bStrip"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content" >
 
-                    <TextView
-                        android:id="@+id/bDateTitle"
+                    <RelativeLayout
+                        android:id="@+id/bDateRel"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#999999"
-                        android:padding="5dp"
-                        android:text="Born"
-                        android:textColor="#ffffff"
-                        android:textSize="18dp"
-                        android:textStyle="bold" />
+                        android:layout_height="wrap_content" >
 
-                    <TextView
-                        android:id="@+id/bDate"
+                        <TextView
+                            android:id="@+id/bDateTitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#999999"
+                            android:padding="5dp"
+                            android:text="Born"
+                            android:textColor="#ffffff"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bDate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/bDateTitle"
+                            android:fontFamily="sans-serif-light"
+                            android:padding="5dp"
+                            android:text="October 2, 1869, Porbandar"
+                            android:textColor="#ffffff"
+                            android:textSize="18dp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/dDateRel"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/bDateTitle"
-                        android:padding="5dp"
-                        android:text="October 2, 1869, Porbandar"
-                        android:textColor="#ffffff"
-                        android:textSize="18dp"
-                        android:textStyle="normal" 
-                        android:fontFamily="sans-serif-light"/>
+                        android:layout_below="@+id/bDateRel" >
+
+                        <TextView
+                            android:id="@+id/dDateTitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#999999"
+                            android:padding="5dp"
+                            android:text="Died"
+                            android:textColor="#ffffff"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dDate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dDateTitle"
+                            android:fontFamily="sans-serif-light"
+                            android:padding="5dp"
+                            android:text="October 2, 1869, Porbandar"
+                            android:textColor="#ffffff"
+                            android:textSize="18dp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
                 </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/acRel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bDateRel" >
 
                 <RelativeLayout
-                    android:id="@+id/dDateRel"
+                    android:id="@+id/acTitle"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/bDateRel" >
+                    android:tag="sticky-nonconstant-hastransparancy" >
 
                     <TextView
-                        android:id="@+id/dDateTitle"
+                        android:id="@+id/acTitleTxt"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:background="#999999"
                         android:padding="5dp"
-                        android:text="Died"
+                        android:tag="sticky"
+                        android:text="@string/achievement"
                         android:textColor="#ffffff"
                         android:textSize="18dp"
                         android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/C_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/acTitle"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="5dp"
+                    android:scrollbars="vertical"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/contentRel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acRel" >
+
+                <RelativeLayout
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="sticky-nonconstant-hastransparancy" >
 
                     <TextView
-                        android:id="@+id/dDate"
+                        android:id="@+id/historyTitle"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/dDateTitle"
+                        android:background="#999999"
                         android:padding="5dp"
-                        android:text="October 2, 1869, Porbandar"
+                        android:tag="sticky"
+                        android:text="Life in Brief"
                         android:textColor="#ffffff"
                         android:textSize="18dp"
-                        android:textStyle="normal"
-                        android:fontFamily="sans-serif-light" />
+                        android:textStyle="bold" />
                 </RelativeLayout>
-            </RelativeLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/acRel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/bDateRel" >
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" 
-                android:id="@+id/acTitle"
-                android:tag="sticky-nonconstant-hastransparancy" >
 
                 <TextView
-                    android:id="@+id/acTitleTxt"
+                    android:id="@+id/person_info"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#999999"
-                    android:padding="5dp"
-                    android:tag="sticky"
-                    android:text="@string/achievement"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/title"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="4dp"
+                    android:scrollbars="vertical"
                     android:textColor="#ffffff"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
+                    android:textSize="18dp" />
             </RelativeLayout>
+        </LinearLayout>
+    </com.greatspeeches.helper.StickyScrollView>
 
-            <TextView
-                android:id="@+id/C_info"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_marginBottom="50dp"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:scrollbars="vertical"
-                android:textColor="#ffffff"
-                android:textSize="18dp"
-                android:layout_below="@+id/acTitle"
-                android:fontFamily="sans-serif-light" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/contentRel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/acRel" >
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:tag="sticky-nonconstant-hastransparancy" 
-                android:id="@+id/title">
-
-                <TextView
-                    android:id="@+id/historyTitle"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#999999"
-                    android:padding="5dp"
-                    android:tag="sticky"
-                    android:text="Life in Brief"
-                    android:textColor="#ffffff"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/person_info"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_marginBottom="50dp"
-                android:layout_marginTop="5dp"
-                android:padding="4dp"
-                android:scrollbars="vertical"
-                android:textColor="#ffffff"
-                android:textSize="18dp"
-                android:layout_below="@+id/title" 
-                android:fontFamily="sans-serif-light"/>
-        </RelativeLayout>
-    </LinearLayout>
-
-</com.greatspeeches.helper.StickyScrollView>
+</FrameLayout>
