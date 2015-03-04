@@ -43,6 +43,7 @@
         <attr name="pstsTabPaddingLeftRight" format="dimension" />
         <attr name="pstsScrollOffset" format="dimension" />
         <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsIndicatorBackground" format="reference" />
         <attr name="pstsShouldExpand" format="boolean" />
         <attr name="pstsTextAllCaps" format="boolean" />
     </declare-styleable>

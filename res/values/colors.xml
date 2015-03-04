@@ -2,5 +2,6 @@
 
     <color name="black_overlay">#66000000</color>
     <color name="background_tab_pressed">#999999</color>
+    <color name="background_tab">#D9999999</color>
 
 </resources>

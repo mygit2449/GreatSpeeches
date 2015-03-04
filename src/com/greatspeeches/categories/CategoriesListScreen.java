@@ -49,7 +49,7 @@ public class CategoriesListScreen extends Activity {
 		getActionBar().setTitle(typeStr);
 //		getActionBar().hide();
 		
-		catDatarr = mDataBaseHelper.getData(typeStr);
+		catDatarr = mDataBaseHelper.getData(typeStr,0);
 		if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category1))){
 			imagesHere = getResources().obtainTypedArray(R.array.science);
 		}else if(typeStr.equalsIgnoreCase(""+getResources().getString(R.string.category2))){

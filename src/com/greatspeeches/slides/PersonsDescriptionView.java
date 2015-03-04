@@ -104,7 +104,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	private boolean isFirstTime = true;
 	private GreatLivesDataBaseHelper mDataBaseHelper = null;
 	private  TextView personText;
-	
+	public  String LOG_TAG = PersonsDescriptionView.this.getClass().getName();
     private Session.StatusCallback statusCallback = new Session.StatusCallback() {
         @Override
         public void call(Session session, SessionState state, Exception exception) {
@@ -175,6 +175,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	        v.setOnClickListener(new View.OnClickListener() {
 	            @Override 
 	            public void onClick(View v) {
+	            	touchHandle.sendEmptyMessage(0);
 	            	designQuoteDialog(""+dataList.get(selectPos).quote);
 	            } 
 	        }); 
@@ -310,10 +311,17 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
    }
 
    @Override
+   public void onResume(){
+	   super.onResume();
+	   Session session = Session.getActiveSession();
+	   session.addCallback(statusCallback);
+   }
+   @Override 
    public void onActivityResult(int requestCode, int resultCode, Intent data) {
        super.onActivityResult(requestCode, resultCode, data);
-       Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
-   }
+       Log.i(LOG_TAG, "result..."+requestCode+"..resultCode.."+resultCode);
+       Session.getActiveSession().onActivityResult(PersonsDescriptionView.this, requestCode, resultCode, data);
+   } 
 
    @Override
    protected void onSaveInstanceState(Bundle outState) {
@@ -709,6 +717,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 	 
 	  
 	 Dialog dialog;
+	 int selectedQoutePos = 0;
 	 public void designQuoteDialog(String quote){
 		  dialog = new Dialog(PersonsDescriptionView.this);
 		  dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -716,15 +725,13 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 		  dialog.setCanceledOnTouchOutside(true);
 		  final TextView quoteCountTxt = (TextView)dialog.findViewById(R.id.countTxt);
 		  final ArrayList<Quotes> quoteList =mDataBaseHelper.getQuotes(dataList.get(selectPos).getId());
-		  Log.v(PersonsDescriptionView.this.getClass().getName(), "quoteList..."+quoteList.size());
 		  quoteCountTxt.setText("1"+"/"+quoteList.size());
 		  final ViewPager quotePager = (ViewPager)dialog.findViewById(R.id.quote_viewpager);
-		   
 		  quotePager.setAdapter(new PagerAdapter() {
 
 	            @Override
 	            public Object instantiateItem(final ViewGroup collection, final int position) {
-	                
+	               
 	               int resId =  R.layout.onlyquote;
 	               LayoutInflater inflater = (LayoutInflater)PersonsDescriptionView.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	               View view = inflater.inflate(resId, null);
@@ -762,6 +769,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 			public void onPageSelected(int arg0) {
 				// TODO Auto-generated method stub
 				quoteCountTxt.setText(arg0+1+"/"+quoteList.size());
+				selectedQoutePos = arg0;
 			}
 			
 			@Override
@@ -799,7 +807,7 @@ public class PersonsDescriptionView extends FragmentActivity implements OnClickL
 				// TODO Auto-generated method stub
 				StringBuilder sb = new StringBuilder();
 				sb.append(""+nameTxt.getText().toString()+"\r\n  ");
-				sb.append(""+"");
+				sb.append(""+""+quoteList.get(selectedQoutePos).getqMessage().trim());
 				
 				Intent sendIntent = new Intent();
 				sendIntent.setAction(Intent.ACTION_SEND);

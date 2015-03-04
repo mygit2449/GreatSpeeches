@@ -1,7 +1,6 @@
 package com.greatspeeches;
 
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -36,7 +35,6 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.greatspeeches.database.GreatLivesDataBaseHelper;
-import com.greatspeeches.helper.ObjectSerializer;
 import com.greatspeeches.helper.PagerSlidingTabStrip;
 import com.greatspeeches.helper.ScrollTabHolder;
 import com.greatspeeches.helper.ScrollTabHolderFragment;
@@ -110,7 +108,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 
 
 	public void forFirstStep(){
-		homeDataarr = mDataBaseHelper.getData("Popular");
+		homeDataarr = mDataBaseHelper.getData("Popular",0);
 		categoriesList = Arrays.asList(getResources().getStringArray(R.array.categories));
 		
 		mHeaderPicture = (KenBurnsSupportView) findViewById(R.id.header_picture);
@@ -164,45 +162,18 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 			
 			bgUpdatedHandler  = new Handler();
 			bgUpdatedHandler.postDelayed(runnable, 10000);
-			savingPersistentDataForfistTime();
-		
-	}
-	
-	
-	
-	
-	private void  savingPersistentDataForfistTime(){
-		ArrayList<HomeDataModel> totalDataArrayList  = new ArrayList<HomeDataModel>();
-		SharedPreferences sharedPreferences;
-	    sharedPreferences = this.getSharedPreferences("gl", MODE_PRIVATE);
-		SharedPreferences.Editor preferencesEdit;
-		preferencesEdit = sharedPreferences.edit();
-		int iCheckCount = sharedPreferences.getInt("alarmCount", 0);
-
-		if (iCheckCount == 0) {
-			totalDataArrayList.addAll(homeDataarr);
-			for (int iCheck = 0; iCheck < categoriesList.size(); iCheck++) {
-				ArrayList<HomeDataModel> innerDataArrayList  = null;
-				innerDataArrayList =  mDataBaseHelper.getData(categoriesList.get(iCheck));
-				totalDataArrayList.addAll(innerDataArrayList);
-			}
 			
-			try {
-				preferencesEdit.putString("popularItems", ObjectSerializer.serialize(totalDataArrayList));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			SharedPreferences prefs = getSharedPreferences("gl", Context.MODE_PRIVATE);
+			boolean isFirstTrack = prefs.getBoolean("firstRem", true);
+			if(isFirstTrack){
+				SharedPreferences.Editor preferencesEdit;
+				preferencesEdit = prefs.edit();
+				preferencesEdit.putBoolean("firstRem",false);
+				preferencesEdit.commit();
+				setQoutationReminders();
 			}
-			if(totalDataArrayList.size() > 0){
-				preferencesEdit.putInt("alarmCount", totalDataArrayList.size());
-			}
-			preferencesEdit.commit();
-			setQoutationReminders();
-		}
 		
 	}
-	
-	
 	
 	OnClickListener flipClickListener = new OnClickListener() {
 		
@@ -239,8 +210,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	private AlarmManager alarmMgr;
 	private PendingIntent alarmIntent;
 	
-	public void setQoutationReminders(){
-		
+public void setQoutationReminders(){
 		alarmMgr = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE); 
 		Intent intent = new Intent(this, NotificationReceiver.class);
 		alarmIntent = PendingIntent.getBroadcast(this, 0, intent, 0); 
@@ -359,7 +329,7 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	public class PagerAdapter extends FragmentPagerAdapter {
 
 		private SparseArrayCompat<ScrollTabHolder> mScrollTabHolders;
-		private final String[] TITLES = { "         Popular          ","         Categories        "};
+		private final String[] TITLES = { "Popular","Categories"};
 		private ScrollTabHolder mListener;
 
 		public PagerAdapter(FragmentManager fm) {
@@ -405,10 +375,11 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 	}
 	
 	public void handleNotificationLaunch(Intent receiverIntent){
-		HomeDataModel receivedObj = receiverIntent.getExtras().getParcelable("notiObject");
 		int selectedPos = -1;
-		homeDataarr = mDataBaseHelper.getData(receivedObj.getType());
-		selectedPos = Integer.parseInt(receivedObj.getId());
+		selectedPos = receiverIntent.getExtras().getInt("selectedPos");
+		homeDataarr = mDataBaseHelper.getData("",selectedPos);
+		selectedPos = getIndex(selectedPos);
+		
 		if (null != homeDataarr && selectedPos > -1 && selectedPos <= homeDataarr.size()) {
 				startActivity(new Intent(this, PersonsDescriptionView.class).putExtra("position", selectedPos).putParcelableArrayListExtra("popularItems", homeDataarr).setAction("fromPop"));
 				finish();
@@ -440,6 +411,16 @@ public class MainActivity extends FragmentActivity implements ScrollTabHolder, V
 		super.onDestroy();
 		if(null != mDataBaseHelper)
 			mDataBaseHelper.close();
+	}
+	
+	
+	public int getIndex(int inxPos){
+		for (int indexPos = 0; indexPos < homeDataarr.size() ; indexPos++) {
+			if(inxPos == Integer.parseInt(homeDataarr.get(indexPos).getId())){
+				return indexPos;
+			}
+		}
+		return inxPos;
 	}
 	
 }

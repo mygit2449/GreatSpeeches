@@ -23,7 +23,7 @@ public class GreatLivesDataBaseHelper extends SQLiteOpenHelper{
 	/* Database name */
 	private final static String DATABASE_NAME = "greatlives.sqlite";
 	
-	public final static String SELECT_QUERY = "select * from %s;";	
+	public final static String NOTI_SELECT_QUERY = "select img,name,quote,id from persons where id = %s";	
 	
 	private final static int DATA_VERSION = 1;
 	
@@ -170,7 +170,7 @@ public class GreatLivesDataBaseHelper extends SQLiteOpenHelper{
 	}
 	
 	
-	public ArrayList<HomeDataModel>   getData(String type)
+	public ArrayList<HomeDataModel>   getData(String type,  int id)
 	{
 		ArrayList<HomeDataModel> mTotalRecords = new ArrayList<HomeDataModel>();
 		Cursor mDataCursor = null;
@@ -179,7 +179,14 @@ public class GreatLivesDataBaseHelper extends SQLiteOpenHelper{
 			type = type.replace("'", "''");
 		}
 		try {
-			mDataCursor = queryDataBase("select id,name,img,quote,info,audio,video,category,bdate,ddate,achievements from persons where category = '"+type+"'");
+			
+			if(type.length() == 0){
+				mDataCursor = queryDataBase("select id,name,img,quote,info,audio,video,category,bdate,ddate,achievements from persons where category IN (select category from persons where id = '"+id+"'"+")");				
+			}else{
+				mDataCursor = queryDataBase("select id,name,img,quote,info,audio,video,category,bdate,ddate,achievements from persons where category = '"+type+"'");
+			}
+			
+			
 			if (mDataCursor.getCount() > 0) {
 				int iCtr=0;
 				mDataCursor.moveToPosition(iCtr);
@@ -239,6 +246,17 @@ public class GreatLivesDataBaseHelper extends SQLiteOpenHelper{
 		return quotesList;
 	}
 	
+	public int getTotaRecCount(){
+		Cursor countCurs = queryDataBase("SELECT count(*) from persons");
+		if (countCurs.moveToFirst()) {
+			do{
+				try {
+					return countCurs.getInt(0);
+				} catch (Exception e) {}
+			} while (countCurs.moveToNext());
+		}
+		return 0;
+	}
 	
 	public Cursor queryDataBase(String query){
 		GreatLivesDataBaseHelper mDataBaseHelper = new GreatLivesDataBaseHelper(mContext);
